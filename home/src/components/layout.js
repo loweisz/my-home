@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
+import Ball from './ball'
 
 import Header from './header'
 import './layout.css'
@@ -26,6 +27,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <LayoutWrapper>
+        <Ball></Ball>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
