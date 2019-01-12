@@ -1,21 +1,42 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import Layout from '../components/layout'
 import github from '../images/Github.png';
 import linkedIn from '../images/LinkedIn.png';
 import twitter from '../images/twitter.png';
 import spotify from '../images/Spotify.png';
+import work from '../images/work.svg';
+import life from '../images/life.svg';
+import avatar from '../images/avatar.jpg';
 import Particles from 'react-particles-js';
 
+const TabIcon = styled.img`
+  color: white;
+  margin-left: 10px;
+`
+
+const slideIn = keyframes`
+  from {
+    margin-left: -300px;
+  }
+`
 
 const LeftHero = styled.div`
   width: 30%;
   background-color: #03346C;
   height: 100vh;
+  margin-left: 0;
+  animation: ${slideIn} .3s ease;
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
 `
 
 const InfoStarter = styled.div`
   width: 70%;
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
 `
 
 const InfoHeader = styled.div`
@@ -37,8 +58,8 @@ const SocialIcon = styled.img`
   width: 70px;
 `
 
-const AvatarImage = styled.div`
-  border: 2px solid black;
+const AvatarImage = styled.img`
+  border: 4px solid #03346C;
   height: 150px;
   width: 150px;
   border-radius: 50%;
@@ -64,6 +85,8 @@ const Tab = styled.div`
   line-height: 40px;
   font-size: 18px;
   width: 35%;
+  display: flex;
+  justify-content: center;
 `
 
 const Title = styled.div`
@@ -232,19 +255,19 @@ const IndexPage = () => {
               <SocialIcon src={github}/>
               <SocialIcon src={linkedIn}/>
             </SocialSection>
-            <AvatarImage/>
+            <AvatarImage src={avatar}/>
             <SocialSection>
               <SocialIcon src={twitter}/>
               <SocialIcon src={spotify}/>
             </SocialSection>
           </InfoHeader>
           <InfoTabBar>
-            <Tab> DEVELOPER </Tab>
+            <Tab> DEVELOPER <TabIcon src={work}/> </Tab>
             <Title>
               <span>{"<Lorenz Weiß />"}</span>
               <SubTitle>Web Developer</SubTitle>
             </Title>
-            <Tab> LIFE </Tab>
+            <Tab> LIFE <TabIcon src={life}/></Tab>
           </InfoTabBar>
           <TextSection>
             <TextBlock>
