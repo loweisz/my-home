@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree|Fredoka+One|Permanent+Marker|Sedgwick+Ave|Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 
 body {
     margin: 0;
     font-family: 'Bai Jamjuree', sans-serif;
-    background-color: #FFF7E8;
-    margin: 50px;
+    background-color: #E6E6E6;
+    height: 100%;
 }
