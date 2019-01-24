@@ -1,277 +1,22 @@
 import React from 'react'
-import styled, {keyframes} from 'styled-components'
 import Layout from '../components/layout'
-import github from '../images/Github.png';
-import linkedIn from '../images/LinkedIn.png';
-import twitter from '../images/twitter.png';
-import spotify from '../images/Spotify.png';
-import work from '../images/work.svg';
-import life from '../images/life.svg';
-import avatar from '../images/avatar.jpg';
-import Particles from 'react-particles-js';
 
-const TabIcon = styled.img`
-  color: white;
-  margin-left: 10px;
-`
-
-const slideIn = keyframes`
-  from {
-    margin-left: -300px;
-  }
-`
-
-const LeftHero = styled.div`
-  width: 30%;
-  background-color: #03346C;
-  height: 100vh;
-  margin-left: 0;
-  animation: ${slideIn} .3s ease;
-  @media screen and (max-width: 1100px) {
-    display: none;
-  }
-`
-
-const InfoStarter = styled.div`
-  width: 70%;
-  @media screen and (max-width: 1100px) {
-    width: 100%;
-  }
-`
-
-const InfoHeader = styled.div`
-  width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: space-between;
-`
-
-const SocialSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin:  20px 40px;
-`
-
-const SocialIcon = styled.img`
-  height: 70px;
-  width: 70px;
-`
-
-const AvatarImage = styled.img`
-  border: 4px solid #03346C;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  margin-top: 40px;
-`
-
-const InfoTabBar = styled.div`
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-`
-
-
-const Wrapper = styled.div`
-  display: flex;
-  width: 100%;
-`
-
-const Tab = styled.div`
-  background-color: #5A8AB2;
-  height: 40px;
-  color: white;
-  line-height: 40px;
-  font-size: 18px;
-  width: 35%;
-  display: flex;
-  justify-content: center;
-`
-
-const Title = styled.div`
-  font-size: 30px;
-  font-weight: 600;
-`
-
-const SubTitle = styled.div`
-  line-height: 18px;
-  font-size: 20px;
-  font-weight: 100;
-`
-
-const TextSection = styled.div`
-  padding: 50px 100px;
-  
-`
-
-const HeaderText = styled.div`
-  margin-bottom: 15px;
-  font-weight: 600;
-  &::after {
-    content: '';
-    width: 40px;
-    height: 20px;
-    background-color: #5A8AB2;
-  }
-`;
-
-const TextBlock = styled.div`
-  padding: 30px;
-  font-size: 25px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 50px -15px rgba(0,0,0,0.75);
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-`
-
-const particleParams = {
-  "particles": {
-    "number": {
-      "value": 53,
-      "density": {
-        "enable": true,
-        "value_area": 481.0236182596568
-      }
-    },
-    "color": {
-      "value": "#5a8ab2"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Panda_Mark.svg",
-        "width": 200,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 1,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 11.83721462448409,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 157.82952832645452,
-      "color": "#5a8ab2",
-      "opacity": 1,
-      "width": 0.4810236182596568
-    },
-    "move": {
-      "enable": true,
-      "speed": 4,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "bounce",
-      "bounce": false,
-      "attract": {
-        "enable": true,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "repulse"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "repulse"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 400,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 10
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-}
+import * as SC from '../styles/pages.sc'
+import AnimationSection from '../components/animation_section/AnimationSection'
+import Header from '../components/header/Header';
+import Tabs from '../components/tabs/Tabs';
 
 const IndexPage = () => { 
-  
   return (
     <Layout>
-      <Wrapper>
-        <LeftHero>
-          <Particles
-            params={particleParams}
-            height="100vh"
-            width="100%"
-          />
-        </LeftHero>
-        <InfoStarter>
-          <InfoHeader>
-            <SocialSection>
-              <SocialIcon src={github}/>
-              <SocialIcon src={linkedIn}/>
-            </SocialSection>
-            <AvatarImage src={avatar}/>
-            <SocialSection>
-              <SocialIcon src={twitter}/>
-              <SocialIcon src={spotify}/>
-            </SocialSection>
-          </InfoHeader>
-          <InfoTabBar>
-            <Tab> DEVELOPER <TabIcon src={work}/> </Tab>
-            <Title>
-              <span>{"<Lorenz Weiß />"}</span>
-              <SubTitle>Web Developer</SubTitle>
-            </Title>
-            <Tab> LIFE <TabIcon src={life}/></Tab>
-          </InfoTabBar>
-          <TextSection>
-            <TextBlock>
-              <HeaderText>Hi, my name is lorenz</HeaderText>
+      <SC.Wrapper>
+        <AnimationSection />
+        <SC.InfoStarter>
+          <Header />
+          <Tabs />
+          <SC.TextSection>
+            <SC.TextBlock>
+              <SC.HeaderText>Hi, my name is lorenz</SC.HeaderText>
               <span>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                 Aenean commodo ligula eget dolor. Aenean massa.
@@ -289,10 +34,10 @@ const IndexPage = () => {
                 Phasellus viverra nulla ut metus varius laoreet.
                 Quisque rutrum. Aenean imperdiet. Etiam u
               </span>
-            </TextBlock>
-         </TextSection>
-        </InfoStarter>        
-      </Wrapper>
+            </SC.TextBlock>
+         </SC.TextSection>
+        </SC.InfoStarter>        
+      </SC.Wrapper>
     </Layout>
   ) 
 }
