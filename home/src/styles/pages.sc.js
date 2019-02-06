@@ -11,7 +11,7 @@ export const slideIn = keyframes`
   }
 `
 export const InfoStarter = styled.div`
-  width: 70%;
+  width: 80%;
   @media screen and (max-width: 1100px) {
     width: 100%;
   }
@@ -45,12 +45,14 @@ export const SubTitle = styled.div`
   font-weight: 100;
 `
 export const TextSection = styled.div`
-  padding: 50px 100px;
+  padding: 0 230px;
   
 `
 export const HeaderText = styled.div`
   margin-bottom: 15px;
   font-weight: 600;
+  font-family: "Permanent Marker";
+  font-size: 30px;
   &::after {
     content: '';
     width: 40px;
@@ -59,11 +61,11 @@ export const HeaderText = styled.div`
   }
 `;
 export const TextBlock = styled.div`
+  text-align: start;
   padding: 30px;
   font-size: 25px;
   border-radius: 5px;
-  box-shadow: 0px 0px 50px -15px rgba(0,0,0,0.75);
-  background-color: white;
+  box-shadow: 0px 0px 10px -15px rgba(0,0,0,0.75);
   display: flex;
   flex-direction: column;
 `

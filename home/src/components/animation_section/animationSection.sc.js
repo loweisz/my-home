@@ -3,7 +3,7 @@ import { slideIn } from '../../styles/pages.sc';
 
 export const LeftHero = styled.div`
   positon: fixed;
-  width: 30%;
+  width: 10%;
   background-color: #03346C;
   height: 100vh;
   margin-left: 0;

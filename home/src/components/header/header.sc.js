@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const InfoHeader = styled.div`
   width: 100%;
-  height: 200px;
+  height: 230px;
   display: flex;
   justify-content: space-between;
 `
@@ -20,9 +20,8 @@ export const SocialIcon = styled.img`
 `
 
 export const AvatarImage = styled.img`
-  border: 4px solid #03346C;
-  height: 150px;
-  width: 150px;
+  height: 180px;
+  width: 180px;
   border-radius: 50%;
   margin-top: 40px;
 `

@@ -36,7 +36,8 @@ const IndexPage = () => {
               </span>
             </SC.TextBlock>
          </SC.TextSection>
-        </SC.InfoStarter>        
+        </SC.InfoStarter>
+        <AnimationSection />     
       </SC.Wrapper>
     </Layout>
   ) 

@@ -4,14 +4,17 @@ import work from '../../images/work.svg';
 import life from '../../images/life.svg';
 
 const Tabs = () => (
+    <div>
+    <SC.Title>
+        <span>{"<Lorenz Weiß />"}</span>
+        <SC.SubTitle>Web Developer</SC.SubTitle>
+    </SC.Title>
     <SC.InfoTabBar>
-        <SC.Tab> DEVELOPER <SC.TabIcon src={work}/> </SC.Tab>
-        <SC.Title>
-            <span>{"<Lorenz Weiß />"}</span>
-            <SC.SubTitle>Web Developer</SC.SubTitle>
-        </SC.Title>
-        <SC.Tab> LIFE <SC.TabIcon src={life}/></SC.Tab>
+        <SC.Tab> Developer </SC.Tab>
+        <SC.Tab> Life </SC.Tab>
+        <SC.Tab> Blog </SC.Tab>
     </SC.InfoTabBar>
+    </div>
 )
 
 export default Tabs;
