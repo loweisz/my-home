@@ -8,7 +8,7 @@ export const particleParams = {
         }
       },
       "color": {
-        "value": "#5a8ab2"
+        "value": "#000000"
       },
       "shape": {
         "type": "circle",

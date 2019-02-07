@@ -11,7 +11,14 @@ export const slideIn = keyframes`
   }
 `
 export const InfoStarter = styled.div`
+  border-left: 5px solid black;
+  border-right: 5px solid black; 
   width: 80%;
+  height: 100vh;
+  overflow: auto;
+  &::-webkit-scrollbar { 
+    display: none; 
+  }
   @media screen and (max-width: 1100px) {
     width: 100%;
   }
@@ -26,7 +33,7 @@ export const Wrapper = styled.div`
   width: 100%;
 `
 export const Tab = styled.div`
-  background-color: #5A8AB2;
+  background-color: #660505;
   height: 40px;
   color: white;
   line-height: 40px;
@@ -45,7 +52,7 @@ export const SubTitle = styled.div`
   font-weight: 100;
 `
 export const TextSection = styled.div`
-  padding: 0 230px;
+  padding: 0 200px;
   
 `
 export const HeaderText = styled.div`
@@ -68,4 +75,6 @@ export const TextBlock = styled.div`
   box-shadow: 0px 0px 10px -15px rgba(0,0,0,0.75);
   display: flex;
   flex-direction: column;
+  background-color: white;
+  border: 5px solid black;
 `

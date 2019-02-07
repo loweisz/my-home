@@ -4,34 +4,47 @@ export const InfoTabBar = styled.div`
   margin: 40px 150px;
   display: flex;
   justify-content: space-around;
+  > a {
+    text-decoration: none;
+  }
 `
 export const Tab = styled.div`
   font-weight: 600;
   letter-spacing: 3px;
   height: 40px;
-  color: #5A8AB2;
+  color: white;
   line-height: 40px;
   font-size: 40px;
-  width: 15%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  margin: 0 5%;
+  margin: 0 10%;
   transition: all 0.3s ease-in-out;
+  padding: 10px;
   cursor: pointer;
   font-weight: 200;
   font-family: 'Permanent Marker', sans-serif;
+  background-color: ${({ color }) => color || '#660505'};
+  text-decoration: none;
   &:hover {
-    width: 25%;
     margin: 0;
+    width: 120%;
     opacity: 0.7;
-    background-color: #5A8AB2;
     color: white;
   }
 `
+
 export const Title = styled.div`
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 400;
   font-family: 'Permanent Marker', sans-serif;
+  &:hover {
+    > span {
+      &.mark {
+        display: none;
+      }
+    }
+  }
 `
 export const SubTitle = styled.div`
   line-height: 18px;

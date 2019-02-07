@@ -4,7 +4,7 @@ import { LeftHero } from './animationSection.sc';
 import { particleParams } from './particles.constants';
 
 const AnimationSection = (props) => (
-    <LeftHero>
+    <LeftHero color={props.color}>
         <Particles
             params={particleParams}
             height="100vh"

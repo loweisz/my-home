@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import * as SC from '../styles/pages.sc'
 import AnimationSection from '../components/animation_section/AnimationSection'
 import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
 import Tabs from '../components/tabs/Tabs';
 
 const IndexPage = () => { 
@@ -36,6 +37,7 @@ const IndexPage = () => {
               </span>
             </SC.TextBlock>
          </SC.TextSection>
+         <Footer/>
         </SC.InfoStarter>
         <AnimationSection />     
       </SC.Wrapper>

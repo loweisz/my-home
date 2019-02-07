@@ -4,7 +4,7 @@ import { slideIn } from '../../styles/pages.sc';
 export const LeftHero = styled.div`
   positon: fixed;
   width: 10%;
-  background-color: #03346C;
+  background-color: ${({ color }) => color || '#660505'};
   height: 100vh;
   margin-left: 0;
   animation: ${slideIn} .3s ease;
