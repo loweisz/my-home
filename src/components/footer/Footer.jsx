@@ -10,10 +10,10 @@ import avatar from '../../images/avatar.jpg';
 const Footer = () => (
     <SC.InfoHeader>
         <SC.SocialSection>
-            <SC.SocialIcon src={github}/>
-            <SC.SocialIcon src={linkedIn}/>
-            <SC.SocialIcon src={twitter}/>
-            <SC.SocialIcon src={spotify}/>
+            {/*<SC.SocialIcon src={github}/>*/}
+            {/*<SC.SocialIcon src={linkedIn}/>*/}
+            {/*<SC.SocialIcon src={twitter}/>*/}
+            {/*<SC.SocialIcon src={spotify}/>*/}
         </SC.SocialSection>
     </SC.InfoHeader>
 )
