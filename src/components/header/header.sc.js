@@ -14,12 +14,16 @@ export const SocialSection = styled.div`
   justify-content: center;
   display: flex;
   margin:  20px 40px;
-`
+`;
 
 export const LinkImg = styled.img`
   height: 30px;
   width: 30px;
-  margin: 20px;
+  margin: 10px;
+  padding: 5px;
+  &:hover {
+    background-color: #E6E6E6;
+  }
 `;
 
 export const LinkContainer = styled.div`

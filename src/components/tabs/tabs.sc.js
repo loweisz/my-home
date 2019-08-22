@@ -10,7 +10,7 @@ export const InfoTabBar = styled.div`
   }
 `
 export const Tab = styled.div`
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 3px;
   height: 40px;
   color: black;
@@ -23,6 +23,11 @@ export const Tab = styled.div`
   padding: 10px;
   cursor: pointer;
   text-decoration: none;
+  transition: all 200ms ease;
+  &:hover {
+    text-decoration: underline;
+    background-color: white;
+  }
 `
 
 export const Title = styled.div`

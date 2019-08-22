@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b2e001e-3ea2-4f6f-9b7a-b3e47c23c544" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/animation_section/AnimationSection.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/animation_section/animationSection.sc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/animation_section/particles.constants.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/header.sc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.sc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/tabs/Tabs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/Tabs.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/tabs/tabs.sc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/tabs/tabs.sc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dev.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/landing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/pages.sc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pages.sc.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +21,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/header/Header.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="520">
-                  <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+                <state relative-caret-position="240">
+                  <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -62,11 +51,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/tabs/tabs.sc.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="446">
-                  <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+                <state relative-caret-position="220">
+                  <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/layout.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="168">
+                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
                 </state>
               </provider>
             </entry>
@@ -75,7 +73,7 @@
             <entry file="file://$PROJECT_DIR$/gatsby-config.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="306">
-                  <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+                  <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -94,18 +92,13 @@
             <entry file="file://$PROJECT_DIR$/gatsby-browser.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="147">
-                  <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+                  <caret line="7" selection-start-line="7" selection-end-line="7" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/images/Name.svg">
-              <provider selected="true" editor-type-id="images" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/images/work.svg">
               <provider selected="true" editor-type-id="images" />
             </entry>
           </file>
@@ -116,8 +109,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/header/header.sc.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
+                <state relative-caret-position="405">
+                  <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -143,10 +136,10 @@
         <option value="$PROJECT_DIR$/src/styles/pages.sc.js" />
         <option value="$PROJECT_DIR$/src/components/footer/Footer.jsx" />
         <option value="$PROJECT_DIR$/src/pages/landing.js" />
-        <option value="$PROJECT_DIR$/src/components/header/Header.jsx" />
-        <option value="$PROJECT_DIR$/src/components/header/header.sc.js" />
         <option value="$PROJECT_DIR$/src/components/tabs/Tabs.jsx" />
         <option value="$PROJECT_DIR$/src/components/tabs/tabs.sc.js" />
+        <option value="$PROJECT_DIR$/src/components/header/header.sc.js" />
+        <option value="$PROJECT_DIR$/src/components/header/Header.jsx" />
       </list>
     </option>
   </component>
@@ -179,13 +172,6 @@
               <item name="my-home" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my-home" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-home" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="tabs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my-home" type="b2602c69:ProjectViewProjectNode" />
@@ -250,12 +236,12 @@
       <updated>1560760431704</updated>
       <workItem from="1560760433739" duration="1330000" />
       <workItem from="1560866367128" duration="308000" />
-      <workItem from="1566456437588" duration="1677000" />
+      <workItem from="1566456437588" duration="2508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3315000" />
+    <option name="totallyTimeSpent" value="4146000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="1920" height="976" extended-state="6" />
@@ -316,13 +302,6 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -435,7 +414,7 @@
     <entry file="file://$PROJECT_DIR$/gatsby-config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -445,7 +424,7 @@
     <entry file="file://$PROJECT_DIR$/gatsby-browser.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -454,23 +433,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/images/Name.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/header/header.sc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="33" column="36" lean-forward="true" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/header/Header.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/gatsby-link/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -488,8 +450,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/tabs/tabs.sc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        <state relative-caret-position="220">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/header/header.sc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/header/Header.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby'
 
 import github from '../../images/github_new.svg';
 import linkedIn from '../../images/linked_new.svg';
@@ -13,10 +12,10 @@ const Header = () => (
     <InfoHeader>
         <HeaderSection>
             <LinkContainer>
-                <Link><LinkImg src={github} /></Link>
-                <Link><LinkImg src={linkedIn} /></Link>
-                <Link><LinkImg src={twitter} /></Link>
-                <Link><LinkImg src={spotify} /></Link>
+                <a href="https://github.com/lowe1111" target="_blank"><LinkImg src={github} /></a>
+                <a href="https://www.linkedin.com/in/lorenz-wei%C3%9F-032689165/" target="_blank"><LinkImg src={linkedIn} /></a>
+                <a href="https://twitter.com/lorenzweisz" target="_blank"><LinkImg src={twitter} /></a>
+                <a href="https://www.spotify.com/de/" target="_blank"><LinkImg src={spotify} /></a>
             </LinkContainer>
         </HeaderSection>
         <HeaderSection>
