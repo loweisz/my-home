@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import './layout.css'
@@ -13,24 +12,11 @@ const LayoutWrapper = styled.div`
 `;
 
 const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <LayoutWrapper>
-        <div>
-          {children}
-        </div>
-      </LayoutWrapper>
-    )}
-  />
+    <LayoutWrapper>
+      <div>
+        {children}
+      </div>
+    </LayoutWrapper>
 )
 
 Layout.propTypes = {

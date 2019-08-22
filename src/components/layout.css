@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree|Fredoka+One|Permanent+Marker|Sedgwick+Ave|Shadows+Into+Light');
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900&display=swap');
 
 body {
     margin: 0;
-    font-family: 'Bai Jamjuree', sans-serif;
+    font-family: 'Railway', sans-serif;
     background-color: #E6E6E6;
     height: 100%;
 }
