@@ -1,14 +1,29 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+const slideIn = keyframes`
+  from {
+    margin-top: -50px;
+  }
+  to {
+    margin-top: 0;
+  }
+`
 
 export const InfoTabBar = styled.div`
-  margin: 40px 150px;
   display: flex;
   justify-content: center;
+  animation: ${slideIn} 500ms ease-in;
   > a {
     margin: 0 20px;
     text-decoration: none;
   }
-`
+`;
+
+export const TabSection = styled.div`
+  width: 100%;
+  background-color: rgba(255,255,255,0.6);
+`;
+
 export const Tab = styled.div`
   font-weight: 400;
   letter-spacing: 3px;
@@ -26,28 +41,7 @@ export const Tab = styled.div`
   transition: all 200ms ease;
   &:hover {
     text-decoration: underline;
-    background-color: white;
+    background-color: #2e703f;
+    color: white;
   }
-`
-
-export const Title = styled.div`
-  font-size: 50px;
-  font-weight: 400;
-  font-family: 'Permanent Marker', sans-serif;
-  &:hover {
-    > span {
-      &.mark {
-        display: none;
-      }
-    }
-  }
-`
-export const SubTitle = styled.div`
-  line-height: 18px;
-  font-size: 20px;
-  font-weight: 100;
-`
-export const TabIcon = styled.img`
-  color: white;
-  margin-left: 10px;
 `

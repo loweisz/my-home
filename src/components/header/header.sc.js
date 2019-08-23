@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const InfoHeader = styled.div`
+  z-index: 1;
   width: 100%;
   display: flex;
   justify-content: space-around;

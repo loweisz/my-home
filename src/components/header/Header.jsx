@@ -23,7 +23,7 @@ const Header = () => (
         </HeaderSection>
         <HeaderSection>
           <ImageContainer>
-            <AvatarImage  />
+            <AvatarImage src="https://picsum.photos/200"  />
           </ImageContainer>
         </HeaderSection>
     </InfoHeader>
