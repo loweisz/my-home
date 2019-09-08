@@ -41,7 +41,7 @@ export const Tab = styled.div`
   transition: all 200ms ease;
   &:hover {
     text-decoration: underline;
-    background-color: #2e703f;
+    background-color: rgba(55,3,0, 0.5);
     color: white;
   }
 `

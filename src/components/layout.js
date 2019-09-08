@@ -10,7 +10,7 @@ const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #2e703f;
+  background-color: #370300;
 `;
 
 const TopSection = styled.header`

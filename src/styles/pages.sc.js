@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 
 export const InfoStarter = styled.div`
   height: 100vh;
@@ -20,15 +20,25 @@ export const Wrapper = styled.div`
   width: 100%;
 `;
 
+const opacIn = keyframes`
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+`;
+
 export const PageHeader = styled.h1`
   color: white;
   text-align: start;
+  animation: ${opacIn} 150ms ease-in;
 `
 
 export const SubHeader = styled.p`
   max-width: 800px;
   color: white;
   text-align: start;
+  animation: ${opacIn} 350ms ease-in;
 `
 
 export const Tab = styled.div`
@@ -51,15 +61,11 @@ export const HeaderText = styled.div`
   margin-bottom: 15px;
   font-weight: 600;
   font-size: 30px;
-  &::after {
-    content: '';
-    width: 40px;
-    height: 20px;
-    background-color: #5A8AB2;
-  }
 `;
 
 export const TextBlock = styled.div`
+  max-width: 800px;
+  margin-top: 30px;
   color: white;
   text-align: start;
   font-size: 25px;

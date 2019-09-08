@@ -24,7 +24,7 @@ export const ExperienceBox = styled.div`
 `;
 
 export const Company = styled.a`
-  color: #2e703f;
+  color: #370300;
   font-size: 20px;
   text-decoration: none;
 `;
