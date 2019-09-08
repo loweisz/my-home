@@ -1,13 +1,10 @@
 ---
-date: "2017-11-07"
-title: "First one"
+startDate: "2017-11-01"
+endDate: "2019-11-01"
+title: "Frontend Developer"
+company: "Loopline Systems"
+website: "now.loopline.systems"
 ---
 
-Has anyone heard about GatsbyJS yet?
+Based on my experience, the only thing i can remember is that you cannot use fragments in the "server side", i.e gatsby-node.js out of the box, they are reserved for "client side" (components/pages) all my experiments with fragments in gatsby-node.js resulted in build errors. A workaround is to write them yourself, if you're willing take a look at the gatsby-transformer-sharp plugin and see how it's built and if it helps
 
----
-date: "2017-11-07"
-title: "second one"
----
-
-Has anyone heard about GatsbyJS yet?

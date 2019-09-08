@@ -20,6 +20,17 @@ export const Wrapper = styled.div`
   width: 100%;
 `;
 
+export const PageHeader = styled.h1`
+  color: white;
+  text-align: start;
+`
+
+export const SubHeader = styled.p`
+  max-width: 800px;
+  color: white;
+  text-align: start;
+`
+
 export const Tab = styled.div`
   background-color: #660505;
   height: 40px;
@@ -32,7 +43,6 @@ export const Tab = styled.div`
 `;
 
 export const TextSection = styled.div`
-  margin-top: 30px;
   max-width: 800px;
   width: 100%;
 `;
