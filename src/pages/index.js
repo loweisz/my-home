@@ -1,11 +1,12 @@
-import React from 'react'
-import Layout from '../components/layout'
-import { Redirect } from '@reach/router';
+import React, {useEffect} from 'react'
 
-const IndexPage = () => (
-  <Layout>
-    <Redirect to="/landing"/>
-  </Layout>
-)
+const IndexPage = () => {
+  useEffect(() => {
+    window.location = '/landing/'
+  }, [])
+  return (
+      <div/>
+  );
+}
 
 export default IndexPage
