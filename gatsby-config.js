@@ -11,8 +11,19 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
-    
-    `gatsby-transformer-remark`,
+    {
+        resolve: `gatsby-transformer-remark`,
+        options: {
+          plugins: [
+            {
+              resolve: 'gatsby-remark-prismjs',
+              options: {
+                inlineCodeMarker: '÷',
+              },
+            },
+          ],
+        },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -25,6 +36,7 @@ module.exports = {
         
       },
     },
+    
     `gatsby-plugin-styled-components`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline

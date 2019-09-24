@@ -7,10 +7,12 @@ import Tabs from "./tabs/Tabs";
 import Header from "./header/Header";
 
 const LayoutWrapper = styled.div`
+  z-index: 2;
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: rgba(55,3,0, 1);
+  
+  position: relative;
 `;
 
 const TopSection = styled.header`
@@ -20,10 +22,14 @@ const TopSection = styled.header`
 
 const BodySection = styled.main`
   margin-top: 120px;
-  
+`;
+
+const Background = styled.div`
+  background-color: rgba(55,3,0, 1);
 `;
 
 const Wave = styled.div`
+  z-index: 1;
   height: 100%;
   width: 100vw;
   position: fixed;
@@ -31,11 +37,12 @@ const Wave = styled.div`
   bottom: 0;
   flex-direction: column;
   justify-content: flex-end;
+  
 `;
 
 const Layout = ({ children }) => {
   return (
-    <LayoutWrapper >
+    <Background>
       <Wave>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
@@ -45,14 +52,16 @@ const Layout = ({ children }) => {
           ></path>
         </svg>
       </Wave>
-      <TopSection>
-        <Header/>
-        <Tabs color={'#ba7200'} />
-      </TopSection>
-      <BodySection>
-        {children}
-      </BodySection>
-    </LayoutWrapper>
+      <LayoutWrapper >
+        <TopSection>
+          <Header/>
+          <Tabs color={'#ba7200'} />
+        </TopSection>
+        <BodySection>
+          {children}
+        </BodySection>
+      </LayoutWrapper>
+    </Background>
   );
 }
 
