@@ -10,17 +10,35 @@ import {
   Wrapper,
 } from './cubeMenu.styles';
 
-function CubeMenu() {
+function CubeMenu(props) {
   const wrapperRef = useRef();
 
   useEffect(() => {
+    document.addEventListener('mouseleave', left);
     setTimeout(() => {
-      document.onmousemove = trackMousePosition;
-    }, 3200);
-  });
+      document.addEventListener('mousemove', trackMousePosition);
+    }, 2000);
+    return () => {
+      document.removeEventListener('mousemove', trackMousePosition);
+    };
+  }, []);
+
+  useEffect(
+    () => {
+      if (props.isSelected) {
+        document.removeEventListener('mousemove', trackMousePosition);
+      }
+    },
+    [props.isSelected],
+  );
 
   const [rotateX, setRotateX] = useState('0');
   const [rotateY, setRotateY] = useState('0');
+
+  const left = () => {
+    setRotateX('0');
+    setRotateY('0');
+  };
 
   const trackMousePosition = (e) => {
     if (wrapperRef.current) {
@@ -52,10 +70,33 @@ function CubeMenu() {
     }
   };
 
+  const [hideText, setHideText] = useState(false);
+
+  useEffect(
+    () => {
+      if (props.isSelected) {
+        setTimeout(() => {
+          setHideText(true);
+        }, 1000);
+      }
+    },
+    [props.isSelected],
+  );
+
   return (
     <Wrapper ref={wrapperRef}>
-      <Cube style={{ transform: `translateZ(-250px) rotateY(${rotateX}) rotateX(${rotateY})` }}>
-        <FaceFront>Welcome to my Page! My Name is Lorenz. I'm a web developer located in Berlin </FaceFront>
+      <Cube
+        isSelected={props.isSelected}
+        style={{
+          transform: !props.isSelected && `translateZ(-250px) rotateY(${rotateX}) rotateX(${rotateY})`,
+          transition: rotateY === '0' && rotateX === '0' ? 'all 1s ease' : 'inherit',
+        }}
+      >
+        <FaceFront>
+          {!hideText && (
+            <span>Welcome to my Page! My Name is Lorenz. I'm a web developer located in Berlin</span>
+          )}
+        </FaceFront>
         <FaceBack>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
           labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusa

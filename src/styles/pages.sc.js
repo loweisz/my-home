@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const InfoStarter = styled.div`
   height: 100vh;
@@ -32,14 +32,14 @@ export const PageHeader = styled.h1`
   color: white;
   text-align: start;
   animation: ${opacIn} 150ms ease-in;
-`
+`;
 
 export const SubHeader = styled.p`
   max-width: 800px;
   color: white;
   text-align: start;
   animation: ${opacIn} 350ms ease-in;
-`
+`;
 
 export const Tab = styled.div`
   background-color: #660505;
@@ -82,35 +82,41 @@ export const PageContainer = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(55,3,0, 1);
+  background-color: rgba(55, 3, 0, 1);
 `;
 
 const Menu = styled.div`
   position: absolute;
   display: flex;
+  align-items: center;
   justify-content: center;
   font-size: 50px;
   color: white;
-`
+  cursor: pointer;
+  a {
+    text-decoration: none;
+    margin-left: 10px;
+  }
+`;
 
 export const MenuTop = styled(Menu)`
   top: 50px;
   width: 100%;
 `;
+
 export const MenuLeft = styled(Menu)`
   left: 50px;
-  flex-direction: column;
 `;
+
 export const MenuRight = styled(Menu)`
   right: 50px;
-  height: 100%;
-  flex-direction: column;
-`
+`;
+
 export const MenuBottom = styled(Menu)`
   bottom: 50px;
   width: 100%;
-`
+`;
+
 export const MenuText = styled.span`
-  text-decoration: none;
   color: white;
-`
+`;

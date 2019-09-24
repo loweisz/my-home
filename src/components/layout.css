@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,800&display=swap');
 
+html {
+    background-color: rgba(55, 3, 0, 1);
+}
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-
     height: 100%;
+    background-color: rgba(55, 3, 0, 1);
 }
