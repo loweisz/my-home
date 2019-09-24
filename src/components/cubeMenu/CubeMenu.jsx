@@ -7,8 +7,10 @@ import {
   FaceLeft,
   FaceRight,
   FaceTop,
+  JumpItem,
   Wrapper,
 } from './cubeMenu.styles';
+import { socialIcons } from '../../pages/start';
 
 function CubeMenu(props) {
   const wrapperRef = useRef();
@@ -93,24 +95,39 @@ function CubeMenu(props) {
         }}
       >
         <FaceFront>
-          {!hideText && (
-            <span>Welcome to my Page! My Name is Lorenz. I'm a web developer located in Berlin</span>
-          )}
+          <div>
+            {!hideText && (
+              <span>Welcome to my Page! My Name is Lorenz. I'm a web developer located in Berlin</span>
+            )}
+          </div>
         </FaceFront>
         <FaceBack>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-          labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusa
+          <div>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, labore et dolore magna aliquyam erat, sed
+            diam voluptua.
+          </div>
         </FaceBack>
         <FaceRight>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-          labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusa
+          <div>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr labore et dolore magna aliquyam erat, sed
+            diam voluptua. At vero eos et accusa
+          </div>
         </FaceRight>
         <FaceLeft>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-          labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusa
+          <div>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+          </div>
         </FaceLeft>
-        <FaceTop>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy </FaceTop>
-        <FaceBottom>Lorem ipsum dolor diam voluptua. At vero eos et accusa</FaceBottom>
+        <FaceTop>
+          <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy </div>
+        </FaceTop>
+        <FaceBottom>
+          <div>
+            {props.hovered
+              ? socialIcons.map((icon) => icon === props.hovered && <JumpItem key={icon}>{icon}</JumpItem>)
+              : 'Social'}
+          </div>
+        </FaceBottom>
       </Cube>
     </Wrapper>
   );

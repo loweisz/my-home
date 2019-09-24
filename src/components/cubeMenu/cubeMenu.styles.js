@@ -49,12 +49,15 @@ export const CubeFace = styled.div`
   font-size: 40px;
   font-weight: bold;
   color: white;
-  text-align: center;
+  text-align: start;
   border: white 5px solid;
+  div {
+    padding: 20px;
+  }
 `;
 
 export const FaceFront = styled(CubeFace)`
-  background-color: rgba(55, 3, 0, 1);
+  background-color: #740300;
   color: white;
   transform: rotateY(0deg) translateZ(250px);
 `;
@@ -64,7 +67,7 @@ export const FaceBack = styled(CubeFace)`
   transform: rotateY(180deg) translateZ(250px);
 `;
 export const FaceRight = styled(CubeFace)`
-  background-color: rgba(55, 3, 0, 1);
+  background-color: #740300;
   color: white;
   transform: rotateY(90deg) translateZ(250px);
 `;
@@ -82,4 +85,23 @@ export const FaceBottom = styled(CubeFace)`
   background: #a4a4a4;
   color: black;
   transform: rotateX(-90deg) translateZ(250px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+`;
+
+const jump = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(0)
+  }
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+`;
+
+export const JumpItem = styled.div`
+  animation: ${jump} 200ms ease;
 `;

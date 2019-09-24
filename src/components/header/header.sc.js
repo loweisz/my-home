@@ -7,7 +7,7 @@ export const InfoHeader = styled.div`
   justify-content: space-around;
   align-items: center;
   background-color: white;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
 `;
 
@@ -15,7 +15,7 @@ export const SocialSection = styled.div`
   width: 100%;
   justify-content: center;
   display: flex;
-  margin:  20px 40px;
+  margin: 20px 40px;
 `;
 
 export const LinkImg = styled.img`
@@ -24,13 +24,23 @@ export const LinkImg = styled.img`
   margin: 10px;
   padding: 5px;
   &:hover {
-    background-color: #E6E6E6;
+    background-color: #e6e6e6;
   }
 `;
 
-export const LinkContainer = styled.div`
-
+export const LightIconImg = styled.img`
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+  padding: 5px;
+  color: white;
+  svg {
+    fill: white;
+    stroke: white;
+  }
 `;
+
+export const LinkContainer = styled.div``;
 
 export const Title = styled.h1`
   font-size: 40px;
@@ -47,7 +57,7 @@ export const AvatarImage = styled.img`
   height: 130px;
   width: 130px;
   border: 2px solid white;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 `;
 
 export const ImageContainer = styled.div`

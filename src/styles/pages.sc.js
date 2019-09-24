@@ -118,5 +118,14 @@ export const MenuBottom = styled(Menu)`
 `;
 
 export const MenuText = styled.span`
+  display: flex;
   color: white;
+
+  div {
+    padding-left: 10px;
+    padding-right: 10px;
+    &:hover {
+      color: #740300;
+    }
+  }
 `;
