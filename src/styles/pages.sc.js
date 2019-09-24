@@ -75,3 +75,42 @@ export const TextBlock = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+export const PageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(55,3,0, 1);
+`;
+
+const Menu = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  color: white;
+`
+
+export const MenuTop = styled(Menu)`
+  top: 50px;
+  width: 100%;
+`;
+export const MenuLeft = styled(Menu)`
+  left: 50px;
+  flex-direction: column;
+`;
+export const MenuRight = styled(Menu)`
+  right: 50px;
+  height: 100%;
+  flex-direction: column;
+`
+export const MenuBottom = styled(Menu)`
+  bottom: 50px;
+  width: 100%;
+`
+export const MenuText = styled.span`
+  text-decoration: none;
+  color: white;
+`
