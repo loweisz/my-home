@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+const introSpin = keyframes`
+  from {
+    transform: translateZ(-250px) rotateX(-270deg) rotateY(90deg);
+  }
+  to {
+    transform: translateZ(-250px) rotateX(0) rotateY(0);
+  }
+`
 
 export const Wrapper = styled.div`
   width: 500px;
@@ -11,6 +20,7 @@ export const Cube = styled.div`
   height: 500px;
   position: relative;
   transform-style: preserve-3d;
+  animation: ${introSpin} 3s cubic-bezier(0,.94,.5,1);
 `
 
 export const CubeFace = styled.div`

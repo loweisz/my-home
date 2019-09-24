@@ -5,14 +5,15 @@ function CubeMenu() {
   const wrapperRef = useRef();
   
   useEffect(() => {
-    document.onmousemove = trackMousePosition
+    setTimeout(() => {
+      document.onmousemove = trackMousePosition
+    }, 3200)
   })
   
   const [rotateX, setRotateX] = useState("0")
   const [rotateY, setRotateY] = useState("0")
   
   const trackMousePosition = (e) => {
-    
     if (wrapperRef.current) {
       const scene = wrapperRef.current.getBoundingClientRect();
       const cubeDistYTop = scene.top + scene.height/2;
