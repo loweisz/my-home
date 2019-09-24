@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b2e001e-3ea2-4f6f-9b7a-b3e47c23c544" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/layoutBackground.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/start.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/dev.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/landing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/page-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/page-2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/pages.sc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pages.sc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/start.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,8 +55,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/pages/start.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="506">
-                  <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+                <state relative-caret-position="346">
+                  <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
                   </folding>
@@ -146,20 +134,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="125">
+                <state relative-caret-position="69">
                   <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="543">
-                  <caret line="91" column="83" selection-start-line="91" selection-start-column="83" selection-end-line="91" selection-end-column="83" />
+                <state relative-caret-position="411">
+                  <caret line="85" column="10" lean-forward="true" selection-start-line="85" selection-start-column="10" selection-end-line="85" selection-end-column="10" />
                   <folding>
                     <element signature="e#0#59#0" expanded="true" />
                   </folding>
@@ -225,8 +213,8 @@
         <option value="$PROJECT_DIR$/src/pages/index.js" />
         <option value="$PROJECT_DIR$/src/styles/pages.sc.js" />
         <option value="$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js" />
-        <option value="$PROJECT_DIR$/src/pages/start.js" />
         <option value="$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx" />
+        <option value="$PROJECT_DIR$/src/pages/start.js" />
       </list>
     </option>
   </component>
@@ -332,12 +320,12 @@
       <workItem from="1568039820330" duration="17000" />
       <workItem from="1569240277784" duration="2644000" />
       <workItem from="1569249121554" duration="3557000" />
-      <workItem from="1569316899356" duration="14533000" />
+      <workItem from="1569316899356" duration="14703000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36146000" />
+    <option name="totallyTimeSpent" value="36316000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="1920" height="976" extended-state="6" />
@@ -639,8 +627,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/pages.sc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        <state relative-caret-position="2244">
+          <caret line="102" column="12" lean-forward="true" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -651,29 +639,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="85" column="10" lean-forward="true" selection-start-line="85" selection-start-column="10" selection-end-line="85" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
+        <state relative-caret-position="69">
           <caret line="16" column="26" lean-forward="true" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/start.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="346">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="91" column="83" selection-start-line="91" selection-start-column="83" selection-end-line="91" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>

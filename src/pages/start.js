@@ -5,7 +5,7 @@ import { navigate } from '@reach/router';
 import { FiBox, FiUser, FiFile, FiAward } from 'react-icons/fi';
 import LayoutBackground from '../components/layoutBackground';
 
-export const SELECT_ANIMATION_TIME = 2500;
+export const SELECT_ANIMATION_TIME = 2400;
 
 const StartPage = () => {
   const [isSelected, setIsSelected] = useState(false);
