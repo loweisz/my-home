@@ -2,23 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b2e001e-3ea2-4f6f-9b7a-b3e47c23c544" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header.sc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.sc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/Github.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/LinkedIn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/Name.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/Spotify.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/github_new.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/google_new.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/icons8-twitter-filled (1).svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/linked_new.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/spotify_new.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/twitter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/twitter_new.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/start.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/pages.sc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pages.sc.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -89,8 +72,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/styles/pages.sc.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="593">
-                  <caret line="93" column="19" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
+                <state relative-caret-position="626">
+                  <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -135,8 +118,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="281">
-                  <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="33" selection-end-column="3" />
+                <state relative-caret-position="638">
+                  <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -336,12 +319,12 @@
       <workItem from="1568039820330" duration="17000" />
       <workItem from="1569240277784" duration="2644000" />
       <workItem from="1569249121554" duration="3557000" />
-      <workItem from="1569316899356" duration="22489000" />
+      <workItem from="1569316899356" duration="22749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44102000" />
+    <option name="totallyTimeSpent" value="44362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1476" y="23" width="1920" height="976" extended-state="0" />
@@ -658,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="33" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/start.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -675,10 +651,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/pages.sc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="93" column="19" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
+        <state relative-caret-position="626">
+          <caret line="110" column="16" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
         </state>
       </provider>
     </entry>

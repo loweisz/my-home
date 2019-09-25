@@ -85,6 +85,8 @@ export const PageContainer = styled.div`
   background-color: rgba(55, 3, 0, 1);
   @media screen and (max-width: 800px) {
     flex-direction: column;
+    padding: 30px 0;
+    height: auto;
   }
 `;
 
@@ -106,6 +108,7 @@ const Menu = styled.div`
   @media screen and (max-width: 800px) {
     position: initial;
     margin-top: 60px;
+    font-size: 40px;
   }
   div {
     text-decoration: none;
