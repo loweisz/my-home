@@ -28,15 +28,31 @@ export const Wrapper = styled.div`
   width: 500px;
   height: 500px;
   perspective: 1000px;
+  transform: scale(0.5);
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+  @media screen and (min-width: 1080px) {
+    transform: scale(0.6);
+  }
+  @media screen and (min-width: 1280px) {
+    transform: scale(0.8);
+  }
+  @media screen and (min-width: 1500px) {
+    transform: scale(1);
+  }
 `;
 
 export const Cube = styled.div`
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
   transition: ${({ isSelected }) => (isSelected ? 'all 300ms ease' : 'none')};
   width: 500px;
   height: 500px;
   position: relative;
   transform-style: preserve-3d;
-  animation: 2500ms;
+  animation: 1800ms;
   animation-timing-function: ${({ isSelected }) =>
     isSelected ? 'ease-in' : 'cubic-bezier(0, 0.94, 0.5, 1)'};
   animation-name: ${({ isSelected }) => (isSelected ? selectSpin : introSpin)};
@@ -56,8 +72,17 @@ export const CubeFace = styled.div`
   }
 `;
 
+export const Greetings = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    margin: 20px;
+  }
+`;
+
 export const FaceFront = styled(CubeFace)`
-  background-color: #740300;
+  background-color: ${({ darkColor }) => (darkColor ? '#370300' : '#740300')};
   color: white;
   transform: rotateY(0deg) translateZ(250px);
 `;

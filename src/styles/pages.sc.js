@@ -83,6 +83,16 @@ export const PageContainer = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: rgba(55, 3, 0, 1);
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+`;
+
+export const MobileImage = styled.div`
+  display: none;
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
 `;
 
 const Menu = styled.div`
@@ -93,9 +103,13 @@ const Menu = styled.div`
   font-size: 50px;
   color: white;
   cursor: pointer;
-  a {
+  @media screen and (max-width: 800px) {
+    position: initial;
+    margin-top: 60px;
+  }
+  div {
     text-decoration: none;
-    margin-left: 10px;
+    margin-left: 20px;
   }
 `;
 
@@ -119,9 +133,10 @@ export const MenuBottom = styled(Menu)`
 
 export const MenuText = styled.span`
   display: flex;
-  color: white;
 
-  div {
+  a {
+    color: white;
+    font-size: 70px;
     padding-left: 10px;
     padding-right: 10px;
     &:hover {

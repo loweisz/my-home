@@ -1,23 +1,28 @@
 import React, { useState } from 'react';
 import CubeMenu from '../components/cubeMenu/CubeMenu';
-import { MenuBottom, MenuLeft, MenuRight, MenuText, MenuTop, PageContainer } from '../styles/pages.sc';
+import {
+  MenuBottom,
+  MenuLeft,
+  MenuRight,
+  MenuText,
+  MenuTop,
+  MobileImage,
+  PageContainer,
+} from '../styles/pages.sc';
 import { navigate } from '@reach/router';
-import { FiBox, FiUser, FiFile, FiAward } from 'react-icons/fi';
+import { FiBox, FiUser, FiFile } from 'react-icons/fi';
+import { IoLogoGithub, IoLogoTwitter, IoLogoLinkedin } from 'react-icons/io';
 import LayoutBackground from '../components/layoutBackground';
+import { AvatarImage } from '../components/header/header.sc';
 
-import github from '../images/github_new.svg';
-import linkedIn from '../images/linked_new.svg';
-import twitter from '../images/twitter_new.svg';
-import { LightIconImg, LinkImg } from '../components/header/header.sc';
-
-export const SELECT_ANIMATION_TIME = 2400;
+export const SELECT_ANIMATION_TIME = 1700;
 
 export const socialIcons = ['linkedIn', 'twitter', 'github'];
 
 export const iconsObj = {
-  linkedIn: linkedIn,
-  twitter: twitter,
-  github: github,
+  linkedIn: { icon: IoLogoLinkedin, link: 'https://www.linkedin.com/in/lorenz-wei%C3%9F-032689165/' },
+  twitter: { icon: IoLogoTwitter, link: 'https://twitter.com/lorenzweisz' },
+  github: { icon: IoLogoGithub, link: 'https://github.com/lowe1111' },
 };
 
 const StartPage = () => {
@@ -26,9 +31,13 @@ const StartPage = () => {
   const select = (loc) => {
     console.log('select');
     setIsSelected(true);
-    setTimeout(() => {
+    if (window.innerWidth < 800) {
       navigate(loc);
-    }, SELECT_ANIMATION_TIME);
+    } else {
+      setTimeout(() => {
+        navigate(loc);
+      }, SELECT_ANIMATION_TIME);
+    }
   };
 
   const [hovered, setHovered] = useState(null);
@@ -44,6 +53,9 @@ const StartPage = () => {
   return (
     <LayoutBackground>
       <PageContainer>
+        <MobileImage>
+          <AvatarImage src="https://picsum.photos/200" />
+        </MobileImage>
         <MenuTop>
           <FiUser />
           <div onClick={() => select('/landing')}>
@@ -66,7 +78,9 @@ const StartPage = () => {
           <MenuText>
             {socialIcons.map((icon) => (
               <div key={icon} onMouseEnter={() => setThisHovers(icon)} onMouseLeave={resetHovered}>
-                <LightIconImg src={iconsObj[icon]} />
+                <a href={iconsObj[icon].link} target="_blank" rel="noopener noreferrer">
+                  {iconsObj[icon].icon()}
+                </a>
               </div>
             ))}
           </MenuText>

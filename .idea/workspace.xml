@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b2e001e-3ea2-4f6f-9b7a-b3e47c23c544" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/header.sc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.sc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Github.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/LinkedIn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Name.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Spotify.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/github_new.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/google_new.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/icons8-twitter-filled (1).svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/linked_new.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/spotify_new.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/twitter_new.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/start.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/pages.sc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pages.sc.js" afterDir="false" />
     </list>
@@ -26,19 +39,14 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/header/header.sc.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="395">
-                  <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+                <state relative-caret-position="307">
+                  <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/images/twitter.png">
-              <provider selected="true" editor-type-id="images" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/images/twitter_new.svg">
+            <entry file="file://$PROJECT_DIR$/src/images/avatar.JPG">
               <provider selected="true" editor-type-id="images" />
             </entry>
           </file>
@@ -46,7 +54,7 @@
             <entry file="file://$PROJECT_DIR$/src/components/layout.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="447">
-                  <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+                  <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -55,19 +63,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/pages/landing.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="132">
-                  <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/pages/start.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="441">
-                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+                <state relative-caret-position="264">
+                  <caret line="60" column="39" lean-forward="true" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
                   </folding>
@@ -76,15 +75,31 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/images/github_new.svg">
-              <provider selected="true" editor-type-id="images" />
+            <entry file="file://$PROJECT_DIR$/ideas.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SPLIT">
+                  <first_editor relative-caret-position="110">
+                    <caret line="5" selection-start-line="5" selection-end-line="5" />
+                  </first_editor>
+                  <second_editor />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/styles/pages.sc.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="593">
+                  <caret line="93" column="19" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
+                </state>
+              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/header/Header.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="307">
-                  <caret line="14" column="120" lean-forward="true" selection-start-line="14" selection-start-column="96" selection-end-line="14" selection-end-column="120" />
+                <state relative-caret-position="154">
+                  <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -93,19 +108,13 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/pages/index.js">
+            <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="154">
-                  <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/styles/pages.sc.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="371">
-                  <caret line="114" column="39" lean-forward="true" selection-start-line="114" selection-start-column="39" selection-end-line="114" selection-end-column="39" />
+                <state relative-caret-position="635">
+                  <caret line="136" column="11" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="11" />
+                  <folding>
+                    <element signature="e#0#59#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -123,23 +132,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="619">
-                  <caret line="99" column="15" lean-forward="true" selection-start-line="99" selection-start-column="15" selection-end-line="99" selection-end-column="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="487">
-                  <caret line="127" column="23" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
-                  <folding>
-                    <element signature="e#0#59#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="281">
+                  <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="33" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -157,7 +154,31 @@
             <entry file="file://$PROJECT_DIR$/src/styles/pages.sc.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="418">
-                  <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+                  <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/header/Header.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="198">
+                  <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="514">
+                  <caret line="101" column="14" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="61" />
+                  <folding>
+                    <element signature="e#0#59#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -183,7 +204,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/pages/page-2.js" />
         <option value="$PROJECT_DIR$/src/posts/experience.md" />
-        <option value="$PROJECT_DIR$/src/components/header/Header.jsx" />
         <option value="$PROJECT_DIR$/src/components/tabs/Tabs.jsx" />
         <option value="$PROJECT_DIR$/src/pages/dev.js" />
         <option value="$PROJECT_DIR$/src/pages/landing.js" />
@@ -199,19 +219,20 @@
         <option value="$PROJECT_DIR$/src/components/layout.js" />
         <option value="$PROJECT_DIR$/src/components/layoutBackground.js" />
         <option value="$PROJECT_DIR$/src/pages/index.js" />
-        <option value="$PROJECT_DIR$/src/styles/pages.sc.js" />
-        <option value="$PROJECT_DIR$/src/pages/start.js" />
+        <option value="$PROJECT_DIR$/src/components/header/Header.jsx" />
         <option value="$PROJECT_DIR$/src/components/header/header.sc.js" />
-        <option value="$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js" />
         <option value="$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx" />
+        <option value="$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js" />
+        <option value="$PROJECT_DIR$/src/pages/start.js" />
+        <option value="$PROJECT_DIR$/src/styles/pages.sc.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1687" />
-    <option name="y" value="117" />
-    <option name="width" value="1440" />
-    <option name="height" value="812" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1476" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="976" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -315,15 +336,15 @@
       <workItem from="1568039820330" duration="17000" />
       <workItem from="1569240277784" duration="2644000" />
       <workItem from="1569249121554" duration="3557000" />
-      <workItem from="1569316899356" duration="16558000" />
+      <workItem from="1569316899356" duration="22489000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38171000" />
+    <option name="totallyTimeSpent" value="44102000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="23" width="1920" height="976" extended-state="6" />
+    <frame x="1476" y="23" width="1920" height="976" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15228967" />
@@ -362,9 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/Github.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/animation_section/AnimationSection.jsx" />
     <entry file="file://$PROJECT_DIR$/src/components/animation_section/animationSection.sc.js" />
     <entry file="file://$PROJECT_DIR$/src/images/google_new.svg">
@@ -380,9 +398,6 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/images/linked_new.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/avatar.JPG">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/footer/Footer.jsx">
@@ -413,9 +428,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/trianglify/lib/pattern.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/trianglify/lib/trianglify.js" />
-    <entry file="file://$PROJECT_DIR$/src/images/Name.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/page-2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -550,16 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ideas.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="110">
-            <caret line="5" selection-start-line="5" selection-end-line="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/layoutBackground.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -591,73 +593,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/pages.sc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/header/Header.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="14" column="120" lean-forward="true" selection-start-line="14" selection-start-column="96" selection-end-line="14" selection-end-column="120" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/images/twitter.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/images/twitter_new.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/github_new.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/header/header.sc.js">
+    <entry file="file://$PROJECT_DIR$/src/components/layout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        <state relative-caret-position="447">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/start.js">
+    <entry file="file://$PROJECT_DIR$/src/images/avatar.JPG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/Github.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/github_new.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/Name.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideas.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="110">
+            <caret line="5" selection-start-line="5" selection-end-line="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/header/Header.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="154">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/header/header.sc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="136" column="11" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="99" column="15" lean-forward="true" selection-start-line="99" selection-start-column="15" selection-end-line="99" selection-end-column="15" />
+        <state relative-caret-position="281">
+          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="33" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx">
+    <entry file="file://$PROJECT_DIR$/src/pages/start.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="127" column="23" selection-start-line="127" selection-start-column="23" selection-end-line="127" selection-end-column="23" />
+        <state relative-caret-position="264">
+          <caret line="60" column="39" lean-forward="true" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
           <folding>
-            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/pages.sc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="93" column="19" selection-start-line="93" selection-start-column="19" selection-end-line="93" selection-end-column="19" />
         </state>
       </provider>
     </entry>

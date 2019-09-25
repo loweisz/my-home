@@ -18,29 +18,17 @@ export const SocialSection = styled.div`
   margin: 20px 40px;
 `;
 
-export const LinkImg = styled.img`
-  height: 30px;
-  width: 30px;
-  margin: 10px;
-  padding: 5px;
-  &:hover {
-    background-color: #e6e6e6;
+export const LinkContainer = styled.div`
+  a {
+    color: black;
+    font-size: 35px;
+    margin: 10px;
+
+    &:hover {
+      color: rgba(55, 3, 0, 1);
+    }
   }
 `;
-
-export const LightIconImg = styled.img`
-  height: 60px;
-  width: 60px;
-  margin: 10px;
-  padding: 5px;
-  color: white;
-  svg {
-    fill: white;
-    stroke: white;
-  }
-`;
-
-export const LinkContainer = styled.div``;
 
 export const Title = styled.h1`
   font-size: 40px;

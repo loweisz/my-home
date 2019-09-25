@@ -7,10 +7,12 @@ import {
   FaceLeft,
   FaceRight,
   FaceTop,
+  Greetings,
   JumpItem,
   Wrapper,
 } from './cubeMenu.styles';
 import { socialIcons } from '../../pages/start';
+import { AvatarImage, ImageContainer } from '../header/header.sc';
 
 function CubeMenu(props) {
   const wrapperRef = useRef();
@@ -94,32 +96,31 @@ function CubeMenu(props) {
           transition: rotateY === '0' && rotateX === '0' ? 'all 1s ease' : 'inherit',
         }}
       >
-        <FaceFront>
-          <div>
-            {!hideText && (
-              <span>Welcome to my Page! My Name is Lorenz. I'm a web developer located in Berlin</span>
-            )}
-          </div>
+        <FaceFront darkColor={hideText}>
+          {!hideText && (
+            <Greetings>
+              <AvatarImage src="https://picsum.photos/200" />
+              <span>
+                Welcome to my Page!
+                <br /> <br /> My Name is Lorenz. I'm a web developer located in Berlin
+              </span>
+            </Greetings>
+          )}
         </FaceFront>
         <FaceBack>
-          <div>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, labore et dolore magna aliquyam erat, sed
-            diam voluptua.
-          </div>
+          <div />
         </FaceBack>
         <FaceRight>
           <div>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr labore et dolore magna aliquyam erat, sed
-            diam voluptua. At vero eos et accusa
+            I try to write some articles from time to time. <br />
+            <br /> If you are interested you can find them here.
           </div>
         </FaceRight>
         <FaceLeft>
-          <div>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-          </div>
+          <div>All project I have worked on. Private and company projects</div>
         </FaceLeft>
         <FaceTop>
-          <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy </div>
+          <div>Currently I am a Frontend Engineer at Loopline Systems </div>
         </FaceTop>
         <FaceBottom>
           <div>
