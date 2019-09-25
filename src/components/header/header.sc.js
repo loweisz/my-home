@@ -9,6 +9,10 @@ export const InfoHeader = styled.div`
   background-color: white;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    padding: 10px 0 40px 0;
+  }
 `;
 
 export const SocialSection = styled.div`
@@ -37,6 +41,9 @@ export const Title = styled.h1`
 
 export const HeaderSection = styled.div`
   width: 33%;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const AvatarImage = styled.img`
@@ -53,4 +60,8 @@ export const ImageContainer = styled.div`
   height: 40px;
   width: 40px;
   left: 50%;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    left: auto;
+  }
 `;

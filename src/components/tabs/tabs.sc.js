@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const slideIn = keyframes`
   from {
@@ -7,7 +7,7 @@ const slideIn = keyframes`
   to {
     margin-top: 0;
   }
-`
+`;
 
 export const InfoTabBar = styled.div`
   display: flex;
@@ -21,7 +21,10 @@ export const InfoTabBar = styled.div`
 
 export const TabSection = styled.div`
   width: 100%;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255, 255, 255, 0.6);
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const Tab = styled.div`
@@ -41,7 +44,7 @@ export const Tab = styled.div`
   transition: all 200ms ease;
   &:hover {
     text-decoration: underline;
-    background-color: rgba(55,3,0, 0.5);
+    background-color: rgba(55, 3, 0, 0.5);
     color: white;
   }
-`
+`;
