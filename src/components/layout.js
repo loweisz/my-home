@@ -12,11 +12,13 @@ const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-
   position: relative;
 `;
 
 const TopSection = styled.header`
+  @media screen and (max-width: 800px) {
+    position: initial;
+  }
   position: fixed;
   width: 100vw;
 `;
