@@ -1,11 +1,15 @@
 import React from 'react';
 
-import { AvatarImage, HeaderSection, ImageContainer, LinkContainer, Title } from './header.sc';
+import { AvatarImage, HeaderSection, ImageContainer, LinkContainer, Mobile, Title } from './header.sc';
 import { InfoHeader } from './header.sc';
 import { iconsObj } from '../../pages/start';
+import BubbleBurgerMenu from '../bubbleBurgerMenu/BubbleBurgerMenu';
 
 const Header = () => (
   <InfoHeader>
+    <Mobile>
+      <BubbleBurgerMenu />
+    </Mobile>
     <HeaderSection>
       <LinkContainer>
         {Object.values(iconsObj).map((obj) => (
@@ -16,7 +20,7 @@ const Header = () => (
       </LinkContainer>
     </HeaderSection>
     <HeaderSection>
-      <Title>**REPLACE**</Title>
+      <Title>Lorenz Weiß</Title>
     </HeaderSection>
     <HeaderSection>
       <ImageContainer>

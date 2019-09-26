@@ -25,6 +25,10 @@ const TopSection = styled.header`
 
 const BodySection = styled.main`
   margin-top: 120px;
+  @media screen and (max-width: 800px) {
+    margin-top: 20px;
+    padding: 40px;
+  }
 `;
 
 const Wave = styled.div`

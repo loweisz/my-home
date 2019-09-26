@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const Mobile = styled.div`
+  display: none;
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+`;
+
 export const InfoHeader = styled.div`
   z-index: 1;
   width: 100%;
