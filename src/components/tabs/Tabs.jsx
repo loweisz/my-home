@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import * as SC from './tabs.sc';
 
 const Tabs = (props) => (
-    <SC.TabSection>
+    <SC.TabSection additionalOpacity={props.additionalOpacity}>
         <SC.InfoTabBar>
             <Link to={'/landing'}>
                 <SC.Tab color={props.color} > ONE </SC.Tab>

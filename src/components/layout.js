@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -43,6 +43,23 @@ const Wave = styled.div`
 `;
 
 const Layout = ({ children }) => {
+  useEffect(() => {
+    document.addEventListener('scroll', scrollFunc);
+    return () => {
+      document.removeEventListener('scroll', scrollFunc);
+    }
+  }, [])
+  
+  const [offset, setOffset] = useState(window.pageYOffset)
+  
+  const scrollFunc = (e) => {
+    if (window.pageYOffset <= 55 * 2) {
+      setOffset(window.pageYOffset / 2);
+    } else {
+      setOffset(55);
+    }
+  };
+  
   return (
     <LayoutBackground>
       <Wave>
@@ -55,9 +72,9 @@ const Layout = ({ children }) => {
         </svg>
       </Wave>
       <LayoutWrapper>
-        <TopSection>
-          <Header />
-          <Tabs color={'#ba7200'} />
+        <TopSection style={{ marginTop: `-${offset}px`}}>
+          <Header offset={offset} />
+          <Tabs additionalOpacity={((offset % 56)/55) * 0.4} color={'#ba7200'} />
         </TopSection>
         <BodySection>{children}</BodySection>
       </LayoutWrapper>

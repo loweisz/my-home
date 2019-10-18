@@ -56,8 +56,6 @@ export const HeaderSection = styled.div`
 export const AvatarImage = styled.img`
   background-color: red;
   border-radius: 60%;
-  height: 130px;
-  width: 130px;
   border: 2px solid white;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 `;

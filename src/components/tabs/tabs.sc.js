@@ -21,7 +21,7 @@ export const InfoTabBar = styled.div`
 
 export const TabSection = styled.div`
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, ${({ additionalOpacity }) => 0.6 + additionalOpacity});
   @media screen and (max-width: 800px) {
     display: none;
   }
