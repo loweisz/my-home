@@ -42,19 +42,23 @@ const Wave = styled.div`
   justify-content: flex-end;
 `;
 
+const hasWindow = typeof window !== 'undefined';
+
 const Layout = ({ children }) => {
   useEffect(() => {
     document.addEventListener('scroll', scrollFunc);
     return () => {
       document.removeEventListener('scroll', scrollFunc);
     }
-  }, [])
+  }, []);
   
-  const [offset, setOffset] = useState(window.pageYOffset)
+  const pYOffset = hasWindow ? window.pageYOffset : null;
+  
+  const [offset, setOffset] = useState(pYOffset);
   
   const scrollFunc = (e) => {
-    if (window.pageYOffset <= 55 * 2) {
-      setOffset(window.pageYOffset / 2);
+    if (pYOffset <= 55 * 2) {
+      setOffset(pYOffset / 2);
     } else {
       setOffset(55);
     }
