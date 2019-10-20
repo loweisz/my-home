@@ -52,13 +52,13 @@ const Layout = ({ children }) => {
     }
   }, []);
   
-  const pYOffset = hasWindow ? window.pageYOffset : null;
-  
-  const [offset, setOffset] = useState(pYOffset);
+  const [offset, setOffset] = useState(Math.abs(document.body.getBoundingClientRect().top));
   
   const scrollFunc = (e) => {
-    if (pYOffset <= 55 * 2) {
-      setOffset(pYOffset / 2);
+    const internOffset = Math.abs(document.body.getBoundingClientRect().top);
+    console.log(internOffset);
+    if (internOffset <= 55 * 2) {
+      setOffset(internOffset / 2);
     } else {
       setOffset(55);
     }
