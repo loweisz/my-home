@@ -42,25 +42,22 @@ const Wave = styled.div`
   justify-content: flex-end;
 `;
 
-const hasWindow = typeof window !== 'undefined';
-
 const Layout = ({ children }) => {
   useEffect(() => {
-    document.addEventListener('scroll', scrollFunc);
+    window.document.addEventListener('scroll', scrollFunc);
     return () => {
-      document.removeEventListener('scroll', scrollFunc);
+      window.document.removeEventListener('scroll', scrollFunc);
     }
   }, []);
   
-  const [offset, setOffset] = useState(Math.abs(document.body.getBoundingClientRect().top));
+  const [offset, setOffset] = useState(0);
   
   const scrollFunc = (e) => {
-    const internOffset = Math.abs(document.body.getBoundingClientRect().top);
-    console.log(internOffset);
+    const internOffset = Math.abs(e.target.body.getBoundingClientRect().top);
     if (internOffset <= 55 * 2) {
-      setOffset(internOffset / 2);
+     setOffset(internOffset / 2);
     } else {
-      setOffset(55);
+     setOffset(55);
     }
   };
   
