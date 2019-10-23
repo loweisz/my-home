@@ -83,51 +83,55 @@ const StartPage = () => {
             <img src={Avatar} />
           </AvatarImage>
         </MobileImage>
-        <MenuTop>
-          <Blob onClick={() => select('/dev')}>
-            <Text>
-              <FiUser />
-              <div>
-                <MenuText>Jobs</MenuText>
-              </div>
-            </Text>
-            <BlobOneStyled isSelected={isSelected === '/dev'} />
-          </Blob>
-        </MenuTop>
-        <MenuLeft>
-          <Blob onClick={() => select('/landing')}>
-            <Text>
-              <FiFile />
-              <div>
-                <MenuText>Mind</MenuText>
-              </div>
-            </Text>
-            <BlobTwoStyled isSelected={isSelected === '/landing'} />
-          </Blob>
-        </MenuLeft>
-        <MenuRight>
-          <Blob onClick={() => select('/projects')}>
-            <Text>
-              <FiBox />
-              <div onClick={() => select('/projects')}>
-                <MenuText>Projects</MenuText>
-              </div>
-            </Text>
-            <BlobThreeStyled isSelected={isSelected === '/projects'} />
-          </Blob>
-        </MenuRight>
-        <MenuBottom>
-          <MenuText>
-            {socialIcons.map((icon) => (
-              <SocialIcon key={icon} onMouseEnter={() => setThisHovers(icon)} onMouseLeave={resetHovered}>
-                <a href={iconsObj[icon].link} target="_blank" rel="noopener noreferrer">
-                  {iconsObj[icon].icon()}
-                </a>
-              </SocialIcon>
-            ))}
-          </MenuText>
-        </MenuBottom>
-        {!isNavigated && <CubeMenu hovered={hovered} isSelected={!!isSelected} />}
+        {!isNavigated && (
+          <>
+            <MenuTop>
+              <Blob onClick={() => select('/dev')}>
+                <Text>
+                  <FiUser />
+                  <div>
+                    <MenuText>Jobs</MenuText>
+                  </div>
+                </Text>
+                <BlobOneStyled isSelected={isSelected === '/dev'} />
+              </Blob>
+            </MenuTop>
+            <MenuLeft>
+              <Blob onClick={() => select('/landing')}>
+                <Text>
+                  <FiFile />
+                  <div>
+                    <MenuText>Mind</MenuText>
+                  </div>
+                </Text>
+                <BlobTwoStyled isSelected={isSelected === '/landing'} />
+              </Blob>
+            </MenuLeft>
+            <MenuRight>
+              <Blob onClick={() => select('/projects')}>
+                <Text>
+                  <FiBox />
+                  <div onClick={() => select('/projects')}>
+                    <MenuText>Projects</MenuText>
+                  </div>
+                </Text>
+                <BlobThreeStyled isSelected={isSelected === '/projects'} />
+              </Blob>
+            </MenuRight>
+            <MenuBottom>
+              <MenuText>
+                {socialIcons.map((icon) => (
+                  <SocialIcon key={icon} onMouseEnter={() => setThisHovers(icon)} onMouseLeave={resetHovered}>
+                    <a href={iconsObj[icon].link} target="_blank" rel="noopener noreferrer">
+                      {iconsObj[icon].icon()}
+                    </a>
+                  </SocialIcon>
+                ))}
+              </MenuText>
+            </MenuBottom>
+            <CubeMenu hovered={hovered} isSelected={!!isSelected} />
+          </>
+        )}
         {/*{Array.from(Array(12).keys()).map((k) => (*/}
         {/*  <RandomCube key={k} index={k} />*/}
         {/*))}*/}
