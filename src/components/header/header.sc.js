@@ -47,6 +47,10 @@ export const LinkContainer = styled.div`
 export const Title = styled.h1`
   font-size: 50px;
   margin: 0;
+  @media screen and (max-width: 800px) {
+    font-size: 30px;
+    margin-top: 20px;
+  }
 `;
 
 export const HeaderSection = styled.div`
@@ -75,5 +79,6 @@ export const ImageContainer = styled.div`
   @media screen and (max-width: 800px) {
     width: 100%;
     left: auto;
+    margin-top: 20px;
   }
 `;

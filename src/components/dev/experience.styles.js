@@ -15,6 +15,8 @@ export const ExperienceBox = styled.div`
   font-size: 20px;
   line-height: 50px;
   color: #222;
+  @media screen and (max-width: 800px) {
+  }
 `;
 
 export const Company = styled.a`
@@ -44,6 +46,9 @@ export const SubInfo = styled.div`
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export const DataText = styled.div`
