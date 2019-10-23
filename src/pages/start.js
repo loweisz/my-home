@@ -21,6 +21,7 @@ import { FiBox, FiUser, FiFile } from 'react-icons/fi';
 import { IoLogoGithub, IoLogoTwitter, IoLogoLinkedin } from 'react-icons/io';
 import LayoutBackground from '../components/layoutBackground';
 import { AvatarImage } from '../components/header/header.sc';
+import Avatar from '../images/data/avatar.png';
 
 // import RandomCube from '../components/cubeMenu/RandomCube';
 
@@ -69,7 +70,14 @@ const StartPage = () => {
     <LayoutBackground>
       <PageContainer>
         <MobileImage>
-          <AvatarImage src="https://picsum.photos/200" />
+          <AvatarImage
+            style={{
+              height: '130px',
+              width: '130px',
+            }}
+          >
+            <img src={Avatar} />
+          </AvatarImage>
         </MobileImage>
         <MenuTop>
           <Blob onClick={() => select('/dev')}>

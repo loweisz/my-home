@@ -8,25 +8,25 @@ import { moveFadeIn, opacIn } from './animations';
 export const BlobOneStyled = styled(BlobOne)`
   position: absolute;
   height: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
-  width: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
+  width: ${({ isSelected }) => (isSelected ? ' 7000px' : '800px')};
   top: ${({ isSelected }) => (isSelected ? '-2500px' : '-540px')};
-  transition: ${({ isSelected }) => (isSelected ? 'all 700ms ease-in-out' : 'all 200ms ease-in-out')};
+  transition: ${({ isSelected }) => (isSelected ? 'all 1000ms ease-in-out' : 'all 200ms ease-in-out')};
 `;
 
 export const BlobTwoStyled = styled(BlobTwo)`
   position: absolute;
   height: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
-  width: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
+  width: ${({ isSelected }) => (isSelected ? ' 7000px' : '800px')};
   left: ${({ isSelected }) => (isSelected ? '-2500px' : '-570px')};
-  transition: ${({ isSelected }) => (isSelected ? 'all 700ms ease-in-out' : 'all 200ms ease-in-out')};
+  transition: ${({ isSelected }) => (isSelected ? 'all 1000ms ease-in-out' : 'all 200ms ease-in-out')};
 `;
 
 export const BlobThreeStyled = styled(BlobThree)`
   position: absolute;
   height: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
-  width: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
+  width: ${({ isSelected }) => (isSelected ? ' 7000px' : '800px')};
   right: ${({ isSelected }) => (isSelected ? '-2500px' : '-500px')};
-  transition: ${({ isSelected }) => (isSelected ? 'all 700ms ease-in-out' : 'all 200ms ease-in-out')};
+  transition: ${({ isSelected }) => (isSelected ? 'all 1000ms ease-in-out' : 'all 200ms ease-in-out')};
 `;
 
 // export const BlobFourStyled = styled(BlobFour)`

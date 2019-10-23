@@ -47,8 +47,10 @@ export const LinkContainer = styled.div`
 export const Title = styled.h1`
   font-size: 50px;
   margin: 0;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1280px) {
     font-size: 30px;
+  }
+  @media screen and (max-width: 800px) {
     margin-top: 20px;
   }
 `;
@@ -57,6 +59,8 @@ export const HeaderSection = styled.div`
   width: 33%;
   @media screen and (max-width: 800px) {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
   a {
     color: ${({ theme }) => theme.white};
@@ -76,14 +80,16 @@ export const AvatarImage = styled.div`
 `;
 
 export const ImageContainer = styled.div`
+  flex-grow: 1;
   position: relative;
   margin-top: -35px;
   height: 40px;
   width: 40px;
   left: 50%;
   @media screen and (max-width: 800px) {
-    width: 100%;
     left: auto;
     margin-top: 20px;
+    flex-grow: 0;
+    width: 135px;
   }
 `;

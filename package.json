@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "homepage-lorenz-weiss",
+  "description": "Homepage Lorenz Weiss",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Lorenz Weiß <lorenz.weis@gmail.com>",
   "devDependecies": {
     "prop-types": "^15.7.2"
   },
@@ -43,6 +43,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/lowe1111/my-home"
   }
 }
