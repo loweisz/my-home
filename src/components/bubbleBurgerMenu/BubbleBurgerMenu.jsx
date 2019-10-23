@@ -6,11 +6,17 @@ function BubbleBurgerMenu() {
   const [selected, setSelected] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('mousedown', deSelect);
+    window.addEventListener('mousedown', bodyClick);
     return () => {
-      window.removeEventListener('mousedown', deSelect);
+      window.removeEventListener('mousedown', bodyClick);
     };
   }, []);
+
+  const bodyClick = (e) => {
+    if (e.target.nodeName !== 'A') {
+      deSelect();
+    }
+  };
 
   const select = () => {
     setSelected((s) => !s);
