@@ -8,4 +8,4 @@
 + building your own Redux with IndexedDB
 + creating a mouse followed cube (very mathematical)
 + article about the emoji image generator
-
++ creating a global click tracker

@@ -1,18 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
-import {
-  Cube,
-  FaceBack,
-  FaceBottom,
-  FaceFront,
-  FaceLeft,
-  FaceRight,
-  FaceTop,
-  Greetings,
-  JumpItem,
-  Wrapper,
-} from './cubeMenu.styles';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { CubeContainer, Greetings, JumpItem } from './cubeMenu.styles';
 import { socialIcons } from '../../pages/start';
-import { AvatarImage, ImageContainer } from '../header/header.sc';
+import { AvatarImage } from '../header/header.sc';
+import CubeElement from './CubeElement';
+// import RandomCube from './RandomCube';
 
 function CubeMenu(props) {
   const wrapperRef = useRef();
@@ -87,50 +78,58 @@ function CubeMenu(props) {
     [props.isSelected],
   );
 
+  const faces = useMemo(
+    () => ({
+      right: (
+        <div>
+          All my ideas and thoughts about tech, coding and everything I have in mind <br />
+          <br /> If you are interested you can find them here.
+        </div>
+      ),
+      left: (
+        <div>
+          All the projects and projects I have worked on or, incidentally, have implemented as a side project.
+        </div>
+      ),
+      bottom: (
+        <div>
+          {props.hovered
+            ? socialIcons.map((icon) => icon === props.hovered && <JumpItem key={icon}>{icon}</JumpItem>)
+            : 'Social'}
+        </div>
+      ),
+      front: !hideText && (
+        <Greetings>
+          <AvatarImage
+            style={{
+              height: '130px',
+              width: '130px',
+            }}
+            src="https://picsum.photos/200"
+          />
+          <span>
+            Hi there 👋
+            <br /> <span>I'm Lorenz.</span>
+            <br />I write code and think about stuff
+          </span>
+        </Greetings>
+      ),
+      top: <div>Currently I'm working at Loopline Systems</div>,
+    }),
+    [props.hovered, hideText],
+  );
+
   return (
-    <Wrapper ref={wrapperRef}>
-      <Cube
+    <CubeContainer>
+      <CubeElement
+        wrapperRef={wrapperRef}
+        rotateX={rotateX}
+        rotateY={rotateY}
+        hideText={hideText}
         isSelected={props.isSelected}
-        style={{
-          transform: !props.isSelected && `translateZ(-250px) rotateY(${rotateX}) rotateX(${rotateY})`,
-          transition: rotateY === '0' && rotateX === '0' ? 'all 1s ease' : 'inherit',
-        }}
-      >
-        <FaceFront darkColor={hideText}>
-          {!hideText && (
-            <Greetings>
-              <AvatarImage src="https://picsum.photos/200" />
-              <span>
-                Welcome to my Page!
-                <br /> <br /> My Name is Lorenz. I'm a web developer located in Berlin
-              </span>
-            </Greetings>
-          )}
-        </FaceFront>
-        <FaceBack>
-          <div />
-        </FaceBack>
-        <FaceRight>
-          <div>
-            I try to write some articles from time to time. <br />
-            <br /> If you are interested you can find them here.
-          </div>
-        </FaceRight>
-        <FaceLeft>
-          <div>All project I have worked on. Private and company projects</div>
-        </FaceLeft>
-        <FaceTop>
-          <div>Currently I am a Frontend Engineer at Loopline Systems </div>
-        </FaceTop>
-        <FaceBottom>
-          <div>
-            {props.hovered
-              ? socialIcons.map((icon) => icon === props.hovered && <JumpItem key={icon}>{icon}</JumpItem>)
-              : 'Social'}
-          </div>
-        </FaceBottom>
-      </Cube>
-    </Wrapper>
+        faces={faces}
+      />
+    </CubeContainer>
   );
 }
 

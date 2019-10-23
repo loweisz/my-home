@@ -1,15 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
 import './layout.css';
+import * as theme from '../styles/colors';
 
 const Background = styled.div`
-  background-color: rgba(55, 3, 0, 1);
+  background-color: ${({ theme }) => theme.darkRed};
 `;
 
 const LayoutBackground = ({ children }) => {
-  return <Background>{children}</Background>;
+  return (
+    <ThemeProvider theme={theme}>
+      <Background>{children}</Background>
+    </ThemeProvider>
+  );
 };
 
 LayoutBackground.propTypes = {

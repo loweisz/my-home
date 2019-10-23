@@ -12,6 +12,9 @@ const slideIn = keyframes`
 export const InfoTabBar = styled.div`
   display: flex;
   justify-content: center;
+  letter-spacing: 0;
+  font-weight: 900;
+ 
   // animation: ${slideIn} 150ms ease-in;
   > a {
     margin: 0 20px;

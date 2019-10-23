@@ -1,17 +1,8 @@
 import React, { useState } from 'react';
-import {
-  Bar,
-  BreadOne,
-  BreadTwo,
-  Bubble,
-  BurgerMenu,
-  Patty,
-  SubMenu,
-  Wrapper,
-} from './bubbleBurgerMenu.styles';
+import { BreadOne, BreadTwo, Bubble, BurgerMenu, Patty, SubMenu, Wrapper } from './bubbleBurgerMenu.styles';
 import { Link } from '@reach/router';
 
-function BubbleBurgerMenu(props) {
+function BubbleBurgerMenu() {
   const [selected, setSelected] = useState(false);
   const select = () => {
     setSelected((s) => !s);
@@ -24,8 +15,8 @@ function BubbleBurgerMenu(props) {
       {selected && (
         <SubMenu onClick={deSelect}>
           <Link to="/landing/">Developer</Link>
-          <Link to="/landing/">Blog</Link>
-          <Link to="/landing/">Whatever</Link>
+          <Link to="/projects/">Projects</Link>
+          <Link to="/dev/">Blog</Link>
         </SubMenu>
       )}
       <Bubble selected={selected} onClick={select}>

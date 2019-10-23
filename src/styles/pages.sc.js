@@ -1,4 +1,39 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import BlobOne from '../images/blobs/blob_one.svg';
+import BlobTwo from '../images/blobs/blob_two.svg';
+import BlobThree from '../images/blobs/blob_three.svg';
+import { moveFadeIn, opacIn } from './animations';
+// import BlobFour from '../images/blobs/blob_four.svg';
+
+export const BlobOneStyled = styled(BlobOne)`
+  position: absolute;
+  height: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
+  width: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
+  top: ${({ isSelected }) => (isSelected ? '-2500px' : '-540px')};
+  transition: ${({ isSelected }) => (isSelected ? 'all 700ms ease-in-out' : 'all 200ms ease-in-out')};
+`;
+
+export const BlobTwoStyled = styled(BlobTwo)`
+  position: absolute;
+  height: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
+  width: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
+  left: ${({ isSelected }) => (isSelected ? '-2500px' : '-570px')};
+  transition: ${({ isSelected }) => (isSelected ? 'all 700ms ease-in-out' : 'all 200ms ease-in-out')};
+`;
+
+export const BlobThreeStyled = styled(BlobThree)`
+  position: absolute;
+  height: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
+  width: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
+  right: ${({ isSelected }) => (isSelected ? '-2500px' : '-500px')};
+  transition: ${({ isSelected }) => (isSelected ? 'all 700ms ease-in-out' : 'all 200ms ease-in-out')};
+`;
+
+// export const BlobFourStyled = styled(BlobFour)`
+//   position: absolute;
+//   height: 400px;
+//   width: 400px;
+// `;
 
 export const InfoStarter = styled.div`
   width: 100%;
@@ -17,14 +52,7 @@ export const InfoStarter = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   width: 100%;
-`;
-
-const opacIn = keyframes`
-  from {
-    opacity: 0;
-  } to {
-    opacity: 1;
-  }
+  animation: ${moveFadeIn} 350ms ease-in;
 `;
 
 export const PageHeader = styled.h1`
@@ -64,7 +92,7 @@ export const HeaderText = styled.div`
 
 export const TextBlock = styled.div`
   max-width: 800px;
-  margin-top: 30px;
+  margin-top: 60px;
   color: white;
   text-align: start;
   font-size: 25px;
@@ -73,6 +101,11 @@ export const TextBlock = styled.div`
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  > span {
+    > a {
+      color: ${({ theme }) => theme.lightRed};
+    }
+  }
 `;
 
 export const PageContainer = styled.div`
@@ -81,11 +114,14 @@ export const PageContainer = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(55, 3, 0, 1);
+  z-index: 3;
+  background: radial-gradient(636px at 49.2% 48.3%, rgb(116, 3, 0) 0%, rgb(55, 3, 0) 90%);
+  overflow: hidden;
+  position: relative;
   @media screen and (max-width: 800px) {
     flex-direction: column;
     padding: 30px 0;
-    height: auto;
+    overflow: auto;
   }
 `;
 
@@ -94,13 +130,15 @@ export const MobileImage = styled.div`
   @media screen and (max-width: 800px) {
     display: block;
   }
+  > img {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 const Menu = styled.div`
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  z-index: 2;
   font-size: 50px;
   color: white;
   cursor: pointer;
@@ -113,11 +151,26 @@ const Menu = styled.div`
     text-decoration: none;
     margin-left: 20px;
   }
+
+  &.blob {
+    position: absolute;
+    svg {
+      height: 200px;
+      width: 200px;
+    }
+  }
 `;
 
 export const MenuTop = styled(Menu)`
   top: 50px;
   width: 100%;
+`;
+
+export const Text = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 `;
 
 export const MenuLeft = styled(Menu)`
@@ -133,8 +186,27 @@ export const MenuBottom = styled(Menu)`
   width: 100%;
 `;
 
+export const Blob = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: 800px) {
+    > svg {
+      display: none;
+    }
+  }
+  &:hover {
+    > svg {
+      transform: scale(1.1);
+    }
+  }
+`;
+
 export const MenuText = styled.span`
   display: flex;
+
+  justify-content: center;
 
   a {
     color: white;
@@ -142,7 +214,19 @@ export const MenuText = styled.span`
     padding-left: 10px;
     padding-right: 10px;
     &:hover {
-      color: #740300;
+      color: rgba(255, 255, 255, 0.6);
     }
   }
+`;
+
+export const SocialIcon = styled.div`
+  @media screen and (max-width: 800px) {
+    > a {
+      font-size: 40px;
+    }
+  }
+  &:hover {
+    transform: scale(1.25);
+  }
+  transition: all 200ms ease-in-out;
 `;

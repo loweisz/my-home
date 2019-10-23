@@ -10,12 +10,12 @@ const DevPage = (props) => {
     <Layout>
       <SC.Wrapper>
         <SC.InfoStarter>
-          <SC.PageHeader>Bla bla Replace me with a header</SC.PageHeader>
-          <SC.SubHeader>
-            the box, they are reserved for "client side" (components/pages) all my experiments with fragments
-            in gatsby-node.js resulted in build errors. A workaround is to write them yourself, if you're
-            willing take a look at the gatsby-tr
-          </SC.SubHeader>
+          <SC.PageHeader>All the companies I worked for:</SC.PageHeader>
+          {/*<SC.SubHeader>*/}
+          {/*  the box, they are reserved for "client side" (components/pages) all my experiments with fragments*/}
+          {/*  in gatsby-node.js resulted in build errors. A workaround is to write them yourself, if you're*/}
+          {/*  willing take a look at the gatsby-tr*/}
+          {/*</SC.SubHeader>*/}
           <SC.TextSection>
             <div>
               {props.data.allMarkdownRemark.edges.map((edge) => (
@@ -42,6 +42,7 @@ export const query = graphql`
             endDate
             company
             website
+            location
           }
           html
         }

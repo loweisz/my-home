@@ -2,6 +2,6 @@ import React from 'react';
 
 import Layout from '../components/layout';
 
-const SecondPage = () => <Layout />;
+const ProjectsPage = () => <Layout />;
 
-export default SecondPage;
+export default ProjectsPage;

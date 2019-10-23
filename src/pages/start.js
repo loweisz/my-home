@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import CubeMenu from '../components/cubeMenu/CubeMenu';
 import {
+  Blob,
+  BlobOneStyled,
+  BlobThreeStyled,
+  BlobTwoStyled,
   MenuBottom,
   MenuLeft,
   MenuRight,
@@ -8,12 +12,17 @@ import {
   MenuTop,
   MobileImage,
   PageContainer,
+  // RandomCubeContainer,
+  SocialIcon,
+  Text,
 } from '../styles/pages.sc';
 import { navigate } from '@reach/router';
 import { FiBox, FiUser, FiFile } from 'react-icons/fi';
 import { IoLogoGithub, IoLogoTwitter, IoLogoLinkedin } from 'react-icons/io';
 import LayoutBackground from '../components/layoutBackground';
 import { AvatarImage } from '../components/header/header.sc';
+
+// import RandomCube from '../components/cubeMenu/RandomCube';
 
 export const SELECT_ANIMATION_TIME = 1700;
 
@@ -26,7 +35,7 @@ export const iconsObj = {
 };
 
 const StartPage = () => {
-  const [isSelected, setIsSelected] = useState(false);
+  const [isSelected, setIsSelected] = useState(null);
 
   useEffect(() => {
     const css =
@@ -36,8 +45,7 @@ const StartPage = () => {
   }, []);
 
   const select = (loc) => {
-    console.log('select');
-    setIsSelected(true);
+    setIsSelected(loc);
     if (window.innerWidth < 800) {
       navigate(loc);
     } else {
@@ -64,35 +72,53 @@ const StartPage = () => {
           <AvatarImage src="https://picsum.photos/200" />
         </MobileImage>
         <MenuTop>
-          <FiUser />
-          <div onClick={() => select('/landing')}>
-            <MenuText>Developer</MenuText>
-          </div>
+          <Blob onClick={() => select('/dev')}>
+            <Text>
+              <FiUser />
+              <div>
+                <MenuText>Jobs</MenuText>
+              </div>
+            </Text>
+            <BlobOneStyled isSelected={isSelected === '/dev'} />
+          </Blob>
         </MenuTop>
         <MenuLeft>
-          <FiFile />
-          <div onClick={() => select('/landing')}>
-            <MenuText>Blog</MenuText>
-          </div>
+          <Blob onClick={() => select('/landing')}>
+            <Text>
+              <FiFile />
+              <div>
+                <MenuText>Mind</MenuText>
+              </div>
+            </Text>
+            <BlobTwoStyled isSelected={isSelected === '/landing'} />
+          </Blob>
         </MenuLeft>
         <MenuRight>
-          <FiBox />
-          <div onClick={() => select('/landing')}>
-            <MenuText>Projects</MenuText>
-          </div>
+          <Blob onClick={() => select('/projects')}>
+            <Text>
+              <FiBox />
+              <div onClick={() => select('/projects')}>
+                <MenuText>Projects</MenuText>
+              </div>
+            </Text>
+            <BlobThreeStyled isSelected={isSelected === '/projects'} />
+          </Blob>
         </MenuRight>
         <MenuBottom>
           <MenuText>
             {socialIcons.map((icon) => (
-              <div key={icon} onMouseEnter={() => setThisHovers(icon)} onMouseLeave={resetHovered}>
+              <SocialIcon key={icon} onMouseEnter={() => setThisHovers(icon)} onMouseLeave={resetHovered}>
                 <a href={iconsObj[icon].link} target="_blank" rel="noopener noreferrer">
                   {iconsObj[icon].icon()}
                 </a>
-              </div>
+              </SocialIcon>
             ))}
           </MenuText>
         </MenuBottom>
-        <CubeMenu hovered={hovered} isSelected={isSelected} />
+        <CubeMenu hovered={hovered} isSelected={!!isSelected} />
+        {/*{Array.from(Array(12).keys()).map((k) => (*/}
+        {/*  <RandomCube key={k} index={k} />*/}
+        {/*))}*/}
       </PageContainer>
     </LayoutBackground>
   );
