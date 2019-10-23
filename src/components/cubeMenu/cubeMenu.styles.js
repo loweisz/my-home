@@ -50,7 +50,7 @@ export const Cube = styled.div`
   height: 495px;
   position: relative;
   transform-style: preserve-3d;
-  animation: 1800ms;
+  animation: 1900ms;
   animation-timing-function: ${({ isSelected }) =>
     isSelected ? 'ease-in' : 'cubic-bezier(0, 0.94, 0.5, 1)'};
   animation-name: ${({ isSelected, automated }) =>
