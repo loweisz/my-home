@@ -64,10 +64,15 @@ export const HeaderSection = styled.div`
   }
 `;
 
-export const AvatarImage = styled.img`
-  background-color: red;
+export const AvatarImage = styled.div`
+  background-color: white;
   border-radius: 60%;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  border: 2px solid white;
+  > img {
+    width: 100%;
+  }
 `;
 
 export const ImageContainer = styled.div`

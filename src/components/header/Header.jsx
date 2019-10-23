@@ -5,6 +5,7 @@ import { InfoHeader } from './header.sc';
 import { iconsObj } from '../../pages/start';
 import BubbleBurgerMenu from '../bubbleBurgerMenu/BubbleBurgerMenu';
 import { Link } from 'gatsby';
+import Avatar from '../../images/data/avatar.png';
 
 const Header = (props) => {
   const percentageScrolled = (props.offset % 95) / 94;
@@ -36,8 +37,9 @@ const Header = (props) => {
               width: `${130 - percentageScrolled * 40}px`,
               marginTop: `${percentageScrolled * 100}px`,
             }}
-            src="https://picsum.photos/200"
-          />
+          >
+            <img src={Avatar} />
+          </AvatarImage>
         </ImageContainer>
       </HeaderSection>
     </InfoHeader>

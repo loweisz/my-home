@@ -72,7 +72,7 @@ export const CubeFace = styled.div`
   background: ${({ automated }) =>
     automated ? 'radial-gradient(500px at 49.2% 48.3%, #fff 0%, #740300 90%) !important' : 'inherit'};
   box-shadow: ${({ automated }) => (automated ? '0 0 101px -5px rgba(255, 255, 255, 0.75)' : 'none')};
-  div {
+  > div {
     padding: 40px;
   }
 `;
@@ -80,7 +80,7 @@ export const CubeFace = styled.div`
 export const Greetings = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   line-height: 70px;
   span {
     span {
@@ -89,16 +89,13 @@ export const Greetings = styled.div`
       color: ${({ theme }) => theme.white};
     }
   }
-  img {
-    margin-bottom: 50px;
-  }
 `;
 
 export const FaceFront = styled(CubeFace)`
   background: ${({ darkColor }) => (darkColor ? '#370300' : '#740300')};
   color: white;
   transform: rotateY(0deg) translateZ(250px);
-  div {
+  > div {
     padding: 20px;
   }
 `;

@@ -7,7 +7,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: `${__dirname}/src/images/`,
+          include: `${__dirname}/src/images/blobs`,
         },
       },
     },
@@ -27,6 +27,15 @@ module.exports = {
             resolve: 'gatsby-remark-prismjs',
             options: {
               inlineCodeMarker: '÷',
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+              rule: {
+                include: `${__dirname}/src/images/data`,
+              },
             },
           },
         ],

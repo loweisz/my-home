@@ -148,8 +148,11 @@ const Menu = styled.div`
     font-size: 40px;
   }
   div {
-    text-decoration: none;
     margin-left: 20px;
+    text-decoration: none;
+    @media screen and (max-width: 800px) {
+      margin-left: 0px;
+    }
   }
 
   &.blob {
@@ -171,6 +174,9 @@ export const Text = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 2;
+  > svg {
+    margin-right: 20px;
+  }
 `;
 
 export const MenuLeft = styled(Menu)`

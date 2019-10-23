@@ -3,6 +3,7 @@ import { CubeContainer, Greetings, JumpItem } from './cubeMenu.styles';
 import { socialIcons } from '../../pages/start';
 import { AvatarImage } from '../header/header.sc';
 import CubeElement from './CubeElement';
+import Avatar from '../../images/data/avatar.png';
 // import RandomCube from './RandomCube';
 
 function CubeMenu(props) {
@@ -104,9 +105,11 @@ function CubeMenu(props) {
             style={{
               height: '130px',
               width: '130px',
+              marginBottom: '-115px',
             }}
-            src="https://picsum.photos/200"
-          />
+          >
+            <img src={Avatar} />
+          </AvatarImage>
           <span>
             Hi there 👋
             <br /> <span>I'm Lorenz.</span>

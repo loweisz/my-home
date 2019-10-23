@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b2e001e-3ea2-4f6f-9b7a-b3e47c23c544" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/images/data/avatar.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/dev/experience.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dev/experience.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gatsby-config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cubeMenu/CubeMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cubeMenu/cubeMenu.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/header.sc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.sc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/avatar.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/data/avatar.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/pages.sc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/pages.sc.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,11 +42,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images/data" />
+      <recent name="$PROJECT_DIR$/src/images" />
       <recent name="$PROJECT_DIR$/src/images/blobs" />
       <recent name="$PROJECT_DIR$/ideas" />
       <recent name="$PROJECT_DIR$/src/posts/experience" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -80,7 +87,7 @@
       <workItem from="1571572416725" duration="2000" />
       <workItem from="1571573233858" duration="1468000" />
       <workItem from="1571660392017" duration="15385000" />
-      <workItem from="1571821718197" duration="9164000" />
+      <workItem from="1571821718197" duration="11033000" />
     </task>
     <servers />
   </component>
