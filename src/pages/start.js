@@ -25,7 +25,7 @@ import Avatar from '../images/data/avatar.png';
 
 // import RandomCube from '../components/cubeMenu/RandomCube';
 
-export const SELECT_ANIMATION_TIME = 1700;
+export const SELECT_ANIMATION_TIME = 1600;
 
 export const socialIcons = ['linkedIn', 'twitter', 'github'];
 
@@ -45,13 +45,17 @@ const StartPage = () => {
     console.log('%cHello Welcome to the console :)', css);
   }, []);
 
+  const [isNavigated, setIsNavigated] = useState(false);
+
   const select = (loc) => {
     setIsSelected(loc);
     if (window.innerWidth < 800) {
+      setIsNavigated(true);
       navigate(loc);
     } else {
       setTimeout(() => {
         navigate(loc);
+        setIsNavigated(true);
       }, SELECT_ANIMATION_TIME);
     }
   };
@@ -123,7 +127,7 @@ const StartPage = () => {
             ))}
           </MenuText>
         </MenuBottom>
-        <CubeMenu hovered={hovered} isSelected={!!isSelected} />
+        {!isNavigated && <CubeMenu hovered={hovered} isSelected={!!isSelected} />}
         {/*{Array.from(Array(12).keys()).map((k) => (*/}
         {/*  <RandomCube key={k} index={k} />*/}
         {/*))}*/}
