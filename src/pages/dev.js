@@ -33,7 +33,7 @@ export default DevPage;
 
 export const query = graphql`
   {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: { frontmatter: { type: { eq: "exp" } } }) {
       edges {
         node {
           frontmatter {
