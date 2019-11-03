@@ -1,10 +1,15 @@
 TODOS: 
 
-- create the other pages
-- create CV components
-- how to load data with Graphql
 - how to load pictures 
-- slide in animation
 - dark mode?!
+- clean up the code part of the articles
+- clean up links in blog posts
+- add tech stack to experience
+- clean up fade in animation
+- double check tracker post
+- BIO component check
+- add SEO?!
+- update the README
+- add abstract to the blog post
 
 - make the tabs and the footer global layout
