@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 
 import * as SC from '../styles/pages.sc';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Experience from '../components/dev/Experience';
 import { DataText, ExperienceBox } from '../components/dev/experience.styles';
 
@@ -12,6 +12,21 @@ const IndexPage = (props) => {
     <Layout>
       <SC.Wrapper>
         <SC.InfoStarter>
+        <SC.TextSection>
+            <SC.TextBlock>
+              <SC.HeaderText>Here are some of my recent ideas and thoughts:</SC.HeaderText>
+            </SC.TextBlock>
+          </SC.TextSection>
+          <SC.TextSection>
+            {props.data.allMarkdownRemark.edges.map(({ node }) => (
+              <Link to={node.fields.slug}>
+                <ExperienceBox>
+                  <span>{node.frontmatter.date}</span>
+                  <h3>{node.frontmatter.title}</h3>
+                </ExperienceBox>
+              </Link>
+            ))}
+          </SC.TextSection>
           <SC.TextSection>
             <SC.TextBlock>
               <SC.HeaderText>Hi,</SC.HeaderText>
@@ -35,19 +50,7 @@ const IndexPage = (props) => {
               </span>
             </SC.TextBlock>
           </SC.TextSection>
-          <SC.TextSection>
-            <SC.TextBlock>
-              <SC.HeaderText>Here are some of my recent ideas and thoughts:</SC.HeaderText>
-            </SC.TextBlock>
-          </SC.TextSection>
-          <SC.TextSection>
-            {props.data.allMarkdownRemark.edges.map((edge) => (
-              <ExperienceBox>
-                <h1>{edge.node.frontmatter.title}</h1>
-                <DataText dangerouslySetInnerHTML={{ __html: edge.node.html }} />
-              </ExperienceBox>
-            ))}
-          </SC.TextSection>
+          
         </SC.InfoStarter>
       </SC.Wrapper>
     </Layout>
@@ -65,6 +68,9 @@ export const query = graphql`
           frontmatter {
             title
             date
+          }
+          fields {
+            slug
           }
           html
         }
