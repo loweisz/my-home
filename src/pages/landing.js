@@ -5,6 +5,7 @@ import * as SC from '../styles/pages.sc';
 import { graphql, Link } from 'gatsby';
 import Experience from '../components/dev/Experience';
 import { DataText, ExperienceBox } from '../components/dev/experience.styles';
+import BlogPart from '../components/blog/BlogPart';
 
 const IndexPage = (props) => {
   console.log(props.data);
@@ -19,12 +20,7 @@ const IndexPage = (props) => {
           </SC.TextSection>
           <SC.TextSection>
             {props.data.allMarkdownRemark.edges.map(({ node }) => (
-              <Link to={node.fields.slug}>
-                <ExperienceBox>
-                  <span>{node.frontmatter.date}</span>
-                  <h3>{node.frontmatter.title}</h3>
-                </ExperienceBox>
-              </Link>
+              <BlogPart node={node} />
             ))}
           </SC.TextSection>
           <SC.TextSection>
@@ -67,8 +63,10 @@ export const query = graphql`
           id
           frontmatter {
             title
+            abstract
             date
           }
+          timeToRead
           fields {
             slug
           }

@@ -12,6 +12,8 @@ export const TopSection = styled.header`
   @media screen and (max-width: 800px) {
     position: initial;
   }
+  flex-shrink: 0;
+  flex-grow: 1;
   position: fixed;
   width: 100vw;
 `;

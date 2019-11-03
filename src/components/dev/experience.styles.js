@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { moveFadeIn } from '../../styles/animations';
 
 export const ExperienceBox = styled.div`
-  animation: ${moveFadeIn} 300ms ease-in-out;
   margin-top: 15px;
   padding: 10px;
   background-color: ${({ theme }) => theme.white};
