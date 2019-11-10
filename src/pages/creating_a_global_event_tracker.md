@@ -4,14 +4,14 @@ date: '2019-10-28'
 abstract: 'How to easily setup an easy and slim event tracker with plain javascript.'
 ---
 
-Okay, what happenend? We wanted to track some of our user interactions with out react app. All of them? 
-No just a few that can be easily modified and extended. 
+Nowadays one of the most important parts of a highly used website is to track and collect data about the usage and behaviours of the users visiting that site. In order to get some basic data we wanted to track some of our user interactions within out react app. All of them? 
+No just a few that can be easily modified and extended. So the goal is, that we can track kind of flexibel when and where made an interaction with our website.
 My initial idea was to implement a hook into our redux store (yes, it's still implemented with redux...) 
 and then check if the action is in our track action list and track the action.
-The big problem here is that we are limited by actions that are going through our store. 
+The big problem here is that we are limited by actions that are going through our store and is adding more functionality to redux which makes it harder to replace redux with another technology at some point. 
 But we also want to track actions like clicking on the sidebar which is not firing a redux action. 
 
-So, the next idea was a bit more global. I just added a global click listener at the beginning of our app.
+So, the next idea was a bit more global. I just added a global click listener at the beginning of our app. (could be any other event listener like `scroll`, `keydown` etc. but in this specific example we just want to focus on a `click` listener)
 
 ```js{2}
 // somewhere in the index.js file
@@ -19,14 +19,11 @@ document.addEventListener('click', (event) => {
   // ... do something with the event
 });
 ```
- 
 With that we can hook in after every click of the user and handle the action. 
-Big problem here, we only want to track a specific list of user interactions. So somehow we need to filter 
-the events with a list of defined events. 
+Big problem here, we only want to track a specific list of user interactions. So somehow we need to filter the events that are trigggered with a list of defined events and locations. 
 
 First let's check what we can do with the event, the eventlistener gives us.
-So the event can give us a lot of stuff about the position if it's clicked with shift or control and, most
-importantly the target. 
+So the event can give us a lot of stuff about the position if it's clicked with shift or control and, most importantly the target element. 
 
 This means we get from the click event the dom element that the user has clicked on.
 And additionally this target element object has a lot information about itself too.
