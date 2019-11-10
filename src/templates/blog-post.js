@@ -1,15 +1,14 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from '../components/layout';
 import { DataText, ExperienceBox } from "../components/dev/experience.styles";
-import { TextSection, Wrapper, InfoStarter } from "../styles/pages.sc";
+import { TextSection, InfoStarter } from "../styles/pages.sc";
+import { Title, SubTitle } from "./blog-post.styles";
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
-
+    
     return (
       <Layout>
         <InfoStarter>
@@ -17,9 +16,12 @@ class BlogPostTemplate extends React.Component {
             <ExperienceBox>
               <article>
                 <header>
-                    <h1>
-                      {post.frontmatter.title}
-                    </h1>
+                  <Title>
+                    {post.frontmatter.title}
+                  </Title>
+                  <SubTitle>
+                    {post.frontmatter.abstract}
+                  </SubTitle>
                 </header>
                 <DataText dangerouslySetInnerHTML={{ __html: post.html }} />
                 <hr/>
@@ -47,6 +49,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        abstract
       }
     }
   }

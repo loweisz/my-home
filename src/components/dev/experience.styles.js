@@ -69,10 +69,19 @@ export const DataText = styled.div`
     hyphens: none;
   }
 
+  code[class*='language-'] {
+    color: ${({ theme }) => theme.grey};
+  }
+
+  a {
+    color: ${({ theme }) => theme.red};
+  }
+
   /* Code blocks */
   pre[class*='language-'] {
     overflow: auto;
-    padding: 1rem 0;
+    padding: 1rem;
+    margin-top: -5px;
   }
   
   pre[class*='language-']::-moz-selection {
@@ -182,7 +191,7 @@ export const DataText = styled.div`
   .gatsby-highlight {
     margin-bottom: 1.75rem;
     border-radius: 10px;
-    background: #2B2B2B;
+    background: #320A28;
     -webkit-overflow-scrolling: touch;
     overflow: auto;
   }
