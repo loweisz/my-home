@@ -11,14 +11,14 @@ const Header = (props) => {
   const percentageScrolled = (props.offset % 95) / 94;
 
   return (
-    <InfoHeader>
+    <InfoHeader style={{ height: `${70 - 60*percentageScrolled}px`}}>
       <Mobile>
         <BubbleBurgerMenu />
       </Mobile>
       <HeaderSection>
         <LinkContainer>
           {Object.values(iconsObj).map((obj) => (
-            <a href={obj.link} target="_blank" rel="noopener noreferrer">
+            <a style={{ fontSize: `${35 - 10*percentageScrolled}px`}} href={obj.link} target="_blank" rel="noopener noreferrer">
               {obj.icon()}
             </a>
           ))}
@@ -26,16 +26,18 @@ const Header = (props) => {
       </HeaderSection>
       <HeaderSection>
         <Link to={'/start'}>
-          <Title>{'<Lorenz Weiß />'}</Title>
+          <Title style={{ fontSize: `${50 - percentageScrolled * 20}px`}}>
+            {'<Lorenz Weiß />'}
+          </Title>
         </Link>
       </HeaderSection>
       <HeaderSection>
         <ImageContainer>
           <AvatarImage
             style={{
-              height: `${130 - percentageScrolled * 40}px`,
-              width: `${130 - percentageScrolled * 40}px`,
-              marginTop: `${percentageScrolled * 100}px`,
+              height: `${130 - percentageScrolled * 50}px`,
+              width: `${130 - percentageScrolled * 50}px`,
+              marginTop: `${percentageScrolled * 40}px`,
             }}
           >
             <img src={Avatar} />

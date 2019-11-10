@@ -31,9 +31,9 @@ const Layout = ({ children }) => {
     <LayoutBackground>
       <Wave />
       <LayoutWrapper>
-        <TopSection style={{ marginTop: `-${offset}px` }}>
+        <TopSection>
           <Header offset={offset} />
-          <Tabs additionalOpacity={((offset % 95) / 94) * 0.4} color={'#ba7200'} />
+          <Tabs offset={offset} color={'#ba7200'} />
         </TopSection>
         <BodySection>{children}</BodySection>
       </LayoutWrapper>

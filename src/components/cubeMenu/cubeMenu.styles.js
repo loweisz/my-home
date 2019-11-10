@@ -34,9 +34,12 @@ export const Wrapper = styled.div`
     display: none;
   }
   @media screen and (min-width: 1080px) {
-    transform: scale(${({ scaleCube }) => (scaleCube ? scaleCube * 0.6 : 0.6)});
+    transform: scale(${({ scaleCube }) => (scaleCube ? scaleCube * 0.55 : 0.55)});
   }
   @media screen and (min-width: 1280px) {
+    transform: scale(${({ scaleCube }) => (scaleCube ? scaleCube * 0.6 : 0.6)});
+  }
+  @media screen and (min-width: 1540px) {
     transform: scale(${({ scaleCube }) => (scaleCube ? scaleCube * 0.8 : 0.8)});
   }
 `;

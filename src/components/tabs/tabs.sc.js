@@ -14,7 +14,7 @@ export const InfoTabBar = styled.div`
   justify-content: center;
   letter-spacing: 0;
   font-weight: 900;
- 
+  font-size: 30px;
   // animation: ${slideIn} 150ms ease-in;
   > a {
     margin: 0 20px;
@@ -33,15 +33,13 @@ export const TabSection = styled.div`
 export const Tab = styled.div`
   font-weight: 400;
   letter-spacing: 3px;
-  height: 40px;
   color: black;
-  line-height: 40px;
-  font-size: 30px;
-  width: 100%;
   display: flex;
   justify-content: center;
-  margin: 0 10%;
-  padding: 10px;
+  align-items: center;
+  height: 100%;
+  flex-shrink: 0;
+  padding: 0 10px;
   cursor: pointer;
   text-decoration: none;
   transition: all 200ms ease;
