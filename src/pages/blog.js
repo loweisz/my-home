@@ -26,7 +26,7 @@ export default BlogPage;
 
 export const query = graphql`
   {
-    allMarkdownRemark(filter: { frontmatter: { type: { ne: "exp" } } }) {
+    allMarkdownRemark(filter: { frontmatter: { type: { nin: ["exp", "edu"] } } }) {
       edges {
         node {
           id
