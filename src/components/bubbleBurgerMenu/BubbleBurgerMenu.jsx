@@ -1,25 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { BreadOne, BreadTwo, Bubble, BurgerMenu, Patty, SubMenu, Wrapper } from './bubbleBurgerMenu.styles';
 import { Link } from '@reach/router';
 
 function BubbleBurgerMenu() {
   const [selected, setSelected] = useState(false);
 
-  useEffect(() => {
-    window.addEventListener('mousedown', bodyClick);
-    return () => {
-      window.removeEventListener('mousedown', bodyClick);
-    };
-  }, []);
-
-  const bodyClick = (e) => {
-    if (e.target.nodeName !== 'A') {
-      deSelect();
-    }
-  };
-
-  const select = () => {
-    setSelected((s) => !s);
+  const select = (e) => {
+    setSelected(s => !s);
   };
   const deSelect = () => {
     setSelected(false);
@@ -28,9 +15,9 @@ function BubbleBurgerMenu() {
     <Wrapper>
       {selected && (
         <SubMenu onClick={deSelect}>
-          <Link to="/landing/">Mind</Link>
+          <Link to="/landing/">About</Link>
           <Link to="/dev/">Job</Link>
-          <Link to="/projects/">Projects</Link>
+          <Link to="/blog/">Blog</Link>
         </SubMenu>
       )}
       <Bubble selected={selected} onClick={select}>

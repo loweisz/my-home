@@ -2,27 +2,13 @@ import React from 'react';
 import Layout from '../components/layout';
 
 import * as SC from '../styles/pages.sc';
-import { graphql, Link } from 'gatsby';
-import Experience from '../components/dev/Experience';
-import { DataText, ExperienceBox } from '../components/dev/experience.styles';
-import BlogPart from '../components/blog/BlogPart';
+import { graphql } from 'gatsby';
 
-const IndexPage = (props) => {
-  console.log(props.data);
+const IndexPage = () => {
   return (
     <Layout>
       <SC.Wrapper>
         <SC.InfoStarter>
-        <SC.TextSection>
-            <SC.TextBlock>
-              <SC.HeaderText>Here are some of my recent ideas and thoughts:</SC.HeaderText>
-            </SC.TextBlock>
-          </SC.TextSection>
-          <SC.TextSection>
-            {props.data.allMarkdownRemark.edges.map(({ node }) => (
-              <BlogPart node={node} />
-            ))}
-          </SC.TextSection>
           <SC.TextSection>
             <SC.TextBlock>
               <SC.HeaderText>Hi,</SC.HeaderText>

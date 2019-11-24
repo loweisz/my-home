@@ -13,13 +13,13 @@ const Tabs = (props) => {
         }}
       >
         <Link to={'/landing'}>
-          <SC.Tab color={props.color}> Mind </SC.Tab>
+          <SC.Tab color={props.color}> About </SC.Tab>
         </Link>
         <Link to={'/dev'}>
           <SC.Tab color={props.color}> Jobs </SC.Tab>
         </Link>
-        <Link to={'/projects'}>
-          <SC.Tab color={props.color}> Projects </SC.Tab>
+        <Link to={'/blog'}>
+          <SC.Tab color={props.color}> Blog </SC.Tab>
         </Link>
       </SC.InfoTabBar>
     </SC.TabSection>

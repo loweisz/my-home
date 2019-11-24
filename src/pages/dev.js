@@ -10,7 +10,7 @@ const DevPage = (props) => {
     <Layout>
       <SC.Wrapper>
         <SC.InfoStarter>
-          <SC.PageHeader>All the companies I worked for:</SC.PageHeader>
+          <SC.PageHeader>What I did so far:</SC.PageHeader>
           {/*<SC.SubHeader>*/}
           {/*  the box, they are reserved for "client side" (components/pages) all my experiments with fragments*/}
           {/*  in gatsby-node.js resulted in build errors. A workaround is to write them yourself, if you're*/}
@@ -19,7 +19,7 @@ const DevPage = (props) => {
           <SC.TextSection>
             <div>
               {props.data.allMarkdownRemark.edges.map((edge) => (
-                <Experience node={edge.node} />
+                <Experience key={edge.node.frontmatter.company} node={edge.node} />
               ))}
             </div>
           </SC.TextSection>
@@ -33,7 +33,7 @@ export default DevPage;
 
 export const query = graphql`
   {
-    allMarkdownRemark(filter: { frontmatter: { type: { eq: "exp" } } }) {
+    allMarkdownRemark(filter: { frontmatter: { type: { in: ["exp", "edu"] } } }) {
       edges {
         node {
           frontmatter {

@@ -1,6 +1,14 @@
 import React from 'react';
 
-import { AvatarImage, HeaderSection, ImageContainer, LinkContainer, Mobile, Title } from './header.sc';
+import { 
+  AvatarImage,
+  HeaderSection,
+  ImageContainer,
+  LinkContainer,
+  Mobile,
+  Title,
+  Desktop
+} from './header.sc';
 import { InfoHeader } from './header.sc';
 import { iconsObj } from '../../pages/start';
 import BubbleBurgerMenu from '../bubbleBurgerMenu/BubbleBurgerMenu';
@@ -16,17 +24,20 @@ const Header = (props) => {
         <BubbleBurgerMenu />
       </Mobile>
       <HeaderSection>
-        <LinkContainer>
-          {Object.values(iconsObj).map((obj) => (
-            <a style={{ fontSize: `${35 - 10*percentageScrolled}px`}} href={obj.link} target="_blank" rel="noopener noreferrer">
-              {obj.icon()}
-            </a>
-          ))}
-        </LinkContainer>
+        <Desktop>
+          <LinkContainer>
+            {Object.values(iconsObj).map((obj) => (
+              <a style={{ fontSize: `${35 - 10*percentageScrolled}px`}} href={obj.link} target="_blank" rel="noopener noreferrer">
+                {obj.icon()}
+              </a>
+            ))}
+          </LinkContainer>
+        </Desktop>
       </HeaderSection>
+      
       <HeaderSection>
         <Link to={'/start'}>
-          <Title style={{ fontSize: `${50 - percentageScrolled * 20}px`}}>
+          <Title>
             {'<Lorenz Weiß />'}
           </Title>
         </Link>

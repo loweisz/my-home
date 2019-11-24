@@ -101,21 +101,21 @@ const StartPage = () => {
                 <Text>
                   <FiFile />
                   <div>
-                    <MenuText>Mind</MenuText>
+                    <MenuText>About</MenuText>
                   </div>
                 </Text>
                 <BlobTwoStyled isSelected={isSelected === '/landing'} />
               </Blob>
             </MenuLeft>
             <MenuRight>
-              <Blob onClick={() => select('/projects')}>
+              <Blob onClick={() => select('/blog')}>
                 <Text>
                   <FiBox />
-                  <div onClick={() => select('/projects')}>
-                    <MenuText>Projects</MenuText>
+                  <div onClick={() => select('/blog')}>
+                    <MenuText>Blog</MenuText>
                   </div>
                 </Text>
-                <BlobThreeStyled isSelected={isSelected === '/projects'} />
+                <BlobThreeStyled isSelected={isSelected === '/blog'} />
               </Blob>
             </MenuRight>
             <MenuBottom>

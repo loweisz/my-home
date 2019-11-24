@@ -92,7 +92,7 @@ export const HeaderText = styled.div`
 
 export const TextBlock = styled.div`
   max-width: 800px;
-  margin-top: 60px;
+  margin-top: 30px;
   color: white;
   text-align: start;
   font-size: 25px;

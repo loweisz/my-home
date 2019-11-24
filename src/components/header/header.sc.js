@@ -7,6 +7,13 @@ export const Mobile = styled.div`
   }
 `;
 
+export const Desktop = styled.div`
+  display: block;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+`;
+
 export const InfoHeader = styled.div`
   background-color: ${({ theme }) => theme.black};
   letter-spacing: 2px;
@@ -20,8 +27,9 @@ export const InfoHeader = styled.div`
   position: relative;
   padding: 20px;
   @media screen and (max-width: 800px) {
+    padding: 10px 0 10px 0;
+    height: 70px !important;
     flex-direction: column;
-    padding: 10px 0 40px 0;
   }
 `;
 
@@ -33,6 +41,7 @@ export const SocialSection = styled.div`
 `;
 
 export const LinkContainer = styled.div`
+  display: flex;
   a {
     color: ${({ theme }) => theme.white};
     font-size: 35px;
@@ -74,6 +83,12 @@ export const AvatarImage = styled.div`
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   overflow: hidden;
   border: 2px solid white;
+  @media screen and (max-width: 800px) {
+    height: 100px !important;
+    width: 100px !important;
+    margin-top: 0 !important;
+  }
+
   > img {
     width: 100%;
   }
@@ -84,12 +99,10 @@ export const ImageContainer = styled.div`
   position: relative;
   margin-top: -35px;
   height: 40px;
-  width: 40px;
   left: 50%;
   @media screen and (max-width: 800px) {
     left: auto;
-    margin-top: 20px;
     flex-grow: 0;
-    width: 135px;
+    margin-top: 5px;
   }
 `;

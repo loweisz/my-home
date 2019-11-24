@@ -49,12 +49,13 @@ So, let's do it! Let's say I want to track if the user clicks on the following l
 <button data-track-id="user_login"> Login </button> 
 ```
 
-I called the property `data-track-id` and gave it a unique id. It's very important that it starts with the prefix `data-` and then something after it, in this case `user_login`
+I called the property `data-track-id` and gave it a unique id. It's very important that it starts with the prefix `data-` and then something after it, in this case `user_login`.
+
 But what can we do with it? 
 Remember the magic event listener object and the target object? 
 Let's look at it again after the `data-track-id` is applied. 
 
-```js
+```js{5}
   ...
   target: {
     ...
@@ -70,7 +71,7 @@ Isn't that amazing? I now have my track id in the target object of the the click
 
 Now in the event listener we only need to check if the `trackId` exists and if its in a defined list of strings. 
 
-```js{2}
+```js{11}
 // defined list of ids we want to track
 const trackList = [
     "user_login",
