@@ -19,7 +19,7 @@ const Header = (props) => {
   const percentageScrolled = (props.offset % 95) / 94;
 
   return (
-    <InfoHeader style={{ height: `${70 - 60*percentageScrolled}px`}}>
+    <InfoHeader style={{ height: `${40 - 30*percentageScrolled}px`}}>
       <Mobile>
         <BubbleBurgerMenu />
       </Mobile>
@@ -47,7 +47,7 @@ const Header = (props) => {
             style={{
               height: `${130 - percentageScrolled * 50}px`,
               width: `${130 - percentageScrolled * 50}px`,
-              marginTop: `${percentageScrolled * 40}px`,
+              marginTop: `${70 - percentageScrolled * 25}px`,
             }}
           >
             <img src={Avatar} />

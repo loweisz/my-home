@@ -18,7 +18,7 @@ export const TopSection = styled.header`
 `;
 
 export const BodySection = styled.main`
-  margin-top: 200px;
+  margin-top: 140px;
   padding: 15px 15px 50px 15px;
   
   @media screen and (max-width: 800px) {
