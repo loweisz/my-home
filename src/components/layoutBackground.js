@@ -6,7 +6,8 @@ import './layout.css';
 import * as theme from '../styles/colors';
 
 const Background = styled.div`
-  background-color: ${({ theme }) => theme.darkRed};
+  background-color: ${({ theme }) => theme.background};
+  min-height: 100vh;
 `;
 
 const LayoutBackground = ({ children }) => {

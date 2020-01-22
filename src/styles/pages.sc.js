@@ -103,7 +103,7 @@ export const TextBlock = styled.div`
   flex-direction: column;
   > span {
     > a {
-      color: ${({ theme }) => theme.lightRed};
+      color: ${({ theme }) => theme.darkRed};
     }
   }
 `;

@@ -11,40 +11,50 @@ export const ExperienceBox = styled.div`
   display: flex;
   flex-direction: column;
   font-family: 'Cabin', sans-serif;
-  font-size: 20px;
-  line-height: 50px;
+  font-size: 18px;
   color: #222;
   @media screen and (max-width: 800px) {
   }
 `;
 
 export const Company = styled.a`
-  color: #370300;
-  font-size: 20px;
+  padding: 4px;
+  background: ${({ theme }) => theme.background};
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
 `;
 
 export const Title = styled.span`
-  font-size: 30px;
-  line-height: 30px;
-`;
+  font-size: 24px;
+  line-height: 26px;
+  `;
 
 export const Time = styled.span`
-  font-size: 20px;
+  padding: 4px;
+  background: ${({ theme }) => theme.background};
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
 `;
 
 export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
+  margin-right: 20px;
+  margin-top: 8px;
   svg {
-    margin-right: 10px;
-    font-size: 30px;
+    margin-right: 8px;
+    font-size: 24px;
   }
 `;
 
 export const SubInfo = styled.div`
   margin-top: 10px;
   display: flex;
-  justify-content: space-between;
+  
   @media screen and (max-width: 800px) {
     flex-direction: column;
   }

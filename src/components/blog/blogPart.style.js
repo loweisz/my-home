@@ -17,7 +17,9 @@ export const Date = styled.div`
   }
 `
 export const Abstract = styled.div`
+  margin-top: 12px;
   font-size: 20px;
+  line-height: 24px;
 `
 
 export const BlogPartContainer = styled.article`
@@ -47,9 +49,6 @@ export const IconSection = styled.div`
 export const TextSection = styled.div`
   display: flex;
   flex-direction: column;
-  > span {
-    margin: 10px 0;
-  }
 `
 
 export const Title = styled.span`

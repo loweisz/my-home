@@ -30,17 +30,18 @@ export const Wrapper = styled.div`
   perspective: 1000px;
   transform: scale(${({ scaleCube }) => (scaleCube ? scaleCube * 0.5 : 0.5)});
   transition: ${({ automated }) => (automated ? 'all 2000ms ease' : 'none')};
+  z-index: 2;
   @media screen and (max-width: 800px) {
     display: none;
   }
   @media screen and (min-width: 1080px) {
-    transform: scale(${({ scaleCube }) => (scaleCube ? scaleCube * 0.55 : 0.55)});
+    transform: scale(${({ scaleCube }) => (scaleCube ? scaleCube * 0.4 : 0.4)});
   }
   @media screen and (min-width: 1280px) {
-    transform: scale(${({ scaleCube }) => (scaleCube ? scaleCube * 0.6 : 0.6)});
+    transform: scale(${({ scaleCube }) => (scaleCube ? scaleCube * 0.5 : 0.5)});
   }
   @media screen and (min-width: 1540px) {
-    transform: scale(${({ scaleCube }) => (scaleCube ? scaleCube * 0.8 : 0.8)});
+    transform: scale(${({ scaleCube }) => (scaleCube ? scaleCube * 0.7 : 0.7)});
   }
 `;
 
@@ -144,8 +145,4 @@ const jump = keyframes`
 
 export const JumpItem = styled.div`
   animation: ${jump} 200ms ease;
-`;
-
-export const CubeContainer = styled.div`
-  z-index: 2;
 `;

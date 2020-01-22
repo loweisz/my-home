@@ -3,7 +3,6 @@ import { Company, DataText, ExperienceBox, IconWrapper, SubInfo, Time, Title } f
 import { FiHome, FiCalendar, FiMapPin, FiUser } from 'react-icons/fi';
 
 function Experience({ node }) {
-  console.log(node);
   return (
     <ExperienceBox>
       <Title>

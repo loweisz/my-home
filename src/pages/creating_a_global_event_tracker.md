@@ -1,7 +1,7 @@
 ---
 title: 'How to setup a global event tracker with vanillaJS'
 date: '2019-10-28'
-abstract: 'How to easily setup an easy and slim event tracker with plain javascript.'
+abstract: 'How to make it easy to add event tracking to elements, when they are interacted with without any additional logic to the event handlers'
 ---
 
 Today, one of the most important parts of a heavily used website is the ability to track and collect data about the usage and behavior of the users who visit this website. This information helps us to improve our work and to detect and correct mistakes.

@@ -34,7 +34,6 @@ const Header = (props) => {
           </LinkContainer>
         </Desktop>
       </HeaderSection>
-      
       <HeaderSection>
         <Link to={'/start'}>
           <Title>

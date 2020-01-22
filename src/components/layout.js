@@ -29,7 +29,6 @@ const Layout = ({ children }) => {
 
   return (
     <LayoutBackground>
-      <Wave />
       <LayoutWrapper>
         <TopSection>
           <Header offset={offset} />

@@ -83,13 +83,12 @@ function CubeMenu(props) {
     () => ({
       right: (
         <div>
-          All my ideas and thoughts about tech, coding and everything I have in mind <br />
-          <br /> If you are interested you can find them here.
+          Feel free to meet me.<br />
         </div>
       ),
       left: (
         <div>
-          All the projects and projects I have worked on or, incidentally, have implemented as a side project.
+        From time to time I write about some topics, that I'm interested in.
         </div>
       ),
       bottom: (
@@ -117,22 +116,20 @@ function CubeMenu(props) {
           </span>
         </Greetings>
       ),
-      top: <div>Currently I'm working at Loopline Systems</div>,
+      top: <div>Currently I'm working at Aroundhome</div>,
     }),
     [props.hovered, hideText],
   );
 
   return (
-    <CubeContainer>
-      <CubeElement
-        wrapperRef={wrapperRef}
-        rotateX={rotateX}
-        rotateY={rotateY}
-        hideText={hideText}
-        isSelected={props.isSelected}
-        faces={faces}
-      />
-    </CubeContainer>
+    <CubeElement
+      wrapperRef={wrapperRef}
+      rotateX={rotateX}
+      rotateY={rotateY}
+      hideText={hideText}
+      isSelected={props.isSelected}
+      faces={faces}
+    />
   );
 }
 
