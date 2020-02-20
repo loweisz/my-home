@@ -3,7 +3,7 @@ import { moveFadeIn } from '../../styles/animations';
 
 export const ExperienceBox = styled.div`
   margin-top: 15px;
-  padding: 10px;
+  padding: 25px;
   background-color: ${({ theme }) => theme.white};
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);

@@ -9,7 +9,7 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Neucha', cursive;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     height: 100%;
     background-color: rgba(55, 3, 0, 1);
 }
