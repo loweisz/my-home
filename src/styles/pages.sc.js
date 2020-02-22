@@ -80,8 +80,9 @@ export const Tab = styled.div`
 `;
 
 export const TextSection = styled.div`
-  max-width: 800px;
+  max-width: 970px;
   width: 100%;
+  padding-bottom: 20px;
 `;
 
 export const HeaderText = styled.div`
@@ -93,7 +94,7 @@ export const HeaderText = styled.div`
 export const TextBlock = styled.div`
   max-width: 800px;
   margin-top: 30px;
-  color: white;
+  color: color: ${({ theme }) => theme.darkRed};
   text-align: start;
   font-size: 25px;
   font-weight: 200;

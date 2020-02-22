@@ -24,14 +24,19 @@ export const Abstract = styled.div`
 
 export const BlogPartContainer = styled.article`
   margin-top: 30px;
-  padding: 10px;
+  padding: 25px;
   background-color: ${({ theme }) => theme.white};
   border-radius: 5px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  
   font-family: 'Cabin', sans-serif;
   a {
     color: ${({ theme }) => theme.black};
     text-decoration: none;
+  }
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px;
+  &:hover {
+    transition: all 300ms ease-in-out;
+    
   }
 `
 
