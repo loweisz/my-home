@@ -23,8 +23,6 @@ import LayoutBackground from '../components/layoutBackground';
 import { AvatarImage } from '../components/header/header.sc';
 import Avatar from '../images/data/avatar.png';
 
-// import RandomCube from '../components/cubeMenu/RandomCube';
-
 export const SELECT_ANIMATION_TIME = 1600;
 
 export const socialIcons = ['linkedIn', 'twitter', 'github'];

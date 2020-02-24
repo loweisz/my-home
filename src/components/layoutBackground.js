@@ -6,7 +6,7 @@ import './layout.css';
 import * as theme from '../styles/colors';
 
 const Background = styled.div`
-  background-color: ${({ theme }) => theme.background};
+  background: radial-gradient(circle, rgba(149,149,149,1) 0%, rgba(98,98,98,1) 100%);
   min-height: 100vh;
 `;
 

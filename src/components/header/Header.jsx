@@ -37,7 +37,7 @@ const Header = (props) => {
       <HeaderSection>
         <Link to={'/start'}>
           <Title>
-            {'<Lorenz Weiß />'}
+            {'<Lorenz Weiß 👋/>'}
           </Title>
         </Link>
       </HeaderSection>

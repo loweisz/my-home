@@ -22,9 +22,6 @@ function BlogPart({ node }) {
               </Date>
             </AdditionalInfo>
           </TextSection>
-          <IconSection>
-            <FiChevronRight/>
-          </IconSection>
         </BlogBox>
       </Link>
     </BlogPartContainer>

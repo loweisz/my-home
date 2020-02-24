@@ -1,27 +1,67 @@
 import styled from 'styled-components';
 import { moveFadeIn } from '../../styles/animations';
 
+export const TechStack = styled.div`
+  display: flex;
+`;
+
+export const TechItem = styled.div`
+  background: ${({ theme }) => theme.darkRed};
+  color: ${({ theme }) => theme.white};
+  padding: 4px 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 10px;
+  &:first-child {
+    margin-left: 0;
+  }
+
+` 
+
 export const ExperienceBox = styled.div`
-  margin-top: 15px;
   padding: 25px;
   background-color: ${({ theme }) => theme.white};
-  border-radius: 5px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   text-align: start;
   display: flex;
   flex-direction: column;
-  font-family: 'Cabin', sans-serif;
   font-size: 18px;
   color: #222;
-  @media screen and (max-width: 800px) {
+  margin-top: 15px;
+  &:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 `;
 
+export const ToggleContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+`;
+
+export const ShowMoreToggle = styled.button`
+  margin-top: 15px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  text-align: end;
+  padding: 10px;
+  cursor: pointer;
+  background: rgba(0,0,0,0.1);
+  &:hover {
+    background: rgba(0,0,0,0.2);
+  }
+`
+
+export const Icon = styled.span`
+  font-size: 30px;
+`;
+
 export const Company = styled.a`
-  padding: 4px;
-  background: ${({ theme }) => theme.background};
+  margin-left: 10px;
+  padding: 6px;
+  background: white;
   border-radius: 4px;
-  color: white;
+  color: ${({ theme }) => theme.black};
   font-size: 16px;
   text-decoration: none;
 `;
@@ -32,18 +72,19 @@ export const Title = styled.span`
   `;
 
 export const Time = styled.span`
-  padding: 4px;
-  background: ${({ theme }) => theme.background};
+  padding: 6px;
+  background: white;
   border-radius: 4px;
-  color: white;
+  color: ${({ theme }) => theme.black};
   font-size: 16px;
   text-decoration: none;
+  margin-left: 10px;
 `;
 
 export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  
   margin-top: 8px;
   svg {
     margin-right: 8px;

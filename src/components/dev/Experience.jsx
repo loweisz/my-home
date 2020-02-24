@@ -1,8 +1,17 @@
-import React from 'react';
-import { Company, DataText, ExperienceBox, IconWrapper, SubInfo, Time, Title } from './experience.styles';
+import React, {useState} from 'react';
+import { motion, AnimatePresence } from "framer-motion"
+import { Company, DataText, ExperienceBox, Icon, IconWrapper, TechItem, SubInfo, Time, TechStack, Title, ShowMoreToggle, ToggleContainer } from './experience.styles';
 import { FiHome, FiCalendar, FiMapPin, FiUser } from 'react-icons/fi';
 
 function Experience({ node }) {
+  const [showMore, setShowMore] = useState(false);
+
+  const toggle = () => {
+    setShowMore(s => !s);
+  }
+
+  console.log(node.frontmatter)
+
   return (
     <ExperienceBox>
       <Title>
@@ -13,23 +22,40 @@ function Experience({ node }) {
       </Title>
       <SubInfo>
         <IconWrapper>
-          <FiHome />
           <Company target=":_blank" href={`https://${node.frontmatter.website}`}>
             <span>{node.frontmatter.company}</span>
           </Company>
         </IconWrapper>
         <IconWrapper>
-          <FiMapPin />
           <Time>{node.frontmatter.location}</Time>
         </IconWrapper>
         <IconWrapper>
-          <FiCalendar />
           <Time>
             {node.frontmatter.startDate} - {node.frontmatter.endDate || 'present'}
           </Time>
         </IconWrapper>
+        <ToggleContainer>
+          <ShowMoreToggle onClick={toggle}>Show {showMore ? "less" : "more"}</ShowMoreToggle>
+        </ToggleContainer>
       </SubInfo>
-      <DataText dangerouslySetInnerHTML={{ __html: node.html }} />
+      <AnimatePresence>
+        {showMore && (
+          <motion.div
+            initial={{ height: 0 }}
+            animate={{ height: "auto" }}
+            exit={{ height: 0 }}
+            style={{ overflow: "hidden"}}
+          >
+            <DataText dangerouslySetInnerHTML={{ __html: node.html }} />
+            <TechStack>
+              {node.frontmatter.techStack && node.frontmatter.techStack.map(tech => (
+                <TechItem>{tech}</TechItem>
+              ))}
+            </TechStack>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      
     </ExperienceBox>
   );
 }

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PostContainer = styled.article`
-  color: ${({ theme }) => theme.white}
+  color: ${({ theme }) => theme.white};
 `;
 
 export const Title = styled.h1`

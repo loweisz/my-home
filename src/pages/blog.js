@@ -13,9 +13,11 @@ const BlogPage = (props) => (
             </SC.TextBlock>
           </SC.TextSection>
           <SC.TextSection>
+          <SC.Blogs>
             {props.data.allMarkdownRemark.edges.map(({ node }) => (
               <BlogPart node={node} />
             ))}
+          </SC.Blogs>
           </SC.TextSection>
         </SC.InfoStarter>
       </SC.Wrapper>

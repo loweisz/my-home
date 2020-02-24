@@ -54,13 +54,10 @@ export const LinkContainer = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 50px;
+  font-size: 30px;
   margin: 0;
-  @media screen and (max-width: 1280px) {
-    font-size: 30px;
-  }
-  @media screen and (max-width: 800px) {
-    margin-top: 20px;
+  &:hover {
+    opacity: 0.8;
   }
 `;
 

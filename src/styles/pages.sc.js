@@ -59,6 +59,8 @@ export const PageHeader = styled.h1`
   color: white;
   text-align: start;
   animation: ${opacIn} 150ms ease-in;
+  width: 100%;
+  max-width: 970px;
 `;
 
 export const SubHeader = styled.p`
@@ -89,12 +91,13 @@ export const HeaderText = styled.div`
   margin-bottom: 15px;
   font-weight: 600;
   font-size: 30px;
+  color: ${({ theme }) => theme.white};
 `;
 
 export const TextBlock = styled.div`
   max-width: 800px;
   margin-top: 30px;
-  color: color: ${({ theme }) => theme.darkRed};
+  
   text-align: start;
   font-size: 25px;
   font-weight: 200;
@@ -103,6 +106,7 @@ export const TextBlock = styled.div`
   display: flex;
   flex-direction: column;
   > span {
+    color: ${({ theme }) => theme.white};
     > a {
       color: ${({ theme }) => theme.darkRed};
     }
@@ -237,3 +241,10 @@ export const SocialIcon = styled.div`
   }
   transition: all 200ms ease-in-out;
 `;
+
+export const Blogs = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  width: 100%;
+`;  
