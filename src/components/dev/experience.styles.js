@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { moveFadeIn } from '../../styles/animations';
 
 export const TechStack = styled.div`
-  display: flex;
+  display: none;
 `;
 
 export const TechItem = styled.div`
