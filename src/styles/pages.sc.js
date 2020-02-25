@@ -97,7 +97,6 @@ export const HeaderText = styled.div`
 export const TextBlock = styled.div`
   max-width: 800px;
   margin-top: 30px;
-  
   text-align: start;
   font-size: 25px;
   font-weight: 200;
@@ -247,4 +246,7 @@ export const Blogs = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   width: 100%;
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 `;  

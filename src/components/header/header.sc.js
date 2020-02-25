@@ -59,6 +59,9 @@ export const Title = styled.h1`
   &:hover {
     opacity: 0.8;
   }
+  @media screen and (max-width: 800px) {
+    font-size: 24px;
+  }
 `;
 
 export const HeaderSection = styled.div`

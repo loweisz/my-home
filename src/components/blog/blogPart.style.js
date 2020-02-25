@@ -11,6 +11,7 @@ export const AdditionalInfo = styled.div`
 export const Date = styled.div`
   display: flex;
   align-items: center;
+  color: rgba(112,7,0, 0.7);
   span {
     margin-top: 6px;
     margin-left: 10px;
@@ -24,17 +25,23 @@ export const Abstract = styled.div`
 
 export const BlogPartContainer = styled.article`
   padding: 25px;
-  background-color: ${({ theme }) => theme.white};
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
   line-height: 1.5;
+  
 
   a {
-    color: ${({ theme }) => theme.black};
     text-decoration: none;
+    color: rgba(255,255,255,0.6);
   }
   
   &:hover {
     transition: all 300ms ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px;  
+    a {
+      transition: all 300ms ease-in-out;
+      color: rgba(255,255,255,1);
+    }
   }
 `
 
@@ -58,5 +65,4 @@ export const TextSection = styled.div`
 export const Title = styled.span`
   font-size: 30px;
   line-height: 1.2;
-  color: ${({ theme }) => theme.black};
 `
