@@ -118,8 +118,8 @@ export const Time = styled.span`
 export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
-  
   margin-top: 8px;
+  
   svg {
     margin-right: 8px;
     font-size: 24px;

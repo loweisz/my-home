@@ -29,19 +29,14 @@ export const BlogPartContainer = styled.article`
   border-radius: 5px;
   line-height: 1.5;
   
-
   a {
     text-decoration: none;
-    color: rgba(255,255,255,0.6);
+    color: white;
   }
   
   &:hover {
     transition: all 300ms ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px;  
-    a {
-      transition: all 300ms ease-in-out;
-      color: rgba(255,255,255,1);
-    }
   }
 `
 
