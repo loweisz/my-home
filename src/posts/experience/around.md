@@ -6,7 +6,7 @@ title: "Frontend Developer"
 company: "Aroundhome"
 website: "aroundhome.de"
 location: "Berlin"
-techStack: ["React", "Redux", "Styled-components"]
+techStack: ["React", "Redux", "Styled-components", "SASS"]
 ---
 
 Working with scrum in an agile enviroment on a react based frontend project. Reduced the bundlesize of the project by optimizing the webpack setup.
