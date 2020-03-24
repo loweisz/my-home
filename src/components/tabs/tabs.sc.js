@@ -1,13 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-
-const slideIn = keyframes`
-  from {
-    margin-top: -50px;
-  }
-  to {
-    margin-top: 0;
-  }
-`;
+import styled from 'styled-components';
 
 export const InfoTabBar = styled.div`
   display: flex;
@@ -15,7 +6,6 @@ export const InfoTabBar = styled.div`
   letter-spacing: 0;
   font-weight: 900;
   font-size: 30px;
-  // animation: ${slideIn} 150ms ease-in;
   > a {
     text-decoration: none;
   }

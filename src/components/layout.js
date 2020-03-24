@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-
 import './layout.css';
 import Tabs from './tabs/Tabs';
 import Header from './header/Header';
@@ -31,7 +30,7 @@ const Layout = ({ children }) => {
       <LayoutWrapper>
         <TopSection>
           <Header offset={offset} />
-          <Tabs offset={offset} color={'#ba7200'} />
+          <Tabs offset={offset} />
         </TopSection>
         <BodySection>{children}</BodySection>
       </LayoutWrapper>

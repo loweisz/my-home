@@ -7,7 +7,7 @@ export const socialIcons = ['linkedIn', 'twitter', 'github'];
 export const iconsObj = {
   linkedIn: { icon: IoLogoLinkedin, link: 'https://www.linkedin.com/in/lorenz-wei%C3%9F-032689165/' },
   twitter: { icon: IoLogoTwitter, link: 'https://twitter.com/lorenzweisz' },
-  github: { icon: IoLogoGithub, link: 'https://github.com/lowe1111' },
+  github: { icon: IoLogoGithub, link: 'https://github.com/loweisz' },
 };
 
 const IconElement = ({ setHovered, resetHovered, icon }) => {
