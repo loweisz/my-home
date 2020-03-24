@@ -1,39 +1,5 @@
 import styled from 'styled-components';
-import BlobOne from '../images/blobs/blob_one.svg';
-import BlobTwo from '../images/blobs/blob_two.svg';
-import BlobThree from '../images/blobs/blob_three.svg';
 import { moveFadeIn, opacIn } from './animations';
-// import BlobFour from '../images/blobs/blob_four.svg';
-
-export const BlobOneStyled = styled(BlobOne)`
-  position: absolute;
-  height: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
-  width: ${({ isSelected }) => (isSelected ? ' 7000px' : '800px')};
-  top: ${({ isSelected }) => (isSelected ? '-2500px' : '-540px')};
-  transition: ${({ isSelected }) => (isSelected ? 'all 1000ms ease-in-out' : 'all 200ms ease-in-out')};
-`;
-
-export const BlobTwoStyled = styled(BlobTwo)`
-  position: absolute;
-  height: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
-  width: ${({ isSelected }) => (isSelected ? ' 7000px' : '800px')};
-  left: ${({ isSelected }) => (isSelected ? '-2500px' : '-570px')};
-  transition: ${({ isSelected }) => (isSelected ? 'all 1000ms ease-in-out' : 'all 200ms ease-in-out')};
-`;
-
-export const BlobThreeStyled = styled(BlobThree)`
-  position: absolute;
-  height: ${({ isSelected }) => (isSelected ? ' 5000px' : '800px')};
-  width: ${({ isSelected }) => (isSelected ? ' 7000px' : '800px')};
-  right: ${({ isSelected }) => (isSelected ? '-2500px' : '-500px')};
-  transition: ${({ isSelected }) => (isSelected ? 'all 1000ms ease-in-out' : 'all 200ms ease-in-out')};
-`;
-
-// export const BlobFourStyled = styled(BlobFour)`
-//   position: absolute;
-//   height: 400px;
-//   width: 400px;
-// `;
 
 export const InfoStarter = styled.div`
   width: 100%;
@@ -56,7 +22,7 @@ export const Wrapper = styled.div`
 `;
 
 export const PageHeader = styled.h1`
-  color: white;
+  color: ${({ theme }) => theme.black};
   text-align: start;
   animation: ${opacIn} 150ms ease-in;
   width: 100%;
@@ -91,11 +57,10 @@ export const HeaderText = styled.div`
   margin-bottom: 15px;
   font-weight: 600;
   font-size: 30px;
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.black};
 `;
 
 export const TextBlock = styled.div`
-  max-width: 800px;
   margin-top: 30px;
   text-align: start;
   font-size: 25px;
@@ -105,10 +70,13 @@ export const TextBlock = styled.div`
   display: flex;
   flex-direction: column;
   > span {
-    color: ${({ theme }) => theme.white};
+    color: ${({ theme }) => theme.black};
     > a {
       color: ${({ theme }) => theme.darkRed};
     }
+  }
+  @media screen and (max-width: 800px) {
+    margin-top: 0;
   }
 `;
 
@@ -171,74 +139,28 @@ const Menu = styled.div`
 export const MenuTop = styled(Menu)`
   top: 50px;
   width: 100%;
-`;
-
-export const Text = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  > svg {
-    margin-right: 20px;
+  .blob > svg {
+    top: -500px;
   }
 `;
 
 export const MenuLeft = styled(Menu)`
   left: 50px;
+  .blob > svg {
+    left: -500px;
+  }
 `;
 
 export const MenuRight = styled(Menu)`
   right: 50px;
+  .blob > svg {
+    right: -500px;
+  }
 `;
 
 export const MenuBottom = styled(Menu)`
   bottom: 50px;
   width: 100%;
-`;
-
-export const Blob = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media screen and (max-width: 800px) {
-    > svg {
-      display: none;
-    }
-  }
-  &:hover {
-    > svg {
-      transform: scale(1.1);
-    }
-  }
-`;
-
-export const MenuText = styled.span`
-  display: flex;
-
-  justify-content: center;
-
-  a {
-    color: white;
-    font-size: 70px;
-    padding-left: 10px;
-    padding-right: 10px;
-    &:hover {
-      color: rgba(255, 255, 255, 0.6);
-    }
-  }
-`;
-
-export const SocialIcon = styled.div`
-  @media screen and (max-width: 800px) {
-    > a {
-      font-size: 40px;
-    }
-  }
-  &:hover {
-    transform: scale(1.25);
-  }
-  transition: all 200ms ease-in-out;
 `;
 
 export const Blogs = styled.div`
@@ -249,4 +171,4 @@ export const Blogs = styled.div`
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
   }
-`;  
+`;

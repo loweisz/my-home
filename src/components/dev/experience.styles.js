@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { moveFadeIn } from '../../styles/animations';
+import { Box } from '../../styles/shared';
 
 export const TechStack = styled.div`
   display: none;
 `;
 
 export const TechItem = styled.div`
-  background: rgba(112,7,0, 0);
+  background: rgba(112, 7, 0, 0);
   color: ${({ theme }) => theme.white};
   padding: 4px 10px;
   text-align: center;
@@ -27,35 +27,31 @@ export const TimeLineElement = styled.div`
   margin-right: 20px;
   width: 2px;
   margin-bottom: -15px;
-  background: ${({ theme }) => theme.white};
+  background: ${({ theme }) => theme.grey};
   position: relative;
   z-index: -1;
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     top: 42px;
     left: -6px;
     height: 14px;
     width: 14px;
     border-radius: 50%;
-    background: ${({ theme }) => theme.white};
+    background: white;
+  }
+
+  @media screen and (max-width: 800px) {
+    display: none;
   }
 `;
 
-export const ExperienceBox = styled.div`
-  padding: 25px;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+export const ExperienceBox = styled(Box)`
   text-align: start;
   display: flex;
   flex-direction: column;
-  font-size: 18px;
-  color: white;
   margin-top: 15px;
   flex: 1;
-  &:hover {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  }
 `;
 
 export const ToggleContainer = styled.div`
@@ -65,11 +61,11 @@ export const ToggleContainer = styled.div`
 `;
 
 export const PreText = styled.span`
-  text-overflow: ellipsis; 
-  overflow: hidden; 
+  text-overflow: ellipsis;
+  overflow: hidden;
   white-space: nowrap;
   display: block;
-`
+`;
 
 export const ShowMoreToggle = styled.button`
   margin-top: 15px;
@@ -80,38 +76,40 @@ export const ShowMoreToggle = styled.button`
   padding: 10px;
   cursor: pointer;
   color: white;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.3);
   &:hover {
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.5);
   }
-`
+`;
 
 export const Icon = styled.span`
   font-size: 30px;
 `;
 
-export const Company = styled.a`
-  margin-left: 10px;
+const Tag = styled.span`
   padding: 6px;
-  background: rgba(255,255,255,0.2);
-  color: ${({ theme }) => theme.white};
+  background: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.black};
   border-radius: 4px;
   font-size: 16px;
   text-decoration: none;
 `;
 
-export const Title = styled.span`
-  font-size: 24px;
-  line-height: 26px;
-  `;
-
-export const Time = styled.span`
+export const Company = styled.a`
   padding: 6px;
-  background: rgba(255,255,255,0.2);
-  color: ${({ theme }) => theme.white};
+  background: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.black};
   border-radius: 4px;
   font-size: 16px;
-  text-decoration: none;
+`;
+
+export const Title = styled.span`
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+`;
+
+export const Time = styled(Tag)`
   margin-left: 10px;
 `;
 
@@ -119,7 +117,6 @@ export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-top: 8px;
-  
   svg {
     margin-right: 8px;
     font-size: 24px;
@@ -129,7 +126,7 @@ export const IconWrapper = styled.div`
 export const SubInfo = styled.div`
   margin-top: 10px;
   display: flex;
-  
+
   @media screen and (max-width: 800px) {
     flex-direction: column;
   }
@@ -137,6 +134,7 @@ export const SubInfo = styled.div`
 
 export const DataText = styled.div`
   line-height: 25px;
+  color: ${({ theme }) => theme.grey};
   code[class*='language-'],
   pre[class*='language-'] {
     color: white;

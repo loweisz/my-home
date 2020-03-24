@@ -1,26 +1,26 @@
 import React from 'react';
-import * as SC from '../styles/pages.sc';
+import { Wrapper, InfoStarter, TextBlock, HeaderText, TextSection, Blogs } from '../styles/pages.sc';
 import Layout from '../components/layout';
 import BlogPart from '../components/blog/BlogPart';
 
 const BlogPage = (props) => (
   <Layout>
-    <SC.Wrapper>
-        <SC.InfoStarter>
-          <SC.TextSection>
-            <SC.TextBlock>
-              <SC.HeaderText>Here are some of my recent ideas and thoughts:</SC.HeaderText>
-            </SC.TextBlock>
-          </SC.TextSection>
-          <SC.TextSection>
-          <SC.Blogs>
+    <Wrapper>
+      <InfoStarter>
+        <TextSection>
+          <TextBlock>
+            <HeaderText>Here are some of my recent ideas and thoughts:</HeaderText>
+          </TextBlock>
+        </TextSection>
+        <TextSection>
+          <Blogs>
             {props.data.allMarkdownRemark.edges.map(({ node }) => (
               <BlogPart node={node} />
             ))}
-          </SC.Blogs>
-          </SC.TextSection>
-        </SC.InfoStarter>
-      </SC.Wrapper>
+          </Blogs>
+        </TextSection>
+      </InfoStarter>
+    </Wrapper>
   </Layout>
 );
 

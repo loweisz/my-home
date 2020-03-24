@@ -16,7 +16,6 @@ export const Desktop = styled.div`
 
 export const InfoHeader = styled.div`
   background-color: ${({ theme }) => theme.black};
-  letter-spacing: 2px;
   z-index: 1;
   color: ${({ theme }) => theme.white};
   width: 100%;
@@ -27,9 +26,9 @@ export const InfoHeader = styled.div`
   position: relative;
   padding: 20px;
   @media screen and (max-width: 800px) {
-    padding: 10px 0 10px 0;
+    padding: 10px;
     height: 70px !important;
-    flex-direction: column;
+    box-sizing: border-box;
   }
 `;
 
@@ -68,7 +67,8 @@ export const HeaderSection = styled.div`
   width: 33%;
   @media screen and (max-width: 800px) {
     width: 100%;
-    display: flex;
+    width: auto;
+    display: ${({ onlyDesktop }) => (onlyDesktop ? 'none' : 'flex')};
     justify-content: center;
   }
   a {
@@ -82,11 +82,13 @@ export const AvatarImage = styled.div`
   border-radius: 60%;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   overflow: hidden;
-  border: 2px solid white;
+  border: 2px solid ${({ theme }) => theme.white};
+  height: 130px;
+  width: 130px;
   @media screen and (max-width: 800px) {
-    height: 100px !important;
-    width: 100px !important;
-    margin-top: 0 !important;
+    height: 80px !important;
+    width: 80px !important;
+    margin-top: -10px !important;
   }
 
   > img {

@@ -7,7 +7,6 @@
     "prop-types": "^15.7.2"
   },
   "dependencies": {
-    "framer-motion": "^1.8.4",
     "gatsby": "^2.10.0",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-google-analytics": "^2.1.36",

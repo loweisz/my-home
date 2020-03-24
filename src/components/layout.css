@@ -4,12 +4,12 @@
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,600&display=swap');
 
 html {
-    background-color: rgba(55, 3, 0, 1);
+  background-color: #e7e3e3;
 }
 
 body {
-    margin: 0;
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    height: 100%;
-    background-color: rgba(55, 3, 0, 1);
+  margin: 0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+  height: 100%;
 }

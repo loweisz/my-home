@@ -89,7 +89,6 @@ export const Greetings = styled.div`
   span {
     span {
       font-size: 60px;
-      letter-spacing: 1px;
       color: ${({ theme }) => theme.white};
     }
   }

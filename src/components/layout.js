@@ -6,7 +6,6 @@ import Tabs from './tabs/Tabs';
 import Header from './header/Header';
 import LayoutBackground from './layoutBackground';
 import { BodySection, LayoutWrapper, TopSection } from './layout.styles';
-import Wave from './wave/Wave';
 
 const Layout = ({ children }) => {
   useEffect(() => {

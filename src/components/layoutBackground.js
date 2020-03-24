@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider, keyframes } from 'styled-components';
 
 import './layout.css';
 import * as theme from '../styles/colors';
 
 const Background = styled.div`
-  background: rgba(255,255,255,0.4);
+  background: ${({ theme }) => theme.background};
   min-height: 100vh;
 `;
 

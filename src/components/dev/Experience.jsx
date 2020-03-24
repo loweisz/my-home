@@ -1,17 +1,20 @@
-import React, {useState} from 'react';
-import { motion, AnimatePresence } from "framer-motion"
-import { Company, DataText, ExperienceBox,TimeLineElement, Wrapper, IconWrapper, TechItem, SubInfo, Time, TechStack, Title, ShowMoreToggle, ToggleContainer } from './experience.styles';
+import React from 'react';
+import {
+  Company,
+  DataText,
+  ExperienceBox,
+  TimeLineElement,
+  Wrapper,
+  IconWrapper,
+  TechItem,
+  SubInfo,
+  Time,
+  TechStack,
+  Title,
+} from './experience.styles';
 import { FiUser } from 'react-icons/fi';
 
 function Experience({ node }) {
-  const [showMore, setShowMore] = useState(false);
-
-  const toggle = () => {
-    setShowMore(s => !s);
-  }
-
-  console.log(node.frontmatter)
-
   return (
     <Wrapper>
       <TimeLineElement />
@@ -36,27 +39,12 @@ function Experience({ node }) {
               {node.frontmatter.startDate} - {node.frontmatter.endDate || 'present'}
             </Time>
           </IconWrapper>
-          <ToggleContainer>
-            <ShowMoreToggle onClick={toggle}>Show {showMore ? "less" : "more"}</ShowMoreToggle>
-          </ToggleContainer>
         </SubInfo>
-        <AnimatePresence>
-          {showMore && (
-            <motion.div
-              initial={{ height: 0 }}
-              animate={{ height: "auto" }}
-              exit={{ height: 0 }}
-              style={{ overflow: "hidden"}}
-            >
-              <DataText dangerouslySetInnerHTML={{ __html: node.html }} />
-              <TechStack>
-                {node.frontmatter.techStack && node.frontmatter.techStack.map(tech => (
-                  <TechItem>{tech}</TechItem>
-                ))}
-              </TechStack>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        <DataText dangerouslySetInnerHTML={{ __html: node.html }} />
+        <TechStack>
+          {node.frontmatter.techStack &&
+            node.frontmatter.techStack.map((tech) => <TechItem>{tech}</TechItem>)}
+        </TechStack>
       </ExperienceBox>
     </Wrapper>
   );

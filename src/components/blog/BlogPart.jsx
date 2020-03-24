@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { BlogPartContainer, BlogBox, Title, IconSection, TextSection, Date, Abstract, AdditionalInfo } from './blogPart.style';
-import { FiChevronRight, FiCalendar, FiClock } from 'react-icons/fi';
+import { BlogBox, Title, TextSection, Date, Abstract, AdditionalInfo } from './blogPart.style';
+import { Box } from '../../styles/shared';
+import { FiCalendar, FiClock } from 'react-icons/fi';
 
 function BlogPart({ node }) {
   return (
-    <BlogPartContainer>
+    <Box>
       <Link to={node.fields.slug}>
         <BlogBox>
           <TextSection>
@@ -24,7 +25,7 @@ function BlogPart({ node }) {
           </TextSection>
         </BlogBox>
       </Link>
-    </BlogPartContainer>
+    </Box>
   );
 }
 

@@ -1,28 +1,37 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import * as SC from './tabs.sc';
+import { Tab, TabSection, InfoTabBar } from './tabs.sc';
+
+const routes = [
+  {
+    url: '/landing',
+    name: 'About',
+  }, {
+    url: '/dev',
+    name: 'Career',
+  }, {
+    url: '/blog',
+    name: 'Blog',
+  }
+]
 
 const Tabs = (props) => {
   const percentageScrolled = (props.offset % 95) / 94;
   return(
-    <SC.TabSection additionalOpacity={percentageScrolled * 0.4}>
-      <SC.InfoTabBar 
+    <TabSection additionalOpacity={percentageScrolled * 0.4}>
+      <InfoTabBar 
         style={{
           fontSize: `${30 - percentageScrolled * 5}px`,
           height: `${60 - percentageScrolled * 10}px`,
         }}
       >
-        <Link to={'/landing'}>
-          <SC.Tab color={props.color}> About </SC.Tab>
-        </Link>
-        <Link to={'/dev'}>
-          <SC.Tab color={props.color}> Jobs </SC.Tab>
-        </Link>
-        <Link to={'/blog'}>
-          <SC.Tab color={props.color}> Blog </SC.Tab>
-        </Link>
-      </SC.InfoTabBar>
-    </SC.TabSection>
+        {routes.map((route) => (
+          <Link key={route.url} to={route.url}>
+            <Tab color={props.color}>{route.name}</Tab>
+          </Link>
+        ))}
+      </InfoTabBar>
+    </TabSection>
   );
  }
 

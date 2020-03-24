@@ -1,17 +1,16 @@
 import React from 'react';
 import Layout from '../components/layout';
-
-import * as SC from '../styles/pages.sc';
+import { Wrapper, InfoStarter, TextSection, TextBlock, HeaderText } from '../styles/pages.sc';
 import { graphql } from 'gatsby';
 
 const IndexPage = () => {
   return (
     <Layout>
-      <SC.Wrapper>
-        <SC.InfoStarter>
-          <SC.TextSection>
-            <SC.TextBlock>
-              <SC.HeaderText>Hi,</SC.HeaderText>
+      <Wrapper>
+        <InfoStarter>
+          <TextSection>
+            <TextBlock>
+              <HeaderText>Hi,</HeaderText>
               <span>
                 Nice to meet you. <br />
                 My name is Lorenz, I'm from the south of germany and currently living in Berlin. <br />I work
@@ -30,11 +29,10 @@ const IndexPage = () => {
                 connect with me, feel free to contact me on any of the social media links on this site or
                 write me an <a href="mailto:lorenz.weis@gmail.com?subject=Contact&body=Hi Lorenz">email</a>.
               </span>
-            </SC.TextBlock>
-          </SC.TextSection>
-          
-        </SC.InfoStarter>
-      </SC.Wrapper>
+            </TextBlock>
+          </TextSection>
+        </InfoStarter>
+      </Wrapper>
     </Layout>
   );
 };

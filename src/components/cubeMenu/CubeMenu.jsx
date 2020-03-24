@@ -1,10 +1,9 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { CubeContainer, Greetings, JumpItem } from './cubeMenu.styles';
-import { socialIcons } from '../../pages/start';
+import { socialIcons } from '../cubeNavigation/SocialElement';
+import { Greetings, JumpItem } from './cubeMenu.styles';
 import { AvatarImage } from '../header/header.sc';
 import CubeElement from './CubeElement';
 import Avatar from '../../images/data/avatar.png';
-// import RandomCube from './RandomCube';
 
 function CubeMenu(props) {
   const wrapperRef = useRef();
@@ -83,14 +82,11 @@ function CubeMenu(props) {
     () => ({
       right: (
         <div>
-          Feel free to meet me.<br />
+          Feel free to meet me.
+          <br />
         </div>
       ),
-      left: (
-        <div>
-        From time to time I write about some topics, that I'm interested in.
-        </div>
-      ),
+      left: <div>From time to time I write about some topics, that I'm interested in.</div>,
       bottom: (
         <div>
           {props.hovered

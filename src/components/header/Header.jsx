@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { 
+import {
   AvatarImage,
   HeaderSection,
   ImageContainer,
   LinkContainer,
   Mobile,
   Title,
-  Desktop
+  Desktop,
 } from './header.sc';
 import { InfoHeader } from './header.sc';
-import { iconsObj } from '../../pages/start';
+import { iconsObj } from '../cubeNavigation/SocialElement';
 import BubbleBurgerMenu from '../bubbleBurgerMenu/BubbleBurgerMenu';
 import { Link } from 'gatsby';
 import Avatar from '../../images/data/avatar.png';
@@ -19,26 +19,27 @@ const Header = (props) => {
   const percentageScrolled = (props.offset % 95) / 94;
 
   return (
-    <InfoHeader style={{ height: `${40 - 30*percentageScrolled}px`}}>
+    <InfoHeader style={{ height: `${40 - 30 * percentageScrolled}px` }}>
       <Mobile>
         <BubbleBurgerMenu />
       </Mobile>
-      <HeaderSection>
-        <Desktop>
-          <LinkContainer>
-            {Object.values(iconsObj).map((obj) => (
-              <a style={{ fontSize: `${35 - 10*percentageScrolled}px`}} href={obj.link} target="_blank" rel="noopener noreferrer">
-                {obj.icon()}
-              </a>
-            ))}
-          </LinkContainer>
-        </Desktop>
+      <HeaderSection onlyDesktop>
+        <LinkContainer>
+          {Object.values(iconsObj).map((obj) => (
+            <a
+              style={{ fontSize: `${35 - 10 * percentageScrolled}px` }}
+              href={obj.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {obj.icon()}
+            </a>
+          ))}
+        </LinkContainer>
       </HeaderSection>
       <HeaderSection>
         <Link to={'/start'}>
-          <Title>
-            {'<Lorenz Weiß 👋/>'}
-          </Title>
+          <Title>{'<Lorenz Weiß 👋/>'}</Title>
         </Link>
       </HeaderSection>
       <HeaderSection>
