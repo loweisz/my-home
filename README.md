@@ -1,4 +1,4 @@
-<h1>THIS IS GONNA BE MY WEBSITE</h1>
-<h2>DONE WITH:</h2>
-<h3>GATSBY JS</h3>
-<h3>AND SOME OTHER COOL STUFF...</h3>
+# The Repo of my personal Portfolio 
+[lorenzweiss.de](https://www.lorenzweiss.de/)
+
+Built with love and [GatsbyJS](https://www.gatsbyjs.org/).
