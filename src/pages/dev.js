@@ -55,7 +55,10 @@ export default DevPage;
 
 export const query = graphql`
   {
-    allMarkdownRemark(filter: { frontmatter: { type: { in: ["exp", "edu"] } } }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { type: { in: ["exp", "edu"] } } }
+      sort: { fields: frontmatter___startDate, order: DESC }
+    ) {
       edges {
         node {
           frontmatter {
