@@ -1,6 +1,6 @@
 ---
 title: 'How to setup a global event tracker with vanillaJS'
-date: '2019-10-28'
+date: 'October 28th, 2019'
 abstract: 'How to make it easy to add event tracking to elements, when they are interacted with without any additional logic to the event handlers'
 ---
 

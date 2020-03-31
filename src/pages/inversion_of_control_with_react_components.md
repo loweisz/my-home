@@ -1,6 +1,6 @@
 ---
 title: 'Inversion of Control with sharable react components'
-date: '2019-12-28'
+date: 'December 28th, 2019'
 abstract: 'Why the pattern could help us to make every component safer and cleaner'
 ---
 

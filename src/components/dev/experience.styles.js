@@ -304,3 +304,4 @@ export const DataText = styled.div`
     }
   }
 `;
+  

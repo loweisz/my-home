@@ -2,18 +2,16 @@ import styled from 'styled-components';
 
 export const AdditionalInfo = styled.div`
   display: flex;
+  justify-content: space-between;
   margin-top: 10px;
-  > div {
-    margin-right: 30px;
-  }
 `;
 
 export const Date = styled.div`
   display: flex;
   align-items: center;
   color: rgba(112, 7, 0, 0.7);
+  font-size: 14px;
   span {
-    margin-top: 6px;
     margin-left: 10px;
   }
 `;
@@ -43,6 +41,7 @@ export const BlogPartContainer = styled.article`
 `;
 
 export const BlogBox = styled.div`
+  height: 100%;
   text-align: start;
   display: flex;
   justify-content: space-between;
@@ -56,6 +55,8 @@ export const IconSection = styled.div`
 
 export const TextSection = styled.div`
   display: flex;
+  height: 100%;
+  justify-content: space-between;
   flex-direction: column;
 `;
 
