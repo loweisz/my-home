@@ -8,12 +8,20 @@ import Experience from '../components/dev/Experience';
 const DevPage = (props) => {
   const [obs, setObs] = useState(null);
   useEffect(() => {
-    let options = {
+    let observer = 'not_available';
+    if ('IntersectionObserver' in window) {
+      observer = createInterSectionObserver();
+    }
+    setObs(observer);
+  }, []);
+
+  const createInterSectionObserver = () => {
+    const options = {
       root: null,
       rootMargin: '0px',
       threshold: 0.3,
     };
-    const observer = new IntersectionObserver((entries, observer) => {
+    return new IntersectionObserver((entries, observer) => {
       entries.forEach((change) => {
         if (change.intersectionRatio > 0) {
           animateElement(change.target);
@@ -21,8 +29,7 @@ const DevPage = (props) => {
         }
       });
     }, options);
-    setObs(observer);
-  }, []);
+  };
 
   const animateElement = (target) => {
     target.classList.add('shown');

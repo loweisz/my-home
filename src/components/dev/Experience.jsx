@@ -14,15 +14,26 @@ import {
 } from './experience.styles';
 import { FiUser } from 'react-icons/fi';
 import { useRef } from 'react';
+import { useCallback } from 'react';
 
 function Experience({ node, observer }) {
   const el = useRef();
 
   useEffect(
     () => {
-      if (observer) {
-        observer.observe(el.current);
+      observeIntersection();
+    },
+    [observeIntersection, observer],
+  );
+
+  const observeIntersection = useCallback(
+    () => {
+      if (!observer) return;
+      if (observer === 'not_available') {
+        el.current.classList.add('shown');
+        return;
       }
+      observer.observe(el.current);
     },
     [observer],
   );
