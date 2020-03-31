@@ -53,16 +53,17 @@ module.exports = {
       options: {
         name: 'gatsby-starter-default',
         short_name: 'starter',
-        start_url: '/',
+        start_url: '/start',
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
+        icon: 'src/icons/icon.png',
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-159014335-1",
+        trackingId: 'UA-159014335-1',
       },
     },
 

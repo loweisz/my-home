@@ -24,21 +24,23 @@ export const Wrapper = styled.div`
 
 export const TimeLineElement = styled.div`
   margin-top: 15px;
-  margin-right: 20px;
+  margin-right: 10px;
   width: 2px;
   margin-bottom: -15px;
   background: ${({ theme }) => theme.grey};
   position: relative;
-  z-index: -1;
+  z-index: 2;
+
   &::after {
     position: absolute;
     content: '';
     top: 42px;
-    left: -6px;
-    height: 14px;
-    width: 14px;
+    left: -25px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
-    background: white;
+    background: ${({ theme }) => theme.lightGrey};
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 
   @media screen and (max-width: 800px) {
@@ -52,6 +54,13 @@ export const ExperienceBox = styled(Box)`
   flex-direction: column;
   margin-top: 15px;
   flex: 1;
+  margin-left: 30px;
+  opacity: 0;
+  transition: all 400ms ease-in;
+  &.shown {
+    opacity: 1;
+    margin-left: 0;
+  }
 `;
 
 export const ToggleContainer = styled.div`

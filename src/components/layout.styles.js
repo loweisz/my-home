@@ -15,6 +15,7 @@ export const TopSection = styled.header`
   position: fixed;
   height: 100px;
   width: 100vw;
+  z-index: 10;
 `;
 
 export const BodySection = styled.main`

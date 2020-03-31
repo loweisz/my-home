@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Company,
   DataText,
@@ -13,12 +13,24 @@ import {
   Title,
 } from './experience.styles';
 import { FiUser } from 'react-icons/fi';
+import { useRef } from 'react';
 
-function Experience({ node }) {
+function Experience({ node, observer }) {
+  const el = useRef();
+
+  useEffect(
+    () => {
+      if (observer) {
+        observer.observe(el.current);
+      }
+    },
+    [observer],
+  );
+
   return (
     <Wrapper>
       <TimeLineElement />
-      <ExperienceBox>
+      <ExperienceBox ref={el}>
         <Title>
           <IconWrapper>
             <FiUser />

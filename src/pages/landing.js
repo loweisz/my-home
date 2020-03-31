@@ -13,9 +13,8 @@ const IndexPage = () => {
               <HeaderText>Hi,</HeaderText>
               <span>
                 Nice to meet you. <br />
-                My name is Lorenz, I'm from the south of germany and currently living in Berlin. <br />I work
-                as a Software Developer and write or think a lot about code, technology and sometimes stupid
-                and{' '}
+                My name is Lorenz, I'm working as a Software Developer and write or think a lot about code,
+                technology and sometimes stupid and{' '}
                 <a target="_blank" href="https://9gag.com/gag/aBg0ZVD">
                   random things.
                 </a>{' '}

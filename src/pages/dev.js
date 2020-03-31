@@ -1,11 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../components/layout';
 
-import { Wrapper, InfoStarter, PageHeader, TextSection, Blogs} from '../styles/pages.sc';
+import { Wrapper, InfoStarter, PageHeader, TextSection, Blogs } from '../styles/pages.sc';
 import { graphql } from 'gatsby';
 import Experience from '../components/dev/Experience';
 
 const DevPage = (props) => {
+  const [obs, setObs] = useState(null);
+  useEffect(() => {
+    let options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3,
+    };
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((change) => {
+        if (change.intersectionRatio > 0) {
+          animateElement(change.target);
+          observer.unobserve(change.target);
+        }
+      });
+    }, options);
+    setObs(observer);
+  }, []);
+
+  const animateElement = (target) => {
+    target.classList.add('shown');
+  };
+
   return (
     <Layout>
       <Wrapper>
@@ -13,7 +35,7 @@ const DevPage = (props) => {
           <PageHeader>What I did so far:</PageHeader>
           <TextSection>
             {props.data.allMarkdownRemark.edges.map((edge) => (
-              <Experience key={edge.node.frontmatter.company} node={edge.node} />
+              <Experience observer={obs} key={edge.node.frontmatter.company} node={edge.node} />
             ))}
           </TextSection>
         </InfoStarter>
