@@ -1,19 +1,11 @@
 import React from 'react';
 
-import {
-  AvatarImage,
-  HeaderSection,
-  ImageContainer,
-  LinkContainer,
-  Mobile,
-  Title,
-  Desktop,
-} from './header.sc';
+import { AvatarImage, HeaderSection, ImageContainer, LinkContainer, Mobile, Title } from './header.sc';
 import { InfoHeader } from './header.sc';
 import { iconsObj } from '../cubeNavigation/SocialElement';
 import BubbleBurgerMenu from '../bubbleBurgerMenu/BubbleBurgerMenu';
 import { Link } from 'gatsby';
-import Avatar from '../../images/data/avatar.png';
+import Avatar from '../../images/data/avatar.jpg';
 
 const Header = (props) => {
   const percentageScrolled = (props.offset % 95) / 94;
