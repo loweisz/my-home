@@ -29,12 +29,9 @@ function Experience({ node, observer }) {
     observer.observe(el.current);
   },[observer] );
 
-  useEffect(
-    () => {
-      observeIntersection();
-    },
-    [observeIntersection, observer],
-  );
+  useEffect(() => {
+    observeIntersection();
+  },[observeIntersection, observer]);
 
   return (
     <Wrapper>
