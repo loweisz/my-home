@@ -20,23 +20,20 @@ import { useCallback } from 'react';
 function Experience({ node, observer }) {
   const el = useRef();
 
+  const observeIntersection = useCallback(() => {
+    if (!observer) return;
+    if (observer === 'not_available') {
+      el.current.classList.add('shown');
+      return;
+    }
+    observer.observe(el.current);
+  },[observer] );
+
   useEffect(
     () => {
       observeIntersection();
     },
     [observeIntersection, observer],
-  );
-
-  const observeIntersection = useCallback(
-    () => {
-      if (!observer) return;
-      if (observer === 'not_available') {
-        el.current.classList.add('shown');
-        return;
-      }
-      observer.observe(el.current);
-    },
-    [observer],
   );
 
   return (
