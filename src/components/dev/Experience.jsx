@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { FiExternalLink } from 'react-icons/fi';
 import {
   Company,
   DataText,
@@ -52,6 +53,7 @@ function Experience({ node, observer }) {
           <IconWrapper>
             <Company target=":_blank" href={`https://${node.frontmatter.website}`}>
               <span>{node.frontmatter.company}</span>
+              <FiExternalLink />
             </Company>
           </IconWrapper>
           <IconWrapper>

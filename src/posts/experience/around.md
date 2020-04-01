@@ -1,15 +1,17 @@
 ---
-startDate: "2019-11-01"
-type: "exp"
+startDate: 'Nov. 2019'
+type: 'exp'
 endDate: null
-title: "Frontend Developer"
-company: "Aroundhome"
-website: "aroundhome.de"
-location: "Berlin"
-techStack: ["React", "Redux", "Styled-components", "SASS"]
+title: 'Frontend Developer'
+company: 'Aroundhome'
+website: 'aroundhome.de'
+location: 'Berlin'
+techStack: ['React', 'Redux', 'Styled-components', 'SASS']
 ---
 
-Working with scrum in an agile enviroment on a react based frontend project. Reduced the bundlesize of the project by optimizing the webpack setup.
-Updated the tech stack of the project to a modern way with bleeding edge technologies and an optimized workflow. 
+Working with scrum in an agile enviroment on multiple react based frontend project. Reduced the bundlesize of the projects by optimizing the webpack setup.
+Updated the tech stack of the existing projects to a modern way with bleeding edge technologies and an optimized workflow.
 
-I also initialized and was heavily involved in created a company internally component library for multiple react projects with storybook, rollup, styled-components etc. 
+I also initialized and was heavily involved in created a company internally component library for multiple react projects with storybook, rollup, styled-components etc.
+
+Being part of building the frontend for two new projects including a video call app for companies and their customers.

@@ -36,10 +36,11 @@ export const TimeLineElement = styled.div`
     content: '';
     top: 42px;
     left: -25px;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
-    background: ${({ theme }) => theme.lightGrey};
+    background: ${({ theme }) => theme.white};
+    border: 10px solid ${({ theme }) => theme.black};
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 
@@ -96,20 +97,27 @@ export const Icon = styled.span`
 `;
 
 const Tag = styled.span`
-  padding: 6px;
-  background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.black};
+  padding: 3px 12px;
+  background: ${({ theme }) => theme.black};
+  color: ${({ theme }) => theme.white};
   border-radius: 4px;
   font-size: 16px;
   text-decoration: none;
 `;
 
 export const Company = styled.a`
-  padding: 6px;
-  background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.black};
+  padding: 3px 12px;
+  background: ${({ theme }) => theme.black};
+  color: white !important;
   border-radius: 4px;
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  > svg {
+    height: 16px;
+    width: 16px;
+    margin-left: 6px;
+  }
 `;
 
 export const Title = styled.span`
@@ -120,6 +128,9 @@ export const Title = styled.span`
 
 export const Time = styled(Tag)`
   margin-left: 10px;
+  @media screen and (max-width: 800px) {
+    margin-left: 0;
+  }
 `;
 
 export const IconWrapper = styled.div`
@@ -304,4 +315,3 @@ export const DataText = styled.div`
     }
   }
 `;
-  

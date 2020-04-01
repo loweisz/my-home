@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Box } from '../styles/shared';
 
 export const PostContainer = styled.article`
   color: ${({ theme }) => theme.white};
@@ -15,4 +16,11 @@ export const SubTitle = styled.span`
   padding-bottom: 40px;
   font-size: 32px;
   line-height: 38px;
-`
+`;
+export const BlogPostBox = styled(Box)`
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  flex: 1;
+`;
