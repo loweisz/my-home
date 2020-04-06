@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import React from 'react';
 
 const jumpIn = keyframes`
   0% {
@@ -15,12 +14,13 @@ const jumpIn = keyframes`
 `;
 const twist = keyframes`
   to {
-    transform: rotate(360deg);
+    transform: rotate(180deg);
   }
 `;
+
 const twistReverse = keyframes`
   to {
-    transform: rotate(-360deg);
+    transform: rotate(-180deg);
   }
 `;
 
@@ -30,10 +30,14 @@ export const Bubble = styled.div`
   position: relative;
   background-color: white;
   border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.29);
   cursor: pointer;
   animation: ${({ selected }) => (selected ? twist : twistReverse)} 500ms ease-in-out;
   animation-direction: ${({ selected }) => (selected ? 'initial' : 'reverse')};
+  -webkit-tap-highlight-color: transparent;
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -52,17 +56,20 @@ export const BurgerMenu = styled.div`
   padding: ${({ selected }) => (selected ? '17px' : '20px')} 15px;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  box-sizing: border-box;
 `;
 
 export const Bar = styled.div`
   height: 8px;
+  flex-shrink: 0;
   width: 100%;
   background-color: black;
   margin-top: ${({ selected }) => (selected ? '17px' : '6px')};
   border-radius: 20px;
   transition: all 0.3s ease;
   &:first-child {
-    margin-top: 0;
+    margin-top: ${({ selected }) => (selected ? '10px' : '0')};
   }
 `;
 
@@ -94,16 +101,28 @@ export const SubMenu = styled.div`
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   top: 0;
   border-radius: 5px;
-  padding: 20px;
   font-size: 30px;
   display: flex;
   flex-direction: column;
   a {
-    margin-top: 17px;
     color: black;
+    padding: 10px 30px;
+    min-width: 200px;
     text-decoration: none;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    color: ${({ theme }) => theme.darkRed};
+
     &:first-child {
       margin-top: 0;
+      border: none;
+    }
+    > span {
+      margin-left: 10px;
+      color: ${({ theme }) => theme.black};
     }
   }
 `;

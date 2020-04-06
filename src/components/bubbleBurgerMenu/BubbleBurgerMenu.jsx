@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { BreadOne, BreadTwo, Bubble, BurgerMenu, Patty, SubMenu, Wrapper } from './bubbleBurgerMenu.styles';
 import { Link } from '@reach/router';
+import { FiBox, FiUser, FiFile } from 'react-icons/fi';
 
 function BubbleBurgerMenu() {
   const [selected, setSelected] = useState(false);
 
-  const select = (e) => {
-    setSelected(s => !s);
+  const select = () => {
+    setSelected((s) => !s);
   };
   const deSelect = () => {
     setSelected(false);
@@ -15,9 +16,15 @@ function BubbleBurgerMenu() {
     <Wrapper>
       {selected && (
         <SubMenu onClick={deSelect}>
-          <Link to="/landing/">About</Link>
-          <Link to="/dev/">Job</Link>
-          <Link to="/blog/">Blog</Link>
+          <Link to="/landing/">
+            <FiUser /> <span>About</span>
+          </Link>
+          <Link to="/dev/">
+            <FiBox /> <span>CV</span>
+          </Link>
+          <Link to="/blog/">
+            <FiFile /> <span>Blog</span>
+          </Link>
         </SubMenu>
       )}
       <Bubble selected={selected} onClick={select}>
