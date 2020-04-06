@@ -106,7 +106,7 @@ export const SubMenu = styled.div`
   flex-direction: column;
   a {
     color: black;
-    padding: 10px 30px;
+    padding: 15px 30px;
     min-width: 200px;
     text-decoration: none;
     border-top: 1px solid #ccc;
