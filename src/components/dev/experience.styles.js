@@ -108,7 +108,7 @@ const Tag = styled.span`
 export const Company = styled.a`
   padding: 3px 12px;
   background: ${({ theme }) => theme.black};
-  color: white !important;
+  color: ${({ theme }) => theme.white} !important;
   border-radius: 4px;
   font-size: 16px;
   display: flex;
@@ -124,6 +124,7 @@ export const Title = styled.span`
   font-size: 22px;
   font-weight: 600;
   line-height: 26px;
+  color: ${({ theme }) => theme.black};
 `;
 
 export const Time = styled(Tag)`
@@ -155,6 +156,11 @@ export const SubInfo = styled.div`
 export const DataText = styled.div`
   line-height: 25px;
   color: ${({ theme }) => theme.grey};
+  h1,
+  h2,
+  h3 {
+    color: ${({ theme }) => theme.black};
+  }
   code[class*='language-'],
   pre[class*='language-'] {
     color: white;
@@ -173,7 +179,7 @@ export const DataText = styled.div`
   }
 
   code[class*='language-'] {
-    color: ${({ theme }) => theme.white};
+    color: white;
   }
 
   a {

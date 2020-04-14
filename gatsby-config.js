@@ -60,16 +60,42 @@ module.exports = {
         icon: 'src/icons/icon.png',
       },
     },
+    `gatsby-plugin-styled-components`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.app/offline
+    // 'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-styled-components-dark-mode`,
+      options: {
+        light: {
+          white: '#eee',
+          black: '#252525',
+          lightRed: '#ffacb3',
+          red: '#740300',
+          darkRed: '#700',
+          lightGrey: '#ccc',
+          grey: '#666666',
+          darkGrey: '#666666',
+          background: '#e7e3e3',
+        },
+        dark: {
+          white: '#252525',
+          black: '#eee',
+          lightRed: '#700',
+          red: '#ffacb3',
+          darkRed: '#ffacb3',
+          lightgrey: '#666666',
+          grey: '#666666',
+          darkGrey: '#ccc',
+          background: '#252525',
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-159014335-1',
       },
     },
-
-    `gatsby-plugin-styled-components`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
   ],
 };

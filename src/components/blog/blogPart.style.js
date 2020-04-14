@@ -9,7 +9,7 @@ export const AdditionalInfo = styled.div`
 export const Date = styled.div`
   display: flex;
   align-items: center;
-  color: rgba(112, 7, 0, 0.7);
+  color: ${({ theme }) => theme.red};
   font-size: 14px;
   span {
     margin-left: 10px;

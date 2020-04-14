@@ -5,6 +5,7 @@ import Tabs from './tabs/Tabs';
 import Header from './header/Header';
 import LayoutBackground from './layoutBackground';
 import { BodySection, LayoutWrapper, TopSection } from './layout.styles';
+import Footer from './footer/Footer';
 
 const Layout = ({ children }) => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const Layout = ({ children }) => {
           <Tabs offset={offset} />
         </TopSection>
         <BodySection>{children}</BodySection>
+        <Footer />
       </LayoutWrapper>
     </LayoutBackground>
   );

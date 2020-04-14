@@ -9,6 +9,7 @@ export const Title = styled.h1`
   font-size: 42px;
   line-height: 48px;
   margin: 10px 0 30px 0;
+  color: ${({ theme }) => theme.black};
 `;
 
 export const SubTitle = styled.span`

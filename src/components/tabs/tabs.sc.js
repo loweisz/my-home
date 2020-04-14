@@ -13,7 +13,7 @@ export const InfoTabBar = styled.div`
 
 export const TabSection = styled.div`
   width: 100%;
-  background: radial-gradient(circle, #fff 0%, ${({ theme }) => theme.background} 70%);
+  background: radial-gradient(circle, ${({ theme }) => theme.white} 0%, ${({ theme }) => theme.white} 70%);
   @media screen and (max-width: 800px) {
     display: none;
   }

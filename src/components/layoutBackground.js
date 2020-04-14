@@ -11,11 +11,7 @@ const Background = styled.div`
 `;
 
 const LayoutBackground = ({ children }) => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Background>{children}</Background>
-    </ThemeProvider>
-  );
+  return <Background>{children}</Background>;
 };
 
 LayoutBackground.propTypes = {

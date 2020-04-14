@@ -4,7 +4,6 @@ import { FiUser } from 'react-icons/fi';
 
 const NavigationElement = ({ blob, isSelected, name, select, url, icon }) => {
   const onSelect = () => select(url);
-  console.log(isSelected);
   return (
     <Blob className="blob" isSelected={isSelected} onClick={onSelect}>
       <Text>

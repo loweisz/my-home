@@ -1,10 +1,11 @@
 import React from 'react';
-
+import ThemeToggle from '../themeToggle/ThemeToggle';
 import { AvatarImage, HeaderSection, ImageContainer, LinkContainer, Mobile, Title } from './header.sc';
 import { InfoHeader } from './header.sc';
 import { iconsObj } from '../cubeNavigation/SocialElement';
 import BubbleBurgerMenu from '../bubbleBurgerMenu/BubbleBurgerMenu';
 import { Link } from 'gatsby';
+
 import Avatar from '../../images/data/avatar.jpg';
 
 const Header = (props) => {
@@ -19,6 +20,7 @@ const Header = (props) => {
         <LinkContainer>
           {Object.values(iconsObj).map((obj) => (
             <a
+              key={obj.link}
               style={{ fontSize: `${35 - 10 * percentageScrolled}px` }}
               href={obj.link}
               target="_blank"

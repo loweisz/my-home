@@ -28,9 +28,9 @@ export const Bubble = styled.div`
   height: 80px;
   width: 80px;
   position: relative;
-  background-color: white;
   border-radius: 50%;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.29);
+  background-color: ${({ theme }) => theme.white};
+  box-shadow: 0 0 30px ${({ theme }) => (theme.isDark ? 'rgba(255, 255, 255, 0.09)' : 'rgba(0, 0, 0, 0.29)')};
   cursor: pointer;
   animation: ${({ selected }) => (selected ? twist : twistReverse)} 500ms ease-in-out;
   animation-direction: ${({ selected }) => (selected ? 'initial' : 'reverse')};
@@ -64,7 +64,7 @@ export const Bar = styled.div`
   height: 8px;
   flex-shrink: 0;
   width: 100%;
-  background-color: black;
+  background-color: ${({ theme }) => theme.black};
   margin-top: ${({ selected }) => (selected ? '17px' : '6px')};
   border-radius: 20px;
   transition: all 0.3s ease;
@@ -97,7 +97,7 @@ export const SubMenu = styled.div`
   animation: ${growBox} 350ms ease;
   margin-bottom: 10px;
   margin-right: 10px;
-  background-color: white;
+  background-color: ${({ theme }) => theme.white};
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   top: 0;
   border-radius: 5px;
@@ -105,7 +105,6 @@ export const SubMenu = styled.div`
   display: flex;
   flex-direction: column;
   a {
-    color: black;
     padding: 15px 30px;
     min-width: 200px;
     text-decoration: none;
