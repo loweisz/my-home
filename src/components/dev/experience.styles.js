@@ -161,6 +161,7 @@ export const DataText = styled.div`
   h3 {
     color: ${({ theme }) => theme.black};
   }
+
   code[class*='language-'],
   pre[class*='language-'] {
     color: white;
@@ -300,7 +301,7 @@ export const DataText = styled.div`
   .gatsby-highlight {
     margin-bottom: 1.75rem;
     border-radius: 10px;
-    background: #320a28;
+    background: #1d1d1d;
     -webkit-overflow-scrolling: touch;
     overflow: auto;
   }
