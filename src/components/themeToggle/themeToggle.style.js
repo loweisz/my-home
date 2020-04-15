@@ -12,10 +12,10 @@ export const IconContainer = styled.div`
     left: 14px;
   }
   .moon {
-    margin-top: ${({ shown }) => (shown ? '-60px' : '10px')};
+    margin-top: ${({ shown }) => (shown ? '-60px' : '12px')};
   }
   .sun {
-    margin-top: ${({ shown }) => (!shown ? '-60px' : '10px')};
+    margin-top: ${({ shown }) => (!shown ? '-60px' : '12px')};
   }
 `;
 
@@ -40,5 +40,8 @@ export const ThemeButton = styled.button`
   overflow: hidden;
   &:focus {
     outline: none;
+  }
+  @media screen and (max-width: 800px) {
+    bottom: 64px;
   }
 `;

@@ -15,9 +15,9 @@ export const Desktop = styled.div`
 `;
 
 export const InfoHeader = styled.div`
-  background-color: ${({ theme }) => theme.black};
+  background-color: #252525;
   z-index: 1;
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.black};
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -25,6 +25,7 @@ export const InfoHeader = styled.div`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
   padding: 20px;
+  border-bottom: 1px solid ${({ theme }) => theme.black};
   @media screen and (max-width: 800px) {
     padding: 10px;
     height: 70px !important;
@@ -42,7 +43,7 @@ export const SocialSection = styled.div`
 export const LinkContainer = styled.div`
   display: flex;
   a {
-    color: ${({ theme }) => theme.white};
+    color: #eee;
     font-size: 35px;
     margin: 10px;
 
@@ -72,7 +73,7 @@ export const HeaderSection = styled.div`
     justify-content: center;
   }
   a {
-    color: ${({ theme }) => theme.white};
+    color: #eee;
     text-decoration: none;
   }
 `;

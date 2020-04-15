@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 import {
   Company,
@@ -14,24 +14,33 @@ import {
   Title,
 } from './experience.styles';
 import { FiUser } from 'react-icons/fi';
+import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
 import { useRef } from 'react';
 import { useCallback } from 'react';
 
 function Experience({ node, observer }) {
   const el = useRef();
 
-  const observeIntersection = useCallback(() => {
-    if (!observer) return;
-    if (observer === 'not_available') {
-      el.current.classList.add('shown');
-      return;
-    }
-    observer.observe(el.current);
-  },[observer] );
+  const observeIntersection = useCallback(
+    () => {
+      if (!observer) return;
+      if (observer === 'not_available') {
+        el.current.classList.add('shown');
+        return;
+      }
+      observer.observe(el.current);
+    },
+    [observer],
+  );
 
-  useEffect(() => {
-    observeIntersection();
-  },[observeIntersection, observer]);
+  const { isDark } = useContext(ThemeManagerContext);
+
+  useEffect(
+    () => {
+      observeIntersection();
+    },
+    [observeIntersection, observer, isDark],
+  );
 
   return (
     <Wrapper>

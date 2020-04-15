@@ -48,6 +48,9 @@ export const Wrapper = styled.div`
   right: 13px;
   bottom: 13px;
   animation: ${jumpIn} 500ms ease-in-out;
+  @media screen and (max-width: 800px) {
+    bottom: 64px;
+  }
 `;
 
 export const BurgerMenu = styled.div`

@@ -26,5 +26,6 @@ export const BodySection = styled.main`
 
   @media screen and (max-width: 800px) {
     margin-top: 0px;
+    padding: 15px 15px 100px 15px;
   }
 `;
