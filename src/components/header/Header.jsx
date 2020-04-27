@@ -1,5 +1,4 @@
 import React from 'react';
-import ThemeToggle from '../themeToggle/ThemeToggle';
 import { AvatarImage, HeaderSection, ImageContainer, LinkContainer, Mobile, Title } from './header.sc';
 import { InfoHeader } from './header.sc';
 import { iconsObj } from '../cubeNavigation/SocialElement';
@@ -45,7 +44,7 @@ const Header = (props) => {
               marginTop: `${70 - percentageScrolled * 25}px`,
             }}
           >
-            <img src={Avatar} />
+            <img alt="avatar" src={Avatar} />
           </AvatarImage>
         </ImageContainer>
       </HeaderSection>

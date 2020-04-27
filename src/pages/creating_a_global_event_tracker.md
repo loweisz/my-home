@@ -4,21 +4,21 @@ date: 'October 28th, 2019'
 abstract: 'How to make it easy to add event tracking to elements, when they are interacted with without any additional logic to the event handlers'
 ---
 
-Today, one of the most important parts of a heavily used website is the ability to track and collect data about the usage and behavior of the users who visit this website. This information helps us to improve our work and to detect and correct mistakes.
+Today, one of the most important parts of a heavily used website is the ability to track and collect data about the usage and behavior of the users who visit this page. This information helps us to improve our work and to detect and correct our mistakes.
 
-To do just that and get some basic data, I wanted to track some of our user interactions in a basic react app. All of them? No, I wanted to start slowly and track only a few and want the list of events to be easily expandable. So the goal is that I can flexibly track when and where a user interacts with our website.
+To do just that and get some basic data, I wanted to track some of our user interactions in a basic react app. All of them? No no not all of them, I just wanted to start slowly and track only a few and extend the list of events piece by piece. So the goal is that I can flexibly track when and where a user interacts with the page.
 
 ### Let's try Redux...
 
 My original idea was to implement a hook in our redux store (yes, it's still implemented with Redux ...) and check if the action is included in my predefined "track action list", and then well ,...track the action.
 
-The big problem with that was that I would be restricted by actions that go through my Redux store and also add more features to Redux, making it more difficult to replace it with another technology at some point.
+One of the big problem with that was that I would be restricted by actions that go through my Redux store. Another would be that I have to add more features to Redux, making it more difficult to replace it with another technology at some point and we all know that point is long overdue.
 But I also wanted to track actions like clicking on the sidebar, which does not trigger a redux action.
-Basically, Redux was not the best solution ...
+Basically, Redux is and was not the best solution ...
 
 ### The power of vanillaJS
 
-The next idea was a bit more global. I've just added a global click listener at the top of my app. (could be any other event listener like `scroll`,`keydown` etc, but in this particular example i just want to focus on a `click` listener)
+The next idea is a bit more general and solved my problem pretty well. The first idea is that the event tracker is implemented completely out of the scope of a framework or library. So I started with adding a global click listener at the top of my app. (could be any other event listener like `scroll`,`keydown` etc, but in this particular example i just want to focus on a `click` listener) and I did that with just plain good ol' javascript:
 
 ```js{2}
 // somewhere in the index.js file or any other place.
@@ -27,13 +27,15 @@ document.addEventListener('click', (event) => {
 });
 ```
 
-With that, I could hook into every click of the user and handle the action.
-The big problem with that was that I just wanted to track a specific list of user interactions. Somehow I had to filter the triggered events with a list of defined events and locations.
+With that, I could hook into every click of the user and handle the action. So this would be the point where I would send the click event to whatever source I want.
+The big problem with that was that I just wanted to track a specific list of user interactions and not all of them. Also I somehow need to label the events to distinguish later what and where something happened. So, Somehow I have to filter the triggered events with a list of defined events and locations. But how?
+
+### The event
 
 First, let's check what we can do with the event, the eventlistener gives us.
-The event object is [pretty big and contains a lot of information](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent), like the position if it's clicked together with a button and, most importantly the target element.
+The event object is [pretty big and contains a lot of information](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent), like the position if it's clicked together with a button and, most importantly the **target element**.
 
-This means that the click event gives us the dom element that the user clicked on, and, what is pretty cool, that this target element object also contains much information about itself.
+This means that the click event gives us the dom element that the user clicked on, and, what is pretty cool, that this target element object also contains much information about itself. So now we know not only **that** the user has clicked but also **where** he clicked.
 
 But how can we differentiate if the element is one of the elements we want to track?
 

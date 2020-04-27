@@ -15,12 +15,12 @@ const IndexPage = () => {
                 Nice to meet you. <br />
                 My name is Lorenz, I'm working as a Software Developer and write or think a lot about code,
                 technology and sometimes stupid and{' '}
-                <a target="_blank" href="https://9gag.com/gag/aBg0ZVD">
+                <a target="_blank" rel="noopener noreferrer" href="https://9gag.com/gag/aBg0ZVD">
                   random things.
                 </a>{' '}
                 <br />
                 <br /> Most of the time when I'm sitting at my computer I also listen to a lot of different{' '}
-                <a href="https://open.spotify.com/user/mizztersc" target="_blank">
+                <a href="https://open.spotify.com/user/mizztersc" rel="noopener noreferrer" target="_blank">
                   music
                 </a>{' '}
                 or try to draw or paint something. I'm also planing to create a section on this website for

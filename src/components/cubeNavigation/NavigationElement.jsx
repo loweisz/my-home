@@ -1,6 +1,5 @@
 import React from 'react';
 import { Blob, Text, MenuText } from './navigationElement.styles';
-import { FiUser } from 'react-icons/fi';
 
 const NavigationElement = ({ blob, isSelected, name, select, url, icon }) => {
   const onSelect = () => select(url);

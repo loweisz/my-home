@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Layout from '../components/layout';
 
-import { Wrapper, InfoStarter, PageHeader, TextSection, Blogs } from '../styles/pages.sc';
+import { Wrapper, InfoStarter, PageHeader, TextSection } from '../styles/pages.sc';
 import { graphql } from 'gatsby';
 import Experience from '../components/dev/Experience';
 
 const DevPage = (props) => {
   const [obs, setObs] = useState(null);
-  useEffect(() => {
-    let observer = 'not_available';
-    if ('IntersectionObserver' in window) {
-      observer = createInterSectionObserver();
-    }
-    setObs(observer);
-  }, []);
 
-  const createInterSectionObserver = () => {
+  const createInterSectionObserver = useCallback(() => {
     const options = {
       root: null,
       rootMargin: '0px',
@@ -29,7 +22,18 @@ const DevPage = (props) => {
         }
       });
     }, options);
-  };
+  }, []);
+
+  useEffect(
+    () => {
+      let observer = 'not_available';
+      if ('IntersectionObserver' in window) {
+        observer = createInterSectionObserver();
+      }
+      setObs(observer);
+    },
+    [createInterSectionObserver],
+  );
 
   const animateElement = (target) => {
     target.classList.add('shown');

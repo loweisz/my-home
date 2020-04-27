@@ -103,10 +103,13 @@ function CubeMenu(props) {
               marginBottom: '-115px',
             }}
           >
-            <img src={Avatar} />
+            <img alt="avatar" src={Avatar} />
           </AvatarImage>
           <span>
-            Hi there 👋
+            Hi there{' '}
+            <span role="img" aria-label="wave-hand">
+              👋
+            </span>
             <br /> <span>I'm Lorenz.</span>
             <br />I write code and think about stuff
           </span>

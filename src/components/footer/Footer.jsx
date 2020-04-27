@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <ThemeToggle />
-      <span>© 2020 Copyright Lorenz Weiß. All rights reserved.</span>
+      <span>2020 Made by Lorenz Weiß.</span>
     </StyledFooter>
   );
 };

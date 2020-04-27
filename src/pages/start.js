@@ -45,7 +45,7 @@ const StartPage = () => {
       <PageContainer>
         <MobileImage>
           <AvatarImage>
-            <img src={Avatar} />
+            <img alt="avatar" src={Avatar} />
           </AvatarImage>
         </MobileImage>
         {!isNavigated && (
