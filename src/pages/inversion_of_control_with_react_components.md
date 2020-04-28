@@ -16,7 +16,7 @@ Nowadays, however, not everything is object-oriented anymore and more and more J
 
 ## Not only object orientated
 
-The idea of inversion of control (IoC) not only makes sense for object-orientation, it can be transffered to a lot more such as for React or any other component-based framework with the composition of components. In this article, I want to explain how you can use the pattern not only in Java(script), but also when you want to create a shared UI-component.
+The idea of inversion of control (IoC) not only makes sense for object-orientation, it can be transferred to a lot more such as for React or any other component-based framework with the composition of components. In this article, I want to explain how you can use the pattern not only in Java(script), but also when you want to create a shared UI-component.
 
 But first let's find out what IoC actually means. Let's see what [wikipedia](https://en.wikipedia.org/wiki/Inversion_of_control) says about it.
 
@@ -138,5 +138,5 @@ With that we can extend the component how we like it and still be using the inve
 
 ## Conclusion
 
-The inversion of control pattern is very powerfull paradigm, which can be used in quite a few places while programming and makes a lot of shared things or libraries easier to customize and safer to use.
+The inversion of control pattern is very powerful paradigm, which can be used in quite a few places while programming and makes a lot of shared things or libraries easier to customize and safer to use.
 I think especially in the world of react components having more than two or three conditions to display something or not in a component, is a point to think about inverting the control to the one using the component not the one writing it and if you are not sure what to add to the component and what do you want be handled by the use case? A rule of thumb for me is, don't use more than two optional and visual props and if you are using one of them more than two times make it a separate component.
