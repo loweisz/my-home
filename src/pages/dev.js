@@ -61,7 +61,7 @@ export const query = graphql`
   {
     allMarkdownRemark(
       filter: { frontmatter: { type: { in: ["exp", "edu"] } } }
-      sort: { fields: frontmatter___startDate, order: DESC }
+      sort: { fields: frontmatter___index, order: ASC }
     ) {
       edges {
         node {
@@ -73,6 +73,7 @@ export const query = graphql`
             website
             location
             techStack
+            index
           }
           html
         }

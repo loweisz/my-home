@@ -76,7 +76,7 @@ module.exports = {
           lightGrey: '#ccc',
           grey: '#666666',
           darkGrey: '#666666',
-          background: '#e7e3e3',
+          background: '#d8d7d7',
         },
         dark: {
           white: '#252525',
@@ -87,7 +87,7 @@ module.exports = {
           lightgrey: '#666666',
           grey: '#666666',
           darkGrey: '#ccc',
-          background: '#252525',
+          background: '#1b1b1b',
         },
       },
     },

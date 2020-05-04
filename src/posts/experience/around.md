@@ -6,6 +6,7 @@ title: 'Frontend Developer'
 company: 'Aroundhome'
 website: 'aroundhome.de'
 location: 'Berlin'
+index: 0
 techStack: ['React', 'Redux', 'Styled-components', 'SASS']
 ---
 

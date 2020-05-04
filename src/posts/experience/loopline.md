@@ -6,6 +6,7 @@ location: 'Berlin'
 title: 'Frontend Developer'
 company: 'Loopline Systems'
 website: 'now.loopline.systems'
+index: 1
 ---
 
 Started and entirely built a tool called "Loop Now" which is an agile web application to control and monitor feedback in your company.
