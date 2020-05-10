@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import { Wrapper, InfoStarter, TextSection, TextBlock, HeaderText } from '../styles/pages.sc';
 import { graphql } from 'gatsby';
-import SEO from "../components/seo"
+import SEO from "../components/seo.helper"
 
 const IndexPage = () => {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import { Wrapper, InfoStarter, TextBlock, HeaderText, TextSection, Blogs } from '../styles/pages.sc';
 import Layout from '../components/layout';
 import BlogPart from '../components/blog/BlogPart';
-import SEO from "../components/seo"
+import SEO from "../components/seo.helper"
 
 const BlogPage = (props) => (
   <Layout>

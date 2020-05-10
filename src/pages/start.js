@@ -10,7 +10,7 @@ import { AvatarImage } from '../components/header/header.sc';
 import Avatar from '../images/data/avatar.png';
 import NavigationElement from '../components/cubeNavigation/NavigationElement';
 import SocialElement from '../components/cubeNavigation/SocialElement';
-import SEO from "../components/seo"
+import SEO from "../components/seo.helper"
 
 export const SELECT_ANIMATION_TIME = 1600;
 

@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import { DataText } from '../components/dev/experience.styles';
 import { TextSection, InfoStarter } from '../styles/pages.sc';
 import { Title, SubTitle, BlogPostBox } from './blog-post.styles';
-import SEO from '../components/SEO'
+import SEO from '../components/seo.helper'
 
 const BlogPostTemplate = (props) => {
   
