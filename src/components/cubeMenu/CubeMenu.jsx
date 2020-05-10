@@ -3,7 +3,7 @@ import { socialIcons } from '../cubeNavigation/SocialElement';
 import { Greetings, JumpItem } from './cubeMenu.styles';
 import { AvatarImage } from '../header/header.sc';
 import CubeElement from './CubeElement';
-import Avatar from '../../images/data/avatar.png';
+import Avatar from '../../images/data/avatar.jpg';
 
 function CubeMenu(props) {
   const wrapperRef = useRef();
