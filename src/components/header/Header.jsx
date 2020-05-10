@@ -10,11 +10,12 @@ import { Link } from 'gatsby';
 const Header = (props) => {
   const percentageScrolled = (props.offset % 95) / 94;
   const data = useStaticQuery(
-    graphql`
-    query AvatarImageQuery {
-      avatarImage: imageSharp {
-        sizes(maxWidth: 472 ) {
-          ...GatsbyImageSharpSizes
+    graphql`query {
+      avatarImage: file(relativePath: { eq: "data/avatar.jpg" }) {
+        childImageSharp {
+          sizes(maxWidth: 472 ) {
+            ...GatsbyImageSharpSizes
+          }
         }
       }
     }
@@ -59,7 +60,7 @@ const Header = (props) => {
             <Img
               title="Avatar image"
               alt="Avatar Image"
-              sizes={data.avatarImage.sizes}
+              sizes={data.avatarImage.childImageSharp.sizes}
             />
           </AvatarImage>
         </ImageContainer>
