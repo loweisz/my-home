@@ -1,6 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Lorenz - Web Engineer',
+    description: 'My Personal Portfolio, Blog and collection of things I like',
+    author: 'Lorenz Weiß',
+    siteUrl: 'https://lorenzweiss.de',
+    social: {
+      twitter: '@lorenzweisz',
+    },
+    keywords: ['frontend', 'javascript', 'react', 'blog', 'software Engineer']
   },
   plugins: [
     {

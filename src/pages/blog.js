@@ -2,9 +2,14 @@ import React from 'react';
 import { Wrapper, InfoStarter, TextBlock, HeaderText, TextSection, Blogs } from '../styles/pages.sc';
 import Layout from '../components/layout';
 import BlogPart from '../components/blog/BlogPart';
+import SEO from "../components/seo"
 
 const BlogPage = (props) => (
   <Layout>
+    <SEO 
+      title="Blog"
+      description="My personal blog two write down my thoughts, ideas and explanations mostly about working as a software developer"
+    />
     <Wrapper>
       <InfoStarter>
         <TextSection>

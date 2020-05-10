@@ -4,14 +4,18 @@ import Layout from '../components/layout';
 import { DataText } from '../components/dev/experience.styles';
 import { TextSection, InfoStarter } from '../styles/pages.sc';
 import { Title, SubTitle, BlogPostBox } from './blog-post.styles';
+import SEO from '../components/SEO'
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.markdownRemark;
-
+const BlogPostTemplate = (props) => {
+  
+    const post = props.data.markdownRemark;
     return (
       <Layout>
         <InfoStarter>
+        <SEO
+          blogTitle={post.frontmatter.title}
+          description={post.frontmatter.abstract}
+        />
           <TextSection>
             <BlogPostBox className="shown">
               <article>
@@ -27,7 +31,7 @@ class BlogPostTemplate extends React.Component {
         </InfoStarter>
       </Layout>
     );
-  }
+  
 }
 
 export default BlogPostTemplate;

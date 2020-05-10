@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import { Wrapper, InfoStarter, PageHeader, TextSection } from '../styles/pages.sc';
 import { graphql } from 'gatsby';
 import Experience from '../components/dev/Experience';
+import SEO from "../components/seo"
 
 const DevPage = (props) => {
   const [obs, setObs] = useState(null);
@@ -41,6 +42,10 @@ const DevPage = (props) => {
 
   return (
     <Layout>
+      <SEO
+        title="Career"
+        description="My path of being a software engine"
+      />
       <Wrapper>
         <InfoStarter>
           <PageHeader>What I did so far:</PageHeader>
