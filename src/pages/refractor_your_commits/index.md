@@ -2,6 +2,7 @@
 title: 'Refractor your commits'
 date: '2019-03-30'
 abstract: 'Working with a lot of people on a big project, it makes sense to think about your way of writing commit messages'
+heroImage: 'colors.jpg'
 ---
 
 When you have worked on a software project, you probably also worked with git to have a proper version control when working with other people on the same code base.
