@@ -41,6 +41,13 @@ export const query = graphql`
             title
             abstract
             date
+            heroImage {
+              childImageSharp {
+                sizes(maxWidth: 1000 ) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
           timeToRead
           fields {

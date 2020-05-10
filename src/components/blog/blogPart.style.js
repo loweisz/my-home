@@ -1,5 +1,16 @@
 import styled from 'styled-components';
 
+export const ImagePreview = styled.div`
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  margin-left: -25px;
+  margin-top: -25px;
+  margin-right: -25px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+`
+
 export const AdditionalInfo = styled.div`
   display: flex;
   justify-content: space-between;
