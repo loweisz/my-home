@@ -3,7 +3,8 @@ import { socialIcons } from '../cubeNavigation/SocialElement';
 import { Greetings, JumpItem } from './cubeMenu.styles';
 import { AvatarImage } from '../header/header.sc';
 import CubeElement from './CubeElement';
-import Avatar from '../../images/data/avatar.jpg';
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 
 function CubeMenu(props) {
   const wrapperRef = useRef();
@@ -78,6 +79,18 @@ function CubeMenu(props) {
     [props.isSelected],
   );
 
+  const data = useStaticQuery(
+    graphql`
+    query AvatarImageQueryCube {
+      avatarImage: imageSharp {
+        sizes(maxWidth: 472 ) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    `
+  )
+
   const faces = useMemo(
     () => ({
       right: (
@@ -103,7 +116,11 @@ function CubeMenu(props) {
               marginBottom: '-115px',
             }}
           >
-            <img alt="avatar" src={Avatar} />
+            <Img
+              title="Avatar image"
+              alt="Avatar Image"
+              sizes={data.avatarImage.sizes}
+            />
           </AvatarImage>
           <span>
             Hi there{' '}

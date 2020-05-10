@@ -1,15 +1,26 @@
 import React from 'react';
+import { useStaticQuery, graphql } from "gatsby"
 import { AvatarImage, HeaderSection, ImageContainer, LinkContainer, Mobile, Title } from './header.sc';
 import { InfoHeader } from './header.sc';
 import { iconsObj } from '../cubeNavigation/SocialElement';
+import Img from "gatsby-image"
 import BubbleBurgerMenu from '../bubbleBurgerMenu/BubbleBurgerMenu';
 import { Link } from 'gatsby';
 
-import Avatar from '../../images/data/avatar.jpg';
-
 const Header = (props) => {
   const percentageScrolled = (props.offset % 95) / 94;
-
+  const data = useStaticQuery(
+    graphql`
+    query AvatarImageQuery {
+      avatarImage: imageSharp {
+        sizes(maxWidth: 472 ) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    `
+  )
+  
   return (
     <InfoHeader style={{ height: `${40 - 30 * percentageScrolled}px` }}>
       <Mobile>
@@ -45,12 +56,17 @@ const Header = (props) => {
               marginTop: `${70 - percentageScrolled * 25}px`,
             }}
           >
-            <img alt="avatar" src={Avatar} />
+            <Img
+              title="Avatar image"
+              alt="Avatar Image"
+              sizes={data.avatarImage.sizes}
+            />
           </AvatarImage>
         </ImageContainer>
       </HeaderSection>
     </InfoHeader>
   );
 };
+
 
 export default Header;

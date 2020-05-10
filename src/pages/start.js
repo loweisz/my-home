@@ -7,7 +7,7 @@ import BlobOne from '../images/blobs/blob_one.svg';
 import BlobTwo from '../images/blobs/blob_two.svg';
 import LayoutBackground from '../components/layoutBackground';
 import { AvatarImage } from '../components/header/header.sc';
-import Avatar from '../images/data/avatar.png';
+import Avatar from '../images/data/avatar.jpg';
 import NavigationElement from '../components/cubeNavigation/NavigationElement';
 import SocialElement from '../components/cubeNavigation/SocialElement';
 import SEO from "../components/seo.helper"
