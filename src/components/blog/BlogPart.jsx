@@ -7,7 +7,6 @@ import { FiCalendar, FiClock } from 'react-icons/fi';
 
 
 function BlogPart({ node }) {
-  console.log(node)
   return (
     <Box>
       <Link to={node.fields.slug}>
