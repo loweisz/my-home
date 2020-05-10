@@ -6,7 +6,7 @@ import { ThemeButton, IconContainer } from './themeToggle.style';
 function ThemeToggle() {
   const { toggleDark, isDark } = useContext(ThemeManagerContext);
   return (
-    <ThemeButton onClick={() => toggleDark()}>
+    <ThemeButton aria-label="theme toggle" onClick={() => toggleDark()}>
       <IconContainer shown={isDark}>
         <FiSun className="sun" />
         <FiMoon className="moon" />

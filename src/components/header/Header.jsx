@@ -20,6 +20,7 @@ const Header = (props) => {
           {Object.values(iconsObj).map((obj) => (
             <a
               key={obj.link}
+              aria-label={obj.name}
               style={{ fontSize: `${35 - 10 * percentageScrolled}px` }}
               href={obj.link}
               target="_blank"

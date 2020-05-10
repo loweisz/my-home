@@ -20,7 +20,7 @@ const BlogPage = (props) => (
         <TextSection>
           <Blogs>
             {props.data.allMarkdownRemark.edges.map(({ node }) => (
-              <BlogPart node={node} />
+              <BlogPart key={node.id} node={node} />
             ))}
           </Blogs>
         </TextSection>

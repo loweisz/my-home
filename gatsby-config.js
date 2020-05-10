@@ -92,7 +92,7 @@ module.exports = {
           red: '#ffacb3',
           darkRed: '#ffacb3',
           lightgrey: '#666666',
-          grey: '#666666',
+          grey: '#9f9f9f',
           darkGrey: '#ccc',
           background: '#1b1b1b',
         },
