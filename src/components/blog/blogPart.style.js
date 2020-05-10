@@ -7,8 +7,8 @@ export const ImagePreview = styled.div`
   margin-left: -25px;
   margin-top: -25px;
   margin-right: -25px;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%) ${({ theme }) => (theme.isDark ? 'invert(100%)' : '')}; /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%) ${({ theme }) => (theme.isDark ? 'invert(100%)' : '')};
 `
 
 export const AdditionalInfo = styled.div`

@@ -44,8 +44,8 @@ export const HeroImage = styled.div`
   margin-right: -25px;
   max-height: 400px;
   overflow: hidden;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%) ${({ theme }) => (theme.isDark ? 'invert(100%)' : '')}; /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%) ${({ theme }) => (theme.isDark ? 'invert(100%)' : '')};
 `
 
 export const BlogHeader = styled.header`
