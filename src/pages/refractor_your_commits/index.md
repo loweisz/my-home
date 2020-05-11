@@ -44,4 +44,30 @@ Maybe let's look at that commit that added that line, to find out who added that
 Nice ! There is the name of that person. So let's ask him/her? But most probably he or she is not working in your company anymore or even more likely also completely forgot what the hell she or him was doing there, so now you are two people being confused.
 Lucky for you, the commit message was well written, explaining what the developer was doing at that time.
 
-Exactly this is the main purpose of the commit message, it is basically the diary or history of a file. So when you go back in time you can see the steps of every change of that file, with a comments or description, basically a changelog, helping you identify the reason of the single parts of the whole composition of your code. And you can easily do that with proper commit messages that describe in a short and understandable way what exactly changed and why.
+Exactly this is the main purpose of the commit message, it is basically the diary or history of a file. So when you go back in time you can see the steps and every change of that file, with comments or a description, essentially it is a changelog, helping you identify the reason of every single part of the whole composition of your code. And you can easily do that with proper commit messages that describe in a short and understandable way what exactly changed and why.
+
+So commits are important, but how can we write proper commit messages then, instead of those examples above?
+Here are some ideas or concepts that might help you to write better commit messages:
+
+#### 1. Use a template within a code project
+
+There are a lot templates out there defining how to write your commit messages. You can even define the template withing your git config:
+
+```
+git config --get commit.template
+```
+
+If you decided to use a commit template, there is probably no real goto what template you should use, make sure you sit together with your team and think about what fits you the best. But here are some tips or ideas what might help you:
+
+- A good starting point is always to define the _What_ and _Why_ of every commit.
+- If you work with Jira or something similiar where your tasks are labeled, define the task ID or number withing the commit message, this might help you later identifiying the task which brought that piece of code.
+-
+
+#### 2. Agree on a maximum and a minimum character count
+
+Even thought this might sound annoying at the beginning, I think this really can help to really think about the meaning and the content of your commit messages, to avoid either unnecessary or meaningless information.
+
+#### 3. Make it possible to quickly identify the reason of a commit
+
+Clarify the basic types of a commit message like **bug-fix**, **feature**, **refactoring** etc. which should always be part of every commit message.
+There is even an idea how to this in a short and elegant way with the help of [gitmojis](https://gitmoji.carloscuesta.me)
