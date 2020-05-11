@@ -1,7 +1,7 @@
 ---
 title: 'Why and how to write useful commit messages. (5 helpful tips)'
 date: 'May 11th, 2020'
-abstract: 'Working with a lot of people on a big software project, it makes sense to think about your way of writing commit messages.'
+abstract: 'When orking with a lot of people on a big software project, it makes sense to think about your way of writing commit messages.'
 heroImage: 'colors.jpg'
 index: 3
 ---
@@ -45,6 +45,7 @@ If you're really honest, not a lot, but you're so excited to finally fix this pr
 Let's face it, we all had these thoughts in mind and we are definitely not the only developers writing these commit messages. I am sure that every developer has done this at least once in their life and will do it even in the future.
 To make it a bit clearer what I think these "bad" commit messages are, I would like to give you a few more examples of a bad type of commit messages:
 
+```
 - "small fix"
 - "testing"
 - "Removing the fetching parameters from file to find a good way of splitting the dependencies in the Fetch processor for api endpoint and also did some hacky solution of how the processor was building the query parameters of the url for accessing the endpoint in a more readable and easy way"
@@ -53,6 +54,7 @@ To make it a bit clearer what I think these "bad" commit messages are, I would l
 - "I don't know how, but it works now"
 - "mmmmmmmmmmmmmmm"
 - "fasdf"
+```
 
 What's the problem with them? Well none one of them is really telling me what exactly happened, right? Maybe at least that very long one. But let's be honest who wants to read all of that for every commit to get what happened here?
 There is clearly a problem. So how can we write better commit messages? To do this, we first need to find out exactly what the purpose of a commit message is and why we are writing it.
