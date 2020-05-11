@@ -33,7 +33,7 @@ export default BlogPage;
 
 export const query = graphql`
   {
-    allMarkdownRemark(filter: { frontmatter: { type: { nin: ["exp", "edu"] } } }) {
+    allMarkdownRemark(filter: {frontmatter: {type: {nin: ["exp", "edu"]}}}, sort: {fields: frontmatter___index, order: DESC}) {
       edges {
         node {
           id

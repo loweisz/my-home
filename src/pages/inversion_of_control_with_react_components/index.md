@@ -3,6 +3,7 @@ title: 'Inversion of Control with sharable react components'
 date: 'December 28th, 2019'
 abstract: 'Why the pattern could help us to make every component safer and cleaner'
 heroImage: 'car.jpg'
+index: 2
 ---
 
 There are many patterns, rules and methodologies in the world of programming.
