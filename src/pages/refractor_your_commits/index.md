@@ -3,6 +3,7 @@ title: 'Why and how to write useful commit messages. (5 helpful tips)'
 date: 'May 11th, 2020'
 abstract: 'Working with a lot of people on a big software project, it makes sense to think about your way of writing commit messages.'
 heroImage: 'colors.jpg'
+index: 3
 ---
 
 If you have worked with other developers on a software project, you have probably used **git**, in order to have a proper version control, especially when you are working in parallel on the same code base. As most of you know git is a very powerful tool to helps people collaborate on a common project and probably used on most of the software projects all around the world, Let's be honest I cannot imagine how it was to work as a software engineer before git was invented.
