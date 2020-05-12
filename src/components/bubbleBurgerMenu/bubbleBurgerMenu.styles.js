@@ -29,10 +29,12 @@ export const Bubble = styled.div`
   width: 80px;
   position: relative;
   border-radius: 50%;
+  border: 2px solid ${({ theme }) => theme.black};
   background-color: ${({ theme }) => theme.white};
   box-shadow: 0 0 30px ${({ theme }) => (theme.isDark ? 'rgba(255, 255, 255, 0.09)' : 'rgba(0, 0, 0, 0.29)')};
   ${({ selected }) => selected && css`
     box-shadow: none;
+    border: none;
   `}
   cursor: pointer;
   animation: ${({ selected }) => (selected ? twist : twistReverse)} 500ms ease-in-out;
@@ -104,6 +106,7 @@ export const SubMenu = styled.div`
   border-radius: 50%;
   margin-bottom: -348px;
   margin-right: -228px;
+  border: 2px solid ${({ theme }) => theme.black};
   a {
     padding: 15px 30px;
     min-width: 200px;
