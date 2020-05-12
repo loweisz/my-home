@@ -1,11 +1,11 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 const jumpIn = keyframes`
   0% {
     transform: scale(0);
   }
   80% {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);
@@ -14,13 +14,13 @@ const jumpIn = keyframes`
 `;
 const twist = keyframes`
   to {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
   }
 `;
 
 const twistReverse = keyframes`
   to {
-    transform: rotate(-180deg);
+    transform: rotate(-90deg);
   }
 `;
 
@@ -31,6 +31,9 @@ export const Bubble = styled.div`
   border-radius: 50%;
   background-color: ${({ theme }) => theme.white};
   box-shadow: 0 0 30px ${({ theme }) => (theme.isDark ? 'rgba(255, 255, 255, 0.09)' : 'rgba(0, 0, 0, 0.29)')};
+  ${({ selected }) => selected && css`
+    box-shadow: none;
+  `}
   cursor: pointer;
   animation: ${({ selected }) => (selected ? twist : twistReverse)} 500ms ease-in-out;
   animation-direction: ${({ selected }) => (selected ? 'initial' : 'reverse')};
@@ -48,9 +51,6 @@ export const Wrapper = styled.div`
   right: 13px;
   bottom: 13px;
   animation: ${jumpIn} 500ms ease-in-out;
-  @media screen and (max-width: 800px) {
-    bottom: 64px;
-  }
 `;
 
 export const BurgerMenu = styled.div`
@@ -86,18 +86,7 @@ export const Patty = styled(Bar)`
   opacity: ${({ selected }) => (selected ? '0' : '1')};
 `;
 
-const growBox = keyframes`
-  from {
-    transform: scale(0);
-    transform-origin: bottom right;
-  }
-  to {
-    transform: scale(1);
-  }
-`;
-
 export const SubMenu = styled.div`
-  animation: ${growBox} 350ms ease;
   margin-bottom: 10px;
   margin-right: 10px;
   background-color: ${({ theme }) => theme.white};
@@ -107,11 +96,18 @@ export const SubMenu = styled.div`
   font-size: 30px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 30px ${({ theme }) => (theme.isDark ? 'rgba(255, 255, 255, 0.09)' : 'rgba(0, 0, 0, 0.29)')};
+  padding: 30px;
+  padding-top: 30px;
+  width: 460px;
+  height: 460px;
+  border-radius: 50%;
+  margin-bottom: -348px;
+  margin-right: -228px;
   a {
     padding: 15px 30px;
     min-width: 200px;
     text-decoration: none;
-    border-top: 1px solid #ccc;
     width: 100%;
     box-sizing: border-box;
     display: flex;
@@ -119,9 +115,13 @@ export const SubMenu = styled.div`
     color: ${({ theme }) => theme.darkRed};
 
     &:first-child {
-      margin-top: 0;
+      margin-left: 90px;
       border: none;
     }
+    &:nth-child(2) {
+      margin-left: 46px;
+    }
+
     > span {
       margin-left: 10px;
       color: ${({ theme }) => theme.black};

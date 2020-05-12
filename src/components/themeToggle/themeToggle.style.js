@@ -42,6 +42,6 @@ export const ThemeButton = styled.button`
     outline: none;
   }
   @media screen and (max-width: 800px) {
-    bottom: 64px;
+    bottom: 22px;
   }
 `;
