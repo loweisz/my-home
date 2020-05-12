@@ -1,7 +1,7 @@
 ---
 title: 'Why and how to write useful commit messages. (5 helpful tips)'
 date: 'May 11th, 2020'
-abstract: 'When orking with a lot of people on a big software project, it makes sense to think about your way of writing commit messages.'
+abstract: 'When working with a lot of people on a big software project, it makes sense to think about your way of writing commit messages.'
 heroImage: 'colors.jpg'
 index: 3
 ---
