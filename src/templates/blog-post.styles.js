@@ -41,7 +41,7 @@ export const BlogPostBox = styled(Box)`
 export const HeroImage = styled.div`
   margin-left: -25px;
   margin-top: -25px;
-  margin-right: -25px;
+  margin-right: -15px;
   max-height: 400px;
   overflow: hidden;
   -webkit-filter: grayscale(100%);
