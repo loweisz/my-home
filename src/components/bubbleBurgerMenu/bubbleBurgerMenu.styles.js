@@ -53,6 +53,7 @@ export const Wrapper = styled.div`
   right: 13px;
   bottom: 13px;
   animation: ${jumpIn} 500ms ease-in-out;
+  
 `;
 
 export const BurgerMenu = styled.div`
@@ -90,6 +91,7 @@ export const Patty = styled(Bar)`
 
 export const SubMenu = styled.div`
   margin-bottom: 10px;
+  transform: rotate(-47deg);
   margin-right: 10px;
   background-color: ${({ theme }) => theme.white};
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -101,14 +103,15 @@ export const SubMenu = styled.div`
   box-shadow: 0 0 30px ${({ theme }) => (theme.isDark ? 'rgba(255, 255, 255, 0.09)' : 'rgba(0, 0, 0, 0.29)')};
   padding: 30px;
   padding-top: 30px;
-  width: 460px;
-  height: 460px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   margin-bottom: -348px;
   margin-right: -228px;
   border: 2px solid ${({ theme }) => theme.black};
   a {
     padding: 15px 30px;
+    margin-left: 196px;
     min-width: 200px;
     text-decoration: none;
     width: 100%;
@@ -118,11 +121,11 @@ export const SubMenu = styled.div`
     color: ${({ theme }) => theme.darkRed};
 
     &:first-child {
-      margin-left: 90px;
+      margin-left: 200px;
       border: none;
     }
     &:nth-child(2) {
-      margin-left: 46px;
+      margin-left: 197px;
     }
 
     > span {
