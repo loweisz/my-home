@@ -53,7 +53,6 @@ export const Wrapper = styled.div`
   right: 13px;
   bottom: 13px;
   animation: ${jumpIn} 500ms ease-in-out;
-  
 `;
 
 export const BurgerMenu = styled.div`
@@ -103,8 +102,8 @@ export const SubMenu = styled.div`
   box-shadow: 0 0 30px ${({ theme }) => (theme.isDark ? 'rgba(255, 255, 255, 0.09)' : 'rgba(0, 0, 0, 0.29)')};
   padding: 30px;
   padding-top: 30px;
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   margin-bottom: -348px;
   margin-right: -228px;

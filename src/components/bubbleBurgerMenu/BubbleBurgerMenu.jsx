@@ -20,9 +20,9 @@ function BubbleBurgerMenu() {
       <AnimatePresence>
         {selected && (
           <motion.div
-            initial={{ height: '4px', width: '4px', marginBottom: '-18px', marginRight: '67px' }}
-            animate={{ height: '500px', width: '500px', marginBottom: '-270px', marginRight: '-167px'}}
-            exit={{ height: '4px', width: '4px', marginBottom: '-18px', marginRight: '67px'}}
+          initial={{ transform: 'scale(0.14)', transformOrigin: "298px 252px" }}
+          animate={{ transform: 'scale(1)' }}
+          exit={{ transform: 'scale(0.14)'}}
           >
             <SubMenu onClick={deSelect}>
               <Link to="/landing/">
