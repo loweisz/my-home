@@ -57,16 +57,16 @@ export const TextSection = styled.div`
 export const HeaderText = styled.div`
   margin-bottom: 15px;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 38px;
   color: ${({ theme }) => theme.black};
 `;
 
 export const TextBlock = styled.div`
   margin-top: 30px;
   text-align: start;
-  font-size: 25px;
-  font-weight: 200;
-  line-height: 40px;
+  font-size: 29px;
+  font-weight: 300;
+  line-height: 45px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
