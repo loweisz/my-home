@@ -10,7 +10,9 @@ import { AvatarImage } from '../components/header/header.sc';
 import Avatar from '../images/data/avatar.jpg';
 import NavigationElement from '../components/cubeNavigation/NavigationElement';
 import SocialElement from '../components/cubeNavigation/SocialElement';
-import SEO from "../components/seo.helper"
+import SEO from '../components/seo.helper';
+import TitleText from '../components/header/Title';
+import ThemeToggle from '../components/themeToggle/ThemeToggle';
 
 export const SELECT_ANIMATION_TIME = 1600;
 
@@ -43,10 +45,7 @@ const StartPage = () => {
 
   return (
     <LayoutBackground>
-      <SEO
-        title="Welcome"
-        description="Welcome to my website"
-      />
+      <SEO title="Welcome" description="Welcome to my website" />
       <PageContainer>
         <MobileImage>
           <AvatarImage>
@@ -88,6 +87,7 @@ const StartPage = () => {
             <MenuBottom>
               <SocialElement setHovered={setThisHovers} resetHovered={resetHovered} />
             </MenuBottom>
+            <ThemeToggle />
             <CubeMenu hovered={hovered} isSelected={!!isSelected} />
           </>
         )}

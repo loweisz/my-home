@@ -5,8 +5,9 @@ export const Blob = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: ${({ theme }) => theme.white};
   > svg {
-    height: 800px;
+    height: 691px;
     position: absolute;
     width: 800px;
     transform: ${({ isSelected }) => (isSelected ? 'scale(10) !important' : 'scale(1)')};
@@ -28,6 +29,7 @@ export const Text = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: ${({ theme }) => theme.black};
   z-index: 2;
   > svg {
     margin-right: 20px;
@@ -37,9 +39,8 @@ export const Text = styled.div`
 export const MenuText = styled.span`
   display: flex;
   justify-content: center;
-
   a {
-    color: white;
+    color: ${({ theme }) => theme.black};
     font-size: 70px;
     padding-left: 10px;
     padding-right: 10px;

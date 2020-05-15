@@ -88,7 +88,7 @@ export const PageContainer = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: 3;
-  background: radial-gradient(636px at 49.2% 48.3%, rgb(116, 3, 0) 0%, rgb(55, 3, 0) 90%);
+  background: ${({ theme }) => theme.background};
   overflow: hidden;
   position: relative;
   @media screen and (max-width: 800px) {

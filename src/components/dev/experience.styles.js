@@ -55,12 +55,14 @@ export const ExperienceBox = styled(Box)`
   flex-direction: column;
   margin-top: 15px;
   flex: 1;
-  margin-left: 30px;
+  margin-left: 70px;
+  margin-right: -70px;
   opacity: 0;
   transition: all 400ms ease-in;
   &.shown {
     opacity: 1;
     margin-left: 0;
+    margin-right: 0;
   }
 `;
 

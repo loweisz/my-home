@@ -69,13 +69,10 @@ export const CubeFace = styled.div`
   font-weight: bold;
   color: white;
   text-align: start;
-  border: ${({ automated }) => (automated ? '#740300 5px solid' : 'white 5px solid')};
+  border: ${({ theme }) => theme.black} 5px solid;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${({ automated }) =>
-    automated ? 'radial-gradient(500px at 49.2% 48.3%, #fff 0%, #740300 90%) !important' : 'inherit'};
-  box-shadow: ${({ automated }) => (automated ? '0 0 101px -5px rgba(255, 255, 255, 0.75)' : 'none')};
   > div {
     padding: 40px;
   }
@@ -95,8 +92,8 @@ export const Greetings = styled.div`
 `;
 
 export const FaceFront = styled(CubeFace)`
-  background: ${({ darkColor }) => (darkColor ? '#370300' : '#740300')};
-  color: white;
+  background: ${({ theme }) => theme.black};
+  color: ${({ theme }) => theme.background};
   transform: rotateY(0deg) translateZ(250px);
   > div {
     padding: 20px;
@@ -108,25 +105,25 @@ export const FaceBack = styled(CubeFace)`
   transform: rotateY(180deg) translateZ(250px);
 `;
 export const FaceRight = styled(CubeFace)`
-  background: radial-gradient(636px at 49.2% 48.3%, rgb(55, 3, 0) 0%, rgb(116, 3, 0) 90%);
-  color: white;
+  background: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.black};
   transform: rotateY(90deg) translateZ(250px);
 `;
 
 export const FaceLeft = styled(CubeFace)`
-  background: radial-gradient(636px at 49.2% 48.3%, rgb(255, 255, 255) 0%, rgb(96, 96, 96) 90%);
-  color: black;
+  background: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.black};
   transform: rotateY(-90deg) translateZ(250px);
 `;
 
 export const FaceTop = styled(CubeFace)`
-  background: radial-gradient(636px at 49.2% 48.3%, #555 0%, #000 90%);
-  color: white;
+  background: ${({ theme }) => theme.black};
+  color: ${({ theme }) => theme.background};
   transform: rotateX(90deg) translateZ(250px);
 `;
 export const FaceBottom = styled(CubeFace)`
-  background: radial-gradient(636px at 49.2% 48.3%, rgb(255, 255, 255) 0%, rgb(96, 96, 96) 90%);
-  color: black;
+  background: ${({ theme }) => theme.black};
+  color: ${({ theme }) => theme.background};
   transform: rotateX(-90deg) translateZ(250px);
   font-size: 120px;
 `;
