@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from 'framer-motion';
 import { BreadOne, BreadTwo, Bubble, BurgerMenu, Patty, SubMenu, Wrapper } from './bubbleBurgerMenu.styles';
 import { Link } from '@reach/router';
 import { FiBox, FiUser, FiFile } from 'react-icons/fi';
 
 function BubbleBurgerMenu() {
   const [selected, setSelected] = useState(false);
-  
+
   const select = () => {
     setSelected((s) => !s);
   };
@@ -14,15 +14,14 @@ function BubbleBurgerMenu() {
     setSelected(false);
   };
 
-
   return (
     <Wrapper>
       <AnimatePresence>
         {selected && (
           <motion.div
-          initial={{ transform: 'scale(0.14)', transformOrigin: "298px 252px" }}
-          animate={{ transform: 'scale(1)' }}
-          exit={{ transform: 'scale(0.14)'}}
+            initial={{ transform: 'scale(0.14)', transformOrigin: '298px 252px' }}
+            animate={{ transform: 'scale(1)' }}
+            exit={{ transform: 'scale(0.14)' }}
           >
             <SubMenu onClick={deSelect}>
               <Link to="/landing/">
