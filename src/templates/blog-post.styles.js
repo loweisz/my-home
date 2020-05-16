@@ -56,6 +56,8 @@ export const HeroImage = styled.div`
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   border-radius: 10px;
+  border: 1px solid ${({ theme }) => theme.black};
+  margin-bottom: 45px;
 `;
 
 export const BlogHeader = styled.header`
