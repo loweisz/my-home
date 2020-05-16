@@ -69,7 +69,9 @@ export const CubeFace = styled.div`
   font-weight: bold;
   color: white;
   text-align: start;
-  border: ${({ theme }) => theme.black} 5px solid;
+  background: ${({ theme }) => theme.black};
+  color: ${({ theme }) => theme.background};
+  border: ${({ theme }) => theme.background} 5px solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,38 +94,26 @@ export const Greetings = styled.div`
 `;
 
 export const FaceFront = styled(CubeFace)`
-  background: ${({ theme }) => theme.black};
-  color: ${({ theme }) => theme.background};
   transform: rotateY(0deg) translateZ(250px);
   > div {
     padding: 20px;
   }
 `;
 export const FaceBack = styled(CubeFace)`
-  background: black;
-  color: white;
   transform: rotateY(180deg) translateZ(250px);
 `;
 export const FaceRight = styled(CubeFace)`
-  background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.black};
   transform: rotateY(90deg) translateZ(250px);
 `;
 
 export const FaceLeft = styled(CubeFace)`
-  background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.black};
   transform: rotateY(-90deg) translateZ(250px);
 `;
 
 export const FaceTop = styled(CubeFace)`
-  background: ${({ theme }) => theme.black};
-  color: ${({ theme }) => theme.background};
   transform: rotateX(90deg) translateZ(250px);
 `;
 export const FaceBottom = styled(CubeFace)`
-  background: ${({ theme }) => theme.black};
-  color: ${({ theme }) => theme.background};
   transform: rotateX(-90deg) translateZ(250px);
   font-size: 120px;
 `;
