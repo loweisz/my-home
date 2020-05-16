@@ -4,7 +4,15 @@ import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import { DataText } from '../components/dev/experience.styles';
 import { InfoStarter } from '../styles/pages.sc';
-import { Title, SubTitle, BlogPostBox, HeroImage, BlogHeader, PostTextSection } from './blog-post.styles';
+import {
+  Title,
+  SubTitle,
+  BlogPostBox,
+  HeroImage,
+  BlogHeader,
+  PostTextSection,
+  Info,
+} from './blog-post.styles';
 import SEO from '../components/seo.helper';
 
 const BlogPostTemplate = (props) => {
@@ -22,6 +30,13 @@ const BlogPostTemplate = (props) => {
         <PostTextSection>
           <BlogPostBox className="shown">
             <article>
+              <BlogHeader>
+                <Title>{post.frontmatter.title}</Title>
+                <SubTitle>{post.frontmatter.abstract}</SubTitle>
+                <Info>
+                  🗓️ {post.frontmatter.date} | ⏲️ {post.timeToRead}min
+                </Info>
+              </BlogHeader>
               {post.frontmatter.heroImage && (
                 <HeroImage>
                   <Img
@@ -31,10 +46,7 @@ const BlogPostTemplate = (props) => {
                   />
                 </HeroImage>
               )}
-              <BlogHeader>
-                <Title>{post.frontmatter.title}</Title>
-                <SubTitle>{post.frontmatter.abstract}</SubTitle>
-              </BlogHeader>
+
               <DataText dangerouslySetInnerHTML={{ __html: post.html }} />
               <hr />
             </article>
@@ -58,8 +70,10 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      timeToRead
       frontmatter {
         title
+        date
         abstract
         heroImage {
           childImageSharp {

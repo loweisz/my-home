@@ -21,30 +21,23 @@ import { useCallback } from 'react';
 function Experience({ node, observer }) {
   const el = useRef();
 
-  const observeIntersection = useCallback(
-    () => {
-      if (!observer) return;
-      if (observer === 'not_available') {
-        el.current.classList.add('shown');
-        return;
-      }
-      observer.observe(el.current);
-    },
-    [observer],
-  );
+  const observeIntersection = useCallback(() => {
+    if (!observer) return;
+    if (observer === 'not_available') {
+      el.current.classList.add('shown');
+      return;
+    }
+    observer.observe(el.current);
+  }, [observer]);
 
   const { isDark } = useContext(ThemeManagerContext);
 
-  useEffect(
-    () => {
-      observeIntersection();
-    },
-    [observeIntersection, observer, isDark],
-  );
+  useEffect(() => {
+    observeIntersection();
+  }, [observeIntersection, observer, isDark]);
 
   return (
     <Wrapper>
-      <TimeLineElement />
       <ExperienceBox ref={el}>
         <Title>
           <IconWrapper>

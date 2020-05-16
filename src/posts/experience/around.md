@@ -2,7 +2,7 @@
 startDate: 'Nov. 2019'
 type: 'exp'
 endDate: null
-title: 'Frontend Developer'
+title: 'Frontend Engineer'
 company: 'Aroundhome'
 website: 'aroundhome.de'
 location: 'Berlin'

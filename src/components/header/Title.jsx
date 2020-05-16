@@ -73,7 +73,6 @@ const Container = styled.div`
 `;
 
 const TitleText = () => {
-  console.log(frames);
   return (
     <Container>
       <Title></Title>
@@ -81,4 +80,3 @@ const TitleText = () => {
   );
 };
 export default TitleText;
-// {'<Lorenz Weiß 👋/>'}

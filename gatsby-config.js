@@ -7,7 +7,7 @@ module.exports = {
     social: {
       twitter: '@lorenzweisz',
     },
-    keywords: ['frontend', 'javascript', 'react', 'blog', 'software Engineer']
+    keywords: ['frontend', 'javascript', 'react', 'blog', 'software Engineer'],
   },
   plugins: [
     {
@@ -37,8 +37,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `img`,
-        path: `${__dirname}/src/images/`
-      }
+        path: `${__dirname}/src/images/`,
+      },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -100,7 +100,7 @@ module.exports = {
           lightRed: '#700',
           red: '#ffacb3',
           darkRed: '#ffacb3',
-          lightgrey: '#666666',
+          lightGrey: '#666666',
           grey: '#9f9f9f',
           darkGrey: '#ccc',
           background: '#1b1b1b',
