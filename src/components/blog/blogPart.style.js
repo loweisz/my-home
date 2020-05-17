@@ -7,9 +7,7 @@ export const ImagePreview = styled.div`
   margin-left: -25px;
   margin-top: -25px;
   margin-right: -25px;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-`
+`;
 
 export const AdditionalInfo = styled.div`
   display: flex;

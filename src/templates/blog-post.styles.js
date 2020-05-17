@@ -24,10 +24,21 @@ export const Title = styled.h1`
 
 export const Info = styled.div`
   margin-top: 24px;
-  padding-top: 24px;
-  border-top: 1px solid ${({ theme }) => theme.grey};
   color: ${({ theme }) => theme.black};
+  font-size: 18px;
+  display: flex;
+  > div {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    > span {
+      margin-left: 5px;
+    }
+  }
 `;
+
+export const InfoBlock = styled.div``;
 
 export const SubTitle = styled.span`
   color: ${({ theme }) => theme.red};
@@ -53,10 +64,8 @@ export const BlogPostBox = styled(Box)`
 export const HeroImage = styled.div`
   max-height: 400px;
   overflow: hidden;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
   border-radius: 10px;
-  border: 1px solid ${({ theme }) => theme.black};
+
   margin-bottom: 45px;
 `;
 

@@ -53,17 +53,6 @@ export const LinkContainer = styled.div`
   }
 `;
 
-export const Title = styled.h1`
-  font-size: 30px;
-  margin: 0;
-  &:hover {
-    opacity: 0.8;
-  }
-  @media screen and (max-width: 800px) {
-    font-size: 24px;
-  }
-`;
-
 export const HeaderSection = styled.div`
   width: 33%;
   @media screen and (max-width: 800px) {

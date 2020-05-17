@@ -12,12 +12,18 @@ import {
   BlogHeader,
   PostTextSection,
   Info,
+  InfoBlock,
 } from './blog-post.styles';
 import SEO from '../components/seo.helper';
+import ShareWidget from '../components/shareWidget/ShareWidget';
+
+import { FiCalendar, FiClock } from 'react-icons/fi';
+import BlogFooter from '../components/blogFooter/BlogFooter';
 
 const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
   const image = post.frontmatter.image ? post.frontmatter.image.childImageSharp.resize : null;
+
   return (
     <Layout>
       <InfoStarter>
@@ -29,13 +35,21 @@ const BlogPostTemplate = (props) => {
         />
         <PostTextSection>
           <BlogPostBox className="shown">
+            <ShareWidget post={post} />
             <article>
               <BlogHeader>
                 <Title>{post.frontmatter.title}</Title>
                 <SubTitle>{post.frontmatter.abstract}</SubTitle>
-                <Info>
-                  🗓️ {post.frontmatter.date} | ⏲️ {post.timeToRead}min
-                </Info>
+                <InfoBlock>
+                  <Info>
+                    <div>
+                      <FiCalendar /> <span>{post.frontmatter.date}</span>
+                    </div>
+                    <div>
+                      <FiClock /> <span>{post.timeToRead}min</span>
+                    </div>
+                  </Info>
+                </InfoBlock>
               </BlogHeader>
               {post.frontmatter.heroImage && (
                 <HeroImage>
@@ -46,9 +60,9 @@ const BlogPostTemplate = (props) => {
                   />
                 </HeroImage>
               )}
-
               <DataText dangerouslySetInnerHTML={{ __html: post.html }} />
               <hr />
+              <BlogFooter post={post} />
             </article>
           </BlogPostBox>
         </PostTextSection>
