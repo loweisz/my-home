@@ -23,9 +23,24 @@ export const BodySection = styled.main`
   margin-top: 140px;
   padding: 15px 15px 50px 15px;
   flex: 1;
+  z-index: 5;
 
   @media screen and (max-width: 800px) {
-    margin-top: 0px;
+    margin-top: 60px;
     padding: 15px 15px 100px 15px;
+  }
+`;
+
+export const Wave = styled.div`
+  margin-top: 100px;
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  height: 0px;
+  color: ${({ theme }) => theme.white};
+
+  @media screen and (max-width: 800px) {
+    margin-top: -30px;
+    position: initial;
   }
 `;

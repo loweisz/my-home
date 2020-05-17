@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 import { moveFadeIn, opacIn } from './animations';
 
+export const Wave = styled.div`
+  margin-top: -24px;
+  margin-left: -16px;
+  margin-right: -16px;
+  width: 110%;
+  height: 50px;
+  color: ${({ theme }) => theme.white};
+`;
+
 export const InfoStarter = styled.div`
   width: 100%;
   display: flex;

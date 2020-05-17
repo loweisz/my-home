@@ -8,6 +8,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Welcome" description="Welcome to my website" />
+
       <Wrapper>
         <InfoStarter>
           <TextSection>
