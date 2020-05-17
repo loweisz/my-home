@@ -14,7 +14,7 @@ function ShareWidget({ post }) {
   const copyToClipboard = () => {
     try {
       const el = document.createElement('textarea');
-      el.value = window.location.href;
+      el.value = document.location.href;
       el.setAttribute('readonly', '');
       el.style.position = 'absolute';
       el.style.left = '-9999px';
@@ -47,7 +47,7 @@ function ShareWidget({ post }) {
     }, 3000);
   };
 
-  const tweetLink = `https://twitter.com/share?text=${post.frontmatter.title} by @loweisz&url=${window.location.href}`;
+  const tweetLink = `https://twitter.com/share?text=${post.frontmatter.title} by @loweisz&url=${document.location.href}`;
   return (
     <ShareBoard>
       <a href={tweetLink} onClick={clickShare}>
