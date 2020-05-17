@@ -47,7 +47,7 @@ function ShareWidget({ post, location }) {
     }, 3000);
   };
 
-  const tweetLink = `https://twitter.com/share?text=${post.frontmatter.title} by @loweisz&url=${document.location.href}`;
+  const tweetLink = `https://twitter.com/share?text=${post.frontmatter.title} by @loweisz&url=${location.href}`;
   return (
     <ShareBoard>
       <a href={tweetLink} onClick={clickShare}>
