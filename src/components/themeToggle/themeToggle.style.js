@@ -21,6 +21,7 @@ export const IconContainer = styled.div`
 
 export const ThemeButton = styled.button`
   position: fixed;
+  z-index: 99;
   bottom: 16px;
   left: 0;
   border: none;
