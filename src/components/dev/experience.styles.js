@@ -317,6 +317,7 @@ export const DataText = styled.div`
     display: block;
     padding-right: 1em;
     padding-left: 1.25em;
+    margin-left: -1.25em;
   }
 
   .gatsby-highlight {
