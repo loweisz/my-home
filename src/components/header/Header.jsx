@@ -1,14 +1,28 @@
 import React from 'react';
-import { AvatarImage, HeaderSection, ImageContainer, LinkContainer, Mobile, Title } from './header.sc';
+import { useStaticQuery, graphql } from 'gatsby';
+import { AvatarImage, HeaderSection, ImageContainer, LinkContainer, Mobile } from './header.sc';
 import { InfoHeader } from './header.sc';
 import { iconsObj } from '../cubeNavigation/SocialElement';
+import Img from 'gatsby-image';
 import BubbleBurgerMenu from '../bubbleBurgerMenu/BubbleBurgerMenu';
 import { Link } from 'gatsby';
-
-import Avatar from '../../images/data/avatar.jpg';
+import TitleText from './Title';
 
 const Header = (props) => {
   const percentageScrolled = (props.offset % 95) / 94;
+  const data = useStaticQuery(
+    graphql`
+      query {
+        avatarImage: file(relativePath: { eq: "data/avatar.jpg" }) {
+          childImageSharp {
+            sizes(maxWidth: 472) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
+      }
+    `,
+  );
 
   return (
     <InfoHeader style={{ height: `${40 - 30 * percentageScrolled}px` }}>
@@ -20,6 +34,7 @@ const Header = (props) => {
           {Object.values(iconsObj).map((obj) => (
             <a
               key={obj.link}
+              aria-label={obj.name}
               style={{ fontSize: `${35 - 10 * percentageScrolled}px` }}
               href={obj.link}
               target="_blank"
@@ -32,7 +47,7 @@ const Header = (props) => {
       </HeaderSection>
       <HeaderSection>
         <Link to={'/start'}>
-          <Title>{'<Lorenz Weiß 👋/>'}</Title>
+          <TitleText />
         </Link>
       </HeaderSection>
       <HeaderSection>
@@ -44,7 +59,7 @@ const Header = (props) => {
               marginTop: `${70 - percentageScrolled * 25}px`,
             }}
           >
-            <img alt="avatar" src={Avatar} />
+            <Img title="Avatar image" alt="Avatar Image" sizes={data.avatarImage.childImageSharp.sizes} />
           </AvatarImage>
         </ImageContainer>
       </HeaderSection>

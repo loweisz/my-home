@@ -9,7 +9,7 @@ const routes = [
   },
   {
     url: '/dev',
-    name: 'Career',
+    name: 'Journey',
   },
   {
     url: '/blog',

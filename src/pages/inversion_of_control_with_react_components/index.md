@@ -2,17 +2,14 @@
 title: 'Inversion of Control with sharable react components'
 date: 'December 28th, 2019'
 abstract: 'Why the pattern could help us to make every component safer and cleaner'
+heroImage: 'car.jpg'
+index: 2
 ---
 
 There are many patterns, rules and methodologies in the world of programming.
 Sometimes many of them make no sense at first or seem to be revising things to make them more complicated than they should be.
 But then, when you take a closer look or use it regularly, you often notice the real advantage of these rules and when you try to work with it you may see the real benefit what they bring to your codebase.
 Let me explain to you that and how one of them, the inversion of control paradigm, can help you use shareable components in React.
-
-## What is the magic behind Inversion of Control ?
-
-The idea of ​​the pattern comes from object-oriented programming in connection with the programming language Java and paradigms such as "dependency injection".
-Nowadays, however, not everything is object-oriented anymore and more and more JavaScript developers in particular see more meaning in functional programming.
 
 ## Not only object orientated
 
@@ -48,7 +45,7 @@ This works fine for this use case, but suddenly we want to have an icon AND a te
 ```js
 const Button = (props) => (
   <button class="button">
-    {props.icon && <i class="icon">{props.icon}</i>}
+    {props.icon && <span class="icon">{props.icon}</span>}
     {props.text}
   </button>
 );
@@ -60,7 +57,7 @@ Mh looks a bit weird but for this use case it's fine... I guess. Oh! now somewhe
 const Button = (props) => (
   <button className="button">
     <span className="upper-line">
-      {props.icon && <i class="icon">{props.icon}</i>}
+      {props.icon && <span class="icon">{props.icon}</span>}
       {props.text}
     </span>
     {props.subText && <span class="sub-text">{props.subText}</span>}
@@ -75,7 +72,7 @@ const Button = (props) => (
   <button className="button">
     {props.image && props.imageIsTop && <img src={props.image} />}
     <span className="upper-line">
-      {props.icon && <i class="icon">{props.icon}</i>}
+      {props.icon && <span class="icon">{props.icon}</span>}
       {props.text}
     </span>
     {props.subText && <span class="sub-text">{props.subText}</span>}
@@ -109,7 +106,7 @@ const Whatever = (props) => <Button>This will be rendered as children</Button>;
 
 const WhateverWithIcon = (props) => (
   <Button>
-    {props.icon && <i class="icon">{props.icon}</i>}
+    {props.icon && <span class="icon">{props.icon}</span>}
     This will render with an icon
   </Button>
 );
@@ -122,19 +119,45 @@ So inversion of control in this case means that the Button component itself does
 But what about the DRY principle ? What if we would have a lot of buttons with icons ? Do we really want to write the whole icon logic again and again?
 Why not extend the button to another `IconButton` component.
 
-```js
-const Button = (props) => <button className="button">{props.children}</button>;
+The `IconButton` still can wrap everything you want, but also adds an icon to it. But as the name clearly says, we don't make the icon optional. In the end every `IconButton` needs its `icon`.
+With that we can extend the component how we like it and still be using the inversion of control but do not violate the DRY principle. That's something to impress at a party isn't it?
 
-const IconButton = (props) => (
-  <Button>
-    <i class="icon">{props.icon}</i>
-    {props.children}
-  </Button>
+## Add some functionality
+
+Let's say our component also needs some functionality that we want to pass to the child component. How would this be possible, when the parent component has no idea about what its children will be?
+
+Let me give you a simple example. Let's take our custom `Button` component and add a tiny little click counter to it to store internally how many times the user has clicked that button.
+Quite simple, we just add the click counter functionality to the shareable `Button` component.
+Now we know in that component the amount of click events fired from it.
+
+But now we also want to give the children the information about the current count. How can we do that without knowing what the children will be?
+
+We just change the type of `props.children` from being a static component to a more flexible function `props.children()`. You probably heard about this way of passing information as "render props". With that we can pass any information from the parent to the children.
+
+```js
+const Button = (props) => {
+  const [count, setCount] = useState(0)
+
+  const onButtonClick = () => {
+    setCount(oldCount => ++oldCount)
+  }
+
+  return (
+    <button className="button">{props.children(count)}</button>
+  )
+};
+
+```
+
+Now when we want to use the button we simply run a render function within the body and get the information about the click count:
+
+```js
+const Whatever = (props) => (
+  <Button>{(count) => `This has been clicked ${count} times`}</Button>
 );
 ```
 
-The `IconButton` still can wrap everything you want, but also adds an icon to it. But as the name clearly says, we don't make the icon optional. In the end every `IconButton` needs its `icon`.
-With that we can extend the component how we like it and still be using the inversion of control but do not violate the DRY principle. That's something to impress at a party isn't it?
+Brilliant! With that we shared functionality but also stylings within one component, but also made it very flexible to decide how you want to display the body of the button.
 
 ## Conclusion
 

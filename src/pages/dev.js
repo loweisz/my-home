@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import { Wrapper, InfoStarter, PageHeader, TextSection } from '../styles/pages.sc';
 import { graphql } from 'gatsby';
 import Experience from '../components/dev/Experience';
-import SEO from "../components/seo"
+import SEO from '../components/seo.helper';
 
 const DevPage = (props) => {
   const [obs, setObs] = useState(null);
@@ -25,16 +25,13 @@ const DevPage = (props) => {
     }, options);
   }, []);
 
-  useEffect(
-    () => {
-      let observer = 'not_available';
-      if ('IntersectionObserver' in window) {
-        observer = createInterSectionObserver();
-      }
-      setObs(observer);
-    },
-    [createInterSectionObserver],
-  );
+  useEffect(() => {
+    let observer = 'not_available';
+    if ('IntersectionObserver' in window) {
+      observer = createInterSectionObserver();
+    }
+    setObs(observer);
+  }, [createInterSectionObserver]);
 
   const animateElement = (target) => {
     target.classList.add('shown');
@@ -42,13 +39,10 @@ const DevPage = (props) => {
 
   return (
     <Layout>
-      <SEO
-        title="Career"
-        description="My path of being a software engine"
-      />
+      <SEO title="Career" description="This is the past and present of my journey as a Software engineer" />
       <Wrapper>
         <InfoStarter>
-          <PageHeader>What I did so far:</PageHeader>
+          <PageHeader>The past and present of my journey as a Software engineer</PageHeader>
           <TextSection>
             {props.data.allMarkdownRemark.edges.map((edge) => (
               <Experience observer={obs} key={edge.node.frontmatter.company} node={edge.node} />

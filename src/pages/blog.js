@@ -2,7 +2,7 @@ import React from 'react';
 import { Wrapper, InfoStarter, TextBlock, HeaderText, TextSection, Blogs } from '../styles/pages.sc';
 import Layout from '../components/layout';
 import BlogPart from '../components/blog/BlogPart';
-import SEO from "../components/seo"
+import SEO from "../components/seo.helper"
 
 const BlogPage = (props) => (
   <Layout>
@@ -20,7 +20,7 @@ const BlogPage = (props) => (
         <TextSection>
           <Blogs>
             {props.data.allMarkdownRemark.edges.map(({ node }) => (
-              <BlogPart node={node} />
+              <BlogPart key={node.id} node={node} />
             ))}
           </Blogs>
         </TextSection>
@@ -33,7 +33,7 @@ export default BlogPage;
 
 export const query = graphql`
   {
-    allMarkdownRemark(filter: { frontmatter: { type: { nin: ["exp", "edu"] } } }) {
+    allMarkdownRemark(filter: {frontmatter: {type: {nin: ["exp", "edu"]}}}, sort: {fields: frontmatter___index, order: DESC}) {
       edges {
         node {
           id
@@ -41,6 +41,13 @@ export const query = graphql`
             title
             abstract
             date
+            heroImage {
+              childImageSharp {
+                sizes(maxWidth: 1000 ) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
           timeToRead
           fields {

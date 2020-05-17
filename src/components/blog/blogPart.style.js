@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const ImagePreview = styled.div`
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  margin-left: -25px;
+  margin-top: -25px;
+  margin-right: -25px;
+`;
+
 export const AdditionalInfo = styled.div`
   display: flex;
   justify-content: space-between;

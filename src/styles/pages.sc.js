@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 import { moveFadeIn, opacIn } from './animations';
 
+export const Wave = styled.div`
+  margin-top: -24px;
+  margin-left: -16px;
+  margin-right: -16px;
+  width: 110%;
+  height: 50px;
+  color: ${({ theme }) => theme.white};
+`;
+
 export const InfoStarter = styled.div`
   width: 100%;
   display: flex;
@@ -12,13 +21,14 @@ export const InfoStarter = styled.div`
   }
   @media screen and (max-width: 1100px) {
     width: 100%;
+    overflow: initial;
   }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  animation: ${moveFadeIn} 350ms ease-in;
+  animation: ${moveFadeIn} 300ms ease-in;
 `;
 
 export const PageHeader = styled.h1`
@@ -56,16 +66,16 @@ export const TextSection = styled.div`
 export const HeaderText = styled.div`
   margin-bottom: 15px;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 38px;
   color: ${({ theme }) => theme.black};
 `;
 
 export const TextBlock = styled.div`
   margin-top: 30px;
   text-align: start;
-  font-size: 25px;
-  font-weight: 200;
-  line-height: 40px;
+  font-size: 29px;
+  font-weight: 300;
+  line-height: 45px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -87,7 +97,7 @@ export const PageContainer = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: 3;
-  background: radial-gradient(636px at 49.2% 48.3%, rgb(116, 3, 0) 0%, rgb(55, 3, 0) 90%);
+  background: ${({ theme }) => theme.background};
   overflow: hidden;
   position: relative;
   @media screen and (max-width: 800px) {

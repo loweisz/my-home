@@ -55,12 +55,12 @@ export const ExperienceBox = styled(Box)`
   flex-direction: column;
   margin-top: 15px;
   flex: 1;
-  margin-left: 30px;
+  margin-top: 130px;
   opacity: 0;
   transition: all 400ms ease-in;
   &.shown {
     opacity: 1;
-    margin-left: 0;
+    margin-top: 15px;
   }
 `;
 
@@ -155,7 +155,17 @@ export const SubInfo = styled.div`
 
 export const DataText = styled.div`
   line-height: 25px;
-  color: ${({ theme }) => theme.grey};
+  color: ${({ theme }) => theme.black};
+  blockquote {
+    margin: 0;
+    padding: 24px;
+    font-style: italic;
+    background-color: ${({ theme }) => theme.lightGrey};
+    border-radius: 6px;
+    > p {
+      margin: 0;
+    }
+  }
   h1,
   h2,
   h3 {
@@ -301,7 +311,8 @@ export const DataText = styled.div`
   .gatsby-highlight {
     margin-bottom: 1.75rem;
     border-radius: 10px;
-    background: #1d1d1d;
+    background: #1b1b1b;
+    border: 1px solid ${({ theme }) => theme.black};
     -webkit-overflow-scrolling: touch;
     overflow: auto;
   }
