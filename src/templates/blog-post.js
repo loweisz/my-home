@@ -24,6 +24,8 @@ const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
   const image = post.frontmatter.image ? post.frontmatter.image.childImageSharp.resize : null;
 
+  console.log(props.location);
+
   return (
     <Layout>
       <InfoStarter>
@@ -35,7 +37,7 @@ const BlogPostTemplate = (props) => {
         />
         <PostTextSection>
           <BlogPostBox className="shown">
-            <ShareWidget post={post} />
+            <ShareWidget location={props.location} post={post} />
             <article>
               <BlogHeader>
                 <Title>{post.frontmatter.title}</Title>
@@ -62,7 +64,7 @@ const BlogPostTemplate = (props) => {
               )}
               <DataText dangerouslySetInnerHTML={{ __html: post.html }} />
               <hr />
-              <BlogFooter post={post} />
+              <BlogFooter location={props.location} post={post} />
             </article>
           </BlogPostBox>
         </PostTextSection>

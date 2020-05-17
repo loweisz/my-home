@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { Title, Wrapper, SubTitle, TwitterIcon } from './blogFooter.styles';
 import { IoLogoTwitter } from 'react-icons/io';
 
-function BlogFooter({ post }) {
+function BlogFooter({ post, location }) {
   function clickShare() {
     window.open(this.href, 'twitter-share', 'width=550,height=235');
     return false;
   }
-  const tweetLink = `https://twitter.com/share?text=${post.frontmatter.title} by @lorenzweisz&url=${window.location.href}`;
+  const tweetLink = `https://twitter.com/share?text=${post.frontmatter.title} by @lorenzweisz&url=${location.href}`;
   return (
     <Wrapper>
       <Title>Hey! Thank you for reading! </Title>

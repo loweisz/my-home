@@ -5,7 +5,7 @@ import { FiLink } from 'react-icons/fi';
 import { useRef } from 'react';
 import { useEffect } from 'react';
 
-function ShareWidget({ post }) {
+function ShareWidget({ post, location }) {
   function clickShare() {
     window.open(this.href, 'twitter-share', 'width=550,height=235');
     return false;
