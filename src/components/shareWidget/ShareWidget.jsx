@@ -47,7 +47,9 @@ function ShareWidget({ post, location }) {
     }, 3000);
   };
 
-  const tweetLink = `https://twitter.com/share?text=${post.frontmatter.title} by @loweisz&url=${location.href}`;
+  const prodUrl = 'https://www.lorenzweiss.de' + post.fields.slug;
+  const tweetLink = `https://twitter.com/share?text=${post.frontmatter.title} by @loweisz&url=${prodUrl}`;
+
   return (
     <ShareBoard>
       <a href={tweetLink} onClick={clickShare}>
