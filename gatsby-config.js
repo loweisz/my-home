@@ -75,7 +75,7 @@ module.exports = {
       options: {
         name: 'gatsby-starter-default',
         short_name: 'starter',
-        start_url: '/start',
+        start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
@@ -117,6 +117,38 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-159014335-1',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+        }`,
+        resolveSiteUrl: ({ site, allSitePage }) => {
+          //Alternativly, you may also pass in an environment variable (or any location) at the beginning of your `gatsby-config.js`.
+          return site.siteMetadata.siteUrl;
+        },
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes.map((node) => {
+            return {
+              url: `${site.siteMetadata.siteUrl}${node.path}`,
+              changefreq: `daily`,
+              priority: 0.7,
+            };
+          }),
       },
     },
   ],
