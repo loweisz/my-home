@@ -6,7 +6,6 @@ const NavigationElement = ({ blob, isSelected, name, select, url, icon }) => {
   return (
     <Blob className="blob" isSelected={isSelected} onClick={onSelect}>
       <Text>
-        {icon}
         <div>
           <MenuText>{name}</MenuText>
         </div>

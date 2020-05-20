@@ -95,7 +95,6 @@ export const PageContainer = styled.div`
   position: relative;
   @media screen and (max-width: 800px) {
     flex-direction: column;
-    padding: 30px 0;
     overflow: auto;
   }
 `;

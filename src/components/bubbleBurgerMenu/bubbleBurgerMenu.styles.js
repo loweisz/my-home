@@ -124,7 +124,9 @@ export const SubMenu = styled.div`
   width: 100vw;
   top: 0;
   left: 0;
-  font-size: 50px;
+  font-size: 60px;
+  font-weight: 900;
+  letter-spacing: 2px;
   text-decoration: underline;
   text-shadow: -2px 0 0 ${({ theme }) => theme.black};
   display: flex;
@@ -133,13 +135,12 @@ export const SubMenu = styled.div`
   justify-content: center;
   animation: ${fadeIn} 500ms ease;
   a {
-    padding: 15px 30px;
+    padding: 18px;
     min-width: 200px;
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
-
-    color: ${({ theme }) => theme.darkRed};
+    color: ${({ theme }) => theme.black};
 
     > span {
       margin-left: 10px;

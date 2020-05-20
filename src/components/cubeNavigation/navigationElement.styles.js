@@ -30,15 +30,26 @@ export const Text = styled.div`
   align-items: center;
   justify-content: center;
   color: ${({ theme }) => theme.black};
+  font-size: 60px;
+
   z-index: 2;
   > svg {
     margin-right: 20px;
+  }
+  > a {
+    text-decoration: underline;
   }
 `;
 
 export const MenuText = styled.span`
   display: flex;
   justify-content: center;
+  font-weight: 900;
+  @media screen and (max-width: 800px) {
+    text-decoration: underline;
+    letter-spacing: 2px;
+  }
+
   a {
     color: ${({ theme }) => theme.black};
     font-size: 70px;
