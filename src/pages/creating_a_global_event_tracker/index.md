@@ -1,7 +1,7 @@
 ---
-title: 'How to setup a global event tracker with vanillaJS'
+title: 'How to setup a global event tracker with plain javascript and html inside a react app'
 date: 'October 28th, 2019'
-abstract: 'How to make it easy to add event tracking to elements, when they are interacted with without any additional logic to the event handlers'
+abstract: 'How to add event tracking to elements on any website, when they are interacted with using only plain javascript and html'
 heroImage: 'train.jpg'
 index: 1
 ---
@@ -10,15 +10,15 @@ Today, one of the most important parts of a heavily used website is the ability 
 
 To do just that and get some basic data, I wanted to track some of our user interactions in a basic react app. All of them? No no not all of them, I just wanted to start slowly and track only a few and extend the list of events piece by piece. So the goal is that I can flexibly track when and where a user interacts with the page.
 
-### Let's try Redux...
+### The first idea in react
 
-My original idea was to implement a hook in our redux store (yes, it's still implemented with Redux ...) and check if the action is included in my predefined "track action list", and then well ,...track the action.
+My original idea was to implement a hook in our [redux](https://redux.js.org/) store (yes, it's still implemented with Redux ...) and check if the action is included in my predefined "track action list", and then well ,...track the action.
 
 One of the big problem with that was that I would be restricted by actions that go through my Redux store. Another would be that I have to add more features to Redux, making it more difficult to replace it with another technology at some point and we all know that point is long overdue.
 But I also wanted to track actions like clicking on the sidebar, which does not trigger a redux action.
 Basically, Redux is and was not the best solution ...
 
-### The power of vanillaJS
+### The power of plain javascript
 
 The next idea is a bit more general and solved my problem pretty well. The first idea is that the event tracker is implemented completely out of the scope of a framework or library. So I started with adding a global click listener at the top of my app. (could be any other event listener like `scroll`,`keydown` etc, but in this particular example i just want to focus on a `click` listener) and I did that with just plain good ol' javascript:
 
