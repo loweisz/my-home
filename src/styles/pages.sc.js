@@ -118,7 +118,7 @@ const Menu = styled.div`
   cursor: pointer;
   @media screen and (max-width: 800px) {
     position: initial;
-    margin-top: 60px;
+    margin-top: 30px;
     font-size: 40px;
   }
   div {
@@ -163,6 +163,12 @@ export const MenuRight = styled(Menu)`
 export const MenuBottom = styled(Menu)`
   bottom: 50px;
   width: 100%;
+
+  @media screen and (max-width: 800px) {
+    position: initial;
+    margin-top: 60px;
+    font-size: 40px;
+  }
 `;
 
 export const Blogs = styled.div`
