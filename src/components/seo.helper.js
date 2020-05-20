@@ -29,7 +29,7 @@ function SEO({ description, blogTitle, lang, meta, image: metaImage, title, path
         lang,
       }}
       title={blogTitle || title}
-      titleTemplate={blogTitle || `${site.siteMetadata.title} > %s`}
+      titleTemplate={`${site.siteMetadata.title} · %s`}
       link={
         canonical
           ? [
