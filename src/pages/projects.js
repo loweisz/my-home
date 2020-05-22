@@ -20,3 +20,25 @@ const ProjectsPage = (props) => (
 );
 
 export default ProjectsPage;
+
+export const query = graphql`
+  {
+    allMarkdownRemark(filter: { frontmatter: { type: { ne: "exp" } } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            abstract
+            date
+          }
+          timeToRead
+          fields {
+            slug
+          }
+          html
+        }
+      }
+    }
+  }
+`;

@@ -4,7 +4,7 @@ import { Tab, TabSection, InfoTabBar, TabInner } from './tabs.sc';
 import { FiChevronsRight } from "react-icons/fi";
 
 
-const routes = [
+export const routes = [
   {
     url: '/landing',
     name: 'About',
@@ -16,6 +16,10 @@ const routes = [
   {
     url: '/blog',
     name: 'Blog',
+  },
+  {
+    url: '/visuals',
+    name: 'Visuals',
   },
 ];
 

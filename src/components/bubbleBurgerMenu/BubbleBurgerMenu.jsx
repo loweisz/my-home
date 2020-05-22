@@ -12,6 +12,7 @@ import {
 } from './bubbleBurgerMenu.styles';
 import { Link } from '@reach/router';
 import { FiBox, FiUser, FiFile } from 'react-icons/fi';
+import { routes } from '../tabs/Tabs';
 
 function BubbleBurgerMenu() {
   const [selected, setSelected] = useState(false);
@@ -38,15 +39,11 @@ function BubbleBurgerMenu() {
       </AnimatePresence>
       {selected && (
         <SubMenu>
-          <Link to="/landing/">
-            <span>About</span>
-          </Link>
-          <Link to="/dev/">
-            <span>Journey</span>
-          </Link>
-          <Link to="/blog/">
-            <span>Blog</span>
-          </Link>
+          {routes.map((route) => (
+            <Link key={route.url} to={route.url}>
+              <span>{route.name}</span>
+            </Link>
+          ))}
         </SubMenu>
       )}
 
