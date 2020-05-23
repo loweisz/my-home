@@ -1,76 +1,35 @@
 ---
-title: 'Common mistakes writing react components (with hooks) in 2020'
+title: '5 common mistakes writing react components (with hooks) in 2020'
 date: 'May 23rd, 2020'
-abstract: 'The most common mistakes I found writing react components and how to avoid them.'
+abstract: 'The most common mistakes I found writing react components and how to avoid or fix them.'
 heroImage: 'fish.jpg'
 index: 5
 ---
 
 ## Understanding the concept
 
-React has been out in the world of web development for quite some time now and it's position as a tool for agile web development has steadily strengthened in recent years. Especially after announcment and release of the [new hook api/concept](https://reactjs.org/docs/hooks-state.html#hooks-and-function-components), writing components has never been easier. 
+React has been out in the world of web development for quite some time now and it's position as a tool for agile web development has steadily strengthened in recent years. Especially after the announcment and release of the [new hook api/concept](https://reactjs.org/docs/hooks-state.html#hooks-and-function-components), writing components has never been easier. 
 
-However even though the team behind react and the huge community around it tried it in an impressive way to train and explain the concepts of the framework, I still some pitfalls and common mistakes made when working with it. 
-I kept a list of all the mistakes I saw over the last years related to react and most of them especially in combination with react-hooks. 
-
-I will also try to explain in detail, why they are mistakes and also will show you the better way to do it. 
+However even though the team behind react and the huge community around it tried it in an impressive way to train and explain the concepts of the framework, I still see some pitfalls and common mistakes made when working with it. 
+I kept a list of all the mistakes I saw over the last years related to react especially with using hooks. In this article I show you the most common ones and 
+I will also try to explain in detail, why they are mistakes and also will show you a way to avoid them.
 
 ### Disclaimer 
 
-Most of the things are not mistakes by the first sight and probably will not infect the user experience or bring any danger to and with every software framework/library there are millions of different opinions about some topics so everything you will see here is based on my personal opinion and should not be taken as a general rule. 
+Most of the things are not mistakes by default or at the first sight and most of them probably will not affect the user experience or bring any danger to it.
+
+Also with every software framework or library, there are millions of different opinions about it, so everything you will see here is based on my personal opinion and should not be taken as a general rule. If you have another opinion about them, I would love to hear it :) 
+
+Let's beginn.
 
 
-## 1. Using router.push instead of a link
+## 1. Using state when no rerender is needed
 
-This might be a very easy and obvious one and not really related to react itself, but I still see it quite a lot when people writing react components. 
-Let's say you will write a button and with clicking the button the user should be redirected to another page. Since this a clientside routing mechanism you will somekind of library for example the most popular one for react, [react-router](https://reacttraining.com/react-router/). So adding a click listener that will redirect the user to the desired page would solve the problem:
+One of the core concepts of react is handling state, you can control your whole data flow via state and every rerender is most likely bound to a state.
 
-### This is dangerous ❌
-```jsx
-function ClickButton(props) {
-  const history = useHistory()
+With hooks you can define your state of the component with the `useState` hook, which is a really neat and easy way how to handle states in react. 
 
-  const onClick = () => {
-    history.push("/next-page");
-  }
-
-  return (
-    <button onClick={onClick}>
-      Go to next page
-    </button>
-  );
-}
-```
-
-### The problem ⚡
-
-Even though this would work just fine for every usual user, there is huge problem when it comes to accessibility with that. The button will not be marked as linking to another page at all. 
-Also could you open that in a new tab or window? Most likely not. 
-
-### The solution ✅
-
-Linking to other pages with any user interaction should as far as possible be handled by a link or a normal `<a>` tag. 
-
-```jsx
-function ClickButton(props) {
-  return (
-    <a href="/next-page">
-      <button onClick={onClick}>
-        Go to next page
-      </button>
-    </a>
-  );
-}
-```
-
-Bonus points, it also makes the code a lot more readable and shorter! 
-
-## 2. Using state when no rerender is needed
-
-One of the core concepts of react is state, you can control your whole data flow via state and every rerender is bound to a state.
-In hooks you can define your state of the component with the `useState` hook, which is really neat and easy way how to handle states in react. 
-
-For the next example we need somekind of explanation, let's say we have two buttons, one button will be a counter and one button will send a request or fire an action with the count. However the current count will not be displayed, it is only needed for the request when clicking the second button. 
+For the next example we need somekind of explanation, let's say we have two buttons, one button will be a counter and one button will send a request or fire an action with the count. However the current count will not be displayed at any time inside the component, it is only needed for the request when clicking the second button. 
 
 ### This is dangerous ❌
 ```jsx
@@ -101,7 +60,7 @@ function ClickButton(props) {
 ### The problem ⚡
 
 At the first sight, you might ask what is exactly the problem with that? Isn't what what the state was made for? 
-Sure you are right, this will work and probably there will be never a problem with that, however in react every state change will force a rerender for that component, which makes sense, but since we never use that state in our rendered part, this will be a unneccassary render every time we set the counter, which can impact the performance or could have unexpected side effects. 
+Sure you are right, this will work and probably there will be never a problem with that, however in react every state change will force a rerender for that component and most likely its children, but in the above example since we never use that state in our render part, this will end up being an unneccassary render every time we set the counter, which can impact the performance or could have unexpected side effects. 
 
 ### The solution ✅
 
@@ -132,11 +91,60 @@ function ClickButton(props) {
 }
 ```
 
+
+## 2. Using router.push instead of a link
+
+This might be a very easy and obvious one and not really related to react itself, but I still see it quite a lot when people writing react components.
+
+Let's say you will write a button and with clicking the button the user should be redirected to another page. Since its a [SPA](https://en.wikipedia.org/wiki/Single-page_application) this will need a clientside routing mechanism so you will need somekind of library for it. In react for example the most popular one is [react-router](https://reacttraining.com/react-router/). 
+So adding a click listener that will redirect the user to the desired page would solve the problem:
+
+### This is dangerous ❌
+```jsx
+function ClickButton(props) {
+  const history = useHistory()
+
+  const onClick = () => {
+    history.push("/next-page");
+  }
+
+  return (
+    <button onClick={onClick}>
+      Go to next page
+    </button>
+  );
+}
+```
+
+### The problem ⚡
+
+Even though this would work just fine for most of the users, there is huge problem when it comes to accessibility with that. The button will not be marked as linking to another page at all, which makes it nearly impossible to be identified by screen readers.
+Also could you open that in a new tab or window? Most likely not. 
+
+### The solution ✅
+
+Linking to other pages with any user interaction should as far as possible be handled by a link or a normal `<a>` tag. 
+
+```jsx
+function ClickButton(props) {
+  return (
+    <a href="/next-page">
+      <button onClick={onClick}>
+        Go to next page
+      </button>
+    </a>
+  );
+}
+```
+
+Bonus points, it also makes the code a lot more readable and shorter! 
+
 ## 3. Handling actions via useEffect 
 
 One of the best and most well thought hooks introduced by react is the `useEffect` hook. It allows to handle actions related to `prop` or `state` change. 
-Unfortunatly whcih is a really helpful feature it also often used in places, where it actually is not needed. 
-Imagine a component which will fetch a list of items and then on success whill render them. Also when the request is successfull we want to call the `onSuccess` function passed as a prop to the component
+Unfortunatly being a really helpful feature, it is also often used in places, where it actually might not be needed.
+
+Imagine a component which will fetch a list of items and on success it should simply render them. But also in additon to that, when the request is successfull we want to call the `onSuccess` function passed as a prop to the component
 
 ### This is dangerous ❌
 ```jsx{23}
@@ -177,7 +185,7 @@ function ClickButton(props) {
 ### The problem ⚡
 
 We have two `useEffect` hooks, the first one is handling the api call on initial render and the other will call the `onSuccess` function, by asuming when there is no loading, no error, but there is data it must have been a successfull call. Make sense right?
-Sure for the first call this is true. But you also loose the direct connection between the action and the function that needs to be called. Also there is no 100% guarantee that this case will only happen if the fetch action has succeeded
+Sure for the first call this is true and probably will never fail. But you also loose the direct connection between the action and the function that needs to be called. Also there is no 100% guarantee that this case will only happen if the fetch action has succeeded
 
 ### The solution ✅
 
@@ -219,9 +227,9 @@ Now it is quite clear at the first sight when the onSuccess has called, exactly 
 
 ## 4. Single responsibility components
 
-Composing component can be hard, when is it time to split up a component in multiple smaller components? How are you structuring the tree of components? All those questions will arraise on a daily basis when working with a component based framework. 
+Composing components can be hard, when is it time to split up a component in multiple smaller components? How are you structure the tree of components? All those questions will arraise on a daily basis when working with a component based framework. 
 But one common mistake about designing your components is putting two use cases in one single component. 
-Imagine you have header that shows either a burger button, when on mobile devices or tabs when on desktop screens. 
+Think of a header that shows either a burger button, when on mobile devices or tabs when on desktop screens. (The conditon will be handled the the magical `isMobile` function, which is not part of this example 🧙‍)
 
 ### This is dangerous ❌
 
@@ -245,10 +253,12 @@ function HeaderInner({ menuItems }) {
 
 ### The problem ⚡
 
-With this approach the component HeaderInner is trying to be two different things at once and we all learned from mister jackl or heyde, being more than one thing at once doesn't really make sense. 
-Also it makes it even hard to reuse the component at other places.
+With this approach the component HeaderInner is trying to be two different things at once and we all learned from [Mr. Jekyll](https://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde), being more than one thing at a time isn't really ideal. 
+Also it makes it even hard to test or to reuse the component at other places.
 
 ### The solution ✅
+
+Bringing the condition one level up, makes it easier to see what the components are made for and that they only have one responsibility, being a `Header`, `Tabs` or a `BurgerButton` and not trying to be two things at once. 
 
 ```jsx
 function Header(props) {
@@ -264,14 +274,11 @@ function Header(props) {
 }
 ```
 
-Bringing the condition one level up, makes it easier to see what the components are made for and that they only have one responsibilit, being a `Header`, `Tabs` or a `BurgerButton` and not trying to be two things at once. 
-
-
 ## 5. Single responsibility useEffects
 
-Another mistake I see a lot when using the `useEffect` hook, remembering the times, where we only had the `componentWillReceiveProps` or `componentDidUpdate` methods is bringing back dark memories and also happiness about the beauty of using the `useEffect` hook and even better having as much off them as you want. 
+Remembering the times, where we only had the `componentWillReceiveProps` or `componentDidUpdate` methods is bringing back dark memories and also realizing the beauty of using the `useEffect` hook and even better that you can have as much as you want of them. 
 
-But sometimes forgetting that and ending up using one `useEffect` for multiple things is bringing back those dark memories. Imagine you have a component which fetches some data from the backend displaying it in some way and also displaying breadcrumbs depending in the location. 
+But sometimes forgetting that and ending up using one `useEffect` for multiple things is bringing back those dark memories. For example, imagine you have a component which fetches some data from the backend, displaying it in some way and also displaying breadcrumbs depending in the location. 
 
 ### This is dangerous ❌
 
@@ -303,12 +310,12 @@ function Example(props) {
 
 ### The problem ⚡
 
-There are two use cases, the "data-fetching" and "displaying breadcrumbs" both are updated with an `useEffect` hook. This single `useEffect` hooks will run when the `fetchData` and `updateBreadcrumbs` functions or the location changes. Basically we also call the `fetchData` function also when the location changes? 
-This might be a side effect we havn't thought off. 
+There are two use cases, the "data-fetching" and "displaying breadcrumbs". Both are updated with an `useEffect` hook. This single `useEffect` hooks will run when the `fetchData` and `updateBreadcrumbs` functions or the `location` changes. The problem is now, we also call the `fetchData` function also when the location changes.
+This might be a side effect we haven't thought of. 
 
 ### The solution ✅
 
-Splitting up the effect makes sure they only are used for one effect and the unecpected side effects are gone. 
+Spliting up the effect makes sure, they only are used for one effect and the unexpected side effects are gone. 
 
 ```jsx
 function Example(props) {
@@ -343,5 +350,6 @@ Bonus Points, the use cases are now also logically sorted within the component.
 
 ## Conclusion
 
-There are many pitfalls writing components in react, it is really important to 100% understand the functionality of the framework to avoid mistakes, but also making mistakes is important and probably no one is 100% mistake free, so I hope I could help you with this tips or mistakes I saw or even made to prevent you from doing them as well. 
+There are many pitfalls writing components in react, it is really important to 100% understand the functionality of the framework to avoid mistakes, but also making mistakes is important when learning a framework or a programming language and probably no one is 100% free of those mistakes, but I think sharing your experience with those mistakes can also be really helpful and I hope could help you with this tips or mistakes I saw or even made to prevent you from doing them as well. 
+
 If you have questions or think wait I don't think this is a mistake feel free to write me, I would love to hear your opinion about it. 
