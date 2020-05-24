@@ -6,24 +6,23 @@ heroImage: 'fish.jpg'
 index: 5
 ---
 
-## Understanding the concept
+## React as a framework
 
 React has been out in the world of web development for quite some time now and it's position as a tool for agile web development has steadily strengthened in recent years. Especially after the announcment and release of the [new hook api/concept](https://reactjs.org/docs/hooks-state.html#hooks-and-function-components), writing components has never been easier. 
 
-However even though the team behind react and the huge community around it tried it in an impressive way to train and explain the concepts of the framework, I still see some pitfalls and common mistakes made when working with it. 
-I kept a list of all the mistakes I saw over the last years related to react especially with using hooks. In this article I show you the most common ones and 
-I will also try to explain in detail, why they are mistakes and also will show you a way to avoid them.
+Although the team behind react and the huge community have tried to train and explain the concepts of the framework in an impressive way, I still see some pitfalls and common mistakes that were made while working with it.
+I kept a list of all the mistakes I saw over the last years related to react especially with using hooks. In this article I want to show you the most common ones and I will also try to explain in detail, why I think they are mistakes and a suggestion for doing it in a cleaner way.
 
 ### Disclaimer 
 
-Most of the things are not mistakes by default or at the first sight and most of them probably will not affect the user experience or bring any danger to it.
+Before we start with the list, I have to say that most of the following things are not fundamental mistakes or don't look wrong at first glance, and also most of them are unlikely to affect the performance or apperance of the  application.
+Probably nobody would notice, except for the developers working on the product, that something is wrong here, but I still believe that good quality code can lead to a better developer experience and thus to a better product.
 
-Also with every software framework or library, there are millions of different opinions about it, so everything you will see here is based on my personal opinion and should not be taken as a general rule. If you have another opinion about them, I would love to hear it :) 
+As with any software framework or library, there are millions of different opinions about it. Everything you see here is based on my personal opinion and should not be considered a general rule.
+If you have a different opinion about her, I would love to hear it :) 
 
-Let's beginn.
 
-
-## 1. Using state when no rerender is needed
+## 1. Using useState when no rerender is needed
 
 One of the core concepts of react is handling state, you can control your whole data flow via state and every rerender is most likely bound to a state.
 
@@ -60,7 +59,7 @@ function ClickButton(props) {
 ### The problem ⚡
 
 At the first sight, you might ask what is exactly the problem with that? Isn't what what the state was made for? 
-Sure you are right, this will work and probably there will be never a problem with that, however in react every state change will force a rerender for that component and most likely its children, but in the above example since we never use that state in our render part, this will end up being an unneccassary render every time we set the counter, which can impact the performance or could have unexpected side effects. 
+Sure you are right, this will work just fine and probably there will be never a problem with that, however in react every state change will force a rerender for that component and most likely its children, but in the above example since we never use that state in our render part, this will end up being an unneccassary render every time we set the counter, which can impact the performance or could have unexpected side effects. 
 
 ### The solution ✅
 
