@@ -24,11 +24,11 @@ If you have a different opinion about her, I would love to hear it :)
 
 ## 1. Using useState when no rerender is needed
 
-One of the core concepts of react is handling state, you can control your whole data flow via state and every rerender is most likely bound to a state.
+One of the core concepts of react is dealing with the state. You can control your entire data flow and rendering through the state. Each time the tree is rendered again, it is most likely tied to a change in state.
 
-With hooks you can define your state of the component with the `useState` hook, which is a really neat and easy way how to handle states in react. 
+With the `useState` hook you can now also define your state in function components, which is a really neat and easy way how to handle states in react. But it can also be misused as we see in the following example.
 
-For the next example we need somekind of explanation, let's say we have two buttons, one button will be a counter and one button will send a request or fire an action with the count. However the current count will not be displayed at any time inside the component, it is only needed for the request when clicking the second button. 
+For the next example we need a bit of explanation, suppose we have two buttons, one button is a counter and the other button sends a request or triggers an action with the curent count. However, the current number is never displayed within the component. It is only required for the request when you click the second button.
 
 ### This is dangerous ❌
 ```jsx
