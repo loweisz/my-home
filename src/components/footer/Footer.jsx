@@ -7,7 +7,7 @@ const Footer = () => {
     <StyledFooter>
       <FooterInner>
         <ThemeToggle />
-        <span>2020 Made by Lorenz Weiß.</span>
+        <span>2020 Built and designed by Lorenz Weiß.</span>
       </FooterInner>
     </StyledFooter>
   );
