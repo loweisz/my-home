@@ -1,7 +1,7 @@
 ---
-title: '5 common mistakes writing react components (with hooks) in 2020'
+title: 'Five common mistakes writing react components (with hooks) in 2020'
 date: 'May 23rd, 2020'
-abstract: 'The most common mistakes I found writing react components and how to avoid or fix them.'
+abstract: 'The most common mistakes I found writing react components, why they are mistakes and how to avoid or fix them.'
 heroImage: 'fish.jpg'
 index: 5
 ---
@@ -19,7 +19,7 @@ Before we start with the list, I have to say that most of the following things a
 Probably nobody would notice, except for the developers working on the product, that something is wrong here, but I still believe that good quality code can lead to a better developer experience and thus to a better product.
 
 As with any software framework or library, there are millions of different opinions about it. Everything you see here is based on my personal opinion and should not be considered a general rule.
-If you have a different opinion about her, I would love to hear it :)
+If you have a different opinion about her, I would love to hear it 🌟
 
 ## 1. Using useState when no rerender is needed
 
@@ -118,7 +118,7 @@ Linking to other pages with any user interaction should as far as possible be ha
 function ClickButton(props) {
   return (
     <Link to="/next-page">
-      <button onClick={onClick}>Go to next page</button>
+      <button>Go to next page</button>
     </Link>
   );
 }
@@ -135,7 +135,7 @@ Imagine a component that fetches a list of items and render them to the dom. In 
 
 ### This is dangerous ❌
 
-```jsx{23}
+```jsx{20}
 function ClickButton(props) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -187,10 +187,8 @@ function ClickButton(props) {
         setData(fetchedData);
         props.onSuccess();
       })
-      .catch(setError)
-      .finally(() => {
-        setLoading(false);
-      });
+      .catch((err) => setError(err))
+      .finally(() => setLoading(false));
   }, [props.onSuccess]);
 
   useEffect(() => {
