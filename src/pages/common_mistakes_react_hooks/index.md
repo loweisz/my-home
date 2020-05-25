@@ -247,9 +247,9 @@ function Header(props) {
 
 ## 5. Single responsibility useEffects
 
-Remembering the times, where we only had the `componentWillReceiveProps` or `componentDidUpdate` methods is bringing back dark memories and also realizing the beauty of using the `useEffect` hook and even better that you can have as much as you want of them.
+Remember the times, where we only had the `componentWillReceiveProps` or `componentDidUpdate` methods to hook into the rendering process of a react component? It is bringing back dark memories and also realizing the beauty of using the `useEffect` hook and especially that you can have as much as you want of them.
 
-But sometimes forgetting that and ending up using one `useEffect` for multiple things is bringing back those dark memories. For example, imagine you have a component which fetches some data from the backend, displaying it in some way and also displaying breadcrumbs depending in the location.
+But sometimes forgetting and using a "useEffect" for several things brings back those dark memories. For example, imagine you have a component that fetches some data from the backend in some way, and also displays breadcrumbs depending on the current location. (Using again [react-router](https://reacttraining.com/react-router/) for getting the current location.)
 
 ### This is dangerous ❌
 
@@ -280,12 +280,12 @@ function Example(props) {
 
 ### The problem ⚡
 
-There are two use cases, the "data-fetching" and "displaying breadcrumbs". Both are updated with an `useEffect` hook. This single `useEffect` hooks will run when the `fetchData` and `updateBreadcrumbs` functions or the `location` changes. The problem is now, we also call the `fetchData` function also when the location changes.
+There are two use cases, the "data-fetching" and "displaying breadcrumbs". Both are updated with an `useEffect` hook. This single `useEffect` hooks will run when the `fetchData` and `updateBreadcrumbs` functions or the `location` changes. The main problem is now, we also call the `fetchData` function when the location changes.
 This might be a side effect we haven't thought of.
 
 ### The solution ✅
 
-Spliting up the effect makes sure, they only are used for one effect and the unexpected side effects are gone.
+Splitting up the effect makes sure, they only are used for one effect and the unexpected side effects are gone.
 
 ```jsx
 function Example(props) {
@@ -319,6 +319,8 @@ function Example(props) {
 
 ## Conclusion
 
-There are many pitfalls writing components in react, it is really important to 100% understand the functionality of the framework to avoid mistakes, but also making mistakes is important when learning a framework or a programming language and probably no one is 100% free of those mistakes, but I think sharing your experience with those mistakes can also be really helpful and I hope could help you with this tips or mistakes I saw or even made to prevent you from doing them as well.
+There are many pitfalls when writing components in react. It is never 100% possible to understand the whole mechanism and to avoid every little or even big mistake. But making mistakes is also important when learning a framework or programming language and probably nobody is 100% free of these mistakes.
 
-If you have questions or think wait I don't think this is a mistake feel free to write me, I would love to hear your opinion about it.
+I think sharing your experience with that can be very helpful for others or prevent them from making them.
+
+If you have any questions or wait, I don't think this is a mistake, please write to me, I would love to hear your opinion.
