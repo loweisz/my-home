@@ -8,7 +8,7 @@ index: 5
 
 ## React as a framework
 
-React has been out in the world of web development for quite some time now and it's position as a tool for agile web development has steadily strengthened in recent years. Especially after the announcment and release of the [new hook api/concept](https://reactjs.org/docs/hooks-state.html#hooks-and-function-components), writing components has never been easier.
+React has been out in the world of web development for quite some time now and its position as a tool for agile web development has steadily strengthened in recent years. Especially after the announcement and release of the [new hook api/concept](https://reactjs.org/docs/hooks-state.html#hooks-and-function-components), writing components has never been easier.
 
 Although the team behind react and the huge community have tried to train and explain the concepts of the framework in an impressive way, I still see some pitfalls and common mistakes that were made while working with it.
 I kept a list of all the mistakes I saw over the last years related to react especially with using hooks. In this article I want to show you the most common ones and I will also try to explain in detail, why I think they are mistakes and a suggestion for doing it in a cleaner way.
