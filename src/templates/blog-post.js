@@ -31,6 +31,7 @@ const BlogPostTemplate = (props) => {
           title={post.frontmatter.title}
           blogTitle={post.frontmatter.title}
           description={post.frontmatter.abstract}
+          pathname={post.fields.slug}
           image={image}
         />
         <PostTextSection>

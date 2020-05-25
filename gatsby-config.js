@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://www.lorenzweiss.de`,
+        siteUrl: `https://lorenzweiss.de`,
       },
     },
     'gatsby-plugin-react-helmet',
