@@ -6,7 +6,7 @@ module.exports = {
     author: 'Lorenz Weiß',
     siteUrl: 'https://lorenzweiss.de',
     social: {
-      twitter: '@lorenzweisz',
+      twitter: '@loweisz',
     },
     keywords: ['frontend', 'javascript', 'react', 'blog', 'software Engineer'],
   },

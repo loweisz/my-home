@@ -6,7 +6,7 @@ export const socialIcons = ['linkedIn', 'twitter', 'github'];
 
 export const iconsObj = {
   linkedIn: { name: "Social link to linkedIn", icon: IoLogoLinkedin, link: 'https://www.linkedin.com/in/lorenz-wei%C3%9F-032689165/' },
-  twitter: { name: "Social link to twitter", icon: IoLogoTwitter, link: 'https://twitter.com/lorenzweisz' },
+  twitter: { name: "Social link to twitter", icon: IoLogoTwitter, link: 'https://twitter.com/loweisz' },
   github: { name: "Social link to github", icon: IoLogoGithub, link: 'https://github.com/loweisz' },
 };
 
