@@ -1,13 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: 'Lorenz - Web Engineer',
-    description: 'My Personal Portfolio, Blog and collection of things I like',
+    title: 'Lorenz Weiß',
+    description:
+      'My Personal Portfolio, Blog and collection about software development, mostly javascript, react etc.',
     author: 'Lorenz Weiß',
     siteUrl: 'https://lorenzweiss.de',
     social: {
       twitter: '@lorenzweisz',
     },
-    keywords: ['frontend', 'javascript', 'react', 'blog', 'software Engineer']
+    keywords: ['frontend', 'javascript', 'react', 'blog', 'software Engineer'],
   },
   plugins: [
     {
@@ -16,6 +17,12 @@ module.exports = {
         rule: {
           include: `${__dirname}/src/images/blobs`,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://lorenzweiss.de`,
       },
     },
     'gatsby-plugin-react-helmet',
@@ -37,8 +44,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `img`,
-        path: `${__dirname}/src/images/`
-      }
+        path: `${__dirname}/src/images/`,
+      },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -69,7 +76,7 @@ module.exports = {
       options: {
         name: 'gatsby-starter-default',
         short_name: 'starter',
-        start_url: '/start',
+        start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
@@ -100,7 +107,7 @@ module.exports = {
           lightRed: '#700',
           red: '#ffacb3',
           darkRed: '#ffacb3',
-          lightgrey: '#666666',
+          lightGrey: '#666666',
           grey: '#9f9f9f',
           darkGrey: '#ccc',
           background: '#1b1b1b',
@@ -111,6 +118,38 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-159014335-1',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                
+                siteUrl
+              }
+            }
+  
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+        }`,
+        resolveSiteUrl: ({ site, allSitePage }) => {
+          //Alternativly, you may also pass in an environment variable (or any location) at the beginning of your `gatsby-config.js`.
+          return site.siteMetadata.siteUrl;
+        },
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes.map((node) => {
+            return {
+              url: `${site.siteMetadata.siteUrl}${node.path}`,
+              changefreq: `daily`,
+              priority: 0.7,
+            };
+          }),
       },
     },
   ],

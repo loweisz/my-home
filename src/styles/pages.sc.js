@@ -57,16 +57,16 @@ export const TextSection = styled.div`
 export const HeaderText = styled.div`
   margin-bottom: 15px;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 38px;
   color: ${({ theme }) => theme.black};
 `;
 
 export const TextBlock = styled.div`
   margin-top: 30px;
   text-align: start;
-  font-size: 25px;
-  font-weight: 200;
-  line-height: 40px;
+  font-size: 29px;
+  font-weight: 300;
+  line-height: 45px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -78,6 +78,8 @@ export const TextBlock = styled.div`
   }
   @media screen and (max-width: 800px) {
     margin-top: 0;
+    font-size: 24px;
+    line-height: 36px;
   }
 `;
 
@@ -88,12 +90,11 @@ export const PageContainer = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: 3;
-  background: radial-gradient(636px at 49.2% 48.3%, rgb(116, 3, 0) 0%, rgb(55, 3, 0) 90%);
+  background: ${({ theme }) => theme.background};
   overflow: hidden;
   position: relative;
   @media screen and (max-width: 800px) {
     flex-direction: column;
-    padding: 30px 0;
     overflow: auto;
   }
 `;
@@ -117,7 +118,7 @@ const Menu = styled.div`
   cursor: pointer;
   @media screen and (max-width: 800px) {
     position: initial;
-    margin-top: 60px;
+    margin-top: 30px;
     font-size: 40px;
   }
   div {
@@ -162,6 +163,12 @@ export const MenuRight = styled(Menu)`
 export const MenuBottom = styled(Menu)`
   bottom: 50px;
   width: 100%;
+
+  @media screen and (max-width: 800px) {
+    position: initial;
+    margin-top: 60px;
+    font-size: 40px;
+  }
 `;
 
 export const Blogs = styled.div`

@@ -3,8 +3,8 @@ import { socialIcons } from '../cubeNavigation/SocialElement';
 import { Greetings, JumpItem } from './cubeMenu.styles';
 import { AvatarImage } from '../header/header.sc';
 import CubeElement from './CubeElement';
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import Img from 'gatsby-image';
+import { useStaticQuery, graphql } from 'gatsby';
 
 function CubeMenu(props) {
   const wrapperRef = useRef();
@@ -19,14 +19,11 @@ function CubeMenu(props) {
     };
   }, []);
 
-  useEffect(
-    () => {
-      if (props.isSelected) {
-        document.removeEventListener('mousemove', trackMousePosition);
-      }
-    },
-    [props.isSelected],
-  );
+  useEffect(() => {
+    if (props.isSelected) {
+      document.removeEventListener('mousemove', trackMousePosition);
+    }
+  }, [props.isSelected]);
 
   const [rotateX, setRotateX] = useState('0');
   const [rotateY, setRotateY] = useState('0');
@@ -68,29 +65,27 @@ function CubeMenu(props) {
 
   const [hideText, setHideText] = useState(false);
 
-  useEffect(
-    () => {
-      if (props.isSelected) {
-        setTimeout(() => {
-          setHideText(true);
-        }, 1000);
-      }
-    },
-    [props.isSelected],
-  );
+  useEffect(() => {
+    if (props.isSelected) {
+      setTimeout(() => {
+        setHideText(true);
+      }, 1000);
+    }
+  }, [props.isSelected]);
 
   const data = useStaticQuery(
-    graphql`query {
-      avatarImage: file(relativePath: { eq: "data/avatar.jpg" }) {
-        childImageSharp {
-          sizes(maxWidth: 472 ) {
-            ...GatsbyImageSharpSizes
+    graphql`
+      query {
+        avatarImage: file(relativePath: { eq: "data/avatar.jpg" }) {
+          childImageSharp {
+            sizes(maxWidth: 472) {
+              ...GatsbyImageSharpSizes
+            }
           }
         }
       }
-    }
-    `
-  )
+    `,
+  );
   const faces = useMemo(
     () => ({
       right: (
@@ -116,11 +111,7 @@ function CubeMenu(props) {
               marginBottom: '-115px',
             }}
           >
-            <Img
-              title="Avatar image"
-              alt="Avatar Image"
-              sizes={data.avatarImage.childImageSharp.sizes}
-            />
+            <Img title="Avatar image" alt="Avatar Image" sizes={data.avatarImage.childImageSharp.sizes} />
           </AvatarImage>
           <span>
             Hi there{' '}
@@ -134,7 +125,7 @@ function CubeMenu(props) {
       ),
       top: <div>Currently I'm working at Aroundhome</div>,
     }),
-    [props.hovered, hideText],
+    [props.hovered, hideText, data.avatarImage.childImageSharp.sizes],
   );
 
   return (

@@ -1,27 +1,29 @@
 import React from 'react';
-import { useStaticQuery, graphql } from "gatsby"
-import { AvatarImage, HeaderSection, ImageContainer, LinkContainer, Mobile, Title } from './header.sc';
+import { useStaticQuery, graphql } from 'gatsby';
+import { AvatarImage, HeaderSection, ImageContainer, LinkContainer, Mobile } from './header.sc';
 import { InfoHeader } from './header.sc';
 import { iconsObj } from '../cubeNavigation/SocialElement';
-import Img from "gatsby-image"
+import Img from 'gatsby-image';
 import BubbleBurgerMenu from '../bubbleBurgerMenu/BubbleBurgerMenu';
 import { Link } from 'gatsby';
+import TitleText from './Title';
 
 const Header = (props) => {
   const percentageScrolled = (props.offset % 95) / 94;
   const data = useStaticQuery(
-    graphql`query {
-      avatarImage: file(relativePath: { eq: "data/avatar.jpg" }) {
-        childImageSharp {
-          sizes(maxWidth: 472 ) {
-            ...GatsbyImageSharpSizes
+    graphql`
+      query {
+        avatarImage: file(relativePath: { eq: "data/avatar.jpg" }) {
+          childImageSharp {
+            sizes(maxWidth: 472) {
+              ...GatsbyImageSharpSizes
+            }
           }
         }
       }
-    }
-    `
-  )
-  
+    `,
+  );
+
   return (
     <InfoHeader style={{ height: `${40 - 30 * percentageScrolled}px` }}>
       <Mobile>
@@ -44,8 +46,8 @@ const Header = (props) => {
         </LinkContainer>
       </HeaderSection>
       <HeaderSection>
-        <Link to={'/start'}>
-          <Title>{'<Lorenz Weiß 👋/>'}</Title>
+        <Link to={'/'}>
+          <TitleText />
         </Link>
       </HeaderSection>
       <HeaderSection>
@@ -57,17 +59,12 @@ const Header = (props) => {
               marginTop: `${70 - percentageScrolled * 25}px`,
             }}
           >
-            <Img
-              title="Avatar image"
-              alt="Avatar Image"
-              sizes={data.avatarImage.childImageSharp.sizes}
-            />
+            <Img title="Avatar image" alt="Avatar Image" sizes={data.avatarImage.childImageSharp.sizes} />
           </AvatarImage>
         </ImageContainer>
       </HeaderSection>
     </InfoHeader>
   );
 };
-
 
 export default Header;

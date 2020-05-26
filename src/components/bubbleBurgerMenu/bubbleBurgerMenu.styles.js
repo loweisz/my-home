@@ -29,13 +29,15 @@ export const Bubble = styled.div`
   width: 80px;
   position: relative;
   border-radius: 50%;
-  border: 2px solid ${({ theme }) => theme.black};
+  border: 2px solid ${({ theme }) => (theme.isDark ? theme.black : 'none')};
   background-color: ${({ theme }) => theme.white};
   box-shadow: 0 0 30px ${({ theme }) => (theme.isDark ? 'rgba(255, 255, 255, 0.09)' : 'rgba(0, 0, 0, 0.29)')};
-  ${({ selected }) => selected && css`
-    box-shadow: none;
-    border: none;
-  `}
+  ${({ selected }) =>
+    selected &&
+    css`
+      box-shadow: none;
+      border: none;
+    `}
   cursor: pointer;
   animation: ${({ selected }) => (selected ? twist : twistReverse)} 500ms ease-in-out;
   animation-direction: ${({ selected }) => (selected ? 'initial' : 'reverse')};
@@ -88,7 +90,7 @@ export const Patty = styled(Bar)`
   opacity: ${({ selected }) => (selected ? '0' : '1')};
 `;
 
-export const SubMenu = styled.div`
+export const SubMenuBackground = styled.div`
   margin-bottom: 10px;
   margin-right: 10px;
   background-color: ${({ theme }) => theme.white};
@@ -101,29 +103,44 @@ export const SubMenu = styled.div`
   box-shadow: 0 0 30px ${({ theme }) => (theme.isDark ? 'rgba(255, 255, 255, 0.09)' : 'rgba(0, 0, 0, 0.29)')};
   padding: 30px;
   padding-top: 30px;
-  width: 460px;
-  height: 460px;
+  width: 500px;
+  height: 500px;
   border-radius: 50%;
   margin-bottom: -348px;
   margin-right: -228px;
-  border: 2px solid ${({ theme }) => theme.black};
+  opacity: 0.9;
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    top: 80px;
+  }
+`;
+
+export const SubMenu = styled.div`
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  font-size: 60px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  text-shadow: -2px 0 0 ${({ theme }) => theme.black};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: ${fadeIn} 500ms ease;
   a {
-    padding: 15px 30px;
+    padding: 18px;
     min-width: 200px;
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    color: ${({ theme }) => theme.darkRed};
-
-    &:first-child {
-      margin-left: 90px;
-      border: none;
-    }
-    &:nth-child(2) {
-      margin-left: 46px;
-    }
+    color: ${({ theme }) => theme.black};
 
     > span {
       margin-left: 10px;

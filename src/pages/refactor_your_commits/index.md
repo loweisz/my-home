@@ -1,16 +1,14 @@
 ---
-title: 'Why and how to write useful commit messages. (5 helpful tips)'
+title: 'How to write useful commit messages? 5 helpful tips and a general guideline.'
 date: 'May 11th, 2020'
-abstract: 'When working with a lot of people on a big software project, it makes sense to think about your way of writing commit messages.'
+abstract: 'As a software engineer working with a lot of people on a big project, it makes sense to think about your way of writing commit messages.'
 heroImage: 'colors.jpg'
 index: 3
 ---
 
-If you have worked with other developers on a software project, you have probably used **git**, in order to have a proper version control, especially when you are working in parallel on the same code base. As most of you know git is a very powerful tool to helps people collaborate on a common project and probably used on most of the software projects all around the world, Let's be honest I cannot imagine how it was to work as a software engineer before git was invented.
+If you have worked with other developers on a software project, you have probably used [git](https://git-scm.com/), in order to have a proper [version control](https://en.wikipedia.org/wiki/Version_control), especially when you are working in parallel on the same code base. As most of you know git is a very powerful tool to helps people collaborate on a common software project and probably used on most of the software projects all around the world, Let's be honest I cannot imagine how it was to work as a software engineer before git was invented.
 
-**Pure. chaos.**
-
-## Working with git
+## Working with git in general
 
 What is probably the most used workflow in git?
 
@@ -20,7 +18,7 @@ We all probably do this, or should do it at least once a day.
 Along with this you also have to write a clear and understandable commit message for every commit you are doing describing what you have done in that commit.
 But what are those commit messages for and why are they so important when working with git ? Let's try to find out using a simple example.
 
-## Using commit messages
+## Writing commit messages
 
 Suppose you encountered a problem in your project and tried to find a solution. You searched and searched and ended up finding a file that was hundreds of years old and most likely the reason for your problem or error you need to solve. So what are you doing now?
 
@@ -59,9 +57,9 @@ To make it a bit clearer what I think these "bad" commit messages are, I would l
 What's the problem with them? Well none one of them is really telling me what exactly happened, right? Maybe at least that very long one. But let's be honest who wants to read all of that for every commit to get what happened here?
 There is clearly a problem. So how can we write better commit messages? To do this, we first need to find out exactly what the purpose of a commit message is and why we are writing it.
 
-## Purpose of a commit message
+## Purpose of writing commit messages
 
-You probably opened a file at least once and saw something there that didn't make sense to you and your first thought was to remove it or rewrite it. If you are smart before doing that you would investigate a bit what and why that code was added.
+As a developer you probably opened a file at least once and saw something there that didn't make sense to you and your first thought was to remove it or rewrite it. If you are smart before doing that you would investigate a bit what and why that code was added.
 
 But how?
 
@@ -74,7 +72,7 @@ Fortunately, the commit message was well written and explained what the develope
 
 This is exactly the main purpose of the commit message, it is basically the diary or history of a file. So if you travel back in time, you can see the steps and any changes to this file with comments or a description. It is essentially a change log that you can use to determine the reason for each part of the overall composition of your code. And you can easily do this with appropriate commit messages that describe in a short and understandable way what exactly has changed and why.
 
-## Improve your commit messages
+## Improve your commit messages with these helpful tips
 
 Commits are important, but then how can we write the right commit messages instead of the examples above?
 Here are some ideas or concepts that could help you write better commit messages:

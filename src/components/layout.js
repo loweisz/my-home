@@ -4,7 +4,7 @@ import './layout.css';
 import Tabs from './tabs/Tabs';
 import Header from './header/Header';
 import LayoutBackground from './layoutBackground';
-import { BodySection, LayoutWrapper, TopSection } from './layout.styles';
+import { BodySection, LayoutWrapper, TopSection, Wave } from './layout.styles';
 import Footer from './footer/Footer';
 
 const Layout = ({ children }) => {
@@ -33,6 +33,14 @@ const Layout = ({ children }) => {
           <Header offset={offset} />
           <Tabs offset={offset} />
         </TopSection>
+        <Wave>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="currentColor"
+              d="M0,256L40,240C80,224,160,192,240,192C320,192,400,224,480,202.7C560,181,640,107,720,106.7C800,107,880,181,960,181.3C1040,181,1120,107,1200,80C1280,53,1360,75,1400,85.3L1440,96L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
+            ></path>
+          </svg>
+        </Wave>
         <BodySection>{children}</BodySection>
         <Footer />
       </LayoutWrapper>
