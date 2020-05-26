@@ -46,7 +46,7 @@ const Header = (props) => {
         </LinkContainer>
       </HeaderSection>
       <HeaderSection>
-        <Link to={'/start'}>
+        <Link to={'/'}>
           <TitleText />
         </Link>
       </HeaderSection>

@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BreadOne, BreadTwo, Bubble, BurgerMenu, Patty, SubMenu, Wrapper } from './bubbleBurgerMenu.styles';
+import {
+  BreadOne,
+  BreadTwo,
+  Bubble,
+  BurgerMenu,
+  Patty,
+  SubMenu,
+  Wrapper,
+  SubMenuBackground,
+} from './bubbleBurgerMenu.styles';
 import { Link } from '@reach/router';
 import { FiBox, FiUser, FiFile } from 'react-icons/fi';
 
@@ -19,24 +28,28 @@ function BubbleBurgerMenu() {
       <AnimatePresence>
         {selected && (
           <motion.div
-            initial={{ transform: 'scale(0.14)', transformOrigin: '298px 252px' }}
-            animate={{ transform: 'scale(1)' }}
-            exit={{ transform: 'scale(0.14)' }}
+            initial={{ transform: 'scale(0.1)', transformOrigin: '390px 345px' }}
+            animate={{ transform: 'scale(5)' }}
+            exit={{ transform: 'scale(0.1)' }}
           >
-            <SubMenu onClick={deSelect}>
-              <Link to="/landing/">
-                <FiUser /> <span>About</span>
-              </Link>
-              <Link to="/dev/">
-                <FiBox /> <span>Jobs</span>
-              </Link>
-              <Link to="/blog/">
-                <FiFile /> <span>Blog</span>
-              </Link>
-            </SubMenu>
+            <SubMenuBackground onClick={deSelect} />
           </motion.div>
         )}
       </AnimatePresence>
+      {selected && (
+        <SubMenu>
+          <Link to="/landing/">
+            <span>About</span>
+          </Link>
+          <Link to="/dev/">
+            <span>Journey</span>
+          </Link>
+          <Link to="/blog/">
+            <span>Blog</span>
+          </Link>
+        </SubMenu>
+      )}
+
       <Bubble selected={selected} onClick={select}>
         <BurgerMenu selected={selected}>
           <BreadOne selected={selected} />

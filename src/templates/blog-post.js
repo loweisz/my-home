@@ -22,9 +22,7 @@ import BlogFooter from '../components/blogFooter/BlogFooter';
 
 const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
-  const image = post.frontmatter.image ? post.frontmatter.image.childImageSharp.resize : null;
-
-  console.log(props.location);
+  const image = post.frontmatter.heroImage ? post.frontmatter.heroImage.childImageSharp.resize : null;
 
   return (
     <Layout>
@@ -33,6 +31,7 @@ const BlogPostTemplate = (props) => {
           title={post.frontmatter.title}
           blogTitle={post.frontmatter.title}
           description={post.frontmatter.abstract}
+          pathname={post.fields.slug}
           image={image}
         />
         <PostTextSection>
@@ -87,6 +86,9 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 160)
       html
       timeToRead
+      fields {
+        slug
+      }
       frontmatter {
         title
         date

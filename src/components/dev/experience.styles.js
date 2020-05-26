@@ -194,7 +194,9 @@ export const DataText = styled.div`
   }
 
   a {
-    color: ${({ theme }) => theme.red};
+    color: ${({ theme }) => theme.red} !important;
+    text-decoration: underline;
+    font-weight: 500;
   }
 
   /* Code blocks */
@@ -228,10 +230,10 @@ export const DataText = styled.div`
   }
 
   /* Inline code */
-  :not(pre) > code[class*='language-'] {
+  :not(pre) > p > code {
     border-radius: 0.3em;
-    background: black;
-    color: #cb772f;
+    background: ${({ theme }) => theme.black} !important;
+    color: ${({ theme }) => theme.white} !important;
     padding: 0.15em 0.2em 0.05em;
     white-space: normal;
   }
@@ -329,7 +331,7 @@ export const DataText = styled.div`
   }
   p {
     > code {
-      color: ${({ theme }) => theme.darkRed} !important;
+      color: ${({ theme }) => theme.darkRed};
     }
   }
 `;

@@ -8,7 +8,9 @@ function BlogFooter({ post, location }) {
     window.open(this.href, 'twitter-share', 'width=550,height=235');
     return false;
   }
-  const tweetLink = `https://twitter.com/share?text=${post.frontmatter.title} by @lorenzweisz&url=${location.href}`;
+  const prodUrl = 'https://www.lorenzweiss.de' + post.fields.slug;
+  const tweetLink = `https://twitter.com/share?text=${post.frontmatter.title} by @loweisz&url=${prodUrl}`;
+
   return (
     <Wrapper>
       <Title>Hey! Thank you for reading! </Title>

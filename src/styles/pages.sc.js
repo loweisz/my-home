@@ -1,15 +1,6 @@
 import styled from 'styled-components';
 import { moveFadeIn, opacIn } from './animations';
 
-export const Wave = styled.div`
-  margin-top: -24px;
-  margin-left: -16px;
-  margin-right: -16px;
-  width: 110%;
-  height: 50px;
-  color: ${({ theme }) => theme.white};
-`;
-
 export const InfoStarter = styled.div`
   width: 100%;
   display: flex;
@@ -87,6 +78,8 @@ export const TextBlock = styled.div`
   }
   @media screen and (max-width: 800px) {
     margin-top: 0;
+    font-size: 24px;
+    line-height: 36px;
   }
 `;
 
@@ -102,7 +95,6 @@ export const PageContainer = styled.div`
   position: relative;
   @media screen and (max-width: 800px) {
     flex-direction: column;
-    padding: 30px 0;
     overflow: auto;
   }
 `;
@@ -126,7 +118,7 @@ const Menu = styled.div`
   cursor: pointer;
   @media screen and (max-width: 800px) {
     position: initial;
-    margin-top: 60px;
+    margin-top: 30px;
     font-size: 40px;
   }
   div {
@@ -171,6 +163,12 @@ export const MenuRight = styled(Menu)`
 export const MenuBottom = styled(Menu)`
   bottom: 50px;
   width: 100%;
+
+  @media screen and (max-width: 800px) {
+    position: initial;
+    margin-top: 60px;
+    font-size: 40px;
+  }
 `;
 
 export const Blogs = styled.div`
