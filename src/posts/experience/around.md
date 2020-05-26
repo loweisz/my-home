@@ -9,18 +9,18 @@ location: 'Berlin'
 index: 0
 techStack:
   [
+    'javascript',
+    'css',
     'React',
+    'typescript',
     'Redux',
-    'Styled-components',
-    'SASS',
-    'React',
-    'Redux',
-    'Styled-components',
-    'SASS',
-    'React',
-    'Redux',
-    'Styled-components',
-    'SASS',
+    'styled-components',
+    'Sass',
+    'webpack',
+    'rollup',
+    'enzyme',
+    'Jest',
+    'react-testing-library',
   ]
 ---
 

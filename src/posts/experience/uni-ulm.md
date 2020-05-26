@@ -7,6 +7,7 @@ title: 'Bachelor of Computer Science'
 company: 'Ulm University'
 website: 'https://www.uni-ulm.de/en/'
 index: 2
+techStack: ['javascript', 'd3.JS', 'Ionic', 'Angular', 'css', 'html', 'Jquery', 'Java', 'Python']
 ---
 
 - **University degree in computer science**, focused on mathematics, theoretical computer science and create and **work with complex software**.

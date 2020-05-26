@@ -7,6 +7,22 @@ title: 'Frontend Engineer'
 company: 'Loopline Systems'
 website: 'now.loopline.systems'
 index: 1
+techStack:
+  [
+    'javascript',
+    'css',
+    'Go',
+    'docker',
+    'React',
+    'typescript',
+    'Redux',
+    'GraphQL',
+    'styled-components',
+    'Sass',
+    'webpack',
+    'enzyme',
+    'Jest',
+  ]
 ---
 
 Agile online for employee feedback. Designed for regular feedback talks or continuos pulse checks.

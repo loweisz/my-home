@@ -11,6 +11,8 @@ export const TechStack = styled.div`
 export const StackTitle = styled.span`
   font-size: 16px;
   font-weight: bold;
+  padding-top: 12px;
+  border-top: 1px solid ${({ theme }) => theme.lightGrey};
 `;
 
 export const TechItem = styled.div`
