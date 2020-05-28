@@ -2,19 +2,27 @@ import styled from 'styled-components';
 import { Box } from '../../styles/shared';
 
 export const TechStack = styled.div`
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: -6px;
+`;
+
+export const StackTitle = styled.span`
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 12px;
+  border-top: 1px solid ${({ theme }) => theme.lightGrey};
 `;
 
 export const TechItem = styled.div`
-  background: rgba(112, 7, 0, 0);
+  background: ${({ theme }) => theme.black};
+  opacity: 0.3;
   color: ${({ theme }) => theme.white};
   padding: 4px 10px;
   text-align: center;
   border-radius: 5px;
-  margin-left: 10px;
-  &:first-child {
-    margin-left: 0;
-  }
+  margin: 6px;
 `;
 
 export const Wrapper = styled.div`
@@ -333,5 +341,23 @@ export const DataText = styled.div`
     > code {
       color: ${({ theme }) => theme.darkRed};
     }
+  }
+`;
+
+export const ExperienceDataText = styled(DataText)`
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    padding-left: 1.3em;
+  }
+  li:before {
+    content: '🔘'; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+    margin-right: 0.3em;
   }
 `;

@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 import {
   Company,
-  DataText,
+  ExperienceDataText,
   ExperienceBox,
   TimeLineElement,
   Wrapper,
@@ -12,6 +12,7 @@ import {
   Time,
   TechStack,
   Title,
+  StackTitle,
 } from './experience.styles';
 import { FiUser } from 'react-icons/fi';
 import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
@@ -61,10 +62,16 @@ function Experience({ node, observer }) {
             </Time>
           </IconWrapper>
         </SubInfo>
-        <DataText dangerouslySetInnerHTML={{ __html: node.html }} />
+        <ExperienceDataText dangerouslySetInnerHTML={{ __html: node.html }} />
+        <StackTitle>Technologies:</StackTitle>
         <TechStack>
-          {node.frontmatter.techStack &&
-            node.frontmatter.techStack.map((tech) => <TechItem>{tech}</TechItem>)}
+          {node.frontmatter.techStack && (
+            <>
+              {node.frontmatter.techStack.map((tech) => (
+                <TechItem>{tech}</TechItem>
+              ))}
+            </>
+          )}
         </TechStack>
       </ExperienceBox>
     </Wrapper>
