@@ -5,7 +5,7 @@ endDate: 'Nov. 2017'
 location: 'Ulm'
 title: 'Bachelor of Computer Science'
 company: 'Ulm University'
-website: 'https://www.uni-ulm.de/en/'
+website: 'uni-ulm.de/en/'
 index: 2
 techStack: ['javascript', 'd3.JS', 'Ionic', 'Angular', 'css', 'html', 'Jquery', 'Java', 'Python']
 ---
