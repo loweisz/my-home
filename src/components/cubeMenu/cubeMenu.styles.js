@@ -69,7 +69,7 @@ export const Cube = styled.div`
   animation-timing-function: ${({ isSelected }) =>
     isSelected ? 'linear' : 'cubic-bezier(0, 0.94, 0.5, 1)'};
   animation-name: ${({ isSelected, automated }) =>
-    automated ? 'none' : isSelected ? spin : introSpin};
+    automated ? 'none' : isSelected ? spin : 'none'};
 `;
 
 export const CubeFace = styled.div`
