@@ -3,7 +3,7 @@ import { keyframes } from 'styled-components';
 export const moveFadeIn = keyframes`
   from {
     opacity: 0;
-    margin-top: 70px;
+    margin-top: 50px;
   }
   to {
     opacity: 1;

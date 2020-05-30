@@ -13,6 +13,7 @@ export const StackTitle = styled.span`
   font-weight: bold;
   padding-top: 12px;
   border-top: 1px solid ${({ theme }) => theme.lightGrey};
+  color: ${({ theme }) => theme.black};
 `;
 
 export const TechItem = styled.div`
