@@ -4,8 +4,9 @@ import './layout.css';
 import Tabs from './tabs/Tabs';
 import Header from './header/Header';
 import LayoutBackground from './layoutBackground';
-import { BodySection, LayoutWrapper, TopSection, Wave } from './layout.styles';
+import { BodySection, LayoutWrapper, TopSection, Wave, MobileSocial } from './layout.styles';
 import Footer from './footer/Footer';
+import SocialElement from './cubeNavigation/SocialElement';
 
 const Layout = ({ children }) => {
   useEffect(() => {
@@ -41,7 +42,12 @@ const Layout = ({ children }) => {
             ></path>
           </svg>
         </Wave>
-        <BodySection>{children}</BodySection>
+        <BodySection>
+          <MobileSocial>
+            <SocialElement />
+          </MobileSocial>
+          {children}
+        </BodySection>
         <Footer />
       </LayoutWrapper>
     </LayoutBackground>

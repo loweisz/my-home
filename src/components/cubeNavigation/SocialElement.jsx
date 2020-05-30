@@ -11,9 +11,20 @@ export const iconsObj = {
 };
 
 const IconElement = ({ setHovered, resetHovered, icon }) => {
-  const hoverThis = () => setHovered(icon);
+  const onMouseEnter = () => {
+    if (setHovered) {
+      setHovered(icon)
+    }
+  };
+
+  const onMouseLeave = (e) => {
+    if (resetHovered) {
+      resetHovered(e)
+    }
+  }
+
   return (
-    <SocialIcon key={icon} onMouseEnter={hoverThis} onMouseLeave={resetHovered}>
+    <SocialIcon key={icon} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
       <a aria-label={iconsObj[icon].name} href={iconsObj[icon].link} target="_blank" rel="noopener noreferrer">
         {iconsObj[icon].icon()}
       </a>
