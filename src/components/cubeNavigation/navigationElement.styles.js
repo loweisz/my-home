@@ -1,4 +1,44 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+const iconJump = keyframes`
+  50% {
+    margin-left: -30px;
+    margin-right: 30px;
+  }
+`
+
+const textJump = ({ theme }) => keyframes`
+  from {
+    margin-left: 40px;
+    margin-right: -40px;
+    color: ${theme.grey};
+  }
+`
+
+export const Text = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.black};
+  font-size: 60px;
+  position: relative;
+  @media screen and (max-width: 800px) {
+    .icon {
+      display: none;
+    }
+  }
+  .icon {
+    position: absolute;
+    left: -60px;
+  }
+  z-index: 2;
+  > svg {
+    margin-right: 20px;
+  }
+  > a {
+    text-decoration: underline;
+  }
+`;
 
 export const Blob = styled.div`
   position: relative;
@@ -22,24 +62,18 @@ export const Blob = styled.div`
     svg {
       transform: scale(1.1);
     }
+    ${Text} {
+      animation: ${textJump} 400ms ease-out;
+      animation-delay: 200ms;
+      
+      .icon {
+        animation: ${iconJump} 250ms ease-in;
+      }
+    }
   }
 `;
 
-export const Text = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${({ theme }) => theme.black};
-  font-size: 60px;
 
-  z-index: 2;
-  > svg {
-    margin-right: 20px;
-  }
-  > a {
-    text-decoration: underline;
-  }
-`;
 
 export const MenuText = styled.span`
   display: flex;

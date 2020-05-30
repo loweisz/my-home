@@ -99,7 +99,7 @@ export const Greetings = styled.div`
   span {
     span {
       font-size: 60px;
-      color: ${({ theme }) => theme.grey};
+      color: ${({ theme }) => theme.lightRed};
     }
   }
 `;
