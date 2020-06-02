@@ -90,6 +90,8 @@ const Button = (props) => (
 Okay STOP. This is definitely too much code for just one button and may still grow and gets even more complicated with even more conditions and props. We now have at least 10 optional props and conditions to cover all use cases of all buttons in our application.
 Nobody will understand them all, and it can be very dangerous to change anything in the logic, and suddenly in one place for this one state, it no longer works as expected.
 
+NEWSLETTER
+
 ## Composition of components or calling is now rendering
 
 The principle of IoC says that we don't call the framework, the framework calls us. How does that help us improve our button?

@@ -82,6 +82,8 @@ function ClickButton(props) {
 }
 ```
 
+NEWSLETTER
+
 ## 2. Using router.push instead of a link
 
 This might be a very easy and obvious one and not really related to react itself, but I still see it quite a lot when people writing react components.

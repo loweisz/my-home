@@ -72,6 +72,8 @@ Fortunately, the commit message was well written and explained what the develope
 
 This is exactly the main purpose of the commit message, it is basically the diary or history of a file. So if you travel back in time, you can see the steps and any changes to this file with comments or a description. It is essentially a change log that you can use to determine the reason for each part of the overall composition of your code. And you can easily do this with appropriate commit messages that describe in a short and understandable way what exactly has changed and why.
 
+NEWSLETTER
+
 ## Improve your commit messages with these helpful tips
 
 Commits are important, but then how can we write the right commit messages instead of the examples above?

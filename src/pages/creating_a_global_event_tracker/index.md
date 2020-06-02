@@ -41,6 +41,8 @@ This means that the click event gives us the dom element that the user clicked o
 
 But how can we differentiate if the element is one of the elements we want to track?
 
+NEWSLETTER
+
 ### HTML is your friend
 
 HTML and Javascript is a lovestory that goes on for centuries. One of the many reasons of their
