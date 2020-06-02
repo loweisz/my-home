@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 import { Wrapper, InfoStarter, TextSection, TextBlock, HeaderText } from '../styles/pages.sc';
 import { graphql } from 'gatsby';
 import SEO from '../components/seo.helper';
+import Newsletter from '../components/newsletter/Newsletter';
 
 const IndexPage = () => {
   return (
@@ -35,6 +36,7 @@ const IndexPage = () => {
               </span>
             </TextBlock>
           </TextSection>
+          <Newsletter />
         </InfoStarter>
       </Wrapper>
     </Layout>
