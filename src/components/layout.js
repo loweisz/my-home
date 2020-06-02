@@ -8,6 +8,7 @@ import { BodySection, LayoutWrapper, TopSection, Wave, MobileSocial } from './la
 import Footer from './footer/Footer';
 import SocialElement from './cubeNavigation/SocialElement';
 
+
 const Layout = ({ children }) => {
   useEffect(() => {
     window.document.addEventListener('scroll', scrollFunc);
@@ -44,7 +45,7 @@ const Layout = ({ children }) => {
         </Wave>
         <BodySection>
           <MobileSocial>
-            <SocialElement />
+            <SocialElement  />
           </MobileSocial>
           {children}
         </BodySection>

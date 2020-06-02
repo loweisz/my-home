@@ -3,6 +3,8 @@ import { Wrapper, InfoStarter, TextBlock, HeaderText, TextSection, Blogs } from 
 import Layout from '../components/layout';
 import BlogPart from '../components/blog/BlogPart';
 import SEO from "../components/seo.helper"
+import Newsletter from '../components/newsletter/Newsletter';
+
 
 const BlogPage = (props) => (
   <Layout>
@@ -24,6 +26,7 @@ const BlogPage = (props) => (
             ))}
           </Blogs>
         </TextSection>
+        <Newsletter />
       </InfoStarter>
     </Wrapper>
   </Layout>

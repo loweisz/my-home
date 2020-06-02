@@ -5,6 +5,7 @@ import { Wrapper, InfoStarter, PageHeader, TextSection } from '../styles/pages.s
 import { graphql } from 'gatsby';
 import Experience from '../components/dev/Experience';
 import SEO from '../components/seo.helper';
+import Newsletter from '../components/newsletter/Newsletter';
 
 const DevPage = (props) => {
   const [obs, setObs] = useState(null);
@@ -48,6 +49,7 @@ const DevPage = (props) => {
               <Experience observer={obs} key={edge.node.frontmatter.company} node={edge.node} />
             ))}
           </TextSection>
+          <Newsletter />
         </InfoStarter>
       </Wrapper>
     </Layout>

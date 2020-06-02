@@ -19,6 +19,7 @@ import ShareWidget from '../components/shareWidget/ShareWidget';
 
 import { FiCalendar, FiClock } from 'react-icons/fi';
 import BlogFooter from '../components/blogFooter/BlogFooter';
+import Newsletter from '../components/newsletter/Newsletter';
 
 const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
@@ -66,6 +67,7 @@ const BlogPostTemplate = (props) => {
               <BlogFooter location={props.location} post={post} />
             </article>
           </BlogPostBox>
+          <Newsletter />
         </PostTextSection>
       </InfoStarter>
     </Layout>
