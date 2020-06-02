@@ -70,7 +70,7 @@ function ClickButton(props) {
   };
 
   const onClickRequest = () => {
-    apiCall(count);
+    apiCall(count.current);
   };
 
   return (
@@ -120,7 +120,7 @@ Linking to other pages with any user interaction should as far as possible be ha
 function ClickButton(props) {
   return (
     <Link to="/next-page">
-      <button>Go to next page</button>
+      <span>Go to next page</span>
     </Link>
   );
 }
