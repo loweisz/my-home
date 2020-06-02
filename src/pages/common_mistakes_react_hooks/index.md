@@ -36,7 +36,7 @@ function ClickButton(props) {
   const [count, setCount] = useState(0);
 
   const onClickCount = () => {
-    setCount((c) => x + 1);
+    setCount((c) => c + 1);
   };
 
   const onClickRequest = () => {
