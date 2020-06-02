@@ -6,7 +6,7 @@ import Newsletter from '../components/newsletter/Newsletter';
 
 const NewsletterPage = () => (
   <Layout>
-    <SEO title="Projects" description="Subscribe to my newsletter" />
+    <SEO title="Newsletter" description="Subscribe to my newsletter" />
     <Wrapper>
       <InfoStarter>
         <TextSection>

@@ -136,7 +136,7 @@ Imagine a component that fetches a list of items and render them to the dom. In 
 ### This is dangerous ❌
 
 ```jsx{20}
-function ClickButton(props) {
+function DataList({ onSuccess }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
@@ -144,8 +144,8 @@ function ClickButton(props) {
   const fetchData = useCallback(() => {
     setLoading(true);
     callApi()
-      .then((res) => setData(res))
-      .catch((err) => setError(err))
+      .then(res => setData(res))
+      .catch(err => setError(err))
       .finally(() => setLoading(false));
   }, []);
 
@@ -155,11 +155,11 @@ function ClickButton(props) {
 
   useEffect(() => {
     if (!loading && !error && data) {
-      props.onSuccess();
+      onSuccess();
     }
-  }, [loading, error, data]);
+  }, [loading, error, data, onSuccess]);
 
-  return <div>{data}</div>;
+  return <div>Data: {data}</div>;
 }
 ```
 
@@ -173,27 +173,26 @@ Sure for the first call this is true and probably will never fail. But you also 
 
 A straight forward solution would be to set the "onSuccess" function to the actual place where the call was successful:
 
-```jsx{12}
-function ClickButton(props) {
+```jsx{11}
+function DataList({ onSuccess }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
 
   const fetchData = useCallback(() => {
     setLoading(true);
-
     callApi()
       .then((fetchedData) => {
         setData(fetchedData);
-        props.onSuccess();
+      onSuccess();
       })
-      .catch((err) => setError(err))
+      .catch(err => setError(err))
       .finally(() => setLoading(false));
-  }, [props.onSuccess]);
+  }, [onSuccess]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   return <div>{data}</div>;
 }
