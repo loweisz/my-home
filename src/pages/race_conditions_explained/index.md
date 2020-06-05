@@ -1,5 +1,5 @@
 ---
-title: 'How to avoid race conditions using asynchronous javascript'
+title: 'How to avoid race conditions with asynchronous javascript'
 date: 'May 17th, 2020'
 abstract: 'Have you every heard about race conditions? What are they and why are they so dangerous? Here are some real life examples using asynchronous javascript'
 heroImage: 'race.jpeg'
