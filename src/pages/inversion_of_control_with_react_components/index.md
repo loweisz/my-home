@@ -3,7 +3,7 @@ title: 'Inversion of Control with shareable react components'
 date: 'December 28th, 2019'
 abstract: 'Why the inversion of control pattern could help you to make every component in react safer and cleaner'
 heroImage: 'car.jpg'
-index: 2
+index: 1
 ---
 
 There are many patterns, rules and methodologies in the world of programming and software engineering.
