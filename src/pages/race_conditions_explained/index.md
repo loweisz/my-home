@@ -89,9 +89,9 @@ Well, this could solve another 0.5% of the cases that could occur, but even if w
 
 NEWSLETTER
 
-### Let's fix it the right way
+### One way of fixing it
 
-One way of fixing this problem is introducing a simple [semaphore](<https://en.wikipedia.org/wiki/Semaphore_(programming)>). That means we add a kind of flag or guard that identifies the resource to be blocked.
+One very simple way of fixing this problem is introducing a simple [semaphore](<https://en.wikipedia.org/wiki/Semaphore_(programming)>). That means we add a kind of flag or guard that identifies the resource to be blocked.
 
 Ideally, we would also have a kind of queue in which we can save the order of the stored functions. For now to keep it simple, we will only block the resource when another mutation is in progress, and for example disable all buttons that would mutate the same state.
 
