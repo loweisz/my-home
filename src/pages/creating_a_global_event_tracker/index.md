@@ -3,7 +3,7 @@ title: 'How to setup a global event tracker with plain javascript and html insid
 date: 'October 28th, 2019'
 abstract: 'How to add event tracking to elements on any website, when they are interacted with using only plain javascript and html'
 heroImage: 'train.jpg'
-index: 1
+index: 0
 ---
 
 Today, one of the most important parts of a heavily used website is the ability to track and collect data about the usage and behavior of the users who visit this page. This information helps us to improve our work and to detect and correct our mistakes.
