@@ -3,7 +3,7 @@ title: 'Five common mistakes writing react components (with hooks) in 2020'
 date: 'May 23rd, 2020'
 abstract: 'The most common mistakes I found writing react components, why they are mistakes and how to avoid or fix them.'
 heroImage: 'fish.jpg'
-index: 5
+index: 3
 ---
 
 ## React as a framework
@@ -146,8 +146,8 @@ function DataList({ onSuccess }) {
   const fetchData = useCallback(() => {
     setLoading(true);
     callApi()
-      .then(res => setData(res))
-      .catch(err => setError(err))
+      .then((res) => setData(res))
+      .catch((err) => setError(err))
       .finally(() => setLoading(false));
   }, []);
 
@@ -186,9 +186,9 @@ function DataList({ onSuccess }) {
     callApi()
       .then((fetchedData) => {
         setData(fetchedData);
-      onSuccess();
+        onSuccess();
       })
-      .catch(err => setError(err))
+      .catch((err) => setError(err))
       .finally(() => setLoading(false));
   }, [onSuccess]);
 

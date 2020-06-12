@@ -4,7 +4,7 @@ module.exports = {
     description:
       'My Personal Portfolio, Blog and collection about software development, mostly javascript, react etc.',
     author: 'Lorenz Weiß',
-    siteUrl: 'https://lorenzweiss.de',
+    siteUrl: 'https://www.lorenzweiss.de',
     social: {
       twitter: '@loweisz',
     },
@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://lorenzweiss.de`,
+        siteUrl: `https://www.lorenzweiss.de`,
       },
     },
     'gatsby-plugin-react-helmet',
