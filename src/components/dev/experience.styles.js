@@ -216,8 +216,6 @@ export const DataText = styled.div`
   h2,
   h3 {
     color: ${({ theme }) => theme.black};
-    font-style: italic;
-    
   }
 
   code[class*='language-'],
