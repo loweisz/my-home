@@ -46,6 +46,10 @@ function SEO({ description, blogTitle, lang, meta, image: metaImage, title, path
           content: metaDescription,
         },
         {
+          name: 'monetization',
+          content: '$ilp.uphold.com/wwyHbMrZWbL7'
+        },
+        {
           name: 'keywords',
           content: site.siteMetadata.keywords.join(','),
         },
