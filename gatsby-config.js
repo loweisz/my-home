@@ -4,9 +4,9 @@ module.exports = {
     description:
       'My Personal Portfolio, Blog and collection about software development, mostly javascript, react etc.',
     author: 'Lorenz Weiß',
-    siteUrl: 'https://lorenzweiss.de',
+    siteUrl: 'https://www.lorenzweiss.de',
     social: {
-      twitter: '@lorenzweisz',
+      twitter: '@loweisz',
     },
     keywords: ['frontend', 'javascript', 'react', 'blog', 'software Engineer'],
   },
@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://lorenzweiss.de`,
+        siteUrl: `https://www.lorenzweiss.de`,
       },
     },
     'gatsby-plugin-react-helmet',
@@ -94,8 +94,8 @@ module.exports = {
           white: '#eee',
           black: '#252525',
           lightRed: '#ffacb3',
-          red: '#740300',
-          darkRed: '#700',
+          red: '#a90600',
+          darkRed: '#700700',
           lightGrey: '#ccc',
           grey: '#666666',
           darkGrey: '#666666',
@@ -104,8 +104,8 @@ module.exports = {
         dark: {
           white: '#252525',
           black: '#eee',
-          lightRed: '#700',
-          red: '#ffacb3',
+          lightRed: '#700700',
+          red: '#ff6471',
           darkRed: '#ffacb3',
           lightGrey: '#666666',
           grey: '#9f9f9f',

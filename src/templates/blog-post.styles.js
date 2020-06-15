@@ -46,16 +46,22 @@ export const SubTitle = styled.span`
   font-size: 24px;
   line-height: 28px;
 `;
-export const BlogPostBox = styled(Box)`
+export const BlogPostBox = styled.article`
+  overflow: hidden;
+  border-radius: 5px;
+  line-height: 1.5;
   text-align: start;
   display: flex;
   flex-direction: column;
   margin-top: 15px;
   flex: 1;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0;
+  a {
+    color: ${({ theme }) => theme.black};
+    text-decoration: none;
+  }
+  hr {
+    display: none;
+  }
   &:hover {
     box-shadow: none;
   }
@@ -65,7 +71,8 @@ export const HeroImage = styled.div`
   max-height: 400px;
   overflow: hidden;
   border-radius: 10px;
-
+  border: 4px solid ${({ theme }) => theme.black};
+  
   margin-bottom: 45px;
 `;
 

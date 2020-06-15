@@ -2,19 +2,28 @@ import styled from 'styled-components';
 import { Box } from '../../styles/shared';
 
 export const TechStack = styled.div`
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: -6px;
+`;
+
+export const StackTitle = styled.span`
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 12px;
+  border-top: 1px solid ${({ theme }) => theme.lightGrey};
+  color: ${({ theme }) => theme.black};
 `;
 
 export const TechItem = styled.div`
-  background: rgba(112, 7, 0, 0);
+  background: ${({ theme }) => theme.black};
+  opacity: 0.3;
   color: ${({ theme }) => theme.white};
   padding: 4px 10px;
   text-align: center;
   border-radius: 5px;
-  margin-left: 10px;
-  &:first-child {
-    margin-left: 0;
-  }
+  margin: 6px;
 `;
 
 export const Wrapper = styled.div`
@@ -62,6 +71,10 @@ export const ExperienceBox = styled(Box)`
     opacity: 1;
     margin-top: 15px;
   }
+  &:hover {
+    transform: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px 0px;
+  }
 `;
 
 export const ToggleContainer = styled.div`
@@ -107,7 +120,7 @@ const Tag = styled.span`
 
 export const Company = styled.a`
   padding: 3px 12px;
-  background: ${({ theme }) => theme.black};
+  background: ${({ theme }) => theme.red};
   color: ${({ theme }) => theme.white} !important;
   border-radius: 4px;
   font-size: 16px;
@@ -160,10 +173,43 @@ export const DataText = styled.div`
     margin: 0;
     padding: 24px;
     font-style: italic;
-    background-color: ${({ theme }) => theme.lightGrey};
+    background-color: ${({ theme }) => theme.lightRed}60;
     border-radius: 6px;
+    position: relative;
+    border-left: 4px solid ${({ theme }) => theme.red};
     > p {
       margin: 0;
+    }
+    &:before {
+      content: '"';
+      position: absolute;
+      top: -3px;
+      left: 0px;
+      height: 30px;
+      width: 30px;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: ${({ theme }) => theme.red};
+      font-size: 50px;
+      
+      
+    }
+
+    &:after {
+      content: '"';
+      position: absolute;
+      bottom: -25px;
+      right: 10px;
+      height: 30px;
+      width: 30px;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: ${({ theme }) => theme.red};
+      font-size: 50px;
     }
   }
   h1,
@@ -232,10 +278,15 @@ export const DataText = styled.div`
   /* Inline code */
   :not(pre) > p > code {
     border-radius: 0.3em;
-    background: ${({ theme }) => theme.black} !important;
-    color: ${({ theme }) => theme.white} !important;
+    
+    
     padding: 0.15em 0.2em 0.05em;
     white-space: normal;
+    color: ${({ theme }) => theme.red} !important;
+    background: ${({ theme }) => theme.red}22 !important;
+    
+    font-style: italic;
+    
   }
 
   .token.attr-name {
@@ -308,6 +359,7 @@ export const DataText = styled.div`
     display: block;
     padding-right: 1em;
     padding-left: 1.25em;
+    margin-left: -1.25em;
   }
 
   .gatsby-highlight {
@@ -315,6 +367,7 @@ export const DataText = styled.div`
     border-radius: 10px;
     background: #1b1b1b;
     border: 1px solid ${({ theme }) => theme.black};
+    border-left: 6px solid ${({ theme }) => theme.red};
     -webkit-overflow-scrolling: touch;
     overflow: auto;
   }
@@ -333,5 +386,23 @@ export const DataText = styled.div`
     > code {
       color: ${({ theme }) => theme.darkRed};
     }
+  }
+`;
+
+export const ExperienceDataText = styled(DataText)`
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    padding-left: 1.3em;
+  }
+  li:before {
+    content: '🔘'; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+    margin-right: 0.3em;
   }
 `;

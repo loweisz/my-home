@@ -14,7 +14,7 @@ import SEO from '../components/seo.helper';
 import TitleText from '../components/header/Title';
 import ThemeToggle from '../components/themeToggle/ThemeToggle';
 
-export const SELECT_ANIMATION_TIME = 1600;
+export const SELECT_ANIMATION_TIME = 1500;
 
 const StartPage = () => {
   const [isSelected, setIsSelected] = useState(null);

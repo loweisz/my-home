@@ -13,7 +13,7 @@ import {
 const CubeElement = (props) => {
   const { faces, rotateY, rotateX, hideText, isSelected, wrapperRef, scaleCube, automated } = props;
   return (
-    <Wrapper automated={automated} scaleCube={scaleCube} ref={wrapperRef}>
+    <Wrapper isSelected={isSelected} automated={automated} scaleCube={scaleCube} ref={wrapperRef}>
       <Cube
         automated={automated}
         isSelected={isSelected}

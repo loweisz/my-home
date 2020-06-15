@@ -19,7 +19,7 @@ export const InfoStarter = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  animation: ${moveFadeIn} 300ms ease-in;
+  animation: ${moveFadeIn} 200ms ease-in;
 `;
 
 export const PageHeader = styled.h1`

@@ -19,6 +19,15 @@ export const TopSection = styled.header`
   z-index: 10;
 `;
 
+export const MobileSocial = styled.div`
+  margin-top: -40px;
+  margin-bottom: 20px;
+  display: none;
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+`
+
 export const BodySection = styled.main`
   margin-top: 140px;
   padding: 15px 15px 50px 15px;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 
 export const InfoTabBar = styled.div`
   display: flex;
@@ -19,6 +19,51 @@ export const TabSection = styled.div`
   }
 `;
 
+const iconJump = ({ theme }) => keyframes`
+  50% {
+    margin-left: -15px;
+    margin-right: 15px;
+  }
+  100% {
+    color: ${theme.black};
+  }
+`
+
+
+
+export const TabInner = styled.div`
+  display: flex;
+  align-items: center;
+  position: relative;
+  svg {
+    color: ${({ theme }) => theme.red};
+  }
+  text-shadow: 
+    2px 0 ${({ theme }) => theme.white},
+    -2px 0 ${({ theme }) => theme.white},
+    -2px -2px ${({ theme }) => theme.white},
+    2px 2px ${({ theme }) => theme.white},
+    -2px 2px ${({ theme }) => theme.white},
+    0 2px ${({ theme }) => theme.white},
+    2px 0 ${({ theme }) => theme.white},
+    0 -2px ${({ theme }) => theme.white};
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: 0;
+    height: 3px;
+    background: ${({ theme }) => theme.red};
+    bottom: 0px;
+    right: -5px;
+    transition: all 500ms ease;
+    border-radius: 5px;
+  }
+  span {
+    z-index: 2;
+  }
+`
+
 export const Tab = styled.div`
   font-weight: 600;
   color: ${({ theme }) => theme.black};
@@ -33,7 +78,17 @@ export const Tab = styled.div`
   background-color: transparent;
   transition: all 600ms ease;
   &:hover {
-    text-decoration: underline;
-    background-color: ${({ theme }) => theme.background};
+    
+    ${TabInner} {
+      .icon {
+        animation: ${iconJump} 250ms ease-in;
+        animation-fill-mode: forwards;
+      }
+      &:after {
+        content: '';
+        width: calc(100%);
+      }
+    }
+    
   }
 `;

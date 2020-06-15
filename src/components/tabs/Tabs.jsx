@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Tab, TabSection, InfoTabBar } from './tabs.sc';
+import { Tab, TabSection, InfoTabBar, TabInner } from './tabs.sc';
+import { FiChevronsRight } from "react-icons/fi";
+
 
 const routes = [
   {
@@ -29,7 +31,12 @@ const Tabs = (props) => {
       >
         {routes.map((route) => (
           <Link key={route.url} to={route.url}>
-            <Tab>{route.name}</Tab>
+            <Tab>
+              <TabInner>
+                <FiChevronsRight className="icon" />
+                <span>{route.name}</span>
+              </TabInner>
+            </Tab>
           </Link>
         ))}
       </InfoTabBar>

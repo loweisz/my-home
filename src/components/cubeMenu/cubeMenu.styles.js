@@ -1,4 +1,5 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
+import { SELECT_ANIMATION_TIME } from '../../pages/index'
 
 const introSpin = keyframes`
   from {
@@ -11,25 +12,35 @@ const introSpin = keyframes`
 
 const selectSpin = keyframes`
   0% {
-    transform: translateZ(-250px) rotateY(0) rotateX(0);
+    transform: scale(0.4);
   }
   40% {
-    transform: translateZ(-1350px) rotateX(340deg) rotateY(12deg);
-  }
-  80% {
-    transform: translateZ(600px) rotateX(720deg) rotateY(-6deg);
+    transform: scale(0.2);
   }
   100% {
-    transform: translateZ(600px) rotateX(720deg) rotateY(-6deg);
+    transform: scale(4);
   }
 `;
+
+const spin = keyframes`
+  0% {
+    transform: rotateX(0);
+  }
+  70% {
+    transform: rotateX(540deg);
+  }
+  100% {
+    transform: rotateX(540deg);
+  }
+`
 
 export const Wrapper = styled.div`
   width: 500px;
   height: 500px;
   perspective: 1000px;
-  transform: scale(${({ scaleCube }) => (scaleCube ? scaleCube * 0.5 : 0.5)});
+  transform: scale(0.5);
   transition: ${({ automated }) => (automated ? 'all 2000ms ease' : 'none')};
+  animation: ${({ isSelected }) => isSelected ? css`${selectSpin} ${SELECT_ANIMATION_TIME}ms ease-in-out forwards` : '0'};
   z-index: 2;
   @media screen and (max-width: 800px) {
     display: none;
@@ -49,16 +60,16 @@ export const Cube = styled.div`
   @media screen and (max-width: 800px) {
     display: none;
   }
-  transition: ${({ isSelected }) => (isSelected ? 'all 300ms ease' : 'none')};
+  transition: ${({ isSelected }) => (isSelected ? 'all 300ms linear' : 'none')};
   width: 495px;
   height: 495px;
   position: relative;
   transform-style: preserve-3d;
-  animation: 1900ms;
+  animation: ${1500}ms;
   animation-timing-function: ${({ isSelected }) =>
-    isSelected ? 'ease-in' : 'cubic-bezier(0, 0.94, 0.5, 1)'};
+    isSelected ? 'linear' : 'cubic-bezier(0, 0.94, 0.5, 1)'};
   animation-name: ${({ isSelected, automated }) =>
-    automated ? 'none' : isSelected ? selectSpin : introSpin};
+    automated ? 'none' : isSelected ? spin : 'none'};
 `;
 
 export const CubeFace = styled.div`
@@ -88,7 +99,7 @@ export const Greetings = styled.div`
   span {
     span {
       font-size: 60px;
-      color: ${({ theme }) => theme.grey};
+      color: ${({ theme }) => theme.lightRed};
     }
   }
 `;

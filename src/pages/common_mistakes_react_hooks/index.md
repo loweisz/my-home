@@ -3,7 +3,7 @@ title: 'Five common mistakes writing react components (with hooks) in 2020'
 date: 'May 23rd, 2020'
 abstract: 'The most common mistakes I found writing react components, why they are mistakes and how to avoid or fix them.'
 heroImage: 'fish.jpg'
-index: 5
+index: 3
 ---
 
 ## React as a framework
@@ -36,7 +36,7 @@ function ClickButton(props) {
   const [count, setCount] = useState(0);
 
   const onClickCount = () => {
-    setCount((c) => x + 1);
+    setCount((c) => c + 1);
   };
 
   const onClickRequest = () => {
@@ -70,7 +70,7 @@ function ClickButton(props) {
   };
 
   const onClickRequest = () => {
-    apiCall(count);
+    apiCall(count.current);
   };
 
   return (
@@ -81,6 +81,8 @@ function ClickButton(props) {
   );
 }
 ```
+
+NEWSLETTER
 
 ## 2. Using router.push instead of a link
 
@@ -118,7 +120,7 @@ Linking to other pages with any user interaction should as far as possible be ha
 function ClickButton(props) {
   return (
     <Link to="/next-page">
-      <button>Go to next page</button>
+      <span>Go to next page</span>
     </Link>
   );
 }
@@ -136,7 +138,7 @@ Imagine a component that fetches a list of items and render them to the dom. In 
 ### This is dangerous ❌
 
 ```jsx{20}
-function ClickButton(props) {
+function DataList({ onSuccess }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
@@ -155,11 +157,11 @@ function ClickButton(props) {
 
   useEffect(() => {
     if (!loading && !error && data) {
-      props.onSuccess();
+      onSuccess();
     }
-  }, [loading, error, data]);
+  }, [loading, error, data, onSuccess]);
 
-  return <div>{data}</div>;
+  return <div>Data: {data}</div>;
 }
 ```
 
@@ -173,27 +175,26 @@ Sure for the first call this is true and probably will never fail. But you also 
 
 A straight forward solution would be to set the "onSuccess" function to the actual place where the call was successful:
 
-```jsx{12}
-function ClickButton(props) {
+```jsx{11}
+function DataList({ onSuccess }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
 
   const fetchData = useCallback(() => {
     setLoading(true);
-
     callApi()
       .then((fetchedData) => {
         setData(fetchedData);
-        props.onSuccess();
+        onSuccess();
       })
       .catch((err) => setError(err))
       .finally(() => setLoading(false));
-  }, [props.onSuccess]);
+  }, [onSuccess]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   return <div>{data}</div>;
 }

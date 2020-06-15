@@ -11,9 +11,7 @@ function CubeMenu(props) {
 
   useEffect(() => {
     document.addEventListener('mouseleave', left);
-    setTimeout(() => {
-      document.addEventListener('mousemove', trackMousePosition);
-    }, 2000);
+    document.addEventListener('mousemove', trackMousePosition);
     return () => {
       document.removeEventListener('mousemove', trackMousePosition);
     };

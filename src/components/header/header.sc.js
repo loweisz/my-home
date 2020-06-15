@@ -48,7 +48,7 @@ export const LinkContainer = styled.div`
     margin: 10px;
 
     &:hover {
-      color: ${({ theme }) => theme.red};
+      color: #ffacb3;
     }
   }
 `;

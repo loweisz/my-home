@@ -13,7 +13,9 @@ export const Box = styled.article`
     text-decoration: none;
   }
   &:hover {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+    transition: all 250ms ease;
+    box-shadow: rgba(0,0,0,0.2) 0px 9px 12px 10px;
   }
 
   hr {
