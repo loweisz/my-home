@@ -19,10 +19,13 @@ export const TabSection = styled.div`
   }
 `;
 
-const iconJump = keyframes`
+const iconJump = ({ theme }) => keyframes`
   50% {
     margin-left: -15px;
     margin-right: 15px;
+  }
+  100% {
+    color: ${theme.black};
   }
 `
 
@@ -79,6 +82,7 @@ export const Tab = styled.div`
     ${TabInner} {
       .icon {
         animation: ${iconJump} 250ms ease-in;
+        animation-fill-mode: forwards;
       }
       &:after {
         content: '';

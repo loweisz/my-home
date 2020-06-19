@@ -3,7 +3,7 @@ title: 'Five common mistakes writing react components (with hooks) in 2020'
 date: 'May 23rd, 2020'
 abstract: 'The most common mistakes I found writing react components, why they are mistakes and how to avoid or fix them.'
 heroImage: 'fish.jpg'
-index: 5
+index: 3
 ---
 
 ## React as a framework
@@ -36,7 +36,7 @@ function ClickButton(props) {
   const [count, setCount] = useState(0);
 
   const onClickCount = () => {
-    setCount((c) => x + 1);
+    setCount((c) => c + 1);
   };
 
   const onClickRequest = () => {
@@ -70,7 +70,7 @@ function ClickButton(props) {
   };
 
   const onClickRequest = () => {
-    apiCall(count);
+    apiCall(count.current);
   };
 
   return (
@@ -81,6 +81,8 @@ function ClickButton(props) {
   );
 }
 ```
+
+NEWSLETTER
 
 ## 2. Using router.push instead of a link
 
@@ -118,7 +120,7 @@ Linking to other pages with any user interaction should as far as possible be ha
 function ClickButton(props) {
   return (
     <Link to="/next-page">
-      <button>Go to next page</button>
+      <span>Go to next page</span>
     </Link>
   );
 }
@@ -144,8 +146,8 @@ function DataList({ onSuccess }) {
   const fetchData = useCallback(() => {
     setLoading(true);
     callApi()
-      .then(res => setData(res))
-      .catch(err => setError(err))
+      .then((res) => setData(res))
+      .catch((err) => setError(err))
       .finally(() => setLoading(false));
   }, []);
 
@@ -184,9 +186,9 @@ function DataList({ onSuccess }) {
     callApi()
       .then((fetchedData) => {
         setData(fetchedData);
-      onSuccess();
+        onSuccess();
       })
-      .catch(err => setError(err))
+      .catch((err) => setError(err))
       .finally(() => setLoading(false));
   }, [onSuccess]);
 

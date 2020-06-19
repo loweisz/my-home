@@ -25,6 +25,8 @@ const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
   const image = post.frontmatter.heroImage ? post.frontmatter.heroImage.childImageSharp.resize : null;
 
+  const posts = post.html.split("NEWSLETTER");
+  
   return (
     <Layout>
       <InfoStarter>
@@ -62,12 +64,14 @@ const BlogPostTemplate = (props) => {
                   />
                 </HeroImage>
               )}
-              <DataText dangerouslySetInnerHTML={{ __html: post.html }} />
+              <DataText dangerouslySetInnerHTML={{ __html: posts[0] }} />
+              <Newsletter />
+              {posts[1] && <DataText dangerouslySetInnerHTML={{ __html: posts[1] }} />}
               <hr />
               <BlogFooter location={props.location} post={post} />
             </article>
           </BlogPostBox>
-          <Newsletter />
+          
         </PostTextSection>
       </InfoStarter>
     </Layout>

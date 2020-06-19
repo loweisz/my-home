@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const text = '<Lorenz Weiß />';
@@ -47,6 +47,7 @@ export const Title = styled.h1`
   }
   &:after {
     position: absolute;
+    display: ${({ isHidden }) => isHidden ? 'none': 'inline-block'};
     bottom: 0;
     top: 11px;
     margin-left: 2px;
@@ -73,9 +74,23 @@ const Container = styled.div`
 `;
 
 const TitleText = () => {
+  const [isHidden, setIsHidden] = useState(false);
+
+  const timer = useRef();
+
+  useEffect(() => {
+    if (timer.current) {
+      clearTimeout(timer.current);
+    }
+    setIsHidden(false)
+    timer.current = setTimeout(() => {
+      setIsHidden(true)
+    }, 4500)
+  }, [])
+
   return (
     <Container>
-      <Title></Title>
+      <Title isHidden={isHidden}></Title>
     </Container>
   );
 };

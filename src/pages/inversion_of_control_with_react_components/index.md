@@ -3,7 +3,7 @@ title: 'Inversion of Control with shareable react components'
 date: 'December 28th, 2019'
 abstract: 'Why the inversion of control pattern could help you to make every component in react safer and cleaner'
 heroImage: 'car.jpg'
-index: 2
+index: 1
 ---
 
 There are many patterns, rules and methodologies in the world of programming and software engineering.
@@ -89,6 +89,8 @@ const Button = (props) => (
 
 Okay STOP. This is definitely too much code for just one button and may still grow and gets even more complicated with even more conditions and props. We now have at least 10 optional props and conditions to cover all use cases of all buttons in our application.
 Nobody will understand them all, and it can be very dangerous to change anything in the logic, and suddenly in one place for this one state, it no longer works as expected.
+
+NEWSLETTER
 
 ## Composition of components or calling is now rendering
 
