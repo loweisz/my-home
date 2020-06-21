@@ -1,16 +1,15 @@
 ---
-title: 'Easily create components with plop JS'
+title: 'Add automated code templates for react components'
 date: 'June 2nd, 2020'
 abstract: 'Speed up your day to day work with an easy way of creating components with plopJS'
 heroImage: 'popcorn.jpeg'
 index: 6
 ---
 
-If you work with a component based framework like react, you most likely create several components and with every component you have to create more that one file with almost the same content.
-Creating those files and writing always the same structure for components can be quite annoying. I will show you in this article, how you can speed up this process, create your own easy scripts that will handle all of that for you.
-The goals is to have one command that spits out everything you need for your component at once and will always have the same structure.
+If you work with a component based framework or anything else that contains always the same structure for its parts, you most likely create several components and with every component you have to create more that one file with almost the same content.
 
-Let's find out how you can save some time.
+Creating those files and writing always the same structure for components can be quite annoying. I will show you in this article, how you can speed up this process, create your own easy scripts and templates that will handle all of that for you.
+The goals is to have one command that spits out everything you need for your component at once and will always have the same custom structure.
 
 ### Using templates from your IDE
 
@@ -20,17 +19,15 @@ Here is how you can do it for example with [VSCode](https://code.visualstudio.co
 ### Snippets are not enough
 
 However there are some restrictions with this and you will still have to create separate files like your styles, your tests, your index files etc.
-Also when you work with a big team with different IDEs and setups, you will need to make sure that everyone will follow the same pattern within a project, or you will end up with different approaches between all your components.
+Also when you work with a big team with different IDEs and setups, you will need to make sure that everyone will follow the same pattern within a project, or you will end up with different approaches between all your components created by different People and IDEs.
 
-If found this especially important when working with a component library.
-There in order to create a new component, you always need to create several files in a same pattern, which is not possible with the inbuilt templates from most of the IDEs
+I found this especially important when working with a component library.
+In order to create a new component add to your library, you always need to create not only one but several files in a same pattern, which is not possible with the inbuilt templates from most of the IDEs.
 
 ### Plop your components
 
-Lucky for you, there is a pretty neat way how you can generate your components and defining the structure and chains what should happen while doing it.
+There is a pretty neat way how you can generate your components and defining the structure and chains what should happen while doing it.
 Let me show you how this works.
-
-NEWSLETTER
 
 ### Introducing [PlopJS](https://github.com/plopjs/plop)
 
@@ -39,12 +36,12 @@ So what is PlopJS? Let's check the official documentation:
 
 > Micro-generator framework that makes it easy for an entire team to create files with a level of uniformity.
 
-Nice! This sounds pretty awesome. But how can I add that to my component library?
+This sounds pretty awesome. But how can you add that to your component library or project?
 
 ### Component structure of the library
 
 So we want to have a generate script which should always generate all out needed files for our new component.
-Before we start to clarify for the following example we are using [styled-components](https://styled-components.com/) for stylings, [storybook](https://storybook.js.org/) for displaying our components and [Jest](https://jestjs.io/) for testing.
+Before we start to clarify some things here, for the following example we are using [styled-components](https://styled-components.com/) for stylings, [storybook](https://storybook.js.org/) for displaying our components and [Jest](https://jestjs.io/) for testing.
 But these are just examples and you can use whatever you want for generating your files.
 
 With that techstack, every component in your library should have the same structure (this is also highly opinionated and you can do your own structure anyway you want):
@@ -84,7 +81,7 @@ With that you can start ploppin'. Let's start by adding the plopscript to your `
 I'm calling the script `generate`, but you can call it whatever fits you best, of course.
 
 Now let's add a so called `plopfile.js` in the root of your project.
-This is where all you scripts are stored.
+This is where all you scripts and commands are stored.
 
 ```js
 module.exports = (plop) => {
@@ -105,7 +102,7 @@ module.exports = (plop) => {
 This function will run when you run the plop script with `npm run generate`.
 With `plop.setWelcomeMessage` you show a message to the user at the beginning to describe what the script is actually doing.
 
-PlopJS can do more that one thing within this script, so we need to tell it what we want to do first, so that the user can select the expected behaviour.
+PlopJS can do more that one thing within this script, so we need to tell it what we want to do first, so that the user can select the expected behavior.
 `plop.setGenerator` will add a new functionality to the plop-script. The first argument is the name of your action and the second an object defining what to do if the user selected that option.
 
 In our case we add the option `"Create a component"`, since we, well want to create a new component.
@@ -202,6 +199,13 @@ So far for the adding part. What about appending a new line to our global `index
 
 ```
 
+It's basically the same as the adding, except we use `"append"` for the `type` value.
+The `templateFile` will contain the single line that will be added to our index file.
+
+```js
+export { default as {{pascalCase name}} } from './components/{{pascalCase name}}';
+```
+
 ### Adding the rest to the script
 
 With all of that we can add the actions for all our files.
@@ -226,8 +230,8 @@ module.exports = (plop) => {
       {
         // Add the main file
         type: 'add',
-        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.tsx',
-        templateFile: 'plop-templates/Component.ts.hbs',
+        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.jsx',
+        templateFile: 'plop-templates/Component.js.hbs',
       },
       {
         // Add the story file
@@ -266,3 +270,5 @@ module.exports = (plop) => {
   });
 };
 ```
+
+Now when when we run `npm run generate` the script will take over all the creation of out component files:
