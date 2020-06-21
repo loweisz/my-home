@@ -2,49 +2,59 @@
 title: 'Add automated code templates for react components'
 date: 'June 2nd, 2020'
 abstract: 'Speed up your day to day work with an easy way of creating components with plopJS'
-heroImage: 'popcorn.jpeg'
+heroImage: 'popcorn.jpg'
 index: 6
 ---
 
-If you work with a component based framework or anything else that contains always the same structure for its parts, you most likely create several components and with every component you have to create more that one file with almost the same content.
+### Save time creating components
 
-Creating those files and writing always the same structure for components can be quite annoying. I will show you in this article, how you can speed up this process, create your own easy scripts and templates that will handle all of that for you.
-The goals is to have one command that spits out everything you need for your component at once and will always have the same custom structure.
+Working with a component-based framework involves a lot of creative work, in which obviously many components are created, which ideally always have the same structure and can be put together to form an application.
+
+Most likely, each component begins with the same structure, e.g. styles, tests, logic etc. and with each piece a new file is needed.
+
+Creating these files and always writing the same structure for components can be quite annoying. In this article, you will learn how to speed up this process and create your own simple scripts and templates that do all of this for you with the magic of PlopJS.
+
+The goal is to have one single command that spits out everything you need for your component at once and always has the same custom structure. Having this helped me a lot in my daily work creating new components and significantly accelerated my work.
 
 ### Using templates from your IDE
 
-Most likely you are already using the templates of your IDE to generate the components. This is a quite easy approach and activated by standard with the most popular IDEs.
-Here is how you can do it for example with [VSCode](https://code.visualstudio.com/docs/editor/userdefinedsnippets).
+Most likely you are already using your IDE templates to generate the components. This is a fairly simple approach, which is activated by default with the most popular IDEs.
+For example, with [VSCode](https://code.visualstudio.com/docs/editor/userdefinedsnippets).
 
 ### Snippets are not enough
 
-However there are some restrictions with this and you will still have to create separate files like your styles, your tests, your index files etc.
-Also when you work with a big team with different IDEs and setups, you will need to make sure that everyone will follow the same pattern within a project, or you will end up with different approaches between all your components created by different People and IDEs.
+However, there are some limitations with it, and you still need to create separate files like your styles, your tests, your index files, etc.
+Especially if you work with a large team with different IDEs and setups, you have to make sure that everyone follows the same pattern within a project, or you will have different approaches between all of your components, which have been created by different people and IDEs.
 
-I found this especially important when working with a component library.
-In order to create a new component add to your library, you always need to create not only one but several files in a same pattern, which is not possible with the inbuilt templates from most of the IDEs.
+A good example and an important use case is working with a component library.
+To create a new component that is added to your library, you always have to create not just one file, but several files in the same pattern, which is not possible with the built-in templates of most IDEs.
+However, building components is required in every project, so adding this functionality increases the productivity of each project
 
 ### Plop your components
 
-There is a pretty neat way how you can generate your components and defining the structure and chains what should happen while doing it.
-Let me show you how this works.
+There's a pretty neat way to generate your components and define the structure and chains of what should happen.
+Let's find out how this works.
 
-### Introducing [PlopJS](https://github.com/plopjs/plop)
+## Introducing [PlopJS](https://github.com/plopjs/plop)
 
-PlopJS is a scripting tool which I'm using it now on most of my projects, to generate my components or other workflows.
-So what is PlopJS? Let's check the official documentation:
+PlopJS is a scripting tool that I now use in most of my projects to generate my components or other workflows.
+What is PlopJS? Let's check the official documentation:
 
 > Micro-generator framework that makes it easy for an entire team to create files with a level of uniformity.
 
-This sounds pretty awesome. But how can you add that to your component library or project?
+That sounds pretty great. But how can you add that to your component library or project?
 
 ### Component structure of the library
 
-So we want to have a generate script which should always generate all out needed files for our new component.
-Before we start to clarify some things here, for the following example we are using [styled-components](https://styled-components.com/) for stylings, [storybook](https://storybook.js.org/) for displaying our components and [Jest](https://jestjs.io/) for testing.
-But these are just examples and you can use whatever you want for generating your files.
+Before we start I should clarify some things here, for the following example we are using:
 
-With that techstack, every component in your library should have the same structure (this is also highly opinionated and you can do your own structure anyway you want):
+- [styled-components](https://styled-components.com/) for stylings
+- [storybook](https://storybook.js.org/) for displaying our components
+- [Jest](https://jestjs.io/) for testing.
+
+However, these are just examples and you can use anything you want to generate your files.
+
+With this tech stack, every component in your project should have the same structure (this is also highly opinionated and of course you can create your own structure as you like):
 
 ```
 MyComponent
@@ -56,9 +66,9 @@ MyComponent
 :- index.js               // Index for exporting
 ```
 
-Also we have in our `src` folder a global `index.js` file which exports all the components from one place.
+In addition we have in our `src` folder a global `index.js` file which exports all the components from one place.
 
-Basically to create a component our script should generate these five files and add one line to the global `index.js`, exporting this component
+In the end, to create a component, our script should generate these five files and add one line to the global `index.js`, exporting this component
 
 ### Adding PlopJs to your component library
 
@@ -103,13 +113,16 @@ This function will run when you run the plop script with `npm run generate`.
 With `plop.setWelcomeMessage` you show a message to the user at the beginning to describe what the script is actually doing.
 
 PlopJS can do more that one thing within this script, so we need to tell it what we want to do first, so that the user can select the expected behavior.
+
+### Add generators
+
 `plop.setGenerator` will add a new functionality to the plop-script. The first argument is the name of your action and the second an object defining what to do if the user selected that option.
 
-In our case we add the option `"Create a component"`, since we, well want to create a new component.
+In our case we add the option `"Create a component"`, since we, well... want to create a new component.
 But before we create this component we will need some input, the created component will need a name.
 
-To get the name we can use the option `prompts` within the object in the second argument.
-`prompts` is an array which defines all the required inputs from the user. For our example we only need a simple text inpuit containing the name of the component. (There a [lot more options](https://plopjs.com/documentation/#using-prompts) to get information from the user using prompts)
+To get the name from the user, we can use the option `prompts` within the object in the second argument.
+`prompts` is an array which defines all the required inputs from the user. For our example we only need one simple text input containing the name of the component. (There a [lot more options](https://plopjs.com/documentation/#using-prompts) to get information from the user using prompts)
 Our prompt contains three things:
 
 - `type` is the type of the action, in our case a simple `"input"`
@@ -118,8 +131,8 @@ Our prompt contains three things:
 
 ### Plop actions
 
-The next part of the object in the generator function is the `actions` part. Here we can define out chain of actions, what the script should do.
-There are [several action types](https://plopjs.com/documentation/#built-in-actions) already built-in that you can use from plopJS.
+The next part of the object in the generator function is the `actions` part. Here we can define our chain of actions, what the script should do.
+There are [several action types](https://plopjs.com/documentation/#built-in-actions) already built-in that you can use from plopJS, plus if that is not enought you can also write your own.
 
 In our example we only need two different action types:
 
