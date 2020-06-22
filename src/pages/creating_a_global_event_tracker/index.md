@@ -3,7 +3,7 @@ title: 'How to setup a global event tracker with plain javascript and html insid
 date: 'October 28th, 2019'
 abstract: 'How to add event tracking to elements on any website, when they are interacted with using only plain javascript and html'
 heroImage: 'train.jpg'
-index: 1
+index: 0
 ---
 
 Today, one of the most important parts of a heavily used website is the ability to track and collect data about the usage and behavior of the users who visit this page. This information helps us to improve our work and to detect and correct our mistakes.
@@ -40,6 +40,8 @@ The event object is [pretty big and contains a lot of information](https://devel
 This means that the click event gives us the dom element that the user clicked on, and, what is pretty cool, that this target element object also contains much information about itself. So now we know not only **that** the user has clicked but also **where** he clicked.
 
 But how can we differentiate if the element is one of the elements we want to track?
+
+NEWSLETTER
 
 ### HTML is your friend
 

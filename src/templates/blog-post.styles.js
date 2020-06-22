@@ -71,7 +71,8 @@ export const HeroImage = styled.div`
   max-height: 400px;
   overflow: hidden;
   border-radius: 10px;
-
+  border: 4px solid ${({ theme }) => theme.black};
+  
   margin-bottom: 45px;
 `;
 

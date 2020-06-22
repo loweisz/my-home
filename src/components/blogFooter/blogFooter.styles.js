@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Title = styled.h2`
   margin: 0;
   margin-bottom: 12px;
+  color: ${({ theme }) => theme.red};
 `;
 
 export const SubTitle = styled.h3``;
@@ -16,6 +17,7 @@ export const Wrapper = styled.div`
 export const TwitterIcon = styled.div`
   height: 80px;
   width: 80px;
+  color: ${({ theme }) => theme.black};
   font-size: 52px;
   transition: all 400ms ease;
   &:hover {

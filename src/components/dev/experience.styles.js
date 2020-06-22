@@ -71,6 +71,10 @@ export const ExperienceBox = styled(Box)`
     opacity: 1;
     margin-top: 15px;
   }
+  &:hover {
+    transform: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px 0px;
+  }
 `;
 
 export const ToggleContainer = styled.div`
@@ -116,7 +120,7 @@ const Tag = styled.span`
 
 export const Company = styled.a`
   padding: 3px 12px;
-  background: ${({ theme }) => theme.black};
+  background: ${({ theme }) => theme.red};
   color: ${({ theme }) => theme.white} !important;
   border-radius: 4px;
   font-size: 16px;
@@ -169,10 +173,43 @@ export const DataText = styled.div`
     margin: 0;
     padding: 24px;
     font-style: italic;
-    background-color: ${({ theme }) => theme.lightGrey};
+    background-color: ${({ theme }) => theme.lightRed}60;
     border-radius: 6px;
+    position: relative;
+    border-left: 4px solid ${({ theme }) => theme.red};
     > p {
       margin: 0;
+    }
+    &:before {
+      content: '"';
+      position: absolute;
+      top: -3px;
+      left: 0px;
+      height: 30px;
+      width: 30px;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: ${({ theme }) => theme.red};
+      font-size: 50px;
+      
+      
+    }
+
+    &:after {
+      content: '"';
+      position: absolute;
+      bottom: -25px;
+      right: 10px;
+      height: 30px;
+      width: 30px;
+      border-radius: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: ${({ theme }) => theme.red};
+      font-size: 50px;
     }
   }
   h1,
@@ -241,10 +278,15 @@ export const DataText = styled.div`
   /* Inline code */
   :not(pre) > p > code {
     border-radius: 0.3em;
-    background: ${({ theme }) => theme.black} !important;
-    color: ${({ theme }) => theme.white} !important;
+    
+    
     padding: 0.15em 0.2em 0.05em;
     white-space: normal;
+    color: ${({ theme }) => theme.red} !important;
+    background: ${({ theme }) => theme.red}22 !important;
+    
+    font-style: italic;
+    
   }
 
   .token.attr-name {
@@ -317,6 +359,7 @@ export const DataText = styled.div`
     display: block;
     padding-right: 1em;
     padding-left: 1.25em;
+    margin-left: -1.25em;
   }
 
   .gatsby-highlight {
@@ -324,6 +367,7 @@ export const DataText = styled.div`
     border-radius: 10px;
     background: #1b1b1b;
     border: 1px solid ${({ theme }) => theme.black};
+    border-left: 6px solid ${({ theme }) => theme.red};
     -webkit-overflow-scrolling: touch;
     overflow: auto;
   }

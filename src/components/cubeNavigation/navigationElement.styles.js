@@ -1,9 +1,12 @@
 import styled, {keyframes} from 'styled-components';
 
-const iconJump = keyframes`
+const iconJump = ({ theme }) => keyframes`
   50% {
     margin-left: -30px;
     margin-right: 30px;
+  }
+  100% {
+    color: ${theme.red};
   }
 `
 
@@ -68,6 +71,7 @@ export const Blob = styled.div`
       
       .icon {
         animation: ${iconJump} 250ms ease-in;
+        animation-fill-mode: forwards;
       }
     }
   }
@@ -90,7 +94,7 @@ export const MenuText = styled.span`
     padding-left: 10px;
     padding-right: 10px;
     &:hover {
-      color: rgba(255, 255, 255, 0.6);
+      color: ${({ theme }) => theme.red};
     }
   }
 `;
@@ -99,7 +103,7 @@ export const SocialIcon = styled.div`
   @media screen and (max-width: 800px) {
     > a {
       font-size: 40px;
-    }
+    } 
   }
   &:hover {
     transform: scale(1.25);

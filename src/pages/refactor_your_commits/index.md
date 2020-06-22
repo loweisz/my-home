@@ -3,7 +3,7 @@ title: 'How to write useful commit messages? 5 helpful tips and a general guidel
 date: 'May 11th, 2020'
 abstract: 'As a software engineer working with a lot of people on a big project, it makes sense to think about your way of writing commit messages.'
 heroImage: 'colors.jpg'
-index: 3
+index: 2
 ---
 
 If you have worked with other developers on a software project, you have probably used [git](https://git-scm.com/), in order to have a proper [version control](https://en.wikipedia.org/wiki/Version_control), especially when you are working in parallel on the same code base. As most of you know git is a very powerful tool to helps people collaborate on a common software project and probably used on most of the software projects all around the world, Let's be honest I cannot imagine how it was to work as a software engineer before git was invented.
@@ -71,6 +71,8 @@ Nice! There is the name of that person. So let's ask him/her? But most probably 
 Fortunately, the commit message was well written and explained what the developer was doing at the time.
 
 This is exactly the main purpose of the commit message, it is basically the diary or history of a file. So if you travel back in time, you can see the steps and any changes to this file with comments or a description. It is essentially a change log that you can use to determine the reason for each part of the overall composition of your code. And you can easily do this with appropriate commit messages that describe in a short and understandable way what exactly has changed and why.
+
+NEWSLETTER
 
 ## Improve your commit messages with these helpful tips
 
