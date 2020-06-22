@@ -193,8 +193,6 @@ export const DataText = styled.div`
       align-items: center;
       color: ${({ theme }) => theme.red};
       font-size: 50px;
-      
-      
     }
 
     &:after {
@@ -276,17 +274,14 @@ export const DataText = styled.div`
   }
 
   /* Inline code */
-  :not(pre) > p > code {
+  :not(pre) > p > code,
+  :not(pre) > ul > li > code {
     border-radius: 0.3em;
-    
-    
     padding: 0.15em 0.2em 0.05em;
     white-space: normal;
     color: ${({ theme }) => theme.red} !important;
     background: ${({ theme }) => theme.red}22 !important;
-    
     font-style: italic;
-    
   }
 
   .token.attr-name {
