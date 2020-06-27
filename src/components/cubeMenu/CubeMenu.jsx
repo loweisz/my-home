@@ -74,7 +74,7 @@ function CubeMenu(props) {
   const data = useStaticQuery(
     graphql`
       query {
-        avatarImage: file(relativePath: { eq: "data/avatar.jpg" }) {
+        avatarImage: file(relativePath: { eq: "data/avatar.png" }) {
           childImageSharp {
             sizes(maxWidth: 472) {
               ...GatsbyImageSharpSizes

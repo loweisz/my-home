@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import { RoughNotation } from 'react-rough-notation';
 import Layout from '../components/layout';
 
 import { Wrapper, InfoStarter, PageHeader, TextSection } from '../styles/pages.sc';
@@ -6,9 +7,11 @@ import { graphql } from 'gatsby';
 import Experience from '../components/dev/Experience';
 import SEO from '../components/seo.helper';
 import Newsletter from '../components/newsletter/Newsletter';
+import useDelayedAnimation from '../hooks/useDelayedAnimation';
 
 const DevPage = (props) => {
   const [obs, setObs] = useState(null);
+  const showAnimation = useDelayedAnimation(400);
 
   const createInterSectionObserver = useCallback(() => {
     const options = {

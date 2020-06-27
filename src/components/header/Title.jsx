@@ -33,7 +33,8 @@ export const Title = styled.h1`
   height: 50%;
   &:before {
   content: '${text}';
-    font-size: 30px;
+    font-size: 38px;
+    font-weight: 900;
     width: 100%;
     height: 100%;
     line-height: 48px;
@@ -47,14 +48,14 @@ export const Title = styled.h1`
   }
   &:after {
     position: absolute;
-    display: ${({ isHidden }) => isHidden ? 'none': 'inline-block'};
+    display: ${({ isHidden }) => (isHidden ? 'none' : 'inline-block')};
     bottom: 0;
     top: 11px;
     margin-left: 2px;
     content: '';
     height: 100%;
     width: 14px;
-    background-color: white;
+    background-color: ${({ theme }) => theme.black};
     animation: ${blink} 900ms infinite;
     animation-timing-function: forwards;
   }
@@ -82,11 +83,11 @@ const TitleText = () => {
     if (timer.current) {
       clearTimeout(timer.current);
     }
-    setIsHidden(false)
+    setIsHidden(false);
     timer.current = setTimeout(() => {
-      setIsHidden(true)
-    }, 4500)
-  }, [])
+      setIsHidden(true);
+    }, 4500);
+  }, []);
 
   return (
     <Container>

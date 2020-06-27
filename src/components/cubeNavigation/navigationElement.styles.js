@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const iconJump = ({ theme }) => keyframes`
   50% {
@@ -8,7 +8,7 @@ const iconJump = ({ theme }) => keyframes`
   100% {
     color: ${theme.red};
   }
-`
+`;
 
 const textJump = ({ theme }) => keyframes`
   from {
@@ -16,14 +16,16 @@ const textJump = ({ theme }) => keyframes`
     margin-right: -40px;
     color: ${theme.grey};
   }
-`
+`;
 
 export const Text = styled.div`
   display: flex;
   align-items: center;
+  font-family: Mosk;
+  font-wight: 900;
   justify-content: center;
   color: ${({ theme }) => theme.black};
-  font-size: 60px;
+  font-size: 68px;
   position: relative;
   @media screen and (max-width: 800px) {
     .icon {
@@ -68,7 +70,7 @@ export const Blob = styled.div`
     ${Text} {
       animation: ${textJump} 400ms ease-out;
       animation-delay: 200ms;
-      
+
       .icon {
         animation: ${iconJump} 250ms ease-in;
         animation-fill-mode: forwards;
@@ -76,8 +78,6 @@ export const Blob = styled.div`
     }
   }
 `;
-
-
 
 export const MenuText = styled.span`
   display: flex;
@@ -103,7 +103,7 @@ export const SocialIcon = styled.div`
   @media screen and (max-width: 800px) {
     > a {
       font-size: 40px;
-    } 
+    }
   }
   &:hover {
     transform: scale(1.25);

@@ -73,7 +73,6 @@ export const ExperienceBox = styled(Box)`
   }
   &:hover {
     transform: none;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px 0px;
   }
 `;
 
@@ -193,8 +192,6 @@ export const DataText = styled.div`
       align-items: center;
       color: ${({ theme }) => theme.red};
       font-size: 50px;
-      
-      
     }
 
     &:after {
@@ -278,15 +275,13 @@ export const DataText = styled.div`
   /* Inline code */
   :not(pre) > p > code {
     border-radius: 0.3em;
-    
-    
+
     padding: 0.15em 0.2em 0.05em;
     white-space: normal;
     color: ${({ theme }) => theme.red} !important;
     background: ${({ theme }) => theme.red}22 !important;
-    
+
     font-style: italic;
-    
   }
 
   .token.attr-name {

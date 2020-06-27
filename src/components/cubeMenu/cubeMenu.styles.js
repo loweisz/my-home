@@ -1,5 +1,5 @@
 import styled, { keyframes, css } from 'styled-components';
-import { SELECT_ANIMATION_TIME } from '../../pages/index'
+import { SELECT_ANIMATION_TIME } from '../../pages/index';
 
 const introSpin = keyframes`
   from {
@@ -32,15 +32,21 @@ const spin = keyframes`
   100% {
     transform: rotateX(540deg);
   }
-`
+`;
 
 export const Wrapper = styled.div`
   width: 500px;
   height: 500px;
+  font-family: Mosk;
   perspective: 1000px;
   transform: scale(0.5);
   transition: ${({ automated }) => (automated ? 'all 2000ms ease' : 'none')};
-  animation: ${({ isSelected }) => isSelected ? css`${selectSpin} ${SELECT_ANIMATION_TIME}ms ease-in-out forwards` : '0'};
+  animation: ${({ isSelected }) =>
+    isSelected
+      ? css`
+          ${selectSpin} ${SELECT_ANIMATION_TIME}ms ease-in-out forwards
+        `
+      : '0'};
   z-index: 2;
   @media screen and (max-width: 800px) {
     display: none;
@@ -66,10 +72,8 @@ export const Cube = styled.div`
   position: relative;
   transform-style: preserve-3d;
   animation: ${1500}ms;
-  animation-timing-function: ${({ isSelected }) =>
-    isSelected ? 'linear' : 'cubic-bezier(0, 0.94, 0.5, 1)'};
-  animation-name: ${({ isSelected, automated }) =>
-    automated ? 'none' : isSelected ? spin : 'none'};
+  animation-timing-function: ${({ isSelected }) => (isSelected ? 'linear' : 'cubic-bezier(0, 0.94, 0.5, 1)')};
+  animation-name: ${({ isSelected, automated }) => (automated ? 'none' : isSelected ? spin : 'none')};
 `;
 
 export const CubeFace = styled.div`
@@ -81,8 +85,8 @@ export const CubeFace = styled.div`
   color: white;
   text-align: start;
   background: ${({ theme }) => theme.black};
-  color: ${({ theme }) => theme.background};
-  border: ${({ theme }) => theme.background} 5px solid;
+  color: ${({ theme }) => theme.white};
+  border: ${({ theme }) => theme.white} 5px solid;
   display: flex;
   justify-content: center;
   align-items: center;

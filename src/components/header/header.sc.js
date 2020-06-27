@@ -15,7 +15,9 @@ export const Desktop = styled.div`
 `;
 
 export const InfoHeader = styled.div`
-  background-color: #252525;
+  font-family: Mosk;
+  font-weight: 900;
+  background-color: ${({ theme }) => theme.background};
   z-index: 1;
   color: ${({ theme }) => theme.black};
   width: 100%;
@@ -25,7 +27,7 @@ export const InfoHeader = styled.div`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
   padding: 20px;
-  border-bottom: 1px solid ${({ theme }) => theme.black};
+  border-bottom: 4px solid ${({ theme }) => theme.black};
   @media screen and (max-width: 800px) {
     padding: 10px;
     height: 70px !important;
@@ -62,7 +64,7 @@ export const HeaderSection = styled.div`
     justify-content: center;
   }
   a {
-    color: #eee;
+    color: ${({ theme }) => theme.black};
     text-decoration: none;
   }
 `;
@@ -72,7 +74,8 @@ export const AvatarImage = styled.div`
   border-radius: 60%;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   overflow: hidden;
-  border: 2px solid ${({ theme }) => theme.white};
+  border: 4px solid ${({ theme }) => theme.white};
+  background-color: ${({ theme }) => theme.background};
   height: 130px;
   width: 130px;
   @media screen and (max-width: 800px) {

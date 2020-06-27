@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useRef, useState, useCallback } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 import {
   Company,
@@ -16,8 +16,6 @@ import {
 } from './experience.styles';
 import { FiUser } from 'react-icons/fi';
 import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
-import { useRef } from 'react';
-import { useCallback } from 'react';
 
 function Experience({ node, observer }) {
   const el = useRef();

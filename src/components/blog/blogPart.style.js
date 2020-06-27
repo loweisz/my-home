@@ -28,7 +28,7 @@ export const Abstract = styled.div`
   margin-top: 12px;
   font-size: 18px;
   line-height: 24px;
-  color: ${({ theme }) => theme.grey};
+  color: ${({ theme }) => theme.black};
 `;
 
 export const BlogPartContainer = styled.article`
@@ -70,7 +70,8 @@ export const TextSection = styled.div`
 `;
 
 export const Title = styled.span`
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 32px;
+  font-family: Mosk;
+  font-weight: 900;
   line-height: 1.2;
 `;

@@ -11861,6 +11861,13 @@ react-refresh@^0.7.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.7.2.tgz#f30978d21eb8cac6e2f2fde056a7d04f6844dd50"
   integrity sha512-u5l7fhAJXecWUJzVxzMRU2Zvw8m4QmDNHlTrT5uo3KBlYBhmChd7syAakBoay1yIiVhx/8Fi7a6v6kQZfsw81Q==
 
+react-rough-notation@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/react-rough-notation/-/react-rough-notation-0.0.11.tgz#692a774c46411ed1182b7edd8d9f5753fa0c290b"
+  integrity sha512-MQ7gfYBS/ECMmmJWwjGQkkN63XSp36m7QvJ/4Riw6zllyrBLIZ8Gz2gA+PUMPmOiHl6tvKxw/xka55jkbDXCrA==
+  dependencies:
+    rough-notation "0.3.1"
+
 react-side-effect@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.0.tgz#1ce4a8b4445168c487ed24dab886421f74d380d3"
@@ -12466,6 +12473,11 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
   dependencies:
     hash-base "^3.0.0"
     inherits "^2.0.1"
+
+rough-notation@0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/rough-notation/-/rough-notation-0.3.1.tgz#6f3865f43b0b63c3118f3be18d4c3267c30b50d3"
+  integrity sha512-WrUTmZa1CxuW2KdghcppZ7WBk7An/ty1bQ5kpYwl5YtXSBCEINa6NO7wx+pViO9TwlMqmIZuRxCJiWtYcIOK0w==
 
 run-async@^2.2.0, run-async@^2.4.0:
   version "2.4.1"

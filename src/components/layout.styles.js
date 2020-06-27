@@ -1,4 +1,28 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+import MoskNormal from '../fonts/mosk_normal.ttf';
+import MoskBold from '../fonts/mosk_bold.ttf';
+import MoskExtraBold from '../fonts/mosk_extra_bold.ttf';
+
+export const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'Mosk';
+    src: local('Mosk'), url(${MoskNormal}) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Mosk';
+    src: local('Mosk'), url(${MoskBold}) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Mosk';
+    src: local('Mosk'), url(${MoskExtraBold}) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+`;
 
 export const LayoutWrapper = styled.div`
   z-index: 2;
@@ -26,7 +50,7 @@ export const MobileSocial = styled.div`
   @media screen and (max-width: 800px) {
     display: block;
   }
-`
+`;
 
 export const BodySection = styled.main`
   margin-top: 140px;

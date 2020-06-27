@@ -1,6 +1,49 @@
 import styled from 'styled-components';
 import { moveFadeIn, opacIn } from './animations';
 
+export const HiLink = styled.a``;
+
+export const AvatarImage = styled.div`
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 60%;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  border: 4px solid ${({ theme }) => theme.white};
+  background-color: ${({ theme }) => theme.background};
+  height: 230px;
+  width: 230px;
+  @media screen and (max-width: 800px) {
+    position: static;
+    height: 100px !important;
+    width: 100px !important;
+    margin-bottom: 30px;
+  }
+
+  > img {
+    width: 100%;
+  }
+`;
+
+export const IntroText = styled.p`
+  color: ${({ theme }) => (theme.isDark ? theme.darkRed : theme.black)};
+  font-family: Mosk;
+  font-size: 70px;
+  line-height: 85px;
+  font-weight: 900;
+  margin-top: 20px;
+  @media screen and (max-width: 1100px) {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  > a {
+    color: ${({ theme }) => theme.black};
+  }
+`;
+
 export const InfoStarter = styled.div`
   width: 100%;
   display: flex;
@@ -26,6 +69,8 @@ export const PageHeader = styled.h1`
   color: ${({ theme }) => theme.black};
   text-align: start;
   animation: ${opacIn} 150ms ease-in;
+  font-family: Mosk;
+  font-weight: 900;
   width: 100%;
   max-width: 970px;
 `;
@@ -49,16 +94,18 @@ export const Tab = styled.div`
 `;
 
 export const TextSection = styled.div`
+  position: relative;
   max-width: 970px;
   width: 100%;
   padding-bottom: 20px;
 `;
 
 export const HeaderText = styled.div`
-  margin-bottom: 15px;
-  font-weight: 600;
-  font-size: 38px;
-  color: ${({ theme }) => theme.black};
+  font-family: 'Mosk';
+  color: ${({ theme }) => (theme.isDark ? theme.darkRed : theme.black)};
+  font-size: 70px;
+  line-height: 85px;
+  font-weight: 900;
 `;
 
 export const TextBlock = styled.div`
