@@ -7,6 +7,7 @@ import LayoutBackground from './layoutBackground';
 import { BodySection, LayoutWrapper, TopSection, Wave, MobileSocial, GlobalStyle } from './layout.styles';
 import Footer from './footer/Footer';
 import SocialElement from './cubeNavigation/SocialElement';
+import SmallCubeMenu from './cubeMenu/SmallCubeMenu';
 
 const Layout = ({ children }) => {
   useEffect(() => {
@@ -49,6 +50,7 @@ const Layout = ({ children }) => {
           </MobileSocial>
           {children}
         </BodySection>
+        <SmallCubeMenu />
         <Footer />
       </LayoutWrapper>
     </LayoutBackground>
