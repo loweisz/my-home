@@ -8,6 +8,9 @@ const CubeWrapper = styled(Link)`
   display: block;
   bottom: 10px;
   right: 10px;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 function SmallCubeMenu(props) {

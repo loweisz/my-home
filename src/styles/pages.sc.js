@@ -36,7 +36,7 @@ export const IntroText = styled.p`
   margin-top: 20px;
   @media screen and (max-width: 1100px) {
     font-size: 32px;
-    line-height: 38px;
+    line-height: 46px;
   }
 
   > a {
@@ -75,24 +75,6 @@ export const PageHeader = styled.h1`
   max-width: 970px;
 `;
 
-export const SubHeader = styled.p`
-  max-width: 800px;
-  color: white;
-  text-align: start;
-  animation: ${opacIn} 350ms ease-in;
-`;
-
-export const Tab = styled.div`
-  background-color: #660505;
-  height: 40px;
-  color: white;
-  line-height: 40px;
-  font-size: 18px;
-  width: 35%;
-  display: flex;
-  justify-content: center;
-`;
-
 export const TextSection = styled.div`
   position: relative;
   max-width: 970px;
@@ -106,6 +88,19 @@ export const HeaderText = styled.div`
   font-size: 70px;
   line-height: 85px;
   font-weight: 900;
+  @media screen and (max-width: 800px) {
+    font-size: 36px;
+    line-height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+`;
+
+export const LandingHeaderText = styled(HeaderText)`
+  @media screen and (max-width: 800px) {
+    margin-top: -75px;
+  }
 `;
 
 export const TextBlock = styled.div`

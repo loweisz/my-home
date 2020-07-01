@@ -81,7 +81,7 @@ export const Blob = styled.div`
 
 export const MenuText = styled.span`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   font-weight: 900;
   @media screen and (max-width: 800px) {
     text-decoration: underline;
