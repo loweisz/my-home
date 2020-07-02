@@ -20,7 +20,7 @@ const routes = [
 const Tabs = (props) => {
   const percentageScrolled = (props.offset % 95) / 94;
   return (
-    <TabSection additionalOpacity={percentageScrolled * 0.4}>
+    <TabSection fixed={props.fixed} additionalOpacity={percentageScrolled * 0.4}>
       <InfoTabBar
         style={{
           fontSize: `${30 - percentageScrolled * 5}px`,

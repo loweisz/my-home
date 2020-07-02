@@ -8,6 +8,9 @@ const CubeWrapper = styled(Link)`
   display: block;
   bottom: 10px;
   right: 10px;
+  z-index: 10;
+  height: 90px;
+  width: 90px;
   @media screen and (max-width: 800px) {
     display: none;
   }

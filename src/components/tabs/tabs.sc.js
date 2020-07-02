@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 export const InfoTabBar = styled.div`
   display: flex;
@@ -14,6 +14,7 @@ export const InfoTabBar = styled.div`
 export const TabSection = styled.div`
   width: 100%;
   background: radial-gradient(circle, ${({ theme }) => theme.white} 0%, ${({ theme }) => theme.white} 70%);
+  box-shadow: ${({ fixed, theme }) => fixed ? css`-2px 13px 11px 1px ${theme.white}`: 'none'};
   @media screen and (max-width: 800px) {
     display: none;
   }

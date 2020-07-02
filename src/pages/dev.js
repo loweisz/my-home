@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { RoughNotation } from 'react-rough-notation';
 import Layout from '../components/layout';
 
-import { Wrapper, InfoStarter, PageHeader, TextSection } from '../styles/pages.sc';
+import { Wrapper, InfoStarter, PageHeader, TextSection, HeaderText, TextBlock } from '../styles/pages.sc';
 import { graphql } from 'gatsby';
 import Experience from '../components/dev/Experience';
 import SEO from '../components/seo.helper';
@@ -46,8 +46,11 @@ const DevPage = (props) => {
       <SEO title="Career" description="This is the past and present of my journey as a Software engineer" />
       <Wrapper>
         <InfoStarter>
-          <PageHeader>The past and present of my journey as a Software engineer</PageHeader>
+
           <TextSection>
+            <TextBlock>
+              <HeaderText>The past and present of my journey as a Software engineer</HeaderText>
+            </TextBlock>
             {props.data.allMarkdownRemark.edges.map((edge) => (
               <Experience observer={obs} key={edge.node.frontmatter.company} node={edge.node} />
             ))}

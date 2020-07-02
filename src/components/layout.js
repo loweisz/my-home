@@ -9,7 +9,7 @@ import Footer from './footer/Footer';
 import SocialElement from './cubeNavigation/SocialElement';
 import SmallCubeMenu from './cubeMenu/SmallCubeMenu';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, fixed = true }) => {
   useEffect(() => {
     window.document.addEventListener('scroll', scrollFunc);
     return () => {
@@ -34,9 +34,9 @@ const Layout = ({ children }) => {
       <LayoutWrapper>
         <TopSection>
           <Header offset={offset} />
-          <Tabs offset={offset} />
+          <Tabs fixed={fixed} offset={offset} />
         </TopSection>
-        <Wave>
+        <Wave fixed={fixed}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
               fill="currentColor"
@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
             ></path>
           </svg>
         </Wave>
-        <BodySection>
+        <BodySection fixed={fixed}>
           <MobileSocial>
             <SocialElement />
           </MobileSocial>

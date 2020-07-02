@@ -81,7 +81,7 @@ export const Blob = styled.div`
 
 export const MenuText = styled.span`
   display: flex;
-  justify-content: flex-start;
+  justify-content: ${({ centered }) => centered ? 'center' : 'flex-start'};
   font-weight: 900;
   @media screen and (max-width: 800px) {
     text-decoration: underline;
@@ -94,7 +94,7 @@ export const MenuText = styled.span`
     padding-left: 10px;
     padding-right: 10px;
     &:hover {
-      color: ${({ theme }) => theme.red};
+      color: ${({ theme }) => theme.darkRed};
     }
   }
 `;

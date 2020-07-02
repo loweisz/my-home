@@ -11,7 +11,7 @@ import {
   IntroText,
   HiLink,
   AvatarImage,
-  LandingHeaderText,
+  LandingHeaderText, HiContainer,
 } from '../styles/pages.sc';
 import { graphql } from 'gatsby';
 import SEO from '../components/seo.helper';
@@ -56,13 +56,15 @@ const IndexPage = ({ data }) => {
                   </RoughNotation>
                   <br />
                   <br />
-                  <HiLink href="mailto:lorenz.weis@gmail.com?subject=Contact&body=Hi Lorenz">Say Hi</HiLink>
                 </IntroText>
               </TextBlock>
             </RoughNotationGroup>
           </TextSection>
-          <Newsletter />
+          <HiContainer>
+            <HiLink href="mailto:lorenz.weis@gmail.com?subject=Contact&body=Hi Lorenz">Say Hi</HiLink>
+          </HiContainer>
         </InfoStarter>
+
       </Wrapper>
     </Layout>
   );

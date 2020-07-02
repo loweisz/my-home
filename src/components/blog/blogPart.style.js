@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const Divider = styled.div`
+  flex: 1;
+  margin: 10px 20px;
+  border-bottom: 1px solid ${({ theme }) => theme.black}; 
+`
+
 export const ImagePreview = styled.div`
   height: 200px;
   overflow: hidden;
@@ -18,7 +24,7 @@ export const AdditionalInfo = styled.div`
 export const Date = styled.div`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.red};
+  color: ${({ theme }) => theme.black};
   font-size: 14px;
   span {
     margin-left: 10px;
@@ -28,7 +34,7 @@ export const Abstract = styled.div`
   margin-top: 12px;
   font-size: 18px;
   line-height: 24px;
-  color: ${({ theme }) => theme.black};
+  color: ${({ theme }) => theme.white};
 `;
 
 export const BlogPartContainer = styled.article`

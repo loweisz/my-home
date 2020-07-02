@@ -7,7 +7,7 @@ export const Box = styled.article`
   overflow: hidden;
   border-radius: 5px;
   line-height: 1.5;
-  background: ${({ theme }) => theme.background};
+  background: ${({ theme }) => theme.red};
   transition: box-shadow 400ms ease-in-out;
   a {
     color: ${({ theme }) => theme.black};
@@ -21,5 +21,8 @@ export const Box = styled.article`
 
   hr {
     display: none;
+  }
+  @media screen and (max-width: 800px) {
+    margin-right: 6px;
   }
 `;

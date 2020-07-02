@@ -11,9 +11,6 @@ const introSpin = keyframes`
 `;
 
 const infiniteSpin = keyframes`
-  0% {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
   100% {
     transform: rotateX(360deg) rotateY(360deg);
   }
@@ -73,7 +70,7 @@ export const Cube = styled.div`
   @media screen and (max-width: 800px) {
     display: none;
   }
-  transition: ${({ isSelected }) => (isSelected ? 'all 300ms linear' : 'none')};
+  transition: ${({ isSelected, automated }) => (isSelected || automated ? 'all 300ms linear' : 'none')};
   width: ${({ size }) => (size === 'small' ? '60px' : '495px')};
   height: ${({ size }) => (size === 'small' ? '60px' : '495px')};
   position: relative;
@@ -92,11 +89,10 @@ export const CubeFace = styled.div`
   height: ${({ size }) => (size === 'small' ? '60px' : '495px')};
   font-size: 50px;
   font-weight: bold;
-  color: white;
   text-align: start;
-  background: ${({ size, theme }) => (size === 'small' ? theme.white : theme.black)};
-  color: ${({ theme }) => theme.white};
-  border: ${({ theme, size }) => (size === 'small' ? theme.black : theme.white)} 5px solid;
+  background: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.black};
+  border: ${({ theme }) => theme.black} 5px solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,7 +109,7 @@ export const Greetings = styled.div`
   span {
     span {
       font-size: 60px;
-      color: ${({ theme }) => theme.lightRed};
+      color: ${({ theme }) => theme.darkRed};
     }
   }
 `;

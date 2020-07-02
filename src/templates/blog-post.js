@@ -13,6 +13,7 @@ import {
   PostTextSection,
   Info,
   InfoBlock,
+  Divider
 } from './blog-post.styles';
 import SEO from '../components/seo.helper';
 import ShareWidget from '../components/shareWidget/ShareWidget';
@@ -26,9 +27,9 @@ const BlogPostTemplate = (props) => {
   const image = post.frontmatter.heroImage ? post.frontmatter.heroImage.childImageSharp.resize : null;
 
   const posts = post.html.split("NEWSLETTER");
-  
+
   return (
-    <Layout>
+    <Layout fixed={false}>
       <InfoStarter>
         <SEO
           title={post.frontmatter.title}
@@ -71,7 +72,6 @@ const BlogPostTemplate = (props) => {
               <BlogFooter location={props.location} post={post} />
             </article>
           </BlogPostBox>
-          
         </PostTextSection>
       </InfoStarter>
     </Layout>

@@ -87,7 +87,7 @@ const StartPage = () => {
               />
             </MenuRight>
             <MenuBottom>
-              <SocialElement setHovered={setThisHovers} resetHovered={resetHovered} />
+              <SocialElement centered setHovered={setThisHovers} resetHovered={resetHovered} />
             </MenuBottom>
             <ThemeToggle />
             <CubeMenu hovered={hovered} isSelected={!!isSelected} />

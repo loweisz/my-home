@@ -18,7 +18,9 @@ export const StackTitle = styled.span`
 
 export const TechItem = styled.div`
   background: ${({ theme }) => theme.black};
-  opacity: 0.3;
+  
+  box-shadow: 3px 3px 0px 0px ${({ theme }) => theme.white};
+  border: 3px solid ${({ theme }) => theme.white};
   color: ${({ theme }) => theme.white};
   padding: 4px 10px;
   text-align: center;
@@ -62,14 +64,13 @@ export const ExperienceBox = styled(Box)`
   text-align: start;
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
   flex: 1;
-  margin-top: 130px;
+  
   opacity: 0;
   transition: all 400ms ease-in;
   &.shown {
     opacity: 1;
-    margin-top: 15px;
+    margin-top: 30px;
   }
   &:hover {
     transform: none;
@@ -89,29 +90,12 @@ export const PreText = styled.span`
   display: block;
 `;
 
-export const ShowMoreToggle = styled.button`
-  margin-top: 15px;
-  background: none;
-  border: none;
-  font-size: 15px;
-  text-align: end;
-  padding: 10px;
-  cursor: pointer;
-  color: white;
-  background: rgba(0, 0, 0, 0.3);
-  &:hover {
-    background: rgba(0, 0, 0, 0.5);
-  }
-`;
-
-export const Icon = styled.span`
-  font-size: 30px;
-`;
-
 const Tag = styled.span`
   padding: 3px 12px;
-  background: ${({ theme }) => theme.black};
-  color: ${({ theme }) => theme.white};
+  background: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.black};
+  box-shadow: 3px 3px 0px 0px ${({ theme }) => theme.black};
+  border: 3px solid ${({ theme }) => theme.black};
   border-radius: 4px;
   font-size: 16px;
   text-decoration: none;
@@ -119,8 +103,10 @@ const Tag = styled.span`
 
 export const Company = styled.a`
   padding: 3px 12px;
-  background: ${({ theme }) => theme.red};
+  background: ${({ theme }) => theme.darkRed};
   color: ${({ theme }) => theme.white} !important;
+  box-shadow: 3px 3px 0px 0px ${({ theme }) => theme.black};
+  border: 3px solid ${({ theme }) => theme.black};
   border-radius: 4px;
   font-size: 16px;
   display: flex;
@@ -148,11 +134,14 @@ export const Time = styled(Tag)`
 
 export const IconWrapper = styled.div`
   display: flex;
+  font-family: Mosk;
   align-items: center;
   margin-top: 8px;
+  font-size: 32px;
   svg {
     margin-right: 8px;
-    font-size: 24px;
+    font-size: 40px;
+    
   }
 `;
 
@@ -172,7 +161,7 @@ export const DataText = styled.div`
     margin: 0;
     padding: 24px;
     font-style: italic;
-    background-color: ${({ theme }) => theme.lightRed}60;
+    background-color: ${({ theme }) => theme.darkRed}60;
     border-radius: 6px;
     position: relative;
     border-left: 4px solid ${({ theme }) => theme.red};
@@ -190,7 +179,7 @@ export const DataText = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      color: ${({ theme }) => theme.red};
+      color: ${({ theme }) => theme.darkRed};
       font-size: 50px;
     }
 
@@ -205,7 +194,7 @@ export const DataText = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      color: ${({ theme }) => theme.red};
+      color: ${({ theme }) => theme.darkRed};
       font-size: 50px;
     }
   }
@@ -237,7 +226,7 @@ export const DataText = styled.div`
   }
 
   a {
-    color: ${({ theme }) => theme.red} !important;
+    color: ${({ theme }) => theme.darkRed} !important;
     text-decoration: underline;
     font-weight: 500;
   }
@@ -278,8 +267,8 @@ export const DataText = styled.div`
     border-radius: 0.3em;
     padding: 0.15em 0.2em 0.05em;
     white-space: normal;
-    color: ${({ theme }) => theme.red} !important;
-    background: ${({ theme }) => theme.red}22 !important;
+    color: ${({ theme }) => theme.darkRed} !important;
+    background: ${({ theme }) => theme.darkRed}22 !important;
     font-style: italic;
   }
 
@@ -361,7 +350,7 @@ export const DataText = styled.div`
     border-radius: 10px;
     background: #1b1b1b;
     border: 1px solid ${({ theme }) => theme.black};
-    border-left: 6px solid ${({ theme }) => theme.red};
+    border-left: 6px solid ${({ theme }) => theme.darkRed};
     -webkit-overflow-scrolling: touch;
     overflow: auto;
   }
@@ -391,12 +380,19 @@ export const ExperienceDataText = styled(DataText)`
   li {
     padding-left: 1.3em;
   }
+  p {
+    font-weight: 600; 
+    font-size: 18px;
+  }
   li:before {
-    content: '🔘'; /* FontAwesome Unicode */
-    font-family: FontAwesome;
+    content: '';
+    width: 6px;
+    background: ${({ theme }) => theme.white};
+    border: 4px solid ${({ theme }) => theme.black};
+    border-radius: 10px;
+    height: 6px;
     display: inline-block;
     margin-left: -1.3em; /* same as padding-left set on li */
-    width: 1.3em; /* same as padding-left set on li */
     margin-right: 0.3em;
   }
 `;

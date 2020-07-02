@@ -40,7 +40,6 @@ function Experience({ node, observer }) {
       <ExperienceBox ref={el}>
         <Title>
           <IconWrapper>
-            <FiUser />
             <span>{node.frontmatter.title}</span>
           </IconWrapper>
         </Title>

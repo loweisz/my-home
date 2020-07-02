@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { Box } from '../styles/shared';
+
+export const Divider = styled.div``
+
 
 export const PostContainer = styled.article`
   color: ${({ theme }) => theme.white};
@@ -43,7 +45,7 @@ export const Info = styled.div`
 export const InfoBlock = styled.div``;
 
 export const SubTitle = styled.span`
-  color: ${({ theme }) => theme.red};
+  color: ${({ theme }) => theme.darkRed};
   padding-bottom: 40px;
   font-size: 24px;
   line-height: 28px;

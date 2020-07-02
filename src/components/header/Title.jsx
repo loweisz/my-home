@@ -70,7 +70,7 @@ const Container = styled.div`
   width: 100%;
   height: 50px;
   @media screen and (max-width: 800px) {
-    width: 270px;
+    width: 180px;
   }
 `;
 
