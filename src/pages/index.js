@@ -6,7 +6,7 @@ import { FiBox, FiUser, FiFile } from 'react-icons/fi';
 import BlobOne from '../images/blobs/blob_one.svg';
 import BlobTwo from '../images/blobs/blob_two.svg';
 import LayoutBackground from '../components/layoutBackground';
-import { AvatarImage } from '../components/header/header.sc';
+import { AvatarImage, CubeAvatarImage } from '../components/header/header.sc';
 import Avatar from '../images/data/avatar.png';
 import NavigationElement from '../components/cubeNavigation/NavigationElement';
 import SocialElement from '../components/cubeNavigation/SocialElement';
@@ -50,9 +50,9 @@ const StartPage = () => {
       <SEO title="Welcome" description="Welcome to my website" />
       <PageContainer>
         <MobileImage>
-          <AvatarImage>
+          <CubeAvatarImage>
             <img alt="avatar" src={Avatar} />
-          </AvatarImage>
+          </CubeAvatarImage>
         </MobileImage>
         {!isNavigated && (
           <>
