@@ -15,7 +15,7 @@ export const Desktop = styled.div`
 `;
 
 export const InfoHeader = styled.div`
-  font-family: Mosk;
+  font-family: Mosk, sans-serif;
   font-weight: 900;
   background-color: ${({ theme }) => theme.red};
   z-index: 1;

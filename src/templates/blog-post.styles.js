@@ -14,7 +14,7 @@ export const PostTextSection = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: Mosk;
+  font-family: Mosk, sans-serif;
   font-size: 57px;
   font-weight: 900;
   line-height: 67px;

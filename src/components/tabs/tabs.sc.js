@@ -5,7 +5,7 @@ export const InfoTabBar = styled.div`
   justify-content: center;
   letter-spacing: 0;
   font-weight: 900;
-  font-family: Mosk;
+  font-family: Mosk, sans-serif;
   > a {
     text-decoration: none;
   }

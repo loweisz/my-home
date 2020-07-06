@@ -42,7 +42,7 @@ const spin = keyframes`
 export const Wrapper = styled.div`
   height: ${({ size }) => (size === 'small' ? '95px' : '500px')};
   width: ${({ size }) => (size === 'small' ? '95px' : '500px')};
-  font-family: Mosk;
+  font-family: Mosk, sans-serif;
   perspective: 1000px;
   transform: scale(0.5);
   transition: ${({ automated }) => (automated ? 'all 2000ms ease' : 'none')};

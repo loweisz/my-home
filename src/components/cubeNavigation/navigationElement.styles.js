@@ -21,8 +21,8 @@ const textJump = ({ theme }) => keyframes`
 export const Text = styled.div`
   display: flex;
   align-items: center;
-  font-family: Mosk;
-  font-wight: 900;
+  font-family: Mosk, sans-serif;
+  font-weight: 900;
   justify-content: center;
   color: ${({ theme }) => theme.black};
   font-size: 68px;

@@ -21,7 +21,7 @@ const glow = ({ theme }) => keyframes`
 `;
 
 export const HiContainer = styled.div`
-  font-family: Mosk;
+  font-family: Mosk, sans-serif;
   font-size: 70px;
   line-height: 85px;
   font-weight: 900;
@@ -110,7 +110,7 @@ export const AvatarImage = styled.div`
 
 export const IntroText = styled.p`
   color: ${({ theme }) => theme.black};
-  font-family: Mosk;
+  font-family: Mosk, sans-serif;
   font-size: 70px;
   line-height: 85px;
   font-weight: 900;
@@ -164,7 +164,7 @@ export const TextSection = styled.div`
 `;
 
 export const HeaderText = styled.div`
-  font-family: 'Mosk';
+  font-family: 'Mosk', sans-serif;
   color: ${({ theme }) => theme.black};
   font-size: 60px;
   line-height: 75px;

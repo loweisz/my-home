@@ -77,7 +77,7 @@ export const TextSection = styled.div`
 
 export const Title = styled.span`
   font-size: 32px;
-  font-family: Mosk;
+  font-family: Mosk, sans-serif;
   font-weight: 900;
   line-height: 1.2;
 `;
