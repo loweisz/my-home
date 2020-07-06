@@ -3,13 +3,36 @@ import styled from 'styled-components';
 export const NewsletterBox = styled.div`
   background: ${({ theme }) => theme.black};
   width: 100%;
-  max-width: 570px;
+  max-width: 700px;
   overflow: hidden;
   margin: 12px;
   display: grid;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  border-radius: 5px;
+  border: 5px solid ${({ theme }) => theme.white};
+  box-shadow: 6px 6px 0 0 ${({ theme }) => theme.white};
+  border-radius: 50px;
   line-height: 1.5;
+`;
+
+export const AvatarImage = styled.div`
+  right: 0;
+  overflow: hidden;
+  margin-top: 30px;
+  height: 230px;
+  width: 230px;
+  @media screen and (max-width: 800px) {
+    position: static;
+    margin-bottom: 30px;
+    display: none;
+  }
+
+  > img {
+    width: 100%;
+  }
+`;
+
+export const Content = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
 
 export const Wrapper = styled.div`
@@ -21,7 +44,7 @@ export const Wrapper = styled.div`
 export const Header = styled.div`
   padding: 25px;
   background: ${({ theme }) => theme.red};
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.black};
 `
 export const Subline = styled.span`
 `
@@ -78,7 +101,7 @@ export const SubmitButton = styled.button`
   background: ${({ theme }) => theme.red};
   border: none;
   margin-top: 12px;
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.black};
   border-radius: 50px;
   cursor: pointer;
   &:focus {

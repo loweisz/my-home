@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { Box } from '../styles/shared';
+
+export const Divider = styled.div``
+
 
 export const PostContainer = styled.article`
   color: ${({ theme }) => theme.white};
@@ -12,8 +14,10 @@ export const PostTextSection = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 42px;
-  line-height: 48px;
+  font-family: Mosk;
+  font-size: 57px;
+  font-weight: 900;
+  line-height: 67px;
   margin: 10px 0 30px 0;
   color: ${({ theme }) => theme.black};
   @media screen and (max-width: 800px) {
@@ -41,7 +45,7 @@ export const Info = styled.div`
 export const InfoBlock = styled.div``;
 
 export const SubTitle = styled.span`
-  color: ${({ theme }) => theme.red};
+  color: ${({ theme }) => theme.darkRed};
   padding-bottom: 40px;
   font-size: 24px;
   line-height: 28px;
@@ -71,8 +75,6 @@ export const HeroImage = styled.div`
   max-height: 400px;
   overflow: hidden;
   border-radius: 10px;
-  border: 4px solid ${({ theme }) => theme.black};
-  
   margin-bottom: 45px;
 `;
 

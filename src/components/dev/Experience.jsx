@@ -1,10 +1,10 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useRef, useState, useCallback } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 import {
   Company,
   ExperienceDataText,
   ExperienceBox,
-  TimeLineElement,
+  ExperienceTitle,
   Wrapper,
   IconWrapper,
   TechItem,
@@ -14,10 +14,7 @@ import {
   Title,
   StackTitle,
 } from './experience.styles';
-import { FiUser } from 'react-icons/fi';
 import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
-import { useRef } from 'react';
-import { useCallback } from 'react';
 
 function Experience({ node, observer }) {
   const el = useRef();
@@ -42,8 +39,7 @@ function Experience({ node, observer }) {
       <ExperienceBox ref={el}>
         <Title>
           <IconWrapper>
-            <FiUser />
-            <span>{node.frontmatter.title}</span>
+            <ExperienceTitle>{node.frontmatter.title}</ExperienceTitle>
           </IconWrapper>
         </Title>
         <SubInfo>
