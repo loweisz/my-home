@@ -143,17 +143,17 @@ function DataList({ onSuccess }) {
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
 
-  const fetchData = useCallback(() => {
+  const fetchData = () => {
     setLoading(true);
     callApi()
       .then((res) => setData(res))
       .catch((err) => setError(err))
       .finally(() => setLoading(false));
-  }, []);
+  };
 
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, []);
 
   useEffect(() => {
     if (!loading && !error && data) {
@@ -181,7 +181,7 @@ function DataList({ onSuccess }) {
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
 
-  const fetchData = useCallback(() => {
+  const fetchData = () => {
     setLoading(true);
     callApi()
       .then((fetchedData) => {
@@ -190,11 +190,11 @@ function DataList({ onSuccess }) {
       })
       .catch((err) => setError(err))
       .finally(() => setLoading(false));
-  }, [onSuccess]);
+  };
 
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, []);
 
   return <div>{data}</div>;
 }
@@ -256,18 +256,18 @@ But sometimes forgetting and using a "useEffect" for several things brings back 
 function Example(props) {
   const location = useLocation();
 
-  const fetchData = useCallback(() => {
+  const fetchData = () => {
     /*  Calling the api */
-  }, []);
+  };
 
-  const updateBreadcrumbs = useCallback(() => {
+  const updateBreadcrumbs = () => {
     /* Updating the breadcrumbs*/
-  }, []);
+  };
 
   useEffect(() => {
     fetchData();
     updateBreadcrumbs();
-  }, [location.pathname, fetchData, updateBreadcrumbs]);
+  }, [location.pathname]);
 
   return (
     <div>
@@ -290,21 +290,21 @@ Splitting up the effect makes sure, they are only used for one effect and the un
 function Example(props) {
   const location = useLocation();
 
-  const updateBreadcrumbs = useCallback(() => {
+  const updateBreadcrumbs = () => {
     /* Updating the breadcrumbs*/
-  }, []);
+  };
 
   useEffect(() => {
     updateBreadcrumbs();
-  }, [location.pathname, updateBreadcrumbs]);
+  }, [location.pathname]);
 
-  const fetchData = useCallback(() => {
+  const fetchData = () => {
     /*  Calling the api */
-  }, []);
+  };
 
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, []);
 
   return (
     <div>
