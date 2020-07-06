@@ -1,14 +1,11 @@
 import React from 'react';
-import { RoughNotation } from 'react-rough-notation';
 import { Wrapper, InfoStarter, TextBlock, HeaderText, TextSection, Blogs } from '../styles/pages.sc';
 import Layout from '../components/layout';
 import BlogPart from '../components/blog/BlogPart';
 import SEO from '../components/seo.helper';
 import Newsletter from '../components/newsletter/Newsletter';
-import useDelayedAnimation from '../hooks/useDelayedAnimation';
 
 const BlogPage = (props) => {
-  const showAnimation = useDelayedAnimation(500);
   return (
     <Layout>
       <SEO

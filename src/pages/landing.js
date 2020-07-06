@@ -1,13 +1,13 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import { RoughNotation, RoughNotationGroup } from 'react-rough-notation';
+import { RoughNotationGroup } from 'react-rough-notation';
+import Annotation from '../components/Annotation';
 import Layout from '../components/layout';
 import {
   Wrapper,
   InfoStarter,
   TextSection,
   TextBlock,
-  HeaderText,
   IntroText,
   HiLink,
   AvatarImage,
@@ -15,7 +15,6 @@ import {
 } from '../styles/pages.sc';
 import { graphql } from 'gatsby';
 import SEO from '../components/seo.helper';
-import Newsletter from '../components/newsletter/Newsletter';
 import useDelayedAnimation from '../hooks/useDelayedAnimation';
 
 const IndexPage = ({ data }) => {
@@ -30,9 +29,9 @@ const IndexPage = ({ data }) => {
             <RoughNotationGroup show={showAnimation}>
               <TextBlock>
                 <LandingHeaderText>
-                  <RoughNotation strokeWidth="4" type="underline">
+                  <Annotation strokeWidth="4" type="underline">
                     <span>Hey there,</span>
-                  </RoughNotation>
+                  </Annotation>
                   <AvatarImage>
                     <Img title="Avatar image" alt="Avatar Image" sizes={data.avatarImage.childImageSharp.sizes} />
                   </AvatarImage>
@@ -41,19 +40,19 @@ const IndexPage = ({ data }) => {
                   Nice to meet you.
                   <br />
                   My name is{' '}
-                  <RoughNotation strokeWidth="4" type="underline">
+                  <Annotation strokeWidth="4" type="underline">
                     Lorenz
-                  </RoughNotation>
+                  </Annotation>
                   <br />
                   I'm a frontend focused
                   <br />
-                  <RoughNotation strokeWidth="4" type="underline">
+                  <Annotation strokeWidth="4" type="underline">
                     Web Engineer
-                  </RoughNotation>{' '}
+                  </Annotation>{' '}
                   living in <br />
-                  <RoughNotation strokeWidth="4" type="underline">
+                  <Annotation strokeWidth="4" type="underline">
                     Berlin.
-                  </RoughNotation>
+                  </Annotation>
                   <br />
                   <br />
                 </IntroText>

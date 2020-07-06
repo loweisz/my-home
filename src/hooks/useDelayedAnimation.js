@@ -5,12 +5,12 @@ function useDelayedAnimation(delay) {
   const delayTimeout = useRef(null);
 
   useEffect(() => {
-    delayTimeout.current = window.setTimeout(() => {
+    delayTimeout.current = setTimeout(() => {
       setShowAnimation(true);
     }, delay);
     return () => {
       if (delayTimeout.current) {
-        window.clearTimeout(delayTimeout.current);
+        clearTimeout(delayTimeout.current);
       }
     };
   }, []);

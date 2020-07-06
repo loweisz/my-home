@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { RoughNotation } from 'react-rough-notation';
 import Layout from '../components/layout';
 
 import { Wrapper, InfoStarter, PageHeader, TextSection, HeaderText, TextBlock } from '../styles/pages.sc';
