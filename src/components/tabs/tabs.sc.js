@@ -13,8 +13,8 @@ export const InfoTabBar = styled.div`
 
 export const TabSection = styled.div`
   width: 100%;
-  background: radial-gradient(circle, ${({ theme }) => theme.white} 0%, ${({ theme }) => theme.white} 70%);
-  box-shadow: ${({ fixed, theme }) => fixed ? css`-2px 13px 11px 1px ${theme.white}`: 'none'};
+  background: linear-gradient(180deg, ${({ theme }) => theme.white} 0%,${({ theme }) => theme.white} 60%, transparent 100%);
+  padding-bottom: 30px;
   @media screen and (max-width: 800px) {
     display: none;
   }

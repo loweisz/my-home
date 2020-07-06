@@ -54,13 +54,17 @@ const Header = (props) => {
         </Link>
       </HeaderSection>
       <HeaderSection>
-        <ImageContainer>
+        <ImageContainer
+          style={{
+            marginTop: `${140 - percentageScrolled * 55}px`,
+          }}
+        >
           {!['/landing', '/landing/'].includes(location.pathname) && (
             <AvatarImage
               style={{
                 height: `${130 - percentageScrolled * 50}px`,
                 width: `${130 - percentageScrolled * 50}px`,
-                marginTop: `${70 - percentageScrolled * 25}px`,
+                marginTop: `${70 - percentageScrolled * 35}px`,
               }}
             >
               <Img title="Avatar image" alt="Avatar Image" sizes={data.avatarImage.childImageSharp.sizes} />

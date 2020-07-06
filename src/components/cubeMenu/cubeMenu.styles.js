@@ -26,14 +26,15 @@ const selectSpin = keyframes`
   100% {
     transform: scale(4);
   }
+  
 `;
 
 const spin = keyframes`
   0% {
     transform: rotateX(0);
   }
-  70% {
-    transform: rotateX(540deg);
+  35% {
+    transform: rotateX(360deg);
   }
   
 `;
@@ -52,6 +53,7 @@ export const Wrapper = styled.div`
         `
       : '0'};
   z-index: 2;
+  animation-fill-mode: forwards;
   @media screen and (max-width: 800px) {
     display: none;
   }

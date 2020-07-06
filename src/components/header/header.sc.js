@@ -84,14 +84,15 @@ const mobileImageFadeIn = keyframes`
 const imageFadeIn = keyframes`
   0% {
     opacity: 0;
-    margin-top: -86px;
+    margin-bottom: 300px;
   }
   60% {
     opacity: 1;
-    margin-top: 100px;
+    margin-bottom: -30px;
   }
   100% {
-    margin-top: 70px;
+    margin-bottom: 0px;
+    opacity: 1;
   }
 `;
 
@@ -113,7 +114,7 @@ export const AvatarImage = styled.div`
   @media screen and (max-width: 800px) {
     height: 80px !important;
     width: 80px !important;
-    margin-top: 24px !important;
+    margin-top: 54px !important;
     animation: ${mobileImageFadeIn} 400ms ease-in-out;
   }
 
@@ -132,25 +133,29 @@ export const AvatarImage = styled.div`
     background: ${({ theme }) => theme.background};
     top: -100px;
   }
-  
-  
+`;
+
+export const CubeAvatarImage = styled(AvatarImage)`
+  animation: none;
+  &:before {
+    display: none;
+  }
 `;
 
 export const ImageContainer = styled.div`
-  flex-grow: 1;
   position: relative;
-  margin-top: -35px;
-  height: 40px;
   left: 50%;
+  flex-grow: 0;
+  margin-top: 140px;
+  width: fit-content;
+  
   @media screen and (max-width: 800px) {
     left: auto;
     flex-grow: 0;
     margin-top: 5px;
   }
   &:hover {
-    ${AvatarImage} {
-      transform-origin: center -60px;
-      animation: ${swing} ease-in-out 1s infinite alternate;
-    }
+    transform-origin: center -60px;
+    animation: ${swing} ease-in-out 1s infinite alternate;
   }
 `;

@@ -134,15 +134,23 @@ export const Time = styled(Tag)`
 
 export const IconWrapper = styled.div`
   display: flex;
-  font-family: Mosk;
+  font-family: 'Mosk';
   align-items: center;
   margin-top: 8px;
   font-size: 32px;
   svg {
     margin-right: 8px;
     font-size: 40px;
-    
   }
+`;
+
+export const ExperienceTitle = styled.span`
+  line-height: 36px;
+  font-size: 32px;
+  @media screen and (max-width: 800px) {
+    line-height: 32px;
+    font-size: 28px;
+  } 
 `;
 
 export const SubInfo = styled.div`

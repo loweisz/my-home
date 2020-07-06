@@ -9,6 +9,9 @@ export const StyledFooter = styled.footer`
   color: ${({ theme }) => theme.darkRed};
   border-top: 5px solid ${({ theme }) => theme.black};
   box-sizing: border-box;
+  @media screen and (max-width: 800px) {
+    font-size: 12px;
+  }
 `;
 
 export const FooterInner = styled.div`

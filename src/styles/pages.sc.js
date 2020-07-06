@@ -115,7 +115,6 @@ export const IntroText = styled.p`
   line-height: 85px;
   font-weight: 900;
   margin-top: 20px;
-  text-shadow: 4px 4px 0px ${({ theme }) => theme.red};
   @media screen and (max-width: 1100px) {
     font-size: 32px;
     line-height: 46px;
@@ -177,7 +176,6 @@ export const HeaderText = styled.div`
     justify-content: space-between;
     align-items: flex-end;
   }
-  text-shadow: 4px 4px 0px ${({ theme }) => theme.red};
 `;
 
 export const LandingHeaderText = styled(HeaderText)`

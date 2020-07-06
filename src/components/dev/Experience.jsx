@@ -4,7 +4,7 @@ import {
   Company,
   ExperienceDataText,
   ExperienceBox,
-  TimeLineElement,
+  ExperienceTitle,
   Wrapper,
   IconWrapper,
   TechItem,
@@ -14,7 +14,6 @@ import {
   Title,
   StackTitle,
 } from './experience.styles';
-import { FiUser } from 'react-icons/fi';
 import { ThemeManagerContext } from 'gatsby-styled-components-dark-mode';
 
 function Experience({ node, observer }) {
@@ -40,7 +39,7 @@ function Experience({ node, observer }) {
       <ExperienceBox ref={el}>
         <Title>
           <IconWrapper>
-            <span>{node.frontmatter.title}</span>
+            <ExperienceTitle>{node.frontmatter.title}</ExperienceTitle>
           </IconWrapper>
         </Title>
         <SubInfo>
