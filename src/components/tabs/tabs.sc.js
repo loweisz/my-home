@@ -13,8 +13,8 @@ export const InfoTabBar = styled.div`
 
 export const TabSection = styled.div`
   width: 100%;
-  background: linear-gradient(180deg, ${({ theme }) => theme.white} 0%,${({ theme }) => theme.white} 60%, transparent 100%);
-  padding-bottom: 30px;
+  background: ${({ theme }) => theme.white};
+  opacity: 0.9;
   @media screen and (max-width: 800px) {
     display: none;
   }
