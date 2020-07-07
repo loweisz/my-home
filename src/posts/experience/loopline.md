@@ -25,7 +25,7 @@ techStack:
   ]
 ---
 
-Agile online for employee feedback. Designed for regular feedback talks or continuos pulse checks.
+Agile online tool for employee feedback. Designed for regular feedback talks or continuous pulse checks.
 
 - Company tool for organizing **Feedback talks**
 - Agile **survey tool** for company pulse checks with detailed reporting
