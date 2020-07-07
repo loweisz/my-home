@@ -22,72 +22,38 @@ const glow = ({ theme }) => keyframes`
 
 export const HiContainer = styled.div`
   font-family: Mosk, sans-serif;
-  font-size: 70px;
+  font-size: 90px;
   line-height: 85px;
   font-weight: 900;
-  margin-bottom: 100px;
-  top: 530px;
-  right: 19%;
-  position: absolute;
+  margin-top: 100px;
+  text-align: center;
+  @media screen and (max-width: 800px) {
+    font-size: 40px;
+    margin-top: 10px;
+    grid-column: 1 / -1;
+  }
   > a {
     color: ${({ theme }) => theme.black};
   }
+`;
 
-`
-
-export const HiLink = styled.a(({ theme }) => css`
+export const HiLink = styled.a`
   position: relative;
-  &:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: transparent;
-    transition: box-shadow 200ms ease;
-    box-shadow: 
-       150px -10px 0px -5px ${theme.black},
-       120px -50px 0px 10px ${theme.black},
-       120px 30px 0px 0px ${theme.black},
-       
-       -30px -80px 0px 0px ${theme.black},
-       30px -80px 0px -4px ${theme.black},
-       
-       -30px 80px 0px -3px ${theme.black},
-       30px 80px 0px 2px ${theme.black},
-       
-       -170px -10px 0px 0px ${theme.black},
-       -140px -50px 0px 3px ${theme.black},
-       -140px 30px 0px 0px ${theme.black};
-  }
-  &:hover {
-    &:before {
-       animation: ${glow} 3s linear;
-       animation-fill-mode: backwards;
-       animation-iteration-count: infinite;
-    }
-  }
-  @media screen and (max-width: 800px) {
-    display: none;
-  }
-`);
+  text-decoration: none;
+  padding: 20px 30px;
+  color: ${({ theme }) => theme.black};
+  
+`;
 
 export const imageFadeIn = keyframes`
-  to {
-    opacity: 1;
-    top: 36px;
+  from {
+    opacity: 0;
+    transform: scale(0);
   }
 `;
 
 export const AvatarImage = styled.div`
-  animation: ${imageFadeIn} 250ms ease-in;
-  animation-delay: 400ms;
-  animation-fill-mode: forwards;
-  position: absolute;
-  top: 100px;
-  opacity: 0;
+  animation: ${imageFadeIn} 350ms ease-in-out;
   right: 0;
   border-radius: 60%;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -97,10 +63,11 @@ export const AvatarImage = styled.div`
   height: 230px;
   width: 230px;
   @media screen and (max-width: 800px) {
-    position: static;
     height: 100px !important;
     width: 100px !important;
-    margin-bottom: 30px;
+    position: absolute;
+    top: 0;
+    margin-top: -70px;
   }
 
   > img {
@@ -108,15 +75,34 @@ export const AvatarImage = styled.div`
   }
 `;
 
+export const Greetings = styled.span`
+  display: block;
+  width: fit-content;
+  font-size: 90px;
+  margin-bottom: 36px;
+  transition: all 300ms ease-in;
+  &:hover {
+    text-shadow: 
+      -3px -6px 0px ${({ theme }) => theme.lightRed},
+      -6px -12px 0px ${({ theme }) => theme.red},
+      -9px -18px 0px ${({ theme }) => theme.darkRed};
+  }
+  @media screen and (max-width: 1100px) {
+    font-size: 36px;
+  }
+`;
+
 export const IntroText = styled.p`
   color: ${({ theme }) => theme.black};
   font-family: Mosk, sans-serif;
+  justify-self: start;
   font-size: 70px;
   line-height: 85px;
   font-weight: 900;
   margin-top: 20px;
   @media screen and (max-width: 1100px) {
     font-size: 32px;
+    grid-column: 1 / -1;
     line-height: 46px;
   }
 
@@ -169,6 +155,8 @@ export const HeaderText = styled.div`
   font-size: 60px;
   line-height: 75px;
   font-weight: 900;
+  display: grid;
+  justify-items: center;
   @media screen and (max-width: 800px) {
     font-size: 36px;
     line-height: 48px;
@@ -179,8 +167,10 @@ export const HeaderText = styled.div`
 `;
 
 export const LandingHeaderText = styled(HeaderText)`
+  
   @media screen and (max-width: 800px) {
-    margin-top: -75px;
+    
+    grid-column: 1 / -1;
   }
 `;
 
@@ -191,8 +181,7 @@ export const TextBlock = styled.div`
   font-weight: 300;
   line-height: 45px;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
+  
   > span {
     color: ${({ theme }) => theme.black};
     > a {
@@ -203,8 +192,21 @@ export const TextBlock = styled.div`
     margin-top: 0;
     font-size: 24px;
     line-height: 36px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
   }
 `;
+
+export const LandingTextBlock = styled(TextBlock)`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: end;
+  align-items: start;
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+`
 
 export const PageContainer = styled.div`
   display: flex;

@@ -57,7 +57,6 @@ export const Title = styled.h1`
     width: 14px;
     background-color: ${({ theme }) => theme.black};
     animation: ${blink} 900ms infinite;
-    animation-timing-function: forwards;
   }
   &:hover {
     opacity: 0.8;
@@ -91,7 +90,7 @@ const TitleText = () => {
 
   return (
     <Container>
-      <Title isHidden={isHidden}></Title>
+      <Title isHidden={isHidden} />
     </Container>
   );
 };

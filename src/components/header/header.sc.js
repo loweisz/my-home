@@ -96,10 +96,7 @@ const imageFadeIn = keyframes`
   }
 `;
 
-const swing = keyframes`
-  0% { transform: rotate(6deg); }
-  100% { transform: rotate(-6deg); 
-`;
+
 
 export const AvatarImage = styled.div`
   animation: ${imageFadeIn} 400ms ease-in-out;
@@ -142,20 +139,28 @@ export const CubeAvatarImage = styled(AvatarImage)`
   }
 `;
 
+const swing = keyframes`
+  0% { transform: rotate(-8deg); }
+  100% { transform: rotate(8deg); }
+`;
+
 export const ImageContainer = styled.div`
   position: relative;
   left: 50%;
   flex-grow: 0;
   margin-top: 140px;
   width: fit-content;
-  
+  transform-origin: center -60px;
+  transform: rotate(0deg);
+  transition: all ease-out 250ms;
   @media screen and (max-width: 800px) {
     left: auto;
     flex-grow: 0;
     margin-top: 5px;
   }
   &:hover {
-    transform-origin: center -60px;
-    animation: ${swing} ease-in-out 1s infinite alternate;
+    transform: rotate(-6deg);
+    animation: ${swing} ease-in-out 1s infinite alternate forwards;
+    animation-delay: 250ms;
   }
 `;

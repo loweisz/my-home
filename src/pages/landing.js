@@ -11,7 +11,7 @@ import {
   IntroText,
   HiLink,
   AvatarImage,
-  LandingHeaderText, HiContainer,
+  LandingHeaderText, HiContainer, Greetings, LandingTextBlock,
 } from '../styles/pages.sc';
 import { graphql } from 'gatsby';
 import SEO from '../components/seo.helper';
@@ -19,24 +19,22 @@ import useDelayedAnimation from '../hooks/useDelayedAnimation';
 
 const IndexPage = ({ data }) => {
   const showAnimation = useDelayedAnimation(400);
-
   return (
     <Layout>
       <SEO title="Welcome" description="Welcome to my website" />
       <Wrapper>
         <InfoStarter>
           <TextSection>
-            <RoughNotationGroup show={showAnimation}>
-              <TextBlock>
-                <LandingHeaderText>
-                  <Annotation strokeWidth="4" type="underline">
-                    <span>Hey there,</span>
-                  </Annotation>
-                  <AvatarImage>
-                    <Img title="Avatar image" alt="Avatar Image" sizes={data.avatarImage.childImageSharp.sizes} />
-                  </AvatarImage>
-                </LandingHeaderText>
-                <IntroText>
+            <LandingTextBlock>
+              <IntroText>
+                <RoughNotationGroup show={showAnimation}>
+                  <Greetings>
+                    <span>
+                      <Annotation strokeWidth="4" type="underline">
+                        Hey there,
+                      </Annotation>
+                    </span>
+                  </Greetings>
                   Nice to meet you.
                   <br />
                   My name is{' '}
@@ -55,15 +53,21 @@ const IndexPage = ({ data }) => {
                   </Annotation>
                   <br />
                   <br />
-                </IntroText>
-              </TextBlock>
-            </RoughNotationGroup>
+                </RoughNotationGroup>
+              </IntroText>
+              <LandingHeaderText>
+                <AvatarImage>
+                  <Img title="Avatar image" alt="Avatar Image" sizes={data.avatarImage.childImageSharp.sizes} />
+                </AvatarImage>
+                <HiContainer>
+                  <Annotation strokeWidth="4" type="circle" show={showAnimation}>
+                    <HiLink href="mailto:lorenz.weis@gmail.com?subject=Contact&body=Hi Lorenz">Say Hi</HiLink>
+                  </Annotation>
+                </HiContainer>
+              </LandingHeaderText>
+            </LandingTextBlock>
           </TextSection>
-          <HiContainer>
-            <HiLink href="mailto:lorenz.weis@gmail.com?subject=Contact&body=Hi Lorenz">Say Hi</HiLink>
-          </HiContainer>
         </InfoStarter>
-
       </Wrapper>
     </Layout>
   );
