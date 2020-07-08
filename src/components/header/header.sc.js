@@ -70,14 +70,14 @@ export const HeaderSection = styled.div`
 const mobileImageFadeIn = keyframes`
   0% {
     opacity: 0;
-    margin-top: -46px;
+    margin-top: -86px;
   }
   60% {
     opacity: 1;
-    margin-top: 30px;
+    margin-top: -40px;
   }
   100% {
-    margin-top: 24px;
+    margin-top: -60px;
   }
 `;
 
@@ -111,7 +111,7 @@ export const AvatarImage = styled.div`
   @media screen and (max-width: 800px) {
     height: 80px !important;
     width: 80px !important;
-    margin-top: 54px !important;
+    margin-top: -60px !important;
     animation: ${mobileImageFadeIn} 400ms ease-in-out;
   }
 
