@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { socialIcons } from '../cubeNavigation/SocialElement';
 import { Greetings, JumpItem } from './cubeMenu.styles';
-import { AvatarImage } from '../header/header.sc';
+import { CubeAvatarImage } from '../header/header.sc';
 import CubeElement from './CubeElement';
 import Img from 'gatsby-image';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -74,7 +74,7 @@ function CubeMenu(props) {
   const data = useStaticQuery(
     graphql`
       query {
-        avatarImage: file(relativePath: { eq: "data/avatar.jpg" }) {
+        avatarImage: file(relativePath: { eq: "data/avatar.png" }) {
           childImageSharp {
             sizes(maxWidth: 472) {
               ...GatsbyImageSharpSizes
@@ -102,7 +102,8 @@ function CubeMenu(props) {
       ),
       front: !hideText && (
         <Greetings>
-          <AvatarImage
+          <CubeAvatarImage
+            noLine
             style={{
               height: '130px',
               width: '130px',
@@ -110,7 +111,7 @@ function CubeMenu(props) {
             }}
           >
             <Img title="Avatar image" alt="Avatar Image" sizes={data.avatarImage.childImageSharp.sizes} />
-          </AvatarImage>
+          </CubeAvatarImage>
           <span>
             Hi there{' '}
             <span role="img" aria-label="wave-hand">

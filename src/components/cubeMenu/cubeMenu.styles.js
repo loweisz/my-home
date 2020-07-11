@@ -1,5 +1,5 @@
 import styled, { keyframes, css } from 'styled-components';
-import { SELECT_ANIMATION_TIME } from '../../pages/index'
+import { SELECT_ANIMATION_TIME } from '../../pages/index';
 
 const introSpin = keyframes`
   from {
@@ -7,6 +7,12 @@ const introSpin = keyframes`
   }
   to {
     transform: translateZ(-250px) rotateX(0) rotateY(0);
+  }
+`;
+
+const infiniteSpin = keyframes`
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
   }
 `;
 
@@ -20,28 +26,34 @@ const selectSpin = keyframes`
   100% {
     transform: scale(4);
   }
+  
 `;
 
 const spin = keyframes`
   0% {
     transform: rotateX(0);
   }
-  70% {
-    transform: rotateX(540deg);
+  35% {
+    transform: rotateX(360deg);
   }
-  100% {
-    transform: rotateX(540deg);
-  }
-`
+  
+`;
 
 export const Wrapper = styled.div`
-  width: 500px;
-  height: 500px;
+  height: ${({ size }) => (size === 'small' ? '95px' : '500px')};
+  width: ${({ size }) => (size === 'small' ? '95px' : '500px')};
+  font-family: Mosk, sans-serif;
   perspective: 1000px;
   transform: scale(0.5);
   transition: ${({ automated }) => (automated ? 'all 2000ms ease' : 'none')};
-  animation: ${({ isSelected }) => isSelected ? css`${selectSpin} ${SELECT_ANIMATION_TIME}ms ease-in-out forwards` : '0'};
+  animation: ${({ isSelected }) =>
+    isSelected
+      ? css`
+          ${selectSpin} ${SELECT_ANIMATION_TIME}ms ease-in-out forwards
+        `
+      : '0'};
   z-index: 2;
+  animation-fill-mode: forwards;
   @media screen and (max-width: 800px) {
     display: none;
   }
@@ -60,29 +72,29 @@ export const Cube = styled.div`
   @media screen and (max-width: 800px) {
     display: none;
   }
-  transition: ${({ isSelected }) => (isSelected ? 'all 300ms linear' : 'none')};
-  width: 495px;
-  height: 495px;
+  transition: ${({ isSelected, automated }) => (isSelected || automated ? 'all 300ms linear' : 'none')};
+  width: ${({ size }) => (size === 'small' ? '60px' : '495px')};
+  height: ${({ size }) => (size === 'small' ? '60px' : '495px')};
   position: relative;
   transform-style: preserve-3d;
-  animation: ${1500}ms;
-  animation-timing-function: ${({ isSelected }) =>
-    isSelected ? 'linear' : 'cubic-bezier(0, 0.94, 0.5, 1)'};
-  animation-name: ${({ isSelected, automated }) =>
-    automated ? 'none' : isSelected ? spin : 'none'};
+  animation: ${({ automated }) => (automated ? 10000 : 1500)}ms;
+  animation-timing-function: ${({ isSelected, automated }) =>
+    isSelected || automated ? 'linear' : 'cubic-bezier(0, 0.94, 0.5, 1)'};
+  animation-iteration-count: ${({ automated }) => (automated ? 'infinite' : 'initial')};
+  animation-name: ${({ isSelected, automated }) => (automated ? infiniteSpin : isSelected ? spin : 'none')};
+  animation-fill-mode: ${({ automated }) => (automated ? 'forwards' : 'none')};
 `;
 
 export const CubeFace = styled.div`
   position: absolute;
-  width: 495px;
-  height: 495px;
+  width: ${({ size }) => (size === 'small' ? '60px' : '495px')};
+  height: ${({ size }) => (size === 'small' ? '60px' : '495px')};
   font-size: 50px;
   font-weight: bold;
-  color: white;
   text-align: start;
-  background: ${({ theme }) => theme.black};
-  color: ${({ theme }) => theme.background};
-  border: ${({ theme }) => theme.background} 5px solid;
+  background: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.black};
+  border: ${({ theme }) => theme.black} 5px solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,33 +111,33 @@ export const Greetings = styled.div`
   span {
     span {
       font-size: 60px;
-      color: ${({ theme }) => theme.lightRed};
+      color: ${({ theme }) => theme.darkRed};
     }
   }
 `;
 
 export const FaceFront = styled(CubeFace)`
-  transform: rotateY(0deg) translateZ(250px);
+  transform: rotateY(0deg) translateZ(${({ size }) => (size === 'small' ? '34px' : '250px')});
   > div {
     padding: 20px;
   }
 `;
 export const FaceBack = styled(CubeFace)`
-  transform: rotateY(180deg) translateZ(250px);
+  transform: rotateY(180deg) translateZ(${({ size }) => (size === 'small' ? '34px' : '250px')});
 `;
 export const FaceRight = styled(CubeFace)`
-  transform: rotateY(90deg) translateZ(250px);
+  transform: rotateY(90deg) translateZ(${({ size }) => (size === 'small' ? '34px' : '250px')});
 `;
 
 export const FaceLeft = styled(CubeFace)`
-  transform: rotateY(-90deg) translateZ(250px);
+  transform: rotateY(-90deg) translateZ(${({ size }) => (size === 'small' ? '34px' : '250px')});
 `;
 
 export const FaceTop = styled(CubeFace)`
-  transform: rotateX(90deg) translateZ(250px);
+  transform: rotateX(90deg) translateZ(${({ size }) => (size === 'small' ? '34px' : '250px')});
 `;
 export const FaceBottom = styled(CubeFace)`
-  transform: rotateX(-90deg) translateZ(250px);
+  transform: rotateX(-90deg) translateZ(${({ size }) => (size === 'small' ? '34px' : '250px')});
   font-size: 120px;
 `;
 

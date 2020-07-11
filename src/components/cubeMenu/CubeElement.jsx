@@ -11,10 +11,21 @@ import {
 } from './cubeMenu.styles';
 
 const CubeElement = (props) => {
-  const { faces, rotateY, rotateX, hideText, isSelected, wrapperRef, scaleCube, automated } = props;
+  const {
+    faces,
+    rotateY,
+    rotateX,
+    hideText,
+    isSelected,
+    wrapperRef,
+    scaleCube,
+    automated,
+    size = 'large',
+  } = props;
   return (
-    <Wrapper isSelected={isSelected} automated={automated} scaleCube={scaleCube} ref={wrapperRef}>
+    <Wrapper size={size} isSelected={isSelected} automated={automated} scaleCube={scaleCube} ref={wrapperRef}>
       <Cube
+        size={size}
         automated={automated}
         isSelected={isSelected}
         style={{
@@ -22,16 +33,24 @@ const CubeElement = (props) => {
           transition: automated ? `none` : rotateY === '0' && rotateX === '0' ? 'all 1s ease' : 'inherit',
         }}
       >
-        <FaceFront automated={automated} darkColor={hideText}>
+        <FaceFront size={size} automated={automated} darkColor={hideText}>
           {faces && faces.front}
         </FaceFront>
-        <FaceBack automated={automated}>
+        <FaceBack size={size} automated={automated}>
           <div />
         </FaceBack>
-        <FaceRight automated={automated}>{faces && faces.right}</FaceRight>
-        <FaceLeft automated={automated}>{faces && faces.left}</FaceLeft>
-        <FaceTop automated={automated}>{faces && faces.top}</FaceTop>
-        <FaceBottom automated={automated}>{faces && faces.bottom}</FaceBottom>
+        <FaceRight size={size} automated={automated}>
+          {faces && faces.right}
+        </FaceRight>
+        <FaceLeft size={size} automated={automated}>
+          {faces && faces.left}
+        </FaceLeft>
+        <FaceTop size={size} automated={automated}>
+          {faces && faces.top}
+        </FaceTop>
+        <FaceBottom size={size} automated={automated}>
+          {faces && faces.bottom}
+        </FaceBottom>
       </Cube>
     </Wrapper>
   );

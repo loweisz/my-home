@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Mosk';
+    font-display: auto;
+    src: local('Mosk'), url("mosk_normal.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mosk';
+    font-display: auto;
+    src: local('Mosk'), url("mosk_bold.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Mosk';
+    font-display: auto;
+    src: local('Mosk'), url("mosk_extra_bold.ttf") format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}

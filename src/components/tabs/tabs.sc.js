@@ -1,11 +1,11 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 export const InfoTabBar = styled.div`
   display: flex;
   justify-content: center;
   letter-spacing: 0;
   font-weight: 900;
-  font-size: 30px;
+  font-family: Mosk, sans-serif;
   > a {
     text-decoration: none;
   }
@@ -13,7 +13,8 @@ export const InfoTabBar = styled.div`
 
 export const TabSection = styled.div`
   width: 100%;
-  background: radial-gradient(circle, ${({ theme }) => theme.white} 0%, ${({ theme }) => theme.white} 70%);
+  background: ${({ theme }) => theme.white};
+  opacity: 0.9;
   @media screen and (max-width: 800px) {
     display: none;
   }
@@ -27,26 +28,20 @@ const iconJump = ({ theme }) => keyframes`
   100% {
     color: ${theme.black};
   }
-`
-
-
+`;
 
 export const TabInner = styled.div`
   display: flex;
   align-items: center;
+  padding: 0 4px;
   position: relative;
   svg {
     color: ${({ theme }) => theme.red};
   }
-  text-shadow: 
-    2px 0 ${({ theme }) => theme.white},
-    -2px 0 ${({ theme }) => theme.white},
-    -2px -2px ${({ theme }) => theme.white},
-    2px 2px ${({ theme }) => theme.white},
-    -2px 2px ${({ theme }) => theme.white},
-    0 2px ${({ theme }) => theme.white},
-    2px 0 ${({ theme }) => theme.white},
-    0 -2px ${({ theme }) => theme.white};
+  text-shadow: 2px 0 ${({ theme }) => theme.white}, -2px 0 ${({ theme }) => theme.white},
+    -2px -2px ${({ theme }) => theme.white}, 2px 2px ${({ theme }) => theme.white},
+    -2px 2px ${({ theme }) => theme.white}, 0 2px ${({ theme }) => theme.white},
+    2px 0 ${({ theme }) => theme.white}, 0 -2px ${({ theme }) => theme.white};
   &:after {
     content: '';
     position: absolute;
@@ -62,9 +57,9 @@ export const TabInner = styled.div`
   span {
     z-index: 2;
   }
-`
+`;
 
-export const Tab = styled.div`
+export const TabElement = styled.div`
   font-weight: 600;
   color: ${({ theme }) => theme.black};
   display: flex;
@@ -77,18 +72,4 @@ export const Tab = styled.div`
   text-decoration: none;
   background-color: transparent;
   transition: all 600ms ease;
-  &:hover {
-    
-    ${TabInner} {
-      .icon {
-        animation: ${iconJump} 250ms ease-in;
-        animation-fill-mode: forwards;
-      }
-      &:after {
-        content: '';
-        width: calc(100%);
-      }
-    }
-    
-  }
 `;

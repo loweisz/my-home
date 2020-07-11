@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
+  
+`;
 
 export const LayoutWrapper = styled.div`
   z-index: 2;
@@ -26,10 +30,10 @@ export const MobileSocial = styled.div`
   @media screen and (max-width: 800px) {
     display: block;
   }
-`
+`;
 
 export const BodySection = styled.main`
-  margin-top: 140px;
+  margin-top: ${({ fixed }) => fixed ? '140px' : '60px'};
   padding: 15px 15px 50px 15px;
   flex: 1;
   z-index: 5;
@@ -42,7 +46,7 @@ export const BodySection = styled.main`
 
 export const Wave = styled.div`
   margin-top: 100px;
-  position: fixed;
+  position: ${({ fixed }) => fixed ? 'fixed' : 'initial'};
   z-index: 4;
   width: 100%;
   height: 0px;

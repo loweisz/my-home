@@ -4,10 +4,14 @@ export const StyledFooter = styled.footer`
   width: 100%;
   background-color: ${({ theme }) => theme.white};
   padding: 14px;
-  font-size: 12px;
-  color: ${({ theme }) => theme.grey};
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.darkRed};
+  border-top: 5px solid ${({ theme }) => theme.black};
   box-sizing: border-box;
+  @media screen and (max-width: 800px) {
+    font-size: 12px;
+  }
 `;
 
 export const FooterInner = styled.div`

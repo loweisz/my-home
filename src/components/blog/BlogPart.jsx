@@ -1,10 +1,9 @@
 import React from 'react';
 import Img from "gatsby-image"
 import { Link } from 'gatsby';
-import { BlogBox, Title, TextSection, Date, Abstract, AdditionalInfo, ImagePreview } from './blogPart.style';
+import { BlogBox, Title, TextSection, Date, Abstract, AdditionalInfo, ImagePreview, Divider } from './blogPart.style';
 import { Box } from '../../styles/shared';
 import { FiCalendar, FiClock } from 'react-icons/fi';
-
 
 function BlogPart({ node }) {
   return (
@@ -28,6 +27,7 @@ function BlogPart({ node }) {
                 <FiCalendar />
                 <span>{node.frontmatter.date}</span>
               </Date>
+              <Divider />
               <Date>
                 <FiClock />
                 <span>{node.timeToRead} min</span>

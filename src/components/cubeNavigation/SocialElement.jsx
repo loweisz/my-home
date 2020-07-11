@@ -33,7 +33,7 @@ const IconElement = ({ setHovered, resetHovered, icon }) => {
 };
 
 const SocialElement = (props) => (
-  <MenuText>
+  <MenuText centered={props.centered}>
     {socialIcons.map((icon) => (
       <IconElement key={icon} icon={icon} {...props} />
     ))}
