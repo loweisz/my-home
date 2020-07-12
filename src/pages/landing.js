@@ -11,11 +11,12 @@ import {
   IntroText,
   HiLink,
   AvatarImage,
-  LandingHeaderText, HiContainer, Greetings, LandingTextBlock,
+  LandingHeaderText, HiContainer, Greetings, LandingTextBlock, Blogs,
 } from '../styles/pages.sc';
 import { graphql } from 'gatsby';
 import SEO from '../components/seo.helper';
 import useDelayedAnimation from '../hooks/useDelayedAnimation';
+import BlogPart from '../components/blog/BlogPart';
 
 const IndexPage = ({ data }) => {
   const showAnimation = useDelayedAnimation(400);
@@ -81,6 +82,33 @@ export const query = graphql`
       childImageSharp {
         sizes(maxWidth: 472) {
           ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    allMarkdownRemark(
+      filter: { frontmatter: { type: { nin: ["exp", "edu"] } } }
+      sort: { fields: frontmatter___index, order: DESC }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            abstract
+            date
+            heroImage {
+              childImageSharp {
+                sizes(maxWidth: 1000) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+          }
+          timeToRead
+          fields {
+            slug
+          }
+          html
         }
       }
     }

@@ -309,3 +309,42 @@ export const Blogs = styled.div`
     grid-template-columns: 1fr;
   }
 `;
+
+export const LowerPart = styled.div`
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;  
+  overflow: auto;
+`;
+
+export const Inner = styled.div`
+  max-width: 1200px;
+`;
+
+export const UpperPart = styled.div``;
+export const BlockPart = styled.div`
+  height: 100vh;
+`;
+
+export const Title = styled.div`
+  font-family: 'Mosk', sans-serif;
+  color: ${({ theme }) => theme.black};
+  font-size: 60px;
+  line-height: 75px;
+  font-weight: 900;
+  display: grid;
+  justify-items: center;
+  @media screen and (max-width: 800px) {
+    font-size: 36px;
+    line-height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+`

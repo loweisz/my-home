@@ -20,12 +20,12 @@ const BlogPage = (props) => {
             </TextBlock>
           </TextSection>
           <TextSection>
-            <Blogs>
-              {props.data.allMarkdownRemark.edges.map(({ node }) => (
-                <BlogPart key={node.id} node={node} />
-              ))}
-            </Blogs>
-          </TextSection>
+          <Blogs>
+            {props.data.allMarkdownRemark.edges.map(({ node }) => (
+              <BlogPart key={node.id} node={node} />
+            ))}
+          </Blogs>
+        </TextSection>
           <Newsletter />
         </InfoStarter>
       </Wrapper>
