@@ -113,13 +113,11 @@ const StartPage = ({ data }) => {
       <LowerPart>
         <Title>Latest articles:</Title>
         <Inner>
-
           <Blogs>
             {data.allMarkdownRemark.edges.slice(0, 3).map(({ node }) => (
               <BlogPart key={node.id} node={node} />
             ))}
           </Blogs>
-
         </Inner>
         <Title>Read More -></Title>
       </LowerPart>
