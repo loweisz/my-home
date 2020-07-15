@@ -20,7 +20,7 @@ But what are http headers and what possibilities are there to use them?
 When a browsers requests a resource, for example a page of this blog it asks the server with a request. 
 This request might look like something like this: 
 
-```
+```js
 fetch("https://www.lorenzweiss.de/race_conditions_explained/", {
   credentials: "include",
   headers: {
@@ -104,7 +104,7 @@ If-Range: <etag>
 If-Range: Wed, 21 Oct 2015 07:28:00 GMT 
 ```
 
-###[Vary](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Vary)
+##[Vary](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Vary)
 
 `Vary` Comes from a time where the web or http was used for a looooooot of things and not only web-pages.  
 It's based on the idea of using http for exchanging information in a lot different formats. 
@@ -114,14 +114,6 @@ Nowadays it can be really helpful, when you for example have different ressource
 mobile, tablet or desktop. 
 Imagine the server has three different images stored for the same ressource depending on the device.
 Then you can simple tell the server with the `Vary` header to check the device and then to decide which image size to send. 
-
-#### How to use
-
-```
-Vary: <header>
-```
-
-Just pass in the header, the server needs to check before deciding which resource to send.
 
 #### Example
 
@@ -133,13 +125,74 @@ Vary: User-Agent
 ```
 
 
+#### How to use
 
-###[Age](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Age)
+```
+Vary: <header>
+```
+
+Just pass in the header, the server needs to check before deciding which resource to send.
 
 
 
-###[Content-Disposition](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Content-Disposition)
-###[Feature-Policy](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Feature-Policy)
+
+##[Age](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Age)
+
+
+
+##[Content-Disposition](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Content-Disposition)
+
+When we go back in the example of making a request to a server to load this website for example, it is clear for the browser,
+that it has to display the resource of the response.
+But it can also be the case that the server sends a resource which the browser should automatically download to the users machine,
+like an image or pdf etc.  
+A server can tell the browser with the `Content-Disposition` header what the browser should do with the attached resource.  
+
+#### Example
+
+With defining the `Content-disposition` to `attachment` the browser knows that this is a resource to download instead of just 
+show. 
+
+```
+Content-Disposition: attachment; filename="data.pdf"
+```
+
+#### How to use
+
+You can define the header to be `inline` or `attachment`, where `inline` is always the default. 
+
+```
+Content-Disposition: <inline | attachment>
+```
+
+
+
+##[Feature-Policy](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Feature-Policy)
+
+This is rather new header and therefor only support by modern browsers (Sorry to all the IE users). However 
+I still want to mention this because I think it can be really helpful for some use cases.  
+Basically `Feature-policy` tells the browser which features or apis the browser should allow the document and its 
+`iframes` for example to use. 
+
+For example it can disallow any scripts or iframes etc within that website to allow sensitive apis like the camera or microphone.
+
+#### How to use
+
+```
+Feature-Policy: <directive> <allowlist>
+```
+
+The `directive` is the name of the feature. You can see the full [list of features here](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Feature-Policy#Directives)
+The `allowlist` defines the origins which are allowed to use the directive.
+### Example
+
+Let's say we want that our website is not allowed to use the microphone or camera. With this header the 
+document or any included iframe cannot access those features.
+
+```
+Feature-Policy: microphone 'none'; camera 'none'
+```
+
 ###[Upgrade-Insecure-Requests](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Upgrade-Insecure-Requests)
 ###[Trailer](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Trailer)
 ###[Location](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Location)
