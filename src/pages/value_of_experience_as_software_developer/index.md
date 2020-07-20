@@ -1,31 +1,42 @@
 ---
-title: 'What is the value of experience working as a software developer'
+title: 'What is the value of experience working as a software developer?'
 date: 'June 15th, 2020'
-abstract: 'In the life of a software developer, the most valueable ressource you have is experience, but what exactly is experience and how can you value it'
+abstract: 'In the life of a software developer, the most valueable ressource you have is experience, but what exactly is experience and how can you value it?'
 heroImage: 'typewriter.jpeg'
-index: 6
+index: 7
 ---
 
-When you have searched for a job you will most definitely being asked about your experience with software development and
-almost every job description for searching a software developer includes the following line
+## Experience
+
+We've all seen it, you're in an interview for a job and they'll certainly ask you about your experience in software development. 
+In fact, you probably saw the following line in almost every job description for a software development position before you started looking
 
 > You need at least X+ years of professional experience working as a X-developer for this position.
 
-Or it might even include answering for every programming language tool or framework how much experience you have.
-I even heard from huge excel sheets, where you have to fill out for every technology the years you have worked with it.
+They may even have been asked how many years of experience they have with specific technologies.
+I've even heard of huge Excel spreadsheets where you have to fill in the years you've worked with each technology.
 
-But is it really that simple? What exactly is this mysterious experience? Can you count it ? Do you have reference for it? Is it just the simple years you have worked so far?
+So I have always wondered:
 
-Let's dig into it.
+- What exactly is this mysterious experience?
+- Can you count it?
+- Do you have a reference for it?
+- Is it just the simple years you've worked so far?
+- Is it really that simple?
 
-### Gaining Experience
+Let's dig into it a bit.
 
-Most of the companies define or value experience in number of years. For example having 5 years experience working as a software developer makes you a senior developer with more than ten you can become a manager.
+## Gaining Experience
 
-So why are we not then only sitting there counting the years and earning more and more experience?
-With that analogy you will be the best developer in the last year before retirement and the only thing you have to do is to sit and wait to get better and better.
+Most companies or recruiters I've seen so far define or rate experience by the number of years. 
+And your position is defined by this. A hard example would be that 5 years of experience as a software developer prepares you to become a senior developer, with more than 10 years you can become a manager.
+
+Well, So why don't we just sit there, count the years and gain more and more experience?
+With this analogy, you'll be the best developer in the last year before retirement, and all you'll have to do is sit and wait to get better and better.
 
 ![Senior developer](./old_man.jpg)
+
+Let me explain why I don't think that is true and why defining experience isn't that simple.
 
 ## Defining Experience
 
@@ -33,47 +44,54 @@ For a better understanding of what experience really is, it is important to divi
 
 ### Technical Experience
 
-As a software developer you will always have to learn new things, the tools we are working with changes so fast that it is important to always sharpen your view with the current trends and new methods or technologies. With that having experience working with a technology from 5 or even 3 years ago is often not as valueable as the experience you get working with the current technologies.
+As a software developer, you will always have to learn new things. The tools we work with change so quickly that it is important to keep a sharp eye on current trends and new methods or technologies. However, experience in working with a technology from 5 or even 3 years ago is often not as valuable as the experience you gain when working with the current technologies.
 
-So imagine you worked 10 years as a software developer and then you went for a 5 years trip around the world without reading or touching any code. Does your 10 years of technical experience have the same value as someone working in the last 5 years? Probably not.
+Imagine you have worked as a software developer for 10 years and then traveled the world for 5 years without reading or touching any code. Does your 10 years of technical experience have the same value as someone who has worked in the last 5 years? Probably not.
 
 #### Understanding the context
 
-Let's say one developer has worked over 5 years with a huge codebase that exists even before you started working on it. You did you best to add new things to it, to refactor some things or to understand some legacy code.
-Another one works at an agency or as a freelancer and contributed or created multiple different projects with different scopes. Even though its in the same field or the technology was even the same both developers gained rather different experience.
+Suppose you as a developer have been working for over 5 years with a huge code base that already exists before you started working on it. You did your best to add new things, refactor some things, or understand the legacy code.
+Another works in an agency or as a freelancer and has contributed or created several different projects of varying scope. Although your were in the same field or using the same technology, you have both gained quite different experiences.
 
-One type of experience is how to work and maintain a big project and how to work legacy code, the other one is more experience with setting up projects and being able to identify the balance between quality and speed.
+One type of experience is how to handle and maintain a large project and how to work with legacy code, the other is more experience in setting up projects and the ability to recognize the balance between quality and speed..
 
 #### It depends on the motivation
 
-This is probably the most overlooked point of what experience is made of.
-You can be either the developer who is always curious and always open to try out learn new things and willing to step out of the comfort zone or you can be a one trick pony developer who knows one thing quite good and you always do only that because that is what you know.
+This is probably the most overlooked point of experience.
+You can either be the developer who is always curious and always open to try new things and ready to step out of the comfort zone, or you can be a one-trick pony developer who knows one thing quite well, and you always do it because that's what you know.
 
-But at the end of the day you will have the same years of experience, but the actual knowledge and _experience_ you've gained are completely different.
+But at the end of the day you will have the same years of experience, but the actual knowledge and _experience_ you have acquired is completely different.
 
 ### Everything but technical experience
 
-We all know it, working as a software developer includes mostly also working with other people or mostly working with inside a team. So one thing you will realize quite quickly is that one big part of having experience is how to deal with working as a team, planing, communicating and mentoring. Those things is not something you can learn by reading a book or an article. Those things come with job. Probably this is the case where experience is the most valueable ressource. But is again time here the best measurement?
+We all know it, the work as a software developer usually includes working with other people or mostly working with within a team. So you will soon realize that a large part of the experience is in how to deal with teamwork, planning, communication and mentoring. You cannot learn these things by reading a book or an article. These things are part of the job. This is probably the case when experience is the most valuable resource. But again, is time the best measure here?
 
-Let's think of someone working in a team of rather less people and the fluctuation is quite low, which means everyone works together for years. Is that experience they all have easily applyable for other teams? Or is it experience really bound to that specific company or team?
-Wouldn't be someone who has worked in the same time withing multiple different teams or companies with various sizes more experienced in that regards?
+Let's imagine that someone works in a team with rather fewer people and the fluctuation is quite low, which means that everyone works together for years. Is this experience they all have easily transferable to other teams? Or is this experience really linked to the specific company or team?
+Wouldn't someone who has worked with several different teams or companies of different sizes at the same time be more experienced in this respect?
 
 #### Getting insights
 
-Don't get me wrong I'm not saying everyone should switch companies or teams every 3 months, I just would argue that you can get easily into somekind of comfort zone working always with the same people and you get used to the workflows without getting new input. When new input and stepping out of the comfort zone is actually gaingin experience the best way.
+Don't get me wrong, I'm not saying that everyone should change the company or the team every 3 months, I would just argue that it's easy to get into a kind of comfort zone where you always work with the same people and get used to the workflow without getting new input. If new input and leaving the comfort zone is indeed the best way to gain experience.
 
-Especially when it comes to non-technical things, as you mostly cannot read or learn them with ressources available the only thing to get new insights is to talk or work with new people. So maybe another measurement except time for defining experience in that sense would make more sense.
+Especially when it comes to non-technical things, since you usually can't read or learn them with the resources available, the only thing that brings new insights is to talk or work with new people. So perhaps another measurement other than time would be more appropriate for defining experience in this sense.
+
+### Years can matter
+
+Let me get this straight: I'm not saying the years don't matter, they definitely do. I'm pretty sure I'm a better developer today than I was 5 years ago.
+But I'm also pretty sure there's someone out there somewhere who has fewer years in the "field" and is a far better developer than I am, because that's just a reference point for yourself, but not as easy as comparing with others.
 
 ### Conclusion
 
-When you for example work as a simple salesman going from door to door selling vacuum cleaners, there is one simple measurement of how good you work, its the number of items you sell, For them it's that simple. That's why you start from any point working in that field you can directly being the best one, by just selling more items.
+Let's take an example, if you work as a simple door-to-door salesman selling vacuum cleaners, there is a simple measure of how well you work, the number of items you sell, for them it is so simple. Therefore, from any point from which you work in this area, you can be the best directly by simply selling more items.
 
-But I think when it comes to judging experience or value of developers it's not that simple and since software development is such a wide spreaded job, it's nearly impossible to find _that_ way of doing it.
-That's why the most used one is currently just the simple time of working experience.
-But since it's obviously not so easy to define it, why are we then using such a simple measurement? Can we not make the definition a bit more detailed than just a simple number?
+But I think when it comes to judging the experience or value of developers, it's not that easy, and since software development is such a common task, it's almost impossible to find _this_ way.
+That's why the most used one at the moment is just the simple time of work experience.
+But since it is obviously not so easy to define it, why do we use such a simple measurement? Can't we make the definition a bit more detailed than just a simple number?
 
-If someone would spend the whole workday write one line of the same javascript code over and over again, for 5 years, would that make him/her a developer with 5 years of experience of javascript?
-Yes, but would that make him/her a good javascript developer?
-No not really.
+If someone would spend the whole working day writing one line of the same Javascript code over and over again for 5 years, would that make him a developer with 5 years of Javascript experience?
+Yes, but would that make him/her a good Javascript developer?
+No, not really.
 
-So I think we need somehow a better way of understand the real value of experience as a software developer and especially when it comes to recruitment there must be a way of identifying it instead of just counting down the number of years.
+So I think we somehow need a better way to understand the real value of experience as a software developer, and especially when it comes to hiring, there must be a way to identify that experience, rather than just counting down the number of years.
+
+Sometimes I have the feeling that we lose a lot of potential in young talented developers just because we don't give them a chance or don't appreciate them enough because of "too little experience".
