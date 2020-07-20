@@ -1,7 +1,7 @@
 ---
 title: 'What is the value of experience working as a software developer?'
 date: 'June 15th, 2020'
-abstract: 'In the life of a software developer, the most valueable ressource you have is experience, but what exactly is experience and how can you value it?'
+abstract: 'In the life of a software developer, the most valuable resource you have is experience, but what exactly is experience and how can you evaluate it?'
 heroImage: 'typewriter.jpeg'
 index: 7
 ---
