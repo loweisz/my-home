@@ -214,7 +214,7 @@ Let's take an example of a header that shows either a burger button on mobile de
 ### This is dangerous ❌
 
 ```jsx
-function Header(props) {
+function Header({ menuItems }) {
   return (
     <header>
       <HeaderInner menuItems={menuItems} />
