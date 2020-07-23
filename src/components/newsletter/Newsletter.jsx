@@ -1,6 +1,6 @@
 import React from 'react';
 import NewsletterForm from './NewsletterForm'
-import {NewsletterBox, Header, Subline, Welcome, Wrapper, Content, AvatarImage } from './newsletter.styles';
+import {NewsletterBox, Header, Subline, Welcome, Wrapper, AvatarImage } from './newsletter.styles';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -8,7 +8,7 @@ const NewsletterHeader = () => {
   return (
     <Header>
       <Welcome>Get Content, helpful articles and links.</Welcome>
-      <Subline>Usually I sent out 1-2 mails per months. No spam or ads I promise 🤞</Subline>
+      <Subline>Usually I sent out 1-2 mails per months. No spam or ads I promise <span role="img" aria-label="fingers-crossed">🤞</span></Subline>
     </Header>
   )
 };

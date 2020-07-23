@@ -1,15 +1,6 @@
 import styled, { keyframes, css } from 'styled-components';
 import { SELECT_ANIMATION_TIME } from '../../pages/index';
 
-const introSpin = keyframes`
-  from {
-    transform: translateZ(-250px) rotateX(-270deg) rotateY(90deg);
-  }
-  to {
-    transform: translateZ(-250px) rotateX(0) rotateY(0);
-  }
-`;
-
 const infiniteSpin = keyframes`
   100% {
     transform: rotateX(360deg) rotateY(360deg);

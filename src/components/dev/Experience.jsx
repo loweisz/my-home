@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useContext, useRef, useCallback } from 'react';
 import { FiExternalLink } from 'react-icons/fi';
 import {
   Company,

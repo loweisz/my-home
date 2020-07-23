@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrapper, InfoStarter, TextBlock, HeaderText, TextSection } from '../styles/pages.sc';
+import { Wrapper, InfoStarter, TextSection } from '../styles/pages.sc';
 import Layout from '../components/layout';
 import SEO from '../components/seo.helper';
 import Newsletter from '../components/newsletter/Newsletter';

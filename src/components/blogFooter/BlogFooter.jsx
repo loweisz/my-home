@@ -1,9 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Title, Wrapper, SubTitle, TwitterIcon } from './blogFooter.styles';
 import { IoLogoTwitter } from 'react-icons/io';
 
-function BlogFooter({ post, location }) {
+function BlogFooter({ post }) {
   function clickShare() {
     window.open(this.href, 'twitter-share', 'width=550,height=235');
     return false;

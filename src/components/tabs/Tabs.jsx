@@ -1,5 +1,5 @@
 import React from 'react';
-import { TabSection, InfoTabBar, TabInner, TabElement } from './tabs.sc';
+import { TabSection, InfoTabBar } from './tabs.sc';
 import Tab from './Tab';
 
 const routes = [

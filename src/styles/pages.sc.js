@@ -1,24 +1,5 @@
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { moveFadeIn, opacIn } from './animations';
-
-const glow = ({ theme }) => keyframes`
-  50% {
-    box-shadow: 
-       150px -15px 0px 10px ${theme.black},
-       120px -40px 0px -3px ${theme.black},
-       120px 30px 0px 10px ${theme.black},
-       
-       -30px -80px 0px 7px ${theme.black},
-       30px -80px 0px 4px ${theme.black},
-       
-       -30px 80px 0px 10px ${theme.black},
-       30px 80px 0px -10px ${theme.black},
-       
-       -170px -10px 0px 7px ${theme.black},
-       -140px -50px 0px -5px ${theme.black},
-       -140px 30px 0px 10px ${theme.black};
-  }
-`;
 
 export const HiContainer = styled.div`
   font-family: Mosk, sans-serif;

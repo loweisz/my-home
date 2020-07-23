@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from 'styled-components';
+import styled from 'styled-components';
 
 export const InfoTabBar = styled.div`
   display: flex;
@@ -17,16 +17,6 @@ export const TabSection = styled.div`
   opacity: 0.9;
   @media screen and (max-width: 800px) {
     display: none;
-  }
-`;
-
-const iconJump = ({ theme }) => keyframes`
-  50% {
-    margin-left: -15px;
-    margin-right: 15px;
-  }
-  100% {
-    color: ${theme.black};
   }
 `;
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import CubeElement from './CubeElement';
-import { Cube, Wrapper } from './cubeMenu.styles';
 
 const CubeContainer = styled.div`
   transition: all 400ms ease-in-out;
@@ -10,12 +9,10 @@ const CubeContainer = styled.div`
   }
 `;
 
-function SimpleAutoCube(props) {
-  return (
-    <CubeContainer>
-      <CubeElement automated size="small" />
-    </CubeContainer>
-  );
-}
+const SimpleAutoCube = () => (
+  <CubeContainer>
+    <CubeElement automated size="small"/>
+  </CubeContainer>
+);
 
 export default SimpleAutoCube;

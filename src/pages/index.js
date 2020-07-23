@@ -6,12 +6,11 @@ import { FiBox, FiUser, FiFile } from 'react-icons/fi';
 import BlobOne from '../images/blobs/blob_one.svg';
 import BlobTwo from '../images/blobs/blob_two.svg';
 import LayoutBackground from '../components/layoutBackground';
-import { AvatarImage, CubeAvatarImage } from '../components/header/header.sc';
+import { CubeAvatarImage } from '../components/header/header.sc';
 import Avatar from '../images/data/avatar.png';
 import NavigationElement from '../components/cubeNavigation/NavigationElement';
 import SocialElement from '../components/cubeNavigation/SocialElement';
 import SEO from '../components/seo.helper';
-import TitleText from '../components/header/Title';
 import ThemeToggle from '../components/themeToggle/ThemeToggle';
 import { GlobalStyle } from '../components/layout.styles';
 

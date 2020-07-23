@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NewsLetterForm, FormInput, SubmitButton, InputFields, Welcome, Subline } from './newsletter.styles';
+import { NewsLetterForm, FormInput, SubmitButton, InputFields, Welcome } from './newsletter.styles';
 
 const NewsletterForm = () => {
   const [status, setStatus] = useState(null);
@@ -36,7 +36,7 @@ const NewsletterForm = () => {
     >
       {status === 'SUCCESS' ? (
         <div>
-          <Welcome>Wow thank you! 🚀</Welcome>
+          <Welcome>Wow thank you! <span role="img" aria-label="rocket">🚀</span></Welcome>
           <span>Check your inbox to confirm your subscription!</span>
         </div>
       ) : (

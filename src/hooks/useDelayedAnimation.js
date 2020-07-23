@@ -13,7 +13,7 @@ function useDelayedAnimation(delay) {
         clearTimeout(delayTimeout.current);
       }
     };
-  }, []);
+  }, [delay]);
 
   return showAnimation;
 }

@@ -7,7 +7,6 @@ import {
   Wrapper,
   InfoStarter,
   TextSection,
-  TextBlock,
   IntroText,
   HiLink,
   AvatarImage,

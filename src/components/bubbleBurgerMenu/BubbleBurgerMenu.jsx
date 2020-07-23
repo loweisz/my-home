@@ -11,7 +11,6 @@ import {
   SubMenuBackground,
 } from './bubbleBurgerMenu.styles';
 import { Link } from '@reach/router';
-import { FiBox, FiUser, FiFile } from 'react-icons/fi';
 
 function BubbleBurgerMenu() {
   const [selected, setSelected] = useState(false);

@@ -12,8 +12,7 @@ import {
   BlogHeader,
   PostTextSection,
   Info,
-  InfoBlock,
-  Divider
+  InfoBlock
 } from './blog-post.styles';
 import SEO from '../components/seo.helper';
 import ShareWidget from '../components/shareWidget/ShareWidget';
