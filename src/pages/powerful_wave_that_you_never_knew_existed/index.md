@@ -1,11 +1,12 @@
 ---
-title: 'Explaining https headers and example you didnt knew before'
-
-date: 'Jul 10th, 2020'
-abstract: 'There are a LOT of http headers you set, most of them are quite basic but there also some poweful headers which you probably never heard of'
+title: 'The power of https headers and 4 examples you did not know before'
+date: 'Oct 23rd, 2020'
+abstract: 'There are a lot of http headers, most of them are quite simple, but there are also some powerful ones you probably have never heard of.'
 heroImage: 'heads.jpg'
-index: 7
+index: 8
 ---
+
+## Hello Http (headers)
 
 Almost everything in the web is sent with **http** and even non-developers have seen it when using the internet as keyword
 inside urls or links.
@@ -14,7 +15,7 @@ Http stands for **Hypertext Transfer Protocol** and gives us the ability to tran
 This is a great technology that has been around almost since the invention of the web and is constantly evolving and
 .[offering more and more great features](https://en.wikipedia.org/wiki/HTTP/2)
 
-### What are [Http headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)?
+## What are [Http headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)?
 
 As a developer you probably heard of http headers, at least in the moment you heard about the CORS policy.
 This is a problem you must have heard about when developing websites. 
@@ -78,7 +79,7 @@ Most of the headers have quite good defaults which you don't need to think of, b
 can get quite important, like CORS headers. But there are so much more headers that you might never heard of which are very useful 
 and good to know how to use. 
 
-### Headers you don't know 
+## Headers you don't know 
 
 Do not worry, this article will not deal with CORS headers. The following http headers are those that are rarely used, but
 can be really powerful and helpful to significantly improve the communication between a server and the browser. 
@@ -86,9 +87,9 @@ can be really powerful and helpful to significantly improve the communication be
 So let's dig into it. Here are some headers that you can set and that are very useful and practical.
 
 
-###[If-Range](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/If-Range)
+##[If-Range](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/If-Range)
 
-#### What and why?
+### What and why?
 
 Imagine you start downloading a large resource, such as a video, an image, etc., and stop in between because of connection problems.
 With `If-Range` you can tell the server if the representation is unchanged, to send the part(s) that are requested in Range. 
