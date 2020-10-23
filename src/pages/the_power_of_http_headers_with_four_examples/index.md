@@ -1,5 +1,5 @@
 ---
-title: 'The power of https headers and 4 examples you did not know before'
+title: 'The power of http headers and 4 examples you did not know before'
 date: 'Oct 23rd, 2020'
 abstract: 'There are a lot of http headers, most of them are quite simple, but there are also some powerful ones you probably have never heard of.'
 heroImage: 'heads.jpg'
@@ -13,7 +13,7 @@ inside urls or links.
 
 Http stands for **Hypertext Transfer Protocol** and gives us the ability to transfer hypertext between a browser and a server.
 This is a great technology that has been around almost since the invention of the web and is constantly evolving and
-.[offering more and more great features](https://en.wikipedia.org/wiki/HTTP/2)
+[offering more and more great features](https://en.wikipedia.org/wiki/HTTP/2)
 
 ## What are [Http headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)?
 
