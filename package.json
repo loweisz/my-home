@@ -36,6 +36,7 @@
     "react-helmet": "^6.0.0",
     "react-icons": "^3.7.0",
     "react-particles-js": "^2.4.2",
+    "react-retro-hit-counter": "^1.0.1",
     "react-rough-notation": "^0.0.11",
     "styled-components": "^4.1.3"
   },
