@@ -1,8 +1,12 @@
 import React from 'react';
+import { useTheme } from 'styled-components'
 import RetroHitCounter from 'react-retro-hit-counter';
 
 function HitCounter({ slug }) {
   const [hits, setHits] = React.useState(undefined);
+  const red = useTheme()
+  console.log(red)
+
   React.useEffect(() => {
     // Don't count hits on localhost
     if (process.env.NODE_ENV !== 'production') {
@@ -21,7 +25,7 @@ function HitCounter({ slug }) {
   if (typeof hits === 'undefined') {
     return null;
   }
-  return <RetroHitCounter size={30} hits={hits} />;
+  return <RetroHitCounter segmentActiveColor="red"  minLength={6} withBorder={false} size={26} hits={hits} />;
 }
 
 export default HitCounter;
