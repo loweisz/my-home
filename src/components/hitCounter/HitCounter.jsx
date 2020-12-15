@@ -1,16 +1,23 @@
 import React from 'react';
-import { useTheme } from 'styled-components'
-import RetroHitCounter from 'react-retro-hit-counter';
+import styled from 'styled-components'
+
+const InfoBox = styled.div`
+  color: ${({ theme }) => theme.black};
+  background: ${({ theme }) => theme.lightRed};
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+`;
 
 function HitCounter({ slug }) {
   const [hits, setHits] = React.useState(undefined);
-  const red = useTheme()
-  console.log(red)
+
 
   React.useEffect(() => {
     // Don't count hits on localhost
     if (process.env.NODE_ENV !== 'production') {
       setHits(9999);
+      return
     }
     // Invoke the function by making a request.
     // Update the URL to match the format of your platform.
@@ -25,7 +32,7 @@ function HitCounter({ slug }) {
   if (typeof hits === 'undefined') {
     return null;
   }
-  return <RetroHitCounter segmentActiveColor="red"  minLength={6} withBorder={false} size={26} hits={hits} />;
+  return <InfoBox>You are the {hits} person reading this article 😍</InfoBox>;
 }
 
 export default HitCounter;

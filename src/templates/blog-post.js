@@ -70,8 +70,8 @@ const BlogPostTemplate = (props) => {
               <Newsletter />
               {posts[1] && <DataText dangerouslySetInnerHTML={{ __html: posts[1] }} />}
               <hr />
-              <HitCounter slug={post.fields.slug} />
               <BlogFooter location={props.location} post={post} />
+              <HitCounter slug={post.fields.slug} />
             </article>
           </BlogPostBox>
         </PostTextSection>

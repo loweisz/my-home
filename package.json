@@ -35,7 +35,6 @@
     "react-helmet": "^6.0.0",
     "react-icons": "^4.1.0",
     "react-rough-notation": "^1.0.1",
-    "react-retro-hit-counter": "^1.0.1",
     "styled-components": "^5.2.1"
   },
   "keywords": [
