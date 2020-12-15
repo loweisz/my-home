@@ -20,6 +20,7 @@ import ShareWidget from '../components/shareWidget/ShareWidget';
 import { FiCalendar, FiClock } from 'react-icons/fi';
 import BlogFooter from '../components/blogFooter/BlogFooter';
 import Newsletter from '../components/newsletter/Newsletter';
+import HitCounter from '../components/hitCounter/HitCounter';
 
 const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
@@ -52,6 +53,7 @@ const BlogPostTemplate = (props) => {
                     <div>
                       <FiClock /> <span>{post.timeToRead}min</span>
                     </div>
+
                   </Info>
                 </InfoBlock>
               </BlogHeader>
@@ -69,6 +71,7 @@ const BlogPostTemplate = (props) => {
               {posts[1] && <DataText dangerouslySetInnerHTML={{ __html: posts[1] }} />}
               <hr />
               <BlogFooter location={props.location} post={post} />
+              <HitCounter slug={post.fields.slug} />
             </article>
           </BlogPostBox>
         </PostTextSection>
