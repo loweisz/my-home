@@ -1,13 +1,26 @@
 import React from 'react';
-import Img from "gatsby-image"
+import Img from 'gatsby-image';
 import { Link } from 'gatsby';
-import { BlogBox, Title, TextSection, Date, Abstract, AdditionalInfo, ImagePreview, Divider } from './blogPart.style';
+import {
+  Abstract,
+  AdditionalInfo,
+  Background,
+  BlogBox,
+  Date,
+  Divider,
+  ImagePreview,
+  TextSection,
+  Title,
+  WrapperBG,
+} from './blogPart.style';
 import { Box } from '../../styles/shared';
 import { FiCalendar, FiClock } from 'react-icons/fi';
 
 function BlogPart({ node }) {
   return (
-    <Box>
+    <WrapperBG>
+    <Background />
+      <Box>
       <Link to={node.fields.slug}>
         <BlogBox>
           <TextSection>
@@ -37,6 +50,7 @@ function BlogPart({ node }) {
         </BlogBox>
       </Link>
     </Box>
+    </WrapperBG>
   );
 }
 

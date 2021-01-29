@@ -63,6 +63,29 @@ export const BlogBox = styled.div`
   align-items: center;
 `;
 
+export const Background = styled.div`
+  background: linear-gradient(90deg, ${({ theme }) => theme.darkGrey}, ${({ theme }) => theme.black});
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 300ms ease;
+  transform: rotate(-3deg);
+  border-radius: 8px;
+  position: absolute;
+`;
+
+
+export const WrapperBG = styled.div`
+  position: relative;
+  &:hover {
+    ${Background} {
+      transform: rotate(3deg);
+    }
+  }
+`
+
+
+
 export const IconSection = styled.div`
   font-size: 50px;
   color: ${({ theme }) => theme.red};
