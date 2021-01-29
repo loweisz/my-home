@@ -7,7 +7,7 @@ const Footer = () => {
     <StyledFooter>
       <FooterInner>
         <ThemeToggle />
-        <span>2020 Built and designed by <strong>Lorenz Weiß.</strong></span>
+        <span><strong>It's the year {new Date().getFullYear()}</strong> and this page is built and designed by <strong>Lorenz</strong></span>
       </FooterInner>
     </StyledFooter>
   );
