@@ -55,7 +55,7 @@ const ArticleContent = styled.div`
 `
 
 const ArticleElement = ({ article }) => {
-  console.log(article);
+  if (!article) return null;
   return (
     <ArticleBox>
       <ArticleLink>
