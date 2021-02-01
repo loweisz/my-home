@@ -1,10 +1,9 @@
 import React, { useMemo } from 'react';
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 const ArticleLinks = styled.div`
-  border-top: 1px solid ${({ theme }) => theme.grey};
-  border-bottom: 1px solid ${({ theme }) => theme.grey};
   padding: 16px 0;
   margin-bottom: 32px;
   display: grid;
@@ -18,7 +17,7 @@ const ArticleLinks = styled.div`
 `
 
 const ArticleLink = styled(Link)`
-  
+  cursor: pointer;
 `
 
 const Title = styled.h1`
@@ -40,17 +39,43 @@ const LinkTitle = styled.h2`
 `
 const LinkSubText = styled.span``
 const ArticleBox = styled.div`
-
+  border-radius: 12px;
+  overflow: hidden;
+  border: 4px solid ${({ theme }) => theme.black};
+  background: ${({ theme }) => theme.white};
 `
 
-const ArticleElement = ({ article }) => (
-  <ArticleBox>
-    <ArticleLink>
-      <LinkTitle>{article.node.frontmatter.title}</LinkTitle>
-      <LinkSubText>{article.node.frontmatter.abstract}</LinkSubText>
-    </ArticleLink>
-  </ArticleBox>
-)
+const ImageWrapper = styled.div`
+  max-height: 200px;
+  overflow: hidden;
+`
+
+const ArticleContent = styled.div`
+  padding: 25px;
+`
+
+const ArticleElement = ({ article }) => {
+  console.log(article);
+  return (
+    <ArticleBox>
+      <ArticleLink>
+        {article.node.frontmatter.heroImage && (
+          <ImageWrapper>
+            <Img
+              title="Avatar image"
+              alt="Avatar Image"
+              sizes={article.node.frontmatter.heroImage.childImageSharp.sizes}
+            />
+          </ImageWrapper>
+        )}
+        <ArticleContent>
+          <LinkTitle>{article.node.frontmatter.title}</LinkTitle>
+          <LinkSubText>{article.node.frontmatter.abstract}</LinkSubText>
+        </ArticleContent>
+      </ArticleLink>
+    </ArticleBox>
+  );
+}
 
 const ContinueReading = props => {
   const {  allMarkdownRemark: { edges } } = useStaticQuery(graphql`

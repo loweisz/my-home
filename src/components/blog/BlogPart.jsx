@@ -17,9 +17,10 @@ import { Box } from '../../styles/shared';
 import { FiCalendar, FiClock } from 'react-icons/fi';
 
 function BlogPart({ node }) {
+  const tilt = Math.random() > 0.5 ? -1 : 1
   return (
-    <WrapperBG>
-    <Background />
+    <WrapperBG tilt={tilt}>
+    <Background tilt={tilt} />
       <Box>
       <Link to={node.fields.slug}>
         <BlogBox>
