@@ -24,7 +24,6 @@ import HitCounter from '../components/hitCounter/HitCounter';
 import ContinueReading from '../components/continueReading/ContinueReading';
 
 const BlogPostTemplate = (props) => {
-  console.log(props.data);
   const post = props.data.markdownRemark;
   const image = post.frontmatter.heroImage ? post.frontmatter.heroImage.childImageSharp.resize : null;
 

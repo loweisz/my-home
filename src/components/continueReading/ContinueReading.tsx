@@ -58,7 +58,7 @@ const ArticleElement = ({ article }) => {
   if (!article) return null;
   return (
     <ArticleBox>
-      <ArticleLink>
+      <ArticleLink to={article.node.fields.slug}>
         {article.node.frontmatter.heroImage && (
           <ImageWrapper>
             <Img
