@@ -3,13 +3,18 @@ import styled from 'styled-components'
 
 const InfoBox = styled.div`
   color: ${({ theme }) => theme.black};
-  background: ${({ theme }) => theme.lightRed};
-  border: 4px solid ${({ theme }) => theme.darkRed};
+  
+  border-radius: 12px;
   padding: 1rem;
   margin-bottom: 6px;
   font-size: 1.2rem;
   text-align: center;
 `;
+
+const Num = styled.span`
+  font-weight: 900;
+  color: ${({ theme }) => theme.darkRed};
+`
 
 const nth = d => {
   if (d > 3 && d < 21) return 'th';
@@ -44,7 +49,7 @@ function HitCounter({ slug }) {
   if (typeof hits === 'undefined') {
     return null;
   }
-  return <InfoBox>You are the {hits}{nth(hits)} person reading this article 😍</InfoBox>;
+  return <InfoBox>You are the <Num>{hits}{nth(hits)}</Num> person reading this article 😍</InfoBox>;
 }
 
 export default HitCounter;

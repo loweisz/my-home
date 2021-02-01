@@ -141,7 +141,7 @@ Vary: <header>
 
 Just enter the header, the server must check before deciding which resource to send.
 
-
+NEWSLETTER
 
 ##[Content-Disposition](https://developer.mozilla.org/de/docs/Web/HTTP/Headers/Content-Disposition)
 

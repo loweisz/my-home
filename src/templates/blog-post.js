@@ -21,6 +21,7 @@ import { FiCalendar, FiClock } from 'react-icons/fi';
 import BlogFooter from '../components/blogFooter/BlogFooter';
 import Newsletter from '../components/newsletter/Newsletter';
 import HitCounter from '../components/hitCounter/HitCounter';
+import ContinueReading from '../components/continueReading/ContinueReading';
 
 const BlogPostTemplate = (props) => {
   const post = props.data.markdownRemark;
@@ -43,6 +44,7 @@ const BlogPostTemplate = (props) => {
             <ShareWidget location={props.location} post={post} />
             <article>
               <BlogHeader>
+                <HitCounter slug={post.fields.slug} />
                 <Title>{post.frontmatter.title}</Title>
                 <SubTitle>{post.frontmatter.abstract}</SubTitle>
                 <InfoBlock>
@@ -69,9 +71,15 @@ const BlogPostTemplate = (props) => {
               <DataText dangerouslySetInnerHTML={{ __html: posts[0] }} />
               <Newsletter />
               {posts[1] && <DataText dangerouslySetInnerHTML={{ __html: posts[1] }} />}
-              <hr />
               <BlogFooter location={props.location} post={post} />
-              <HitCounter slug={post.fields.slug} />
+              <hr />
+
+
+
+              <hr />
+
+
+              <ContinueReading />
             </article>
           </BlogPostBox>
         </PostTextSection>
@@ -114,7 +122,7 @@ export const pageQuery = graphql`
           }
         }
       }
-    }
+    }    
   }
 `;
 

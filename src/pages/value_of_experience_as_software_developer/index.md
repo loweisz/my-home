@@ -69,6 +69,8 @@ We all know it, the work as a software developer usually includes working with o
 Let's imagine that someone works in a team with rather fewer people and the fluctuation is quite low, which means that everyone works together for years. Is this experience they all have easily transferable to other teams? Or is this experience really linked to the specific company or team?
 Wouldn't someone who has worked with several different teams or companies of different sizes at the same time be more experienced in this respect?
 
+NEWSLETTER
+
 #### Getting insights
 
 Don't get me wrong, I'm not saying that everyone should change the company or the team every 3 months, I would just argue that it's easy to get into a kind of comfort zone where you always work with the same people and get used to the workflow without getting new input. If new input and leaving the comfort zone is indeed the best way to gain experience.
