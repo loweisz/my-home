@@ -1,7 +1,8 @@
 import React from 'react';
 import SimpleAutoCube from './SimpleAutoCube';
-import { Link } from '@reach/router';
+
 import styled from 'styled-components';
+import Link from 'next/link';
 
 const CubeWrapper = styled(Link)`
   position: fixed;
@@ -18,7 +19,7 @@ const CubeWrapper = styled(Link)`
 
 function SmallCubeMenu(props) {
   return (
-    <CubeWrapper to="/">
+    <CubeWrapper href="/">
       <SimpleAutoCube />
     </CubeWrapper>
   );
