@@ -1,34 +1,39 @@
 const POST_GRAPHQL_FIELDS = `
 slug
 title
+date
+abstract
 coverImage {
   url
 }
-date
-author {
-  name
-  picture {
-    url
-  }
-}
-excerpt
-content {
-  json
-  links {
-    assets {
-      block {
-        sys {
-          id
-        }
-        url
-        description
-      }
-    }
-  }
-}
+
 `
 
+// date
+// author {
+//   name
+//   picture {
+//     url
+//   }
+// }
+// excerpt
+// content {
+//   json
+//   links {
+//     assets {
+//       block {
+//         sys {
+//           id
+//         }
+//         url
+//         description
+//       }
+//     }
+//   }
+// }
+
 async function fetchGraphQL(query, preview = false) {
+  console.log(process.env.CONTENTFUL_ACCESS_TOKEN);
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
@@ -47,17 +52,17 @@ async function fetchGraphQL(query, preview = false) {
 }
 
 function extractPost(fetchResponse) {
-  return fetchResponse?.data?.postCollection?.items?.[0]
+  return fetchResponse?.data?.blogArticleCollection?.items?.[0]
 }
 
 function extractPostEntries(fetchResponse) {
-  return fetchResponse?.data?.postCollection?.items
+  return fetchResponse?.data?.blogArticleCollection?.items
 }
 
-export async function getPreviewPostBySlug(slug) {
+export async function getPostBySlug(slug) {
   const entry = await fetchGraphQL(
     `query {
-      postCollection(where: { slug: "${slug}" }, preview: true, limit: 1) {
+      blogArticleCollection(where: { slug: "${slug}" }, limit: 1) {
         items {
           ${POST_GRAPHQL_FIELDS}
         }
@@ -71,7 +76,7 @@ export async function getPreviewPostBySlug(slug) {
 export async function getAllPostsWithSlug() {
   const entries = await fetchGraphQL(
     `query {
-      postCollection(where: { slug_exists: true }, order: date_DESC) {
+      blogArticleCollection(where: { slug_exists: true }, order: date_DESC) {
         items {
           ${POST_GRAPHQL_FIELDS}
         }
@@ -84,7 +89,7 @@ export async function getAllPostsWithSlug() {
 export async function getAllPostsForHome(preview) {
   const entries = await fetchGraphQL(
     `query {
-      postCollection(order: date_DESC, preview: ${preview ? 'true' : 'false'}) {
+      blogArticleCollection {
         items {
           ${POST_GRAPHQL_FIELDS}
         }
@@ -92,13 +97,14 @@ export async function getAllPostsForHome(preview) {
     }`,
     preview
   )
+  console.log({ entries: JSON.stringify(entries) });
   return extractPostEntries(entries)
 }
 
 export async function getPostAndMorePosts(slug, preview) {
   const entry = await fetchGraphQL(
     `query {
-      postCollection(where: { slug: "${slug}" }, preview: ${
+      blogArticleCollection(where: { slug: "${slug}" }, preview: ${
       preview ? 'true' : 'false'
     }, limit: 1) {
         items {
@@ -110,7 +116,7 @@ export async function getPostAndMorePosts(slug, preview) {
   )
   const entries = await fetchGraphQL(
     `query {
-      postCollection(where: { slug_not_in: "${slug}" }, order: date_DESC, preview: ${
+      blogArticleCollection(where: { slug_not_in: "${slug}" }, order: date_DESC, preview: ${
       preview ? 'true' : 'false'
     }, limit: 2) {
         items {
