@@ -27,7 +27,7 @@
     "gatsby-remark-prismjs": "^3.3.14",
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-styled-components-dark-mode": "^1.1.1",
-    "gatsby-transformer-remark": "^2.6.24",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.5.2",
     "prismjs": "^1.17.1",
     "react": "^17.0.1",
