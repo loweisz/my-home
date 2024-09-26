@@ -1,12 +1,12 @@
 ---
 startDate: 'Nov. 2019'
 type: 'exp'
-endDate: null
-title: 'Frontend Engineer'
+endDate: 'Mar. 2021'
+title: 'Software Engineer - Frontend'
 company: 'Aroundhome'
 website: 'aroundhome.de'
 location: 'Berlin'
-index: 0
+index: 1
 techStack:
   [
     'javascript',

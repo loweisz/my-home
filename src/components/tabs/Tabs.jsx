@@ -5,11 +5,11 @@ import Tab from './Tab';
 const routes = [
   {
     url: '/landing',
-    name: 'About',
+    name: 'Hello',
   },
   {
     url: '/dev',
-    name: 'Journey',
+    name: 'About',
   },
   {
     url: '/blog',

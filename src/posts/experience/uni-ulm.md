@@ -6,7 +6,7 @@ location: 'Ulm'
 title: 'Bachelor of Computer Science'
 company: 'Ulm University'
 website: 'uni-ulm.de/en/'
-index: 2
+index: 3
 techStack: ['javascript', 'd3.JS', 'Ionic', 'Angular', 'css', 'html', 'Jquery', 'Java', 'Python']
 ---
 

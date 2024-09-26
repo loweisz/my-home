@@ -62,7 +62,7 @@ const StartPage = () => {
                 icon={<FiBox />}
                 isSelected={isSelected === '/dev'}
                 url={'/dev'}
-                name={'Journey'}
+                name={'About'}
               />
             </MenuTop>
             <MenuLeft>
@@ -72,7 +72,7 @@ const StartPage = () => {
                 icon={<FiUser />}
                 isSelected={isSelected === '/landing'}
                 url={'/landing'}
-                name={'About'}
+                name={'Hello'}
               />
             </MenuLeft>
             <MenuRight>

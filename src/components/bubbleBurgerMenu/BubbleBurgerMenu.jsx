@@ -38,10 +38,10 @@ function BubbleBurgerMenu() {
       {selected && (
         <SubMenu>
           <Link to="/landing/">
-            <span>About</span>
+            <span>Hello</span>
           </Link>
           <Link to="/dev/">
-            <span>Journey</span>
+            <span>About</span>
           </Link>
           <Link to="/blog/">
             <span>Blog</span>

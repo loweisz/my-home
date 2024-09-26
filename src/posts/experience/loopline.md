@@ -3,10 +3,10 @@ startDate: 'Nov. 2017'
 type: 'exp'
 endDate: 'Nov. 2019'
 location: 'Berlin'
-title: 'Frontend Engineer'
+title: 'Software Engineer - Frontend'
 company: 'Loopline Systems'
 website: 'now.loopline.systems'
-index: 1
+index: 2
 techStack:
   [
     'javascript',
